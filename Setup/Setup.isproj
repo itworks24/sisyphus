@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\BackupSender\BackupSender.csproj">
+			<Name>BackupSender</Name>
+			<Project>{E77158F7-209F-4555-8958-86E820BACAC4}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\CheckImapConnection\CheckImapConnection.csproj">
+			<Name>CheckImapConnection</Name>
+			<Project>{8BA64265-9289-4A3A-9158-F10AC10AE838}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConfigApplication\ConfigApplication.csproj">
+			<Name>ConfigApplication</Name>
+			<Project>{26E260E3-AB62-4BB2-AFAC-5788A9BB1211}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\EnterpriseBackup\EnterpriseBackup.csproj">
+			<Name>EnterpriseBackup</Name>
+			<Project>{2C314C89-0C09-4FBB-9E79-E5DB1F432BDB}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\SampleTask\SampleTask.csproj">
+			<Name>SampleTask</Name>
+			<Project>{756F6A58-7996-4B8B-8CB6-61C69E8D2F8B}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ServiceControll\ServiceControll.csproj">
+			<Name>ServiceControll</Name>
+			<Project>{D4C64F83-62AF-490A-888B-04C4FD18AD18}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\SisyphusSheduler\SisyphusScheduler.csproj">
+			<Name>SisyphusScheduler</Name>
+			<Project>{DC18E5FA-3C4C-4898-8093-F4DE505E064C}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\TrelloChecker\TrelloChecker.csproj">
+			<Name>TrelloChecker</Name>
+			<Project>{57A750D9-36B6-410B-8808-29CABE955842}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\TrelloReport\TrelloReport.csproj">
+			<Name>TrelloReport</Name>
+			<Project>{5005A377-0A59-4E18-9E8B-DE05BEC67E67}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

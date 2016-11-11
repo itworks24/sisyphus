@@ -1,0 +1,5 @@
+D:\zv\Downloads\Manatee.Trello-master\Manatee.Trello\bin\Release-4.5\Manatee.Trello.XML
+D:\zv\Downloads\Manatee.Trello-master\Manatee.Trello\bin\Release-4.5\Manatee.Trello.dll
+D:\zv\Downloads\Manatee.Trello-master\Manatee.Trello\bin\Release-4.5\Manatee.Trello.pdb
+D:\zv\Downloads\Manatee.Trello-master\Manatee.Trello\obj\Release-4.5\Manatee.Trello.dll
+D:\zv\Downloads\Manatee.Trello-master\Manatee.Trello\obj\Release-4.5\Manatee.Trello.pdb

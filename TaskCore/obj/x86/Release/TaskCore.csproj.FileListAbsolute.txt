@@ -1,0 +1,10 @@
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\TaskCore.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\TaskCore.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\Common.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\SQLLogger.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\LiteDB.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\Common.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\bin\x86\Release\SQLLogger.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\obj\x86\Release\TaskCore.csprojResolveAssemblyReference.cache
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\obj\x86\Release\TaskCore.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\TaskCore\obj\x86\Release\TaskCore.pdb

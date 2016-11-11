@@ -1,0 +1,2044 @@
+<?xml version="1.0"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OrganizationUrl>https://trello.com/itworks24ru</OrganizationUrl>
+  <OrganizationName>it works</OrganizationName>
+  <Cards>
+    <CardRepresent>
+      <Text>Добавить раздел Бытовая техника и аксессуары, в котором будут, как и в Мебели ссылки на фабрики бытовой техники, с которыми мы работаем</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/95uKfDH9/20--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В раздел "Бытовая техника и аксессуары" добавить ссылки на фабрики бытовой техники</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Dd70JiqC/17--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавляем на главную страницу следующую информацию: "Мы являемся единственным официальным дилером фабрики NOLTE KUECHEN в городе Сочи!"</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/18lBPmhE/18-nolte-kuechen</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Вместо рубрики Ремонт, теперь рубрика Услуги в этом разделе три подраздела: - дизайн частных и общественных интерьеров (в нем написать состав и стоимость этих услуг - это я позже скину) - мебель из европы и россии (в нем ссылка на рубрику Мебель, ссылка на раздел Бытовая техника и небольшой текст о мебели по индивидуальному проекту - тоже скину позже) - ремонт и оснащение (внутри будет написан небольшой текст)</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/YNr7nNlm/21--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Еще куда-то надо добавить нашу команду с фотографиями нас самих)</Text>
+      <DueDate>2016-11-16T12:00:00+03:00</DueDate>
+      <DueDateRepresent>16 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kwgRx15T/23--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Хотим, чтобы на сайте был раздел Отзывы, я так понимаю, что надо, чтобы наши клиенты написали отзывы о нас и мы его перешлем вам, тогда и добавится раздел Отзывы</Text>
+      <DueDate>2016-11-16T12:00:00+03:00</DueDate>
+      <DueDateRepresent>16 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/h6QWURvf/24--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Разместить картинки для всех разделов</Text>
+      <DueDate>2016-11-16T12:00:00+03:00</DueDate>
+      <DueDateRepresent>16 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/1VuBn3qv/14--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить сайт в гугл.аналитикс</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ELbAkNlq/2--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проект "Новая Александрия" Масштабный проект с перепланировкой, ремонтом, авторским надзором, комплектацией и декорированием</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/yqiesCIK/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проект "Актер Гэлакси" Небольшой бюджетный проект для пары с взрослыми детьми, которые все вместе приезжают в наш край на отдых)</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/QaqrNY7y/15--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Вместо раздела Дизайн, теперь раздел Наши работы, в котором будут фото наших работ</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/YeIMQJmO/22--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать теги для поисковиков в яндекс и google</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Dyc09al9/19-google</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>С ориентируйте пожалуйста по сроку логотипа?</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/6P8whuFY/7--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделал ориентировочную наброску названия кнопок сайта</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/4W6iWWWr/5--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделал развертку кнопок, пока тоже приблизительную.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/6FS20IlO/6--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Есть возможность поставить специальный движок для расширенного редактирования чтоб можно было так делать http://vnedrenie.su/ и так soyuzprommeh.ru Стоит 2к рублей единоразово.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/DpTblMRr/8-http-vnedrenie-su-soyuzprommeh-ru-2</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>С ориентируйте по срокам прорисовки сайта, пожалуйста)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/bHXVUSZB/9--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Купить доменное имя sfera.store</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/y0sJT7HH/1-sfera-store</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить сайт и всё  такое</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/3KC5t83M/4--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Поставить почту и т.д.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/pKrGXhsi/3--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Придумать логотип</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kaPSunC4/2--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Присвоить столбцу с кодом в Печатной форме для выгрузки из 1С в Инфо-Предприятие текстовый формат. Коды в форме для выгрузки должны содержать 10 знаков</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/xHQBRm0q/31-1-10</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В торговле в УПД нужно пронумеровать все страницы</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/yxgJhf1A/15--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Ahmuldinova</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>обновить пакет офиса, чтобы читался формат xlsx</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/zCVmm1oH/17-xlsx</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Настроить работу битрикс для сотрудников склада</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/BQtEvEXt/27--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сайт trubasochi.ru не всё показывает, разобраться</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/YXyF3T3H/19-trubasochi-ru</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить формирование заказов в 1с агоры</Text>
+      <DueDate>2016-10-10T09:00:00+03:00</DueDate>
+      <DueDateRepresent>10 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/aHdVs6UV/14-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать три подписи в счете на оплату</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/3ZeCQuCt/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить оперативу на склад</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/03gnmGzq/30--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить сотрудника Мельниченко Алексей Юрьевич sales@agorasochi.ru</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/YD3a1c7Q/23-sales-agorasochi-ru</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить админские права на user4</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/KoyzSoN6/29-user4</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить Microsoft Office компьютер Ольги Страховой</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/V5av8xij/26-microsoft-office</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Синхронизировать товары инфо-предприятия с 1С</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/VwztHSjz/18-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Ahmuldinova</FullName>
+        </Member>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить нового пользователя 1С Пестов Антон Александрович</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/6zZ6lhIa/22-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+        <Member>
+          <FullName>Алексей Лепихов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Настроить принтер для нового сотрудника, необходимо личное присутствие</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Cn3nlXin/25--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Дать права администратора Алие на компьютер</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/lEKrdMow/28--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить 1С Татьяны Петровны на ноутбук . Тим ID 702355271 пароль 1488</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/gTYHa5dX/24-1-id-702355271-1488</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать упрощенную форму бланка (название товара, код, количество, сумма) для загрузки в Инфо-Предприятие из 1С</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/hMBfXFFE/20-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Синхронизировать инфо-предприятие по кодам с 1с торговлей</Text>
+      <DueDate>2016-08-29T12:00:00+03:00</DueDate>
+      <DueDateRepresent>29 августа 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/mQ6Gp8xf/13-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить учетную запись в 1С на Николаенко Яну Андреевну, тел. 89654690445, marusenka86@mail.ru</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/b4BfUC5p/21-1-89654690445-marusenka86-mail-ru</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Переадресация писем ke@ на ia@</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/2Ok7B5bw/1-ke-ia</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Составить примерное представление о том, что нужно сделать в сервисной базе.</Text>
+      <DueDate>2016-10-15T12:00:00+03:00</DueDate>
+      <DueDateRepresent>15 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/D6SI39Jg/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В технологической карте ремонта поставить Сервисный центр «Рем-Моторс», а потом ИП Ашалян</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/B4sNz5xc/3--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В представлении номера неправильно ставит номер, ставит "," а не 8(918)...</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ArMDVHqB/2-8-918</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить печать счета из заявки</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kjUTHhTV/6--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить пользователя Ашалян как администратора сервиса</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Vuy04etV/7--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Тех. карта с актом восстановить как было изначально</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ULD463Lx/4--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить номер счета в печатной форме и вообще поставить стандартную печатную форму.</Text>
+      <DueDate>2016-10-25T10:00:00+03:00</DueDate>
+      <DueDateRepresent>25 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/i289v9av/5--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать скрипт для полного отключения пользователя от RDS для перезапуска системы печати.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/EkZCRbU0/2-rds</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Парус Светлана</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить нового пользователя</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/aifrpOYz/4--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Некорретно формируются книга покупок</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/g2IOWJEw/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Обновление бухгалтерии</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/nyTHKCQg/3--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить поставщика в Расшифровку</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/yH2F0V6Z/15--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>При добавление картинки ставить наименование как наименование номенкоатуры</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ht5wNVkT/11--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать кнопку, которая будет сразу искать картинки на яндексе</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/bCkMlDtK/12--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить параметры номенклатуры в 1С, причём надо чтобы эти параметры корректно обрабатывались в яндекс.маркете или тругих каталогах</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/mSFJhsqQ/7-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Антон Юдин</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать на базе Формирования заказов отчет о заполненности номенклатуры.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/74eRHjjW/10--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>AВ</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Все товары на сайте в штуках, а в базе есть несколько единиц измерения</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/FqqaFui1/5--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Bedrosova</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Не выгружается код из базы, возможно кода нет в файле выгрузки</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/OVjLyu6u/6--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Bedrosova</FullName>
+        </Member>
+        <Member>
+          <FullName>Антон Юдин</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Жду дговор С Вами! Договор с Бедросовой в работе</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/0UDdRVv3/8--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Уменьшить размер титульной картинки или вообще её убрать</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/yTTCmRwr/3--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Bedrosova</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>После измененя картинки не даёт менять саму позицию номенклатуры, возможно не освобождён объект</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/YwYWve2U/14--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Юлия Парамей</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить описание и полное наименование в расшифровке</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/dzKhWu16/13--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Юлия Парамей</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Изменить имя основного каталога: для выгрузки товаров на сайт list.ru нужно чтоб каталог назывался как-то по-человечески, например "Стройматериалы".</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/iET51deS/9-list-ru</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Bedrosova</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Поставить обработку для "Формирование заказов" для 1С</Text>
+      <DueDate>2016-10-24T18:00:00+03:00</DueDate>
+      <DueDateRepresent>24 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/oaQPd1cr/1-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>AВ</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проанализировать сайт</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/RJbIGd6B/4--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Bedrosova</FullName>
+        </Member>
+        <Member>
+          <FullName>Александр Змеевский</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Настроить БЭКАП программы торговля и бухгалтерия с оптимальным количеством раз, но для бухгалтерии не менее 1 раз в неделю, торговля не менее 2 раза в неделю</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Cg9PceDe/2-1-2</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проверить есть ли в торговле вид номенклатуры "Материалы" или что то аналогичное для приходования собственных нужд. Соответственно Материалы в бухгалтерию выгружались бы на 10 счет...</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/GUDhgiys/7-10</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В торговле в документе "оплата от покупателя платежной картой" выставить по умолчанию на вкладке эквайринг вид оплаты - оплата банковской картой и %торговой уступки 1,85 (рядом сумма должна сама проставиться)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/LJECQY6C/10-1-85</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В бухгалтерии на документах поступления есть Галочка Оригинал , а в торговле так можно? Чтобы в торговле ставить а в бух уже выгружалась</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/DN6ur5Ru/11--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить в торговлю в печать счета на оплату печати и подписи по Теплоэнергии и логотип</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/krNg9wS3/13--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать учетную запись Максиму Корнилову (продублировано на телефоне)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/saOY3Z55/15--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Новость. Готовимся к зиме. Все, что необходимо для отопительной системы дома или квартиры, вы найдете у нас в магазине: отопительные котлы различных систем, радиаторы отопления для автономного и централизованного подключения, насосы, запорную арматуру, контрольно-измерительные приборы и оборудование для безопасности отопительных систем. +сочная картинка)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/phxdtGpg/26--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Раздел тех. информация. Можно добавить интересные ссылки или полезные сайты?? Туда размещаем http://www.viega.ru/xchg/ru-ru/hs.xsl/6253.htm http://www.viega.ru/xchg/ru-ru/hs.xsl/6259.htm</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/hdP5OHzs/27-http-www-viega-ru-xchg-ru-ru-hs-xsl-6253-htm-http-www-viega-ru-xchg-ru-ru-hs-xsl-6259-htm</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить возможность обратной связи</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/mCgGkpy9/28--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить сайт в яндекс и гугл</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/oSI25W6o/29--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Настроить дополнительные правила синхронизации торговли с бухгалтерией 1 часть</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/xKnUHuBK/5-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Юлия Гасратова</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Настроить дополнительные правила синхронизации торговли с бухгалтерией 2 часть</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/1fdVRlgh/6-2</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Юлия Гасратова</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Фотографии на первую страницу. Владас предложил отличную идею приобрести хорошие фото на фотобанке. Сейчас хотя бы две листающие фотографии. Как вариант: https://ru.fotolia.com/id/118187198 https://ru.fotolia.com/id/96316280</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/iuDxbJjc/24-https-ru-fotolia-com-id-118187198-https-ru-fotolia-com-id-96316280</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Акция (можно в новостях) надо обсудить. Тема Кондиционеры. Жаркий летний сезон близится к завершению. Самое время приобрести или обновить кондиционер по максимально выгодной цене. Мы предлагаем Вам качественную заводскую технику ведущих производителей сплит-систем BALLU, Gree, Leberg, RODA, Elektrolux. И сочную картинку )</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/dzzXlEEU/25-ballu-gree-leberg-roda-elektrolux</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать "красивое" письмо и карточку реквизитов, аналогично ВАР</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/wYB7KGy8/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать пользователя в торговле и в бухгалтерии и корпоративную почту. Краснянская Екатерина 8-918-402-46-04 ketrin2910@mail.ru</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/PjC5LwHD/3-8-918-402-46-04-ketrin2910-mail-ru</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Доп. настройка генерального отчета.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/khBlYytD/9--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Исправить: найти реквизит на который ругается программа при попытке проведения документа Счет-фактура полученная № 6067 от 31.08.16, №5449 от 10.08.16 и т.д. Селект рус (договора комиссии). Ругается в Бухгалтерии, в торговле все проводится.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/jBsXJ3DX/4-6067-31-08-16-5449-10-08-16</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Юлия Гасратова</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Изменить настройки сервера/базы с английского на русский язык</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/16zJv2n7/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Провести счета-фактуры полученные № 4577 от 13.07.16 и №4929 от 26.07.16 (Ругается на авансы)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/m8XGloYE/12-4577-13-07-16-4929-26-07-16</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать учетку для пользователяМаксим Валерьевич Корнилов</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/F0KV7jG4/14--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>"Дернуть" у кого-нибудь ИТС и обновить базу )))</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/sEbALBGS/8--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Текст для третьего блока на главной транице. Вместо "Достижение успеха" "Наши преимущества"</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kJ8gtA5k/17--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Разместить в разделе тех. информации материалы по ссылке http://www.select.ru/tech/documentation/3207/</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/URRI7Z58/18-http-www-select-ru-tech-documentation-3207</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Текст для карточки ассортимент продукции: Иcпользуя многолетний опыт успешной работы на рынке инженерных систем мы наладили эффективные отношения с производителями оборудования высшего качества. На сегодняшний день список поставляемого нашей компанией оборудования насчитывает свыше 70 000 артикулов. Большой запас товаров на наших складах и отлаженная система поставок из Европы исключит перебои в поставках и позволит производить комплектацию заказов в самые короткие сроки.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/qWyisB7q/19-c-70-000</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Первоочередная задача: сделать первую страницу. Касательно фотографий, текстов, и двух акций-новостей информация ниже. Надо срочно поменять то, что делается быстро. Сейчас много упоминаний о сайте Мастер-ват, образец которого мы взяли.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/SLu5leri/20--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Хочу статью на тему трубы Banninger, вот ссылка у одних https://vodopad.ru/catalog/27095/#close или http://ctf-russia.ru/catalog/plastic-pipes/baenninger-pipes/truba-gladkaya-banninger-benninger-polipropilen-d-20mm-sdr11/ Она у нас только в Сочи</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/xDDNbe4K/21-banninger-https-vodopad-ru-catalog-27095-close-http-ctf-russia-ru-catalog-plastic-pipes-baenninger-pipes-truba-gladkaya-banninge</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Отформатировать тексты</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/nmdUC9rK/22--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Текст для блока поддержка партнеров: Мы придаем большое значение всесторонней поддержке монтажных бригад и организаций. Нами разработаны специальные условия и сервисы, которые делают наше сотрудничество еще более комфортным и выгодным. Мы проводим стимулирующие акции, организуем семинары, помогаем в комплектации заказов</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/eB74hGvU/23--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Вычитал, что лучше не вносить изменения в тему вордпресс напрямую, а создавать дочернюю тему в которую и вносить изменения. https://codex.wordpress.org/%D0%94%D0%BE%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B5_%D1%82%D0%B5%D0%BC%D1%8B</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/sYsLpeyT/1-https-codex-wordpress-org-d0-94-d0-be-d1-87-d0-b5-d1-80-d0-bd-d0-b8-d0-b5-d1-82-d0-b5-d0-bc-d1-8b</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Придумать в каком формате и как часто будут обновляться новости на сайте</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/r4fSNRdG/10--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проработать вариант сайта с лэндингом</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/opVTmDmd/15--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Найти фрилансера, для минимизации потерь при переносе сайта</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Wn4wk8yF/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить лого на все страницы</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/J29sgkpl/11--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Найти кошерные пиктограммы для видов дейстельности</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/4sCrG53b/8--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить страницы про виды дейстельности (ППКД и ГКПД)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/DC9uBW5V/13--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить контакную инфу внизу каждой страницы</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/aebnMsMn/7--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить новые тексты и схемы на сайт</Text>
+      <DueDate>2016-09-28T12:00:00+03:00</DueDate>
+      <DueDateRepresent>28 сентября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ElxreaFB/14--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Найти картинки для слайдера</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/6CmD49lJ/9--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить visual composer</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/MdoVcBut/6-visual-composer</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Упордочить бренды</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/rOuEMjC5/12--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить на все сайты ssl</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Vhfu9phc/6-ssl</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добить баннер теплоэнергии, созвониться с печатником, всё согласовать</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/o5woh3Ng/1--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Созвониться с Натальей по поводу сайта</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/9WgiwTqu/2--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Обновить главную страницу сайта</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/dWVHZ4Rs/3--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать страницу с нашими возможностями (облако, it, сайтостроение)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/3ehjxP1k/5-it</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Посмотреть что надо бы сделать по нашему сайту (itworks24.ru)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/qfpuIgF4/4-itworks24-ru</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Разобраться с платежом в банк.</Text>
+      <DueDate>2016-11-03T14:00:00+03:00</DueDate>
+      <DueDateRepresent>3 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/moRHaFcN/28--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить объявление в журнал Красная Поляна</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/g7QWQbSY/24--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить в договор свойство в котором указывается счет для выставления ежемесячных услуг. Раз в месяц этот счет копировать в новый заказ покупателя.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/EAAwvDAf/20--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>У договора добавить свойство период выставления счетов и актов (в днях)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/1UsLouwu/19--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Написать тексты для флаеров и рекламы</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/AAcIJi1m/11--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Привести в порядок офис</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/pZs4O4mP/8--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Подумать о том как организовать рассылку</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/vUJ93aWy/10--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Убрать HTTPS из сайта itworks24</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/8WGZrRz9/12-https-itworks24</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Расписать проекты и программы, которые неплохо бы доделать</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/wNYiAClF/15--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить webdav для работы</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/E4VsQc4v/17-webdav</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Через typeform показывать примерную стоимость услуг на основании ответов пользователя</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/HnrYyhlf/21-typeform</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать флаер для сервисного центра</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/sIaOMqLc/22--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Можно печатать логотип и информацию на кружках, одна кружка всего 250р стоит! Можно на оранжевых или белых кружках фигачить лого и небольшой текст.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/0nNNWfpu/26-250</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать для машин магнитную наклейку можно. Лого, телефон, сайт.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ZFexDcqr/27--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить фирму в дубль-гис</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/FB6vFE0n/25--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить ЗУП</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/vs1R8Uzy/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать флаер для досок объявлений</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/qU7eWIiP/23--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Визитки, флаера, баннер для фирмы</Text>
+      <DueDate>2016-10-20T12:00:00+03:00</DueDate>
+      <DueDateRepresent>20 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/7s8UQTpm/5--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать карточку предприятия</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/tlzBQ2xd/18--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Дорабить основной функционал itworks.adminUnits!</Text>
+      <DueDate>2016-07-15T12:00:00+03:00</DueDate>
+      <DueDateRepresent>15 июля 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/t8mtdFLs/2-itworks-adminunits</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Разобраться наконец с интеграцией OTRS, slack, teamveiwer, 1C</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/s2RltiiY/3-otrs-slack-teamveiwer-1c</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать фирменный стиль для teamveiwer</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/5z5csRit/4-teamveiwer</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>создать шаблон договора с клиентами на все виды оказания услуг</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/8QT3oBl9/13--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Регистрация ООО</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/LiwWMDnx/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+  </Cards>
+  <CompletedCards>
+    <CardRepresent>
+      <Text>Добавить сайт в гугл.аналитикс</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ELbAkNlq/2--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проект "Новая Александрия" Масштабный проект с перепланировкой, ремонтом, авторским надзором, комплектацией и декорированием</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/yqiesCIK/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проект "Актер Гэлакси" Небольшой бюджетный проект для пары с взрослыми детьми, которые все вместе приезжают в наш край на отдых)</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/QaqrNY7y/15--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Вместо раздела Дизайн, теперь раздел Наши работы, в котором будут фото наших работ</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/YeIMQJmO/22--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать теги для поисковиков в яндекс и google</Text>
+      <DueDate>2016-11-09T12:00:00+03:00</DueDate>
+      <DueDateRepresent>9 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Dyc09al9/19-google</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Купить доменное имя sfera.store</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/y0sJT7HH/1-sfera-store</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить сайт и всё  такое</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/3KC5t83M/4--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Поставить почту и т.д.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/pKrGXhsi/3--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Придумать логотип</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kaPSunC4/2--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+        <Member>
+          <FullName>Tatarov Elia</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить Microsoft Office компьютер Ольги Страховой</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/V5av8xij/26-microsoft-office</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Синхронизировать товары инфо-предприятия с 1С</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/VwztHSjz/18-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Ahmuldinova</FullName>
+        </Member>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить нового пользователя 1С Пестов Антон Александрович</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/6zZ6lhIa/22-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+        <Member>
+          <FullName>Алексей Лепихов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Настроить принтер для нового сотрудника, необходимо личное присутствие</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Cn3nlXin/25--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Дать права администратора Алие на компьютер</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/lEKrdMow/28--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить 1С Татьяны Петровны на ноутбук . Тим ID 702355271 пароль 1488</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/gTYHa5dX/24-1-id-702355271-1488</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать упрощенную форму бланка (название товара, код, количество, сумма) для загрузки в Инфо-Предприятие из 1С</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/hMBfXFFE/20-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Синхронизировать инфо-предприятие по кодам с 1с торговлей</Text>
+      <DueDate>2016-08-29T12:00:00+03:00</DueDate>
+      <DueDateRepresent>29 августа 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/mQ6Gp8xf/13-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить учетную запись в 1С на Николаенко Яну Андреевну, тел. 89654690445, marusenka86@mail.ru</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/b4BfUC5p/21-1-89654690445-marusenka86-mail-ru</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Алия</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Переадресация писем ke@ на ia@</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/2Ok7B5bw/1-ke-ia</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Составить примерное представление о том, что нужно сделать в сервисной базе.</Text>
+      <DueDate>2016-10-15T12:00:00+03:00</DueDate>
+      <DueDateRepresent>15 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/D6SI39Jg/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В технологической карте ремонта поставить Сервисный центр «Рем-Моторс», а потом ИП Ашалян</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/B4sNz5xc/3--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>В представлении номера неправильно ставит номер, ставит "," а не 8(918)...</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ArMDVHqB/2-8-918</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить печать счета из заявки</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kjUTHhTV/6--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить пользователя Ашалян как администратора сервиса</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/Vuy04etV/7--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Тех. карта с актом восстановить как было изначально</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ULD463Lx/4--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить номер счета в печатной форме и вообще поставить стандартную печатную форму.</Text>
+      <DueDate>2016-10-25T10:00:00+03:00</DueDate>
+      <DueDateRepresent>25 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/i289v9av/5--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить нового пользователя</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/aifrpOYz/4--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Некорретно формируются книга покупок</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/g2IOWJEw/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Обновление бухгалтерии</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/nyTHKCQg/3--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Проанализировать сайт</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/RJbIGd6B/4--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Bedrosova</FullName>
+        </Member>
+        <Member>
+          <FullName>Александр Змеевский</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Сделать "красивое" письмо и карточку реквизитов, аналогично ВАР</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/wYB7KGy8/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать пользователя в торговле и в бухгалтерии и корпоративную почту. Краснянская Екатерина 8-918-402-46-04 ketrin2910@mail.ru</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/PjC5LwHD/3-8-918-402-46-04-ketrin2910-mail-ru</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Доп. настройка генерального отчета.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/khBlYytD/9--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Исправить: найти реквизит на который ругается программа при попытке проведения документа Счет-фактура полученная № 6067 от 31.08.16, №5449 от 10.08.16 и т.д. Селект рус (договора комиссии). Ругается в Бухгалтерии, в торговле все проводится.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/jBsXJ3DX/4-6067-31-08-16-5449-10-08-16</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Юлия Гасратова</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Изменить настройки сервера/базы с английского на русский язык</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/16zJv2n7/16--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Провести счета-фактуры полученные № 4577 от 13.07.16 и №4929 от 26.07.16 (Ругается на авансы)</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/m8XGloYE/12-4577-13-07-16-4929-26-07-16</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Создать учетку для пользователяМаксим Валерьевич Корнилов</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/F0KV7jG4/14--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>"Дернуть" у кого-нибудь ИТС и обновить базу )))</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/sEbALBGS/8--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Текст для третьего блока на главной транице. Вместо "Достижение успеха" "Наши преимущества"</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/kJ8gtA5k/17--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Разместить в разделе тех. информации материалы по ссылке http://www.select.ru/tech/documentation/3207/</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/URRI7Z58/18-http-www-select-ru-tech-documentation-3207</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Текст для карточки ассортимент продукции: Иcпользуя многолетний опыт успешной работы на рынке инженерных систем мы наладили эффективные отношения с производителями оборудования высшего качества. На сегодняшний день список поставляемого нашей компанией оборудования насчитывает свыше 70 000 артикулов. Большой запас товаров на наших складах и отлаженная система поставок из Европы исключит перебои в поставках и позволит производить комплектацию заказов в самые короткие сроки.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/qWyisB7q/19-c-70-000</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Первоочередная задача: сделать первую страницу. Касательно фотографий, текстов, и двух акций-новостей информация ниже. Надо срочно поменять то, что делается быстро. Сейчас много упоминаний о сайте Мастер-ват, образец которого мы взяли.</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/SLu5leri/20--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Хочу статью на тему трубы Banninger, вот ссылка у одних https://vodopad.ru/catalog/27095/#close или http://ctf-russia.ru/catalog/plastic-pipes/baenninger-pipes/truba-gladkaya-banninger-benninger-polipropilen-d-20mm-sdr11/ Она у нас только в Сочи</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/xDDNbe4K/21-banninger-https-vodopad-ru-catalog-27095-close-http-ctf-russia-ru-catalog-plastic-pipes-baenninger-pipes-truba-gladkaya-banninge</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Отформатировать тексты</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/nmdUC9rK/22--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Текст для блока поддержка партнеров: Мы придаем большое значение всесторонней поддержке монтажных бригад и организаций. Нами разработаны специальные условия и сервисы, которые делают наше сотрудничество еще более комфортным и выгодным. Мы проводим стимулирующие акции, организуем семинары, помогаем в комплектации заказов</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/eB74hGvU/23--</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Установить visual composer</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/MdoVcBut/6-visual-composer</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Упордочить бренды</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/rOuEMjC5/12--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Регистрация ООО</Text>
+      <DueDate>0001-01-01T03:00:00+03:00</DueDate>
+      <DueDateRepresent>1 января 0001 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/LiwWMDnx/1--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+  </CompletedCards>
+  <OverdueCards>
+    <CardRepresent>
+      <Text>Дорабить основной функционал itworks.adminUnits!</Text>
+      <DueDate>2016-07-15T12:00:00+03:00</DueDate>
+      <DueDateRepresent>15 июля 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/t8mtdFLs/2-itworks-adminunits</CardUrl>
+      <Members />
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить новые тексты и схемы на сайт</Text>
+      <DueDate>2016-09-28T12:00:00+03:00</DueDate>
+      <DueDateRepresent>28 сентября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/ElxreaFB/14--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Иван Соколов</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Добавить формирование заказов в 1с агоры</Text>
+      <DueDate>2016-10-10T09:00:00+03:00</DueDate>
+      <DueDateRepresent>10 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/aHdVs6UV/14-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Визитки, флаера, баннер для фирмы</Text>
+      <DueDate>2016-10-20T12:00:00+03:00</DueDate>
+      <DueDateRepresent>20 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/7s8UQTpm/5--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>Se</FullName>
+        </Member>
+        <Member>
+          <FullName>Sm</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Поставить обработку для "Формирование заказов" для 1С</Text>
+      <DueDate>2016-10-24T18:00:00+03:00</DueDate>
+      <DueDateRepresent>24 октября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/oaQPd1cr/1-1</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+        <Member>
+          <FullName>AВ</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+    <CardRepresent>
+      <Text>Разобраться с платежом в банк.</Text>
+      <DueDate>2016-11-03T14:00:00+03:00</DueDate>
+      <DueDateRepresent>3 ноября 2016 г.</DueDateRepresent>
+      <CardUrl>https://trello.com/c/moRHaFcN/28--</CardUrl>
+      <Members>
+        <Member>
+          <FullName>Zv</FullName>
+        </Member>
+      </Members>
+    </CardRepresent>
+  </OverdueCards>
+</Report>

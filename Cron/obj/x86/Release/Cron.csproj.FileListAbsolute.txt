@@ -1,0 +1,4 @@
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\bin\x86\Release\Rlc.Cron.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\bin\x86\Release\Rlc.Cron.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\obj\x86\Release\Rlc.Cron.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\obj\x86\Release\Rlc.Cron.pdb

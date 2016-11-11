@@ -1,0 +1,9 @@
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\bin\Debug\SQLLogger.dll.config
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\bin\Debug\SQLLogger.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\bin\Debug\SQLLogger.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\bin\Debug\Common.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\bin\Debug\Common.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\obj\Debug\SQLLogger.csprojResolveAssemblyReference.cache
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\obj\Debug\SQLLogger.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\obj\Debug\SQLLogger.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\SQLLogger\bin\Debug\LiteDB.dll

@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
+   assemblypath = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe
+Installing service SisyphusScheduler...
+Service SisyphusScheduler has been successfully installed.
+Creating EventLog source SisyphusScheduler in log Application...
+Committing assembly 'C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
+   assemblypath = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe

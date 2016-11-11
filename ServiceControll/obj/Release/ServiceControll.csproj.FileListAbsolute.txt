@@ -1,0 +1,10 @@
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\ServiceControll.exe.config
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\ServiceControll.exe
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\ServiceControll.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\CommandLine.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\Common.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\Common.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\bin\Release\CommandLine.xml
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\obj\Release\ServiceControll.csprojResolveAssemblyReference.cache
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\obj\Release\ServiceControll.exe
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Evelated\obj\Release\ServiceControll.pdb

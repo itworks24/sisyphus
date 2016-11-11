@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd1="http://itworks24.ru/sisyphus/trellosync" xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://itworks24.ru/sisyphus/trellosync" name="itwts_TrelloSync" targetNamespace="http://itworks24.ru/sisyphus/trellosync" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:xs1="http://itworks24.ru/sisyphus/trellosync" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://itworks24.ru/sisyphus/trellosync" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="CardHistory">
+        <xs:sequence>
+          <xs:element name="CreatorId" nillable="true" type="xs:string" />
+          <xs:element name="CreatorUserName" nillable="true" type="xs:string" />
+          <xs:element name="CreatorEMail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="10000" name="InWorkActionRecordList" nillable="true" type="xs1:CardRecord" />
+          <xs:element minOccurs="0" maxOccurs="10000" name="Labels" type="xs:string" />
+          <xs:element name="CardId" type="xs:string" />
+          <xs:element name="BoardId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="100000" name="Comments" type="xs1:Comment" />
+          <xs:element name="CreationDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element name="Text" nillable="true" type="xs:string" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="CardUrl" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CardHistoryList">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="10000" name="Elements" nillable="true" type="xs1:CardHistory" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CardRecord">
+        <xs:sequence>
+          <xs:element name="StartDateTime" type="xs:dateTime" />
+          <xs:element name="FinishDateTime" type="xs:dateTime" />
+          <xs:element name="BeginerId" nillable="true" type="xs:string" />
+          <xs:element name="BeginerUserName" type="xs:string" />
+          <xs:element name="BeginerEMail" nillable="true" type="xs:string" />
+          <xs:element name="FinisherId" nillable="true" type="xs:string" />
+          <xs:element name="FinisherEMail" nillable="true" type="xs:string" />
+          <xs:element name="FinisherUserName" type="xs:string" />
+          <xs:element name="ListId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Comment">
+        <xs:sequence>
+          <xs:element name="UserEMail" />
+          <xs:element name="UserName" type="xs:string" />
+          <xs:element name="Text" />
+          <xs:element name="CommentDateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Contractor">
+        <xs:sequence>
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Id" type="xs:string" />
+          <xs:element name="EMail" type="xs:string" />
+          <xs:element name="Represent" type="xs:string" />
+          <xs:element name="BoardId" nillable="true" type="xs:string" />
+          <xs:element name="INN" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ContractorList">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="10000" name="ContractorList" nillable="true" type="xs1:Contractor" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Nomenclature">
+        <xs:sequence>
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Id" type="xs:string" />
+          <xs:element name="Represent" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NomenclatureList">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="10000" name="NomencletureList" nillable="true" type="xs1:Nomenclature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddCardHistory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CardHistory" type="xs1:CardHistory" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCardHistoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetСontractors">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetСontractorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs1:ContractorList" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNomenclature">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNomenclatureResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs1:NomenclatureList" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetContractorsBoards">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FilledContractorList" type="xs1:ContractorList" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetContractorsBoardsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetContractorBoard">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Contractor" type="xs1:Contractor" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetContractorBoardResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean" />
+            <xs:element name="ErrorRepresent" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="AddCardHistoryRequestMessage">
+    <part name="parameters" element="tns:AddCardHistory" />
+  </message>
+  <message name="AddCardHistoryResponseMessage">
+    <part name="parameters" element="tns:AddCardHistoryResponse" />
+  </message>
+  <message name="GetСontractorsRequestMessage">
+    <part name="parameters" element="tns:GetСontractors" />
+  </message>
+  <message name="GetСontractorsResponseMessage">
+    <part name="parameters" element="tns:GetСontractorsResponse" />
+  </message>
+  <message name="GetNomenclatureRequestMessage">
+    <part name="parameters" element="tns:GetNomenclature" />
+  </message>
+  <message name="GetNomenclatureResponseMessage">
+    <part name="parameters" element="tns:GetNomenclatureResponse" />
+  </message>
+  <message name="SetContractorsBoardsRequestMessage">
+    <part name="parameters" element="tns:SetContractorsBoards" />
+  </message>
+  <message name="SetContractorsBoardsResponseMessage">
+    <part name="parameters" element="tns:SetContractorsBoardsResponse" />
+  </message>
+  <message name="SetContractorBoardRequestMessage">
+    <part name="parameters" element="tns:SetContractorBoard" />
+  </message>
+  <message name="SetContractorBoardResponseMessage">
+    <part name="parameters" element="tns:SetContractorBoardResponse" />
+  </message>
+  <portType name="itwts_TrelloSyncPortType">
+    <operation name="AddCardHistory">
+      <input message="tns:AddCardHistoryRequestMessage" />
+      <output message="tns:AddCardHistoryResponseMessage" />
+    </operation>
+    <operation name="GetСontractors">
+      <input message="tns:GetСontractorsRequestMessage" />
+      <output message="tns:GetСontractorsResponseMessage" />
+    </operation>
+    <operation name="GetNomenclature">
+      <input message="tns:GetNomenclatureRequestMessage" />
+      <output message="tns:GetNomenclatureResponseMessage" />
+    </operation>
+    <operation name="SetContractorsBoards">
+      <input message="tns:SetContractorsBoardsRequestMessage" />
+      <output message="tns:SetContractorsBoardsResponseMessage" />
+    </operation>
+    <operation name="SetContractorBoard">
+      <input message="tns:SetContractorBoardRequestMessage" />
+      <output message="tns:SetContractorBoardResponseMessage" />
+    </operation>
+  </portType>
+  <binding name="itwts_TrelloSyncSoapBinding" type="tns:itwts_TrelloSyncPortType">
+    <soapbind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddCardHistory">
+      <soapbind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:AddCardHistory" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetСontractors">
+      <soapbind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:GetСontractors" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNomenclature">
+      <soapbind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:GetNomenclature" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetContractorsBoards">
+      <soapbind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:SetContractorsBoards" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetContractorBoard">
+      <soapbind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:SetContractorBoard" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="itwts_TrelloSyncSoap12Binding" type="tns:itwts_TrelloSyncPortType">
+    <soap12bind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddCardHistory">
+      <soap12bind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:AddCardHistory" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetСontractors">
+      <soap12bind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:GetСontractors" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNomenclature">
+      <soap12bind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:GetNomenclature" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetContractorsBoards">
+      <soap12bind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:SetContractorsBoards" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetContractorBoard">
+      <soap12bind:operation soapAction="http://itworks24.ru/sisyphus/trellosync#itwts_TrelloSync:SetContractorBoard" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="itwts_TrelloSync">
+    <port name="itwts_TrelloSyncSoap" binding="tns:itwts_TrelloSyncSoapBinding">
+      <documentation>
+        <wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" conformsTo="http://ws-i.org/profiles/basic/1.1" />
+      </documentation>
+      <soapbind:address location="http://rd.itworks24.ru:8080/torg_is_2016/ws/itwts_TrelloSync.1cws" />
+    </port>
+    <port name="itwts_TrelloSyncSoap12" binding="tns:itwts_TrelloSyncSoap12Binding">
+      <soap12bind:address location="http://rd.itworks24.ru:8080/torg_is_2016/ws/itwts_TrelloSync.1cws" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,20 @@
+﻿<html xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <H2><a target="_blank"><href>https://trello.com/itworks24ru</href>
+            Организация </a></H2>
+    <p>
+          Всего карточек:
+          <b></b></p>
+    <p>
+          Всего выполненных карточек:
+          <b></b></p>
+    <p>
+          Всего просроченных карточек: <b></b></p>
+    <h3>Детализация по просроченным карточкам</h3>
+    <p><b></b><br><span></span><br><a target="_blank"><href></href></a><ul></ul>
+    </p>
+  </body>
+</html>

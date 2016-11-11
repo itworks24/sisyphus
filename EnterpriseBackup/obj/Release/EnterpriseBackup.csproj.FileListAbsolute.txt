@@ -1,0 +1,12 @@
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\BaseBackup.exe.config
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\BaseBackup.exe
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\BaseBackup.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\BaseBackup.exe.CodeAnalysisLog.xml
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\BaseBackup.exe.lastcodeanalysissucceeded
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\Common.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\bin\Release\Common.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\obj\Release\EnterpriseBackup.csprojResolveAssemblyReference.cache
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\obj\Release\Interop.V83.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\obj\Release\EnterpriseBackup.csproj.ResolveComReference.cache
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\obj\Release\BaseBackup.exe
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\AdminUnits\obj\Release\BaseBackup.pdb
