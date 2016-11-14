@@ -149,7 +149,7 @@ namespace Sisyphus.Settings
                         _extFields.Add(GetSettingNameGroupName(task, group), typeof(string));
                         _extFields.Add(GetSettingNameSendReportInterval(task, group), typeof(int));
                         _extFields.Add(GetSettingNameReportInformationLevel(task, group), typeof(EventLogEntryType));
-                        _extFields.Add(GetSettingNameMaxErrorCount(task, group), typeof(EventLogEntryType));
+                        _extFields.Add(GetSettingNameMaxErrorCount(task, group), typeof(uint));
                     }
                 }
                 return _extFields;

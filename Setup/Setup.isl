@@ -3944,6 +3944,7 @@
 		<row><td>_7F24DB4DA4624F9E97A9A7C2AB10BE54.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_87C3AB521ADC43159CFCED68AF1B2C9E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_8850829F86F54F23AE02D1AB506ED552.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_8A083003E28A4F268F96F4414F0512A3.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_8E95417465D44C4DA80F2AE7920C04DB.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_91C0E22AF89646068B4998DCBCB08D05.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_93FB534CC7E8424E8AD996EE680A6D5A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
@@ -4446,7 +4447,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>LAUNCHPROGRAM</td><td>1</td><td/></row>
 		<row><td>LAUNCHPROGRAMCOMPCODE</td><td>{5F69F1AF-597A-48FE-841F-BDB7019B60CE}</td><td/></row>
 		<row><td>LAUNCHPROGRAMFILEKEY</td><td>configapplication.primary_ou</td><td/></row>
-		<row><td>MSIFASTINSTALL</td><td>5</td><td/></row>
+		<row><td>MSIFASTINSTALL</td><td>7</td><td/></row>
 		<row><td>Manufacturer</td><td>##COMPANY_NAME##</td><td/></row>
 		<row><td>PIDKEY</td><td/><td/></row>
 		<row><td>PIDTemplate</td><td>12345&lt;###-%%%%%%%&gt;@@@@@</td><td/></row>
@@ -4474,9 +4475,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{450A7B69-1D5C-4A94-85F6-DD75593EAB46}</td><td/></row>
+		<row><td>ProductCode</td><td>{EED9E9EE-F1D3-49EC-9C71-0B4D06DB7C63}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0024</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0025</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
