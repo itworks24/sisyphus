@@ -51,6 +51,5 @@ C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\bin\Debug\Manatee.Trello.We
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\bin\Debug\Newtonsoft.Json.xml
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\bin\Debug\System.Web.Http.xml
-C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\obj\Debug\TrelloReport.csprojResolveAssemblyReference.cache
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\obj\Debug\TrelloReport.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\obj\Debug\TrelloReport.pdb

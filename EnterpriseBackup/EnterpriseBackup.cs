@@ -222,13 +222,13 @@ namespace Sisyphus
                     WindowStyle = ProcessWindowStyle.Hidden,
                     UseShellExecute = true,
                     FileName = "cmd.exe",
-                    Arguments = "taskkill /f /t /fi \"IMAGENAME eq 1cv8*\"",
+                    Arguments = "/c taskkill /f /t /fi \"IMAGENAME eq 1cv8*\"",
                     Verb = "runas"
                 };
                 process.StartInfo = startInfo;
                 process.Start();
                 process.WaitForExit(5000);
-                process.Kill();
+                if (!process.HasExited) process.Kill();
             }
             else
             {

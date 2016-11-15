@@ -44,7 +44,6 @@ namespace Sisyphus.Tasks
                 catch (Exception e)
                 {
                     CreateLogRecord(e);
-                    errorAccured = true;
                 }
                 lastErrorLogsCount = this.Count(t => t.IsErrorMessage);
                 maxErrorCount--;

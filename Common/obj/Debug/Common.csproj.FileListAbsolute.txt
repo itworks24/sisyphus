@@ -3,3 +3,8 @@ C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\bi
 C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\bin\Debug\Common.pdb
 C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\obj\Debug\Common.dll
 C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\obj\Debug\Common.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\Common\bin\Debug\Common.dll.config
+C:\Users\vladas.j\Source\Repos\sisyphus\Common\bin\Debug\Common.dll
+C:\Users\vladas.j\Source\Repos\sisyphus\Common\bin\Debug\Common.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\Common\obj\Debug\Common.dll
+C:\Users\vladas.j\Source\Repos\sisyphus\Common\obj\Debug\Common.pdb

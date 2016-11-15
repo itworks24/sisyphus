@@ -3933,6 +3933,7 @@
 		<row><td>_078F5F725A274134BA7F383A883D414D.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0A3C353C22744A70B2D9248C8A1F35BA.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0DD7F26233DB415CAEDD78898D743284.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_109DD8F2CE5E4DB6A79B857610EFDD3E.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_1DA9802A06F64845B4A8255DA80B5B71.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2CE2F380EC6B4F28A4CA0BD6E62ECE18.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_39A928FF6A6941AC96C37D1D0F54F48F.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
@@ -3940,6 +3941,7 @@
 		<row><td>_3C518F3A131248F091A23B7B5DCEDE0E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_4EE3204553CD4684ACB6D4979B14E0A8.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_6E74B70529524861833E209B1E39351B.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_7739C58D88AC4B7CB8038B615ED171F9.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_799081B7759E4386BC7648B58674A5FC.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7F24DB4DA4624F9E97A9A7C2AB10BE54.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_87C3AB521ADC43159CFCED68AF1B2C9E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3948,16 +3950,19 @@
 		<row><td>_8E95417465D44C4DA80F2AE7920C04DB.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_91C0E22AF89646068B4998DCBCB08D05.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_93FB534CC7E8424E8AD996EE680A6D5A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_9CA70B12A75A43CAA88D9C2F0DC7B93F.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_A7F359D3351D432983D4FCC751636BA6.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_AE5BA5387773461788412011F1602865.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_B4CA663D8BA54CB49BA262CDA0D109ED.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_B963ECEB5ADC4350BA5EB6496ADB377E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C1A7376A9F064EF1985E57FD769D67A5.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_D93D82A79FA84B41A29402245BDF2037.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_DCCDEE75AB1C4938A9D38E9D1B08A104.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_DD6ADA23DB834EE9A2E5A1D387DDEA25.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_E304A47DF2FC41C085935AD1B76FA4F5.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_E6CB6DB3823C49D0B6B618606C9E8AC2.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_EBF6D9EFFD5B4BBBAB7619EFB1FCFE4D.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_EE1D8C0EAD6F49279A32C6EE5EA72308.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_F86DC0CFCB334AA48C18642F96AFBA3A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FA5D53238DF74F7A98EFC86A9AD73DAF.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 	</table>
@@ -4475,9 +4480,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{EED9E9EE-F1D3-49EC-9C71-0B4D06DB7C63}</td><td/></row>
+		<row><td>ProductCode</td><td>{63C59C4A-40B1-4F70-8256-062AAF22BD44}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0025</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0029</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
