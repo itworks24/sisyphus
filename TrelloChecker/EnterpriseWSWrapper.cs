@@ -97,13 +97,19 @@ namespace Sisyphus
 
         public EnterpriseWsWrapper(TrelloCheckerSettings settings)
         {
+            var myCredentials = new CredentialCache
+            {
+                {
+                    new Uri(settings.EnterpriseWsPath), "Basic",
+                    new NetworkCredential(settings.EnterpriseUserName, settings.EnterprisePassword)
+                }
+            };
             _service = new itwts_TrelloSync
             {
                 SoapVersion = System.Web.Services.Protocols.SoapProtocolVersion.Soap12,
-                Credentials = new NetworkCredential(settings.EnterpriseUserName, settings.EnterprisePassword)
+                Credentials = myCredentials,
+                Url = settings.EnterpriseWsPath
             };
-            _service.ToString();
-            _service.Url = settings.EnterpriseWsPath;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace EnterpriseCreateUsersUnitTest
 {
@@ -9,6 +10,7 @@ namespace EnterpriseCreateUsersUnitTest
         [TestMethod]
         public void TestMethod1()
         {
+            Mock<>
         }
     }
 }

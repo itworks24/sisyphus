@@ -67,6 +67,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActiveDirectory\ActiveDirecotoryHelper.cs" />
+    <Compile Include="ActiveDirectory\ActiveDirectory.cs" />
     <Compile Include="CashSystems\CashSystem.cs" />
     <Compile Include="Common\CommonFunctions.cs" />
     <Compile Include="Common\Extensions.cs" />

@@ -89,21 +89,21 @@ namespace Sisyphus
                 }
             }
             if (settings.MoveToDirectory == string.Empty || settings.MoveToDirectory == settings.EmptyValue) return !errorAccured;
+
+            foreach (var file in sucessfullyTransferedFiles)
             {
-                foreach (var file in sucessfullyTransferedFiles)
+                try
                 {
-                    try
-                    {
-                        File.Move(file, Path.Combine(settings.MoveToDirectory, Path.GetFileName(file)));
-                        CreateLogRecord($"{file} successfully moved to folder {settings.MoveToDirectory}");
-                    }
-                    catch (Exception e)
-                    {
-                        CreateLogRecord(e);
-                        errorAccured = true;
-                    }
+                    File.Move(file, Path.Combine(settings.MoveToDirectory, Path.GetFileName(file)));
+                    CreateLogRecord($"{file} successfully moved to folder {settings.MoveToDirectory}");
+                }
+                catch (Exception e)
+                {
+                    CreateLogRecord(e);
+                    errorAccured = true;
                 }
             }
+
             return !errorAccured;
         }
     }

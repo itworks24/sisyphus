@@ -8,3 +8,4 @@ C:\Users\vladas.j\Source\Repos\sisyphus\Common\bin\Debug\Common.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\Common\bin\Debug\Common.pdb
 C:\Users\vladas.j\Source\Repos\sisyphus\Common\obj\Debug\Common.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\Common\obj\Debug\Common.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

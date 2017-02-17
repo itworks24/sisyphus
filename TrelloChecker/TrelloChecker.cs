@@ -99,6 +99,7 @@ namespace Sisyphus
             var sourceBoard = new Board(settings.SourceTrelloBoardShortlink);
             foreach (var contractor in contractorsArray.Where(c => !string.IsNullOrEmpty(c.BoardId) && BoardExists(c.BoardId)))
             {
+                var board = new Board(contractor.BoardId);
                 var boardId = new Board(contractor.BoardId).Id;
                 if (boardId == contractor.BoardId) continue;
                 contractor.BoardId = boardId;
