@@ -13,11 +13,14 @@ namespace Sisyphus.Settings
     {
         private const string SettingsFileName = "SisyphusSettings.ini";
 
-        public static readonly string FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                                                        "Sisyphus");
+        public static readonly string FolderPath = Path.Combine(new string[] {
+                                                                                Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
+                                                                                "itworks",
+                                                                                "Sisyphus"
+                                                                             });
 
         protected static readonly string SettingsFilePath = Path.Combine(FolderPath,
-                                                                 SettingsFileName);
+                                                                     SettingsFileName);
 
         protected bool NotAllSettingsExist;
         protected const string NotSetValue = "ValueNotSet";
@@ -62,14 +65,15 @@ namespace Sisyphus.Settings
         protected static void SaveSettingsIni(Ini settingsIni)
         {
             settingsIni.Save();
+            // TODO secure conf file
             try
             {
-                File.Encrypt(SettingsFilePath);
+                //SettingsFilePath;
             }
             catch (Exception e)
             {
                 return;
-            }    
+            }
         }
 
         protected bool SectionExist(string sectionName)
@@ -96,7 +100,7 @@ namespace Sisyphus.Settings
 
         public static string[] GetSeparatedSection(string section)
         {
-            if (!section.Contains('.')) return new string[] { section, "default"};
+            if (!section.Contains('.')) return new string[] { section, "default" };
             var splited = section.Split('.');
             return splited;
         }

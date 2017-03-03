@@ -88,14 +88,21 @@ namespace Sisyphus
                     return false;
                 }
             }
-            if (settings.MoveToDirectory == string.Empty || settings.MoveToDirectory == settings.EmptyValue) return !errorAccured;
+            if (!settings.DeleteFile || settings.MoveToDirectory == string.Empty || settings.MoveToDirectory == settings.EmptyValue) return !errorAccured;
 
             foreach (var file in sucessfullyTransferedFiles)
             {
                 try
                 {
-                    File.Move(file, Path.Combine(settings.MoveToDirectory, Path.GetFileName(file)));
-                    CreateLogRecord($"{file} successfully moved to folder {settings.MoveToDirectory}");
+                    if (settings.DeleteFile)
+                    {
+                        File.Delete(file);
+                    }
+                    else
+                    {
+                        File.Move(file, Path.Combine(settings.MoveToDirectory, Path.GetFileName(file)));
+                        CreateLogRecord($"{file} successfully moved to folder {settings.MoveToDirectory}");
+                    }
                 }
                 catch (Exception e)
                 {

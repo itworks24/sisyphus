@@ -85,7 +85,7 @@ namespace Sisyphus.Mail
 
             var messageBody = source == null ? body : body.FormatWith(source);
 
-            var mailMessage = new MailMessage(Settings.MailAddress,
+            var mailMessage = new MailMessage(Settings.UserName,
                 recepientAddress,
                 subject,
                 messageBody)

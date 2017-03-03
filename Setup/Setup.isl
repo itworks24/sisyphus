@@ -2459,7 +2459,7 @@
 		<row><td>DVD-18</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>15.83</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-5</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>4.38</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-9</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>7.95</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
-		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>3</td></row>
+		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108572</td><td/><td/><td/><td>2</td></row>
 		<row><td>WebDeployment</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>4</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>124941</td><td/><td/><td/><td>3</td></row>
 	</table>
 
@@ -2669,7 +2669,6 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
-		<row><td>_4B045C11_AD02_4168_B073_B675578D3EE7_</td><td>Microsoft .NET Framework 4.5 Web.prq</td><td/><td/><td/></row>
 	</table>
 
 	<table name="ISSetupType">
@@ -2703,7 +2702,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>itworks</td><td>0</td><td/><td>-584809268</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>itworks</td><td>0</td><td/><td>161862465</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-1834706133</td></row>
@@ -3808,12 +3807,12 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1834700245</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.itworks24.ru</td><td>0</td><td/><td>-584817460</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>ItWorks</td><td>0</td><td/><td>-1121699657</td></row>
-		<row><td>ID_STRING4</td><td>1033</td><td>Contact:  admin@itworks24.ru</td><td>0</td><td/><td>-1834687381</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.itworks24.ru</td><td>0</td><td/><td>161857013</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>itworks</td><td>0</td><td/><td>161862465</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>Contact:  support@itworks24.ru</td><td>0</td><td/><td>161848821</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>SisyphusShceduler</td><td>0</td><td/><td>-1834703406</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>Admin units shedulres service</td><td>0</td><td/><td>-1834698958</td></row>
-		<row><td>ID_STRING7</td><td>1033</td><td>http://www.itworks24.ru</td><td>0</td><td/><td>-584815412</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>http://www.itworks24.ru</td><td>0</td><td/><td>161859061</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1834702293</td></row>
 	</table>
 
@@ -3931,16 +3930,21 @@
 		<row><td>_00E76C4B7FEA4D1A94A7ECBD67EF533E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_01A34885A70943D9A18B78F01B0E918A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_078F5F725A274134BA7F383A883D414D.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_0A13950C09624A1E8D31A0C26AF8FE2A.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0A3C353C22744A70B2D9248C8A1F35BA.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0DD7F26233DB415CAEDD78898D743284.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_109DD8F2CE5E4DB6A79B857610EFDD3E.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_1DA9802A06F64845B4A8255DA80B5B71.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_2160DAA1B5A347C0BC45C78E6CF298F4.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2CE2F380EC6B4F28A4CA0BD6E62ECE18.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_39A928FF6A6941AC96C37D1D0F54F48F.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_3B9DAA8A7250435F96B2258BCC6689D2.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_3C518F3A131248F091A23B7B5DCEDE0E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_43FCDB2AE3FA42A8B2E64DDD3ADAA18C.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_4EE3204553CD4684ACB6D4979B14E0A8.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_548D7CE9BAE547449B2AFED42BEF8BB2.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_54F83DBCE3324265BBB9701048F987F3.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_6BBB45D5CE9B4FEF81FD5EE974535C7B.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_6E74B70529524861833E209B1E39351B.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7739C58D88AC4B7CB8038B615ED171F9.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_799081B7759E4386BC7648B58674A5FC.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
@@ -3952,12 +3956,14 @@
 		<row><td>_91C0E22AF89646068B4998DCBCB08D05.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_93FB534CC7E8424E8AD996EE680A6D5A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_9CA70B12A75A43CAA88D9C2F0DC7B93F.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_A1EB11A31931417EB36BA48F723B2239.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_A2CDAE4ADDC345F1BF3B0EDA97376AE8.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_A7F359D3351D432983D4FCC751636BA6.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_AE5BA5387773461788412011F1602865.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_B4CA663D8BA54CB49BA262CDA0D109ED.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_B963ECEB5ADC4350BA5EB6496ADB377E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C1A7376A9F064EF1985E57FD769D67A5.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_C95E19F193B0416BBC14136CF217ED46.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C98FA3C0AF1D42618090578661CFBD66.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_D93D82A79FA84B41A29402245BDF2037.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_DCCDEE75AB1C4938A9D38E9D1B08A104.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -4483,9 +4489,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{8B6AA9A6-6D88-49C9-A48E-30055CEFB027}</td><td/></row>
+		<row><td>ProductCode</td><td>{02E2D672-EC57-4C29-9BDF-75D010786B0A}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0033</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0034</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

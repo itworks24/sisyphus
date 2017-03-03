@@ -13,8 +13,13 @@ namespace Sisyphus.Logging
     public static class SqlLogger
     {
         private static readonly string DbFolderPath =
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "Sisyphus");
+            Path.Combine(new string[] {
+                                        Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
+                                        "itworks",
+                                        "Sisyphus",
+                                        "conf"
+                                      }
+                        );
 
         private static readonly string DbFileName = Path.Combine(DbFolderPath,
             "log.lite.db");

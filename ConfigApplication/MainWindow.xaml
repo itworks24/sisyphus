@@ -59,7 +59,7 @@
                         </StackPanel.DataContext>
                         <Label Margin="5 5 5 5" Content ="current usert:"/>
                         <Label Margin="5 5 5 5" Content ="{Binding CurrentUser, Mode=OneWay}" Background="{Binding BgColor, Converter={StaticResource ColorToBrushConverter}}"/>
-                        <Button Margin="5 5 5 5" Command="{Binding ChangeCurrentUserCommand}" Visibility="{Binding AccountMatch, Converter={StaticResource VisibleIfNotTrue}}">Auth</Button>
+                        <!--<Button Margin="5 5 5 5" Command="{Binding ChangeCurrentUserCommand}" Visibility="{Binding AccountMatch, Converter={StaticResource VisibleIfNotTrue}}">Auth</Button>-->
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -118,14 +118,14 @@
                         <TextBox Margin="5,0" Text="{Binding NewGroupName, Mode=TwoWay}" MinWidth="100px"></TextBox>
                         <Button Margin="5,0" Command="{Binding AddGroupCommand}">Add group</Button>
                     </StackPanel>
-                    <Button Margin="5 5 5 5" Command="{Binding EditConfigCommand}" IsEnabled="{Binding AccountMatch}"  Content="Edit config" ToolTipService.ShowOnDisabled="True">
+                    <Button Margin="5 5 5 5" Command="{Binding EditConfigCommand}" Content="Edit config" ToolTipService.ShowOnDisabled="True">
                         <Button.ToolTip>Service accaunt and current app accaunt doesn't match. Please relogin.</Button.ToolTip>
                     </Button>
-                    <Button Margin="5 5 5 5" Command="{Binding ReloadTasks}" IsEnabled="{Binding AccountMatch}"  Content="Reload config" ToolTipService.ShowOnDisabled="True">
+                    <Button Margin="5 5 5 5" Command="{Binding ReloadTasks}" Content="Reload config" ToolTipService.ShowOnDisabled="True">
                         <Button.ToolTip>Service accaunt and current app accaunt doesn't match. Please relogin.</Button.ToolTip>
                     </Button>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" IsEnabled="{Binding AccountMatch}">
+                <StackPanel Orientation="Vertical">
                     <xctk:PropertyGrid Margin="5 5 5 5" SelectedObject="{Binding ElementName=ComponentsTreeView, Path=SelectedItem.Settings}" MaxWidth="400" MaxHeight="600" ShowSearchBox="False" ShowSortOptions="False" ShowSummary="True" ShowTitle="False" ShowDescriptionByTooltip="True"/>
                     <Button Margin="5 5 5 5" Command="{Binding ElementName=ComponentsTreeView, Path=SelectedItem.SaveCommand}">Save</Button>
                 </StackPanel>
