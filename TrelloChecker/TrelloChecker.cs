@@ -41,8 +41,8 @@ namespace Sisyphus
 
     internal static class TrelloRequestCounter
     {
-        private const int TrelloInterval = 10;
-        private const int TrelloMaxRequestCountPerInterval = 40;
+        private const int TrelloInterval = 15;
+        private const int TrelloMaxRequestCountPerInterval = 50;
         private static int _trelloRequestCount;
         public static int TrelloPostCount
         {
@@ -66,6 +66,7 @@ namespace Sisyphus
 
         private Label CheckLabel(Board board, string labelName, LabelColor labelColor)
         {
+            TrelloRequestCounter.TrelloPostCount += 3;
             var label = board.Labels.FirstOrDefault(l => l.Name == labelName);
             return label ?? board.Labels.Add(labelName, labelColor);
         }
@@ -108,6 +109,7 @@ namespace Sisyphus
         {
             if (newBoard)
             {
+                TrelloRequestCounter.TrelloPostCount += 2;
                 var oldLists = dest.Lists.ToList();
                 foreach (var list in oldLists) list.IsArchived = true;
                 source.Preferences.Background = source.Preferences.Background;
@@ -115,13 +117,15 @@ namespace Sisyphus
             foreach (var list in source.Lists.Reverse())
             {
                 TrelloRequestCounter.TrelloPostCount++;
-                if (dest.Lists.All(l => l.Name != list.Name))
-                    dest.Lists.Add(list.Name);
+                if (!dest.Lists.All(l => l.Name != list.Name)) continue;
+                TrelloRequestCounter.TrelloPostCount += 1;
+                dest.Lists.Add(list.Name);
             }
         }
 
         private string GetBoardId(Board board)
         {
+            TrelloRequestCounter.TrelloPostCount += 1;
             var url = new Uri(board.Url);
             var boardShortId = url.Segments.Reverse().Skip(1).Take(1).First();
             return boardShortId;
@@ -175,7 +179,7 @@ namespace Sisyphus
 
             var organization = new Organization(settings.OrganizationID);
             var organizationMembers = organization.Members.Select(t => t.UserName).ToArray();
-            TrelloRequestCounter.TrelloPostCount += 1;
+            TrelloRequestCounter.TrelloPostCount += 2;
 
             SyncContractors(contractorsArray, organization, settings);
 
@@ -185,10 +189,10 @@ namespace Sisyphus
                 var label = CheckLabel(board, LabelName, LabelColor);
                 SyncLabels(board, nomenclatureArray.Select(t => t.Represent).ToArray(), LabelColor.Purple);
 
+                TrelloRequestCounter.TrelloPostCount += 3;
                 var listStruct = new ListsStruct(settings, board);
                 if (!listStruct.BoardHaveAllList)
                 {
-                    TrelloRequestCounter.TrelloPostCount += 3;
                     CreateLogRecord($"There are not enoght lists in board \"{board.Name}\" ({board.Url})", System.Diagnostics.EventLogEntryType.Error);
                     continue;
                 }
