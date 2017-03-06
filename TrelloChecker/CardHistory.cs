@@ -99,6 +99,7 @@ namespace Sisyphus
             var currentActionRecord = new ActionRecord();
             foreach (var action in actions)
             {
+                TrelloRequestCounter.TrelloPostCount += 1;
                 if (action.Data.ListBefore != null && action.Data.ListBefore.Id == list.Id)
                 {
                     currentActionRecord = new ActionRecord();
@@ -108,6 +109,7 @@ namespace Sisyphus
                 {
                     currentActionRecord.CloseRecord(action.Creator, action.CreationDate);
                     if (!organizationMembers.Contains(action.Creator.UserName)) continue;
+                    TrelloRequestCounter.TrelloPostCount += 1;
                     actionList.Add(currentActionRecord);
                 }
             }
@@ -125,11 +127,21 @@ namespace Sisyphus
             Creator = hasCreateAction ? createAction.Creator : null;
             CreationDateTime = hasCreateAction ? createAction.Date.GetValueOrDefault() : DateTime.Now;
 
+            TrelloRequestCounter.TrelloPostCount += 3;
+
             InWorkActionRecordList = FillActionRecordList(card.Actions.Filter(ActionType.UpdateCard).ToArray(), listsStruct.TrelloInWorkList, organizationMembers);
 
             Comments = new List<Comment>();
-            foreach (var comment in card.Comments.Where(c => organizationMembers.Contains(c.Creator.UserName) && (c.Data.Text.StartsWith("+") || c.Data.Text.StartsWith("-"))))
+            foreach (
+                var comment in
+                    card.Comments.Where(
+                        c =>
+                            organizationMembers.Contains(c.Creator.UserName) &&
+                            (c.Data.Text.StartsWith("+") || c.Data.Text.StartsWith("-"))))
+            {
+                TrelloRequestCounter.TrelloPostCount += 1;
                 Comments.Add(new Comment(comment));
+            }
         }
     }
 }

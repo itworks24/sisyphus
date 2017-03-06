@@ -43,3 +43,4 @@ C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\Interop.V83.d
 C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\EnterpriseBackup.csproj.ResolveComReference.cache
 C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\BaseBackup.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\BaseBackup.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\bin\Debug\SharpCompress.dll

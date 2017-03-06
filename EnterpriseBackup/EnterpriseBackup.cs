@@ -13,6 +13,8 @@ using Sisyphus.Settings;
 using Sisyphus.Tasks;
 using V83;
 using Settings;
+using SharpCompress.Common;
+using SharpCompress.Writers;
 
 namespace Sisyphus
 {
@@ -256,13 +258,57 @@ namespace Sisyphus
             return r.Replace(path, "");
         }
 
-        public void CreateBackup(string enterprisePath, string destinationPath, string fileNameFormat = "{name}_{date}",
+        struct FileNamesStruct
+        {
+            private string _fileNameFormat;
+            private string _destinationPath;
+            private string _resultFileExtension;
+            private BaseRepresent _currentBaseRepresent;
+
+            internal string FileName => RemoveIllegelPathSymbols(_fileNameFormat.FormatWith(_currentBaseRepresent));
+            internal string BackupFileName => System.IO.Path.Combine(_destinationPath, FileName + "." + _resultFileExtension);
+            internal string LogFileName => System.IO.Path.Combine(_destinationPath, FileName + ".log");
+            internal string DumpResultFileName => System.IO.Path.Combine(_destinationPath, FileName + "-dumpresult.log");
+            internal string LogDirectory => System.IO.Path.Combine(_destinationPath, "log");
+            public FileNamesStruct(string fileNameFormat, string destinationPath, BaseRepresent currentBaseRepresent, string resultFileExtension = "dt")
+            {
+                _fileNameFormat = fileNameFormat;
+                _destinationPath = destinationPath;
+                _currentBaseRepresent = currentBaseRepresent;
+                _resultFileExtension = resultFileExtension;
+            }
+        }
+
+        private static void CompressDirectorySharpCompress(string inFile, string outFile)
+        {
+            using (var zip = File.OpenWrite(outFile))
+            using (var zipWriter = WriterFactory.Open(zip, ArchiveType.Zip, new WriterOptions(CompressionType.LZMA)))
+            {
+                zipWriter.Write(System.IO.Path.GetFileName(inFile), inFile);
+            }
+        }
+
+        public void CreateArchiev(string destinationPath, string fileNameFormat = "{name}_{date}")
+        {
+            if (CurrentBaseType != BaseType.File) return;
+            var sourceFileName = System.IO.Path.Combine(BaseName, "1Cv8.1CD");
+            KickAllUsers();
+            var fileNamesStruct = new FileNamesStruct(fileNameFormat, destinationPath, this, "zip");
+            CompressDirectorySharpCompress(sourceFileName, fileNamesStruct.BackupFileName);
+        }
+
+        public void CreateBackup(string enterprisePath, bool useArchiev, string destinationPath, string fileNameFormat = "{name}_{date}",
             int whaitForBackUp = 1000 * 60 * 60 * 4)
         {
             if (CurrentBackUpState != BackupState.Queued)
                 return;
 
             LogResult = $"Starting backup process for base {BaseName}";
+
+            if (CurrentBaseType == BaseType.File && useArchiev)
+            {
+                CreateArchiev(destinationPath, fileNameFormat); return;
+            }
 
             var startInfo = new ProcessStartInfo();
             string backupFileName;
@@ -271,12 +317,13 @@ namespace Sisyphus
 
             try
             {
-                var fileName = RemoveIllegelPathSymbols(fileNameFormat.FormatWith(this));
-                var logDirectory = System.IO.Path.Combine(destinationPath, "log");
+                var fileNamesStruct = new FileNamesStruct(fileNameFormat, destinationPath, this);
+                var fileName = fileNamesStruct.FileName;
+                var logDirectory = fileNamesStruct.LogDirectory;
                 if (!Directory.Exists(logDirectory)) Directory.CreateDirectory(logDirectory);
-                backupFileName = System.IO.Path.Combine(destinationPath, fileName + ".dt");
-                logFileName = System.IO.Path.Combine(logDirectory, fileName + ".log");
-                dumpResultFileName = System.IO.Path.Combine(logDirectory, fileName + "-dumpresult.log");
+                backupFileName = fileNamesStruct.BackupFileName;
+                logFileName = fileNamesStruct.LogFileName;
+                dumpResultFileName = fileNamesStruct.DumpResultFileName;
                 var commandArgs =
                     $"DESIGNER /IBConnectionString{Path} /DumpIB \"{backupFileName}\" /DumpResult \"{dumpResultFileName}\" /Out \"{logFileName}\"";
 
@@ -438,16 +485,15 @@ namespace Sisyphus
                 process.WaitForExit(1000 * 60 * 5);
             }
 
-            var baseRepresentList = new List<BaseRepresent>();
+            var baseRepresentList = baseList.GetSections().Select(currentBase => new BaseRepresent(currentBase, baseList.GetValue("Connect", currentBase))).ToList();
 
-            foreach (var currentBase in baseList.GetSections())
-                baseRepresentList.Add(new BaseRepresent(currentBase, baseList.GetValue("Connect", currentBase)));
+            if (!Directory.Exists(options.DestinationPath)) Directory.CreateDirectory(options.DestinationPath);
 
             foreach (var currentBase in baseRepresentList)
             {
                 try
                 {
-                    currentBase.CreateBackup(options.EnterprisePath, options.DestinationPath, options.OutputFormat);
+                    currentBase.CreateBackup(options.EnterprisePath, options.UseArchiev, options.DestinationPath, options.OutputFormat);
                 }
                 catch (Exception e)
                 {
@@ -457,9 +503,8 @@ namespace Sisyphus
                 }
             }
 
-            if (options.UseLog)
-                foreach (var currentBase in baseRepresentList)
-                    currentBase.AddLogRecord(this);
+            foreach (var currentBase in baseRepresentList)
+                currentBase.AddLogRecord(this);
 
             return baseRepresentList.All(t => t.CurrentBackUpState != BaseRepresent.BackupState.Error);
         }

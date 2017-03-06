@@ -53,3 +53,4 @@ C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\bin\Debug\System.Net.Http.F
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\bin\Debug\System.Web.Http.xml
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\obj\Debug\TrelloReport.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\obj\Debug\TrelloReport.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\TrelloReport\obj\Debug\TrelloReport.csprojResolveAssemblyReference.cache

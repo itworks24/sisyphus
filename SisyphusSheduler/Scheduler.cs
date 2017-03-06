@@ -8,7 +8,16 @@ namespace Sisyphus
     {
         public Scheduler()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception e)
+            {
+                _serviceLogger.CreateLogRecord(e);
+                ReportMailSender.SendLog(_serviceLogger);
+                throw;
+            }
         }
 
         protected override void OnStart(string[] args)

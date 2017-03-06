@@ -48,19 +48,9 @@
                     <ComboBox Margin="5 5 5 5" SelectedItem="{Binding Path=ServiceStartupMode}" ItemsSource="{Binding Source={StaticResource EnumStartupMode}}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Visibility="{Binding ServiceInstalled, Converter={StaticResource BooleanToVisibilityConverter}}">
-                    <Label Margin="5 5 5 5" Content ="logon account:"/>
+                    <Label Margin="5 5 5 5" Content ="service account:"/>
                     <Label Margin="5 5 5 5" Content ="{Binding ServiceLogonAccount, Mode=OneWay}" />
                     <Button Margin="5 5 5 5" Command="{Binding ChangeLogonAccountCommand}">Change</Button>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Visibility="{Binding ServiceInstalled, Converter={StaticResource BooleanToVisibilityConverter}}">
-                    <StackPanel Orientation="Horizontal">
-                        <StackPanel.DataContext>
-                            <viewModels:LogonControlViewModel/>
-                        </StackPanel.DataContext>
-                        <Label Margin="5 5 5 5" Content ="current usert:"/>
-                        <Label Margin="5 5 5 5" Content ="{Binding CurrentUser, Mode=OneWay}" Background="{Binding BgColor, Converter={StaticResource ColorToBrushConverter}}"/>
-                        <!--<Button Margin="5 5 5 5" Command="{Binding ChangeCurrentUserCommand}" Visibility="{Binding AccountMatch, Converter={StaticResource VisibleIfNotTrue}}">Auth</Button>-->
-                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </TabItem>

@@ -16,7 +16,8 @@ namespace Sisyphus.Settings
         public static readonly string FolderPath = Path.Combine(new string[] {
                                                                                 Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
                                                                                 "itworks",
-                                                                                "Sisyphus"
+                                                                                "Sisyphus",
+                                                                                "conf"
                                                                              });
 
         protected static readonly string SettingsFilePath = Path.Combine(FolderPath,

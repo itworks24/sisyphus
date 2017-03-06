@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Manatee.Trello;
 using Manatee.Trello.ManateeJson;
 using Manatee.Trello.WebApi;
@@ -38,6 +39,24 @@ namespace Sisyphus
         }
     }
 
+    internal static class TrelloRequestCounter
+    {
+        private const int TrelloInterval = 10;
+        private const int TrelloMaxRequestCountPerInterval = 40;
+        private static int _trelloRequestCount;
+        public static int TrelloPostCount
+        {
+            get { return _trelloRequestCount; }
+            set
+            {
+                _trelloRequestCount += value;
+                if (_trelloRequestCount <= TrelloMaxRequestCountPerInterval) return;
+                Thread.Sleep(TrelloInterval * 1000);
+                _trelloRequestCount = 0;
+            }
+        }
+    }
+
     public partial class TrelloChecker
     {
         private string LabelName { get; } = "Dipper checks this";
@@ -56,27 +75,33 @@ namespace Sisyphus
             var boardLabels = board.Labels.Select(l => new { l.Name, l.Color, l.Id }).Where(l => l.Color == labelColor).ToArray();
             var unwantedLabels = boardLabels.Where(l => newLabelNameCollection.All(c => c != l.Name)).ToArray();
             var newLabels = newLabelNameCollection.Where(c => boardLabels.All(l => l.Name != c)).ToArray();
+            TrelloRequestCounter.TrelloPostCount += boardLabels.Count() + unwantedLabels.Count() + newLabels.Count();
             foreach (var missedLabel in unwantedLabels)
             {
+                TrelloRequestCounter.TrelloPostCount++;
                 board.Labels.Delete(missedLabel.Id);
             }
             foreach (var label in newLabels)
             {
+                TrelloRequestCounter.TrelloPostCount += 3;
                 CheckLabel(board, label, labelColor);
             }
         }
 
         private bool BoardExists(string id)
         {
+            Board board;
             try
             {
-                var board = new Board(id);
-                return !board.IsClosed.GetValueOrDefault();
+                TrelloRequestCounter.TrelloPostCount++;
+                board = new Board(id);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                CreateLogRecord(e);
                 return false;
             }
+            return !board.IsClosed.GetValueOrDefault();
         }
 
         private void CloneBoard(Board source, Board dest, bool newBoard = false)
@@ -88,29 +113,45 @@ namespace Sisyphus
                 source.Preferences.Background = source.Preferences.Background;
             }
             foreach (var list in source.Lists.Reverse())
+            {
+                TrelloRequestCounter.TrelloPostCount++;
                 if (dest.Lists.All(l => l.Name != list.Name))
                     dest.Lists.Add(list.Name);
+            }
+        }
+
+        private string GetBoardId(Board board)
+        {
+            var url = new Uri(board.Url);
+            var boardShortId = url.Segments.Reverse().Skip(1).Take(1).First();
+            return boardShortId;
         }
 
         private void SyncContractors(Contractor[] contractorsArray, Organization currentOrganiztion, TrelloCheckerSettings settings)
         {
-            var emptyBoardContractors =
-                contractorsArray.Where(c => string.IsNullOrEmpty(c.BoardId) || !BoardExists(c.BoardId));
+            var emptyBoardContractors = new List<Contractor>();
             var sourceBoard = new Board(settings.SourceTrelloBoardShortlink);
-            foreach (var contractor in contractorsArray.Where(c => !string.IsNullOrEmpty(c.BoardId) && BoardExists(c.BoardId)))
+            foreach (var contractor in contractorsArray)
             {
-                var board = new Board(contractor.BoardId);
-                var boardId = new Board(contractor.BoardId).Id;
-                if (boardId == contractor.BoardId) continue;
-                contractor.BoardId = boardId;
+                if (!BoardExists(contractor.BoardId))
+                {
+                    emptyBoardContractors.Add(contractor);
+                    continue;
+                }
+                TrelloRequestCounter.TrelloPostCount += 3;
+                var boardShortId = GetBoardId(new Board(contractor.BoardId));
+                if (boardShortId == contractor.BoardId) continue;
+                contractor.BoardId = boardShortId;
                 EnterpriseWsWrapper.SetContractor(contractor);
             }
             foreach (var contractor in emptyBoardContractors)
             {
+                TrelloRequestCounter.TrelloPostCount += 3;
                 var newContractorsBoard =
                     currentOrganiztion.Boards.Add($"{settings.BoardNamePrefix} {contractor.Represent}");
+                newContractorsBoard.Preferences.PermissionLevel = BoardPermissionLevel.Org;
                 CloneBoard(sourceBoard, newContractorsBoard, true);
-                contractor.BoardId = newContractorsBoard.Id;
+                contractor.BoardId = GetBoardId(newContractorsBoard);
                 if (!EnterpriseWsWrapper.SetContractor(contractor))
                     newContractorsBoard.IsClosed = true;
             }
@@ -134,6 +175,7 @@ namespace Sisyphus
 
             var organization = new Organization(settings.OrganizationID);
             var organizationMembers = organization.Members.Select(t => t.UserName).ToArray();
+            TrelloRequestCounter.TrelloPostCount += 1;
 
             SyncContractors(contractorsArray, organization, settings);
 
@@ -146,17 +188,22 @@ namespace Sisyphus
                 var listStruct = new ListsStruct(settings, board);
                 if (!listStruct.BoardHaveAllList)
                 {
+                    TrelloRequestCounter.TrelloPostCount += 3;
                     CreateLogRecord($"There are not enoght lists in board \"{board.Name}\" ({board.Url})", System.Diagnostics.EventLogEntryType.Error);
                     continue;
                 }
 
                 foreach (var card in listStruct.TrelloDoneList.Cards.Where(c => !c.IsArchived.GetValueOrDefault()))
                 {
+                    TrelloRequestCounter.TrelloPostCount += 1;
                     if (card.Labels.Count(l => l.Name == LabelName) > 0) continue;
                     var cardHistory = new CardHistory(listStruct, card, organizationMembers);
                     var errorRepresent = string.Empty;
                     if (EnterpriseWsWrapper.AddCardHistory(cardHistory, ref errorRepresent))
+                    {
+                        TrelloRequestCounter.TrelloPostCount += 1;
                         card.Labels.Add(label);
+                    }
                     else
                         CreateLogRecord(errorRepresent, System.Diagnostics.EventLogEntryType.Error);
                 }

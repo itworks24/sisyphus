@@ -122,3 +122,4 @@ C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Release\ConfigAppl
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Release\ConfigApplication.csproj.GenerateResource.Cache
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Release\ConfigApplication.exe
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Release\ConfigApplication.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SharpCompress.dll
