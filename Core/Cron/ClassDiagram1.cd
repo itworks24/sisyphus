@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Rlc.Cron.CronBuilder">
+    <Position X="0.5" Y="5.25" Width="4.5" />
+    <NestedTypes>
+      <Enum Name="Rlc.Cron.CronBuilder.DayOfWeek" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CronBuilder.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EABAAAAAAAACAAAAAAAIAAABAAAqAAAACAAAAAAAAAA=</HashCode>
+      <FileName>CronBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.CronEntryBase" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAgAAAAAAQgAQQAAAAAAAAAAIAAQAAAgAAAAAAA=</HashCode>
+      <FileName>CronEntryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Rlc.Cron.CronEntryException" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CronEntryException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.CronExpression">
+    <Position X="0.5" Y="8.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAEQAAAAAAQAAAAAAAEQAAAAAAAAAA=</HashCode>
+      <FileName>CronExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.CronObject">
+    <Position X="9.25" Y="7" Width="4.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="Rlc.Cron.CronObject.CronEvent">
+        <TypeIdentifier>
+          <NewMemberFileName>CronObject.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACACAAAAgCAAAAAgBABBAAAAAAgAACAIIAQUAABAAgA=</HashCode>
+      <FileName>CronObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.CronObjectDataContext">
+    <Position X="5.75" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CronObjectDataContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.CronSchedule">
+    <Position X="6.75" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAACAAQAAAAEAAAAAAAEAAAAAAIAAgAIIAAAAAA=</HashCode>
+      <FileName>CronSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.DaysCronEntry" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DaysCronEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.DaysOfWeekCronEntry" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DaysOfWeekCronEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.HoursCronEntry" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="Rlc.Cron.CronEntryBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="1.062" />
+        <Point X="5.75" Y="1.375" />
+        <Point X="5.688" Y="1.375" />
+        <Point X="5.688" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HoursCronEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.MinutesCronEntry" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MinutesCronEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rlc.Cron.MonthsCronEntry" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonthsCronEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Rlc.Cron.ICronEntry" Collapsed="true">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAQgAAAAAAAAAAAAAAAAQAAAgAAAAAAA=</HashCode>
+      <FileName>ICronEntry.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

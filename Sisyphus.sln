@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseBackup", "EnterpriseBackup\EnterpriseBackup.csproj", "{2C314C89-0C09-4FBB-9E79-E5DB1F432BDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseBackup", "Tasks\EnterpriseBackup\EnterpriseBackup.csproj", "{2C314C89-0C09-4FBB-9E79-E5DB1F432BDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckImapConnection", "CheckImapConnection\CheckImapConnection.csproj", "{8BA64265-9289-4A3A-9158-F10AC10AE838}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckImapConnection", "Tasks\CheckImapConnection\CheckImapConnection.csproj", "{8BA64265-9289-4A3A-9158-F10AC10AE838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B7F2182C-37E6-4FA6-B1B2-9E5C500CC576}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Core\Common\Common.csproj", "{B7F2182C-37E6-4FA6-B1B2-9E5C500CC576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cron", "Cron\Cron.csproj", "{669CCD90-EBB4-438B-A31A-A16030214B61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cron", "Core\Cron\Cron.csproj", "{669CCD90-EBB4-438B-A31A-A16030214B61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisyphusScheduler", "SisyphusSheduler\SisyphusScheduler.csproj", "{DC18E5FA-3C4C-4898-8093-F4DE505E064C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisyphusScheduler", "Core\SisyphusSheduler\SisyphusScheduler.csproj", "{DC18E5FA-3C4C-4898-8093-F4DE505E064C}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{34B323C9-C9C3-4A7C-8341-7786CC7256B9}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -26,15 +26,15 @@ Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj
 		{DC18E5FA-3C4C-4898-8093-F4DE505E064C} = {DC18E5FA-3C4C-4898-8093-F4DE505E064C}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigApplication", "ConfigApplication\ConfigApplication.csproj", "{26E260E3-AB62-4BB2-AFAC-5788A9BB1211}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigApplication", "GUI\ConfigApplication\ConfigApplication.csproj", "{26E260E3-AB62-4BB2-AFAC-5788A9BB1211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTask", "SampleTask\SampleTask.csproj", "{756F6A58-7996-4B8B-8CB6-61C69E8D2F8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTask", "Tasks\SampleTask\SampleTask.csproj", "{756F6A58-7996-4B8B-8CB6-61C69E8D2F8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSender", "BackupSender\BackupSender.csproj", "{E77158F7-209F-4555-8958-86E820BACAC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSender", "Tasks\BackupSender\BackupSender.csproj", "{E77158F7-209F-4555-8958-86E820BACAC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControll", "ServiceControll\ServiceControll.csproj", "{D4C64F83-62AF-490A-888B-04C4FD18AD18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControll", "Core\ServiceControll\ServiceControll.csproj", "{D4C64F83-62AF-490A-888B-04C4FD18AD18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloChecker", "TrelloChecker\TrelloChecker.csproj", "{57A750D9-36B6-410B-8808-29CABE955842}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloChecker", "Tasks\TrelloChecker\TrelloChecker.csproj", "{57A750D9-36B6-410B-8808-29CABE955842}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{30E27055-007D-4FA8-BEF5-88B457B4592B}"
 EndProject
@@ -42,15 +42,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6F21748D-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{4E8F9D99-EF83-44EF-8DE4-F18ADB499F0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLLogger", "SQLLogger\SQLLogger.csproj", "{AC9A090A-EB11-48E3-8A88-E9DE45BD4B06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLLogger", "Core\SQLLogger\SQLLogger.csproj", "{AC9A090A-EB11-48E3-8A88-E9DE45BD4B06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCore", "TaskCore\TaskCore.csproj", "{6EECA358-C495-40C7-A5EA-445FBF0FB710}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCore", "Core\TaskCore\TaskCore.csproj", "{6EECA358-C495-40C7-A5EA-445FBF0FB710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloReport", "TrelloReport\TrelloReport.csproj", "{5005A377-0A59-4E18-9E8B-DE05BEC67E67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloReport", "Tasks\TrelloReport\TrelloReport.csproj", "{5005A377-0A59-4E18-9E8B-DE05BEC67E67}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{842E2C17-5EF5-45B3-AE65-209837A9B372}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.ActiveDirectory", "Core.Common.ActiveDirectory\Core.Common.ActiveDirectory.csproj", "{483A7938-0F07-44AD-9B59-9AE79117507C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.ActiveDirectory", "UnitTests\Core.Common.ActiveDirectory\Core.Common.ActiveDirectory.csproj", "{483A7938-0F07-44AD-9B59-9AE79117507C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

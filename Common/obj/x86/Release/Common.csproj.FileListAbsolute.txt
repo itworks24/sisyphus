@@ -1,5 +1,0 @@
-C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\bin\x86\Release\Common.dll.config
-C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\bin\x86\Release\Common.dll
-C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\bin\x86\Release\Common.pdb
-C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\obj\x86\Release\Common.dll
-C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Common\obj\x86\Release\Common.pdb

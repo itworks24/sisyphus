@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?xml-stylesheet type="text/xsl" href="is.xsl" ?>
 <!DOCTYPE msi [
    <!ELEMENT msi   (summary,table*)>
@@ -2375,28 +2375,28 @@
 		<col def="S255">Value</col>
 		<col def="S255">TestValue</col>
 		<col def="i4">Type</col>
-		<row><td>BackupSender</td><td>BackupSender\BackupSender.csproj</td><td/><td>2</td></row>
-		<row><td>CheckImapConnection</td><td>CheckImapConnection\CheckImapConnection.csproj</td><td/><td>2</td></row>
-		<row><td>Common</td><td>Common\Common.csproj</td><td/><td>2</td></row>
+		<row><td>BackupSender</td><td>Tasks\BackupSender\BackupSender.csproj</td><td/><td>2</td></row>
+		<row><td>CheckImapConnection</td><td>Tasks\CheckImapConnection\CheckImapConnection.csproj</td><td/><td>2</td></row>
+		<row><td>Common</td><td>Core\Common\Common.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
-		<row><td>ConfigApplication</td><td>ConfigApplication\ConfigApplication.csproj</td><td/><td>2</td></row>
-		<row><td>Cron</td><td>Cron\Cron.csproj</td><td/><td>2</td></row>
-		<row><td>EnterpriseBackup</td><td>EnterpriseBackup\EnterpriseBackup.csproj</td><td/><td>2</td></row>
+		<row><td>ConfigApplication</td><td>GUI\ConfigApplication\ConfigApplication.csproj</td><td/><td>2</td></row>
+		<row><td>Cron</td><td>Core\Cron\Cron.csproj</td><td/><td>2</td></row>
+		<row><td>EnterpriseBackup</td><td>Tasks\EnterpriseBackup\EnterpriseBackup.csproj</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
 		<row><td>Installer</td><td>Installer\Installer.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
-		<row><td>SampleTask</td><td>SampleTask\SampleTask.csproj</td><td/><td>2</td></row>
-		<row><td>ServiceControll</td><td>Evelated\ServiceControll.csproj</td><td/><td>2</td></row>
-		<row><td>ServiceControll1</td><td>ServiceControll\ServiceControll.csproj</td><td/><td>2</td></row>
+		<row><td>SampleTask</td><td>Tasks\SampleTask\SampleTask.csproj</td><td/><td>2</td></row>
+		<row><td>ServiceControll</td><td>Core\Evelated\ServiceControll.csproj</td><td/><td>2</td></row>
+		<row><td>ServiceControll1</td><td>Core\ServiceControll\ServiceControll.csproj</td><td/><td>2</td></row>
 		<row><td>Settings</td><td>Settings\Settings.csproj</td><td/><td>2</td></row>
-		<row><td>SisyphusScheduler</td><td>SisyphusScheduler\SisyphusScheduler.csproj</td><td/><td>2</td></row>
-		<row><td>SisyphusScheduler1</td><td>SisyphusSheduler\SisyphusScheduler.csproj</td><td/><td>2</td></row>
+		<row><td>SisyphusScheduler</td><td>Core\SisyphusScheduler\SisyphusScheduler.csproj</td><td/><td>2</td></row>
+		<row><td>SisyphusScheduler1</td><td>Core\SisyphusSheduler\SisyphusScheduler.csproj</td><td/><td>2</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
-		<row><td>TrelloChecker</td><td>TrelloChecker\TrelloChecker.csproj</td><td/><td>2</td></row>
-		<row><td>TrelloReport</td><td>TrelloReport\TrelloReport.csproj</td><td/><td>2</td></row>
+		<row><td>TrelloChecker</td><td>Tasks\TrelloChecker\TrelloChecker.csproj</td><td/><td>2</td></row>
+		<row><td>TrelloReport</td><td>Tasks\TrelloReport\TrelloReport.csproj</td><td/><td>2</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
 	</table>
 

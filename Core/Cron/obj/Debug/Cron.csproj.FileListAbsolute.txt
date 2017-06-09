@@ -1,0 +1,13 @@
+C:\Code\DOTNET\Cron\Cron\obj\Debug\ResolveAssemblyReference.cache
+C:\Code\DOTNET\Cron\Cron\bin\Debug\Rlc.Cron.dll
+C:\Code\DOTNET\Cron\Cron\bin\Debug\Rlc.Cron.pdb
+C:\Code\DOTNET\Cron\Cron\obj\Debug\Rlc.Cron.dll
+C:\Code\DOTNET\Cron\Cron\obj\Debug\Rlc.Cron.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\bin\Debug\Rlc.Cron.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\bin\Debug\Rlc.Cron.pdb
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\obj\Debug\Rlc.Cron.dll
+C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\Cron\obj\Debug\Rlc.Cron.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\Cron\bin\Debug\Rlc.Cron.dll
+C:\Users\vladas.j\Source\Repos\sisyphus\Cron\bin\Debug\Rlc.Cron.pdb
+C:\Users\vladas.j\Source\Repos\sisyphus\Cron\obj\Debug\Rlc.Cron.dll
+C:\Users\vladas.j\Source\Repos\sisyphus\Cron\obj\Debug\Rlc.Cron.pdb
