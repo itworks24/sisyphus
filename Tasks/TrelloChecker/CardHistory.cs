@@ -23,15 +23,11 @@ namespace Sisyphus
 
             public string BeginerId => Beginer?.Id != null ? Beginer.Id : string.Empty;
 
-            public string BeginerUserName => Beginer?.UserName != null ? Beginer.UserName : string.Empty;
-
-            public string BeginerEMail => Beginer?.Email != null ? Beginer.Email : string.Empty;
+            public string BeginerUserName => Beginer?.UserName != null ? Beginer.UserName : string.Empty;       
 
             public string FinisherId => Finisher?.Id != null ? Finisher.Id : string.Empty;
 
             public string FinisherUserName => Finisher?.UserName != null ? Finisher.UserName : string.Empty;
-
-            public string FinisherEMail => Finisher?.Email != null ? Finisher.Email : string.Empty;
 
             public string ListId => List?.Id != null ? List.Id : string.Empty;
 
@@ -55,7 +51,6 @@ namespace Sisyphus
         {
             private Member Author { get; set; }
             public DateTime CommentDateTime { get; set; }
-            public string AuthorEMail => Author?.Email != null ? Author.Email : string.Empty;
             public string AuthorUserName => Author?.UserName != null ? Author.UserName : string.Empty;
             public string Text { get; set; }
 
@@ -77,8 +72,6 @@ namespace Sisyphus
         public string CardId => Card != null ? Card.Id : string.Empty;
 
         public string CreatorId => Creator != null ? Creator.Id : string.Empty;
-
-        public string CreatorEMail => Creator?.Email != null ? Creator.Email : string.Empty;
 
         public DateTime CreationDateTime { get; }
 

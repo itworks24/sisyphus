@@ -30,3 +30,5 @@ C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloChecker\bin\Release\LiteDB.
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloChecker\obj\Release\TrelloChecker.dll
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloChecker\obj\Release\TrelloChecker.pdb
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloChecker\obj\Release\TrelloChecker.XmlSerializers.dll
+C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloChecker\bin\Release\Manatee.Trello.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloChecker\bin\Release\Manatee.Trello.xml

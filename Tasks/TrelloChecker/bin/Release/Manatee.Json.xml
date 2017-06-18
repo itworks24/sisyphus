@@ -382,6 +382,13 @@
             </returns>
             <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:System.Object"/>. </param><filterpriority>2</filterpriority>
         </member>
+        <member name="M:Manatee.Json.JsonValue.Equals(Manatee.Json.JsonValue)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
         <member name="M:Manatee.Json.JsonValue.GetHashCode">
             <summary>
             Serves as a hash function for a particular type. 
@@ -1674,6 +1681,11 @@
             <param name="root">The root schema serialized to a <see cref="T:Manatee.Json.JsonValue"/>.  Used internally for resolving references.</param>
             <returns>The results of the validation.</returns>
         </member>
+        <member name="P:Manatee.Json.Schema.IJsonSchema.DocumentPath">
+            <summary>
+            Identifies the physical path for the schema document (may be different than the ID).
+            </summary>
+        </member>
         <member name="T:Manatee.Json.Schema.IJsonSchemaDependency">
             <summary>
             Defines properties and methods required to represent dependencies within JSON Schema.
@@ -1884,6 +1896,11 @@
             Gets other, non-schema-defined properties.
             </summary>
         </member>
+        <member name="P:Manatee.Json.Schema.JsonSchema.DocumentPath">
+            <summary>
+            Identifies the physical path for the schema document (may be different than the ID).
+            </summary>
+        </member>
         <member name="M:Manatee.Json.Schema.JsonSchema.Validate(Manatee.Json.JsonValue,Manatee.Json.JsonValue)">
             <summary>
             Validates a <see cref="T:Manatee.Json.JsonValue"/> against the schema.
@@ -1940,18 +1957,12 @@
             Defines methods to build schema objects.
             </summary>
         </member>
-        <member name="M:Manatee.Json.Schema.JsonSchemaFactory.Load(System.String)">
-            <summary>
-            Returns
-            </summary>
-            <param name="path"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Manatee.Json.Schema.JsonSchemaFactory.FromJson(Manatee.Json.JsonValue)">
+        <member name="M:Manatee.Json.Schema.JsonSchemaFactory.FromJson(Manatee.Json.JsonValue,System.Uri)">
             <summary>
             Creates a schema object from its JSON representation.
             </summary>
             <param name="json">A JSON object.</param>
+            <param name="documentPath">The path to the physical location to this document</param>
             <returns>A schema object</returns>
         </member>
         <member name="M:Manatee.Json.Schema.JsonSchemaFactory.FromType``1">
@@ -2052,6 +2063,12 @@
             Defines whether this property is required.
             </summary>
         </member>
+        <member name="P:Manatee.Json.Schema.JsonSchemaPropertyDefinition.IsHidden">
+            <summary>
+            Defines whether this property should be hidden from the schema Properties collection when serialized.
+            This is useful when the property is required but not included in the Properties collection.
+            </summary>
+        </member>
         <member name="M:Manatee.Json.Schema.JsonSchemaPropertyDefinition.#ctor(System.String)">
             <summary>
             Creates a new instance of the <see cref="T:Manatee.Json.Schema.JsonSchemaPropertyDefinition"/> class.
@@ -2128,7 +2145,7 @@
             Exposes the schema at the references location.
             </summary>
             <remarks>
-            The <see cref="M:Manatee.Json.Schema.JsonSchemaReference.Resolve(Manatee.Json.JsonValue)"/> method must first be called.
+            The <see cref="M:Manatee.Json.Schema.JsonSchemaReference._Resolve(Manatee.Json.JsonValue)"/> method must first be called.
             </remarks>
         </member>
         <member name="M:Manatee.Json.Schema.JsonSchemaReference.#ctor(System.String)">
@@ -2302,6 +2319,11 @@
         <member name="T:Manatee.Json.Schema.JsonSchemaCollection">
             <summary>
             Represents a collection of schemata.
+            </summary>
+        </member>
+        <member name="P:Manatee.Json.Schema.JsonSchemaCollection.DocumentPath">
+            <summary>
+            Identifies the physical path for the schema document (may be different than the ID).
             </summary>
         </member>
         <member name="M:Manatee.Json.Schema.JsonSchemaCollection.Validate(Manatee.Json.JsonValue,Manatee.Json.JsonValue)">
@@ -3060,6 +3082,19 @@
             <param name="source">The source JSON.</param>
             <param name="template">A template defining the transformation.</param>
             <returns>The transformed JSON.</returns>
+        </member>
+        <member name="M:Manatee.Json.UriExtensions.GetParentUri(System.Uri)">
+            <summary>
+            Gets the Uri to the parent object.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri" /> of a resource, for which the parent Uri should be retrieved.</param>
+            <returns>
+            The parent <see cref="T:System.Uri" />.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">uri</exception>
+            <exception cref="T:System.InvalidOperationException">Cannot get parent of root</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is <c>null</c>.</exception>
+            <exception cref="T:System.InvalidOperationException"><paramref name="uri" /> has no parent, it refers to a root resource.</exception>
         </member>
         <member name="T:Manatee.Json.XmlExtensions">
             <summary>

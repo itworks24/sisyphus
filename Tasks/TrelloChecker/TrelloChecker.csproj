@@ -53,19 +53,20 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Manatee.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=c267f67a39449c62, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Manatee.Json.5.1.1\lib\net45\Manatee.Json.dll</HintPath>
+    <Reference Include="Manatee.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=c267f67a39449c62, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Manatee.Json.6.0.3\lib\net45\Manatee.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Manatee.Trello">
-      <HintPath>.\Manatee.Trello.dll</HintPath>
+    <Reference Include="Manatee.Trello, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f502fcc17fc907d6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Manatee.Trello.1.18.2\lib\net45\Manatee.Trello.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Manatee.Trello.ManateeJson, Version=0.0.0.0, Culture=neutral, PublicKeyToken=fbb8336f4f768592, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Manatee.Trello.ManateeJson.1.5.3\lib\net45\Manatee.Trello.ManateeJson.dll</HintPath>
+    <Reference Include="Manatee.Trello.ManateeJson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbb8336f4f768592, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Manatee.Trello.ManateeJson.1.8.1\lib\net45\Manatee.Trello.ManateeJson.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Manatee.Trello.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f7ae00e0424b8d0e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Manatee.Trello.WebApi.1.0.4\lib\net45\Manatee.Trello.WebApi.dll</HintPath>
+      <HintPath>..\..\packages\Manatee.Trello.WebApi.1.1.0.1\lib\net45\Manatee.Trello.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

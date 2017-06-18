@@ -9,11 +9,11 @@ namespace Sisyphus
         [Category("Trello auth")]
         [DisplayName("Trello app key")]
         [Description("To get app token go to https://trello.com/app-key")]
-        public string TrelloAppKey { get; set; } = "";
+        public string TrelloAppKey { get; set; } = "c2e2223a5a17c1bf35330c0e43465098";
 
         [Category("Trello auth")]
         [DisplayName("Trello user token")]
-        [Description("To get app token go to https://trello.com/1/authorize?expiration=never&name=SisyphusTrelloCheckerDipper&key=REPLACEWITHYOURKEY")]
+        [Description("To get app token go to https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=SisyphusTrelloCardReminder&key=c2e2223a5a17c1bf35330c0e43465098")]
         public string TrelloUserToken { get; set; } = "";
 
         [Category("Trello boards")]

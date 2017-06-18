@@ -1,43 +1,43 @@
-﻿Installing assembly 'C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
+﻿Uninstalling assembly 'C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe'.
 Affected parameters are:
    logtoconsole = 
-   logfile = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
-   assemblypath = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe
+   logfile = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog
+   assemblypath = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe
+Removing EventLog source SisyphusScheduler.
+Service SisyphusScheduler is being removed from the system...
+Service SisyphusScheduler was successfully removed from the system.
+Installing assembly 'C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog
+   assemblypath = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe
 Installing service SisyphusScheduler...
 Service SisyphusScheduler has been successfully installed.
 Creating EventLog source SisyphusScheduler in log Application...
-Committing assembly 'C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
+Committing assembly 'C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe'.
 Affected parameters are:
    logtoconsole = 
-   logfile = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
-   assemblypath = C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe
-Uninstalling assembly 'C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
+   logfile = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog
+   assemblypath = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe
+Installing assembly 'C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe'.
 Affected parameters are:
    logtoconsole = 
-   logfile = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
-   assemblypath = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe
+   logfile = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog
+   assemblypath = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe
+Installing service SisyphusScheduler...
+Service SisyphusScheduler has been successfully installed.
+Creating EventLog source SisyphusScheduler in log Application...
+Committing assembly 'C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog
+   assemblypath = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe
+Uninstalling assembly 'C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog
+   assemblypath = C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe
 Removing EventLog source SisyphusScheduler.
 Service SisyphusScheduler is being removed from the system...
 Service SisyphusScheduler was successfully removed from the system.
 Attempt to stop service SisyphusScheduler.
-Installing assembly 'C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
-Affected parameters are:
-   logtoconsole = 
-   logfile = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
-   assemblypath = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe
-Installing service SisyphusScheduler...
-Service SisyphusScheduler has been successfully installed.
-Creating EventLog source SisyphusScheduler in log Application...
-Committing assembly 'C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
-Affected parameters are:
-   logtoconsole = 
-   logfile = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
-   assemblypath = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe
-Uninstalling assembly 'C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe'.
-Affected parameters are:
-   logtoconsole = 
-   logfile = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog
-   assemblypath = C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe
-Removing EventLog source SisyphusScheduler.
-Service SisyphusScheduler is being removed from the system...
-Service SisyphusScheduler was successfully removed from the system.

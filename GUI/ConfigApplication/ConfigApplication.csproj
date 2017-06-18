@@ -192,14 +192,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tasks\BackupSender\BackupSender.csproj">
-      <Project>{e77158f7-209f-4555-8958-86e820bacac4}</Project>
-      <Name>BackupSender</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\CheckImapConnection\CheckImapConnection.csproj">
-      <Project>{8ba64265-9289-4a3a-9158-f10ac10ae838}</Project>
-      <Name>CheckImapConnection</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\Common\Common.csproj">
       <Project>{b7f2182c-37e6-4fa6-b1b2-9e5c500cc576}</Project>
       <Name>Common</Name>
@@ -208,9 +200,13 @@
       <Project>{669ccd90-ebb4-438b-a31a-a16030214b61}</Project>
       <Name>Cron</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\EnterpriseBackup\EnterpriseBackup.csproj">
-      <Project>{2c314c89-0c09-4fbb-9e79-e5db1f432bdb}</Project>
-      <Name>EnterpriseBackup</Name>
+    <ProjectReference Include="..\..\Tasks\BackupSender\BackupSender.csproj">
+      <Project>{e77158f7-209f-4555-8958-86e820bacac4}</Project>
+      <Name>BackupSender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\CheckImapConnection\CheckImapConnection.csproj">
+      <Project>{8ba64265-9289-4a3a-9158-f10ac10ae838}</Project>
+      <Name>CheckImapConnection</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Tasks\SampleTask\SampleTask.csproj">
       <Project>{756f6a58-7996-4b8b-8cb6-61c69e8d2f8b}</Project>
@@ -228,13 +224,13 @@
       <Project>{6eeca358-c495-40c7-a5ea-445fbf0fb710}</Project>
       <Name>TaskCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\TrelloCardReminder\TrelloCardReminder.csproj">
+      <Project>{103f395d-e3ac-497d-bf78-2f820922e092}</Project>
+      <Name>TrelloCardReminder</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Tasks\TrelloChecker\TrelloChecker.csproj">
       <Project>{57a750d9-36b6-410b-8808-29cabe955842}</Project>
       <Name>TrelloChecker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\TrelloReport\TrelloReport.csproj">
-      <Project>{5005a377-0a59-4e18-9e8b-de05bec67e67}</Project>
-      <Name>TrelloReport</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

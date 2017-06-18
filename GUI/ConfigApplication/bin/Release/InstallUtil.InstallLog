@@ -1,34 +1,34 @@
 ﻿
-Running a transacted installation.
-
-Beginning the Install phase of the installation.
-See the contents of the log file for the C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe assembly's progress.
-The file is located at C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog.
-
-The Install phase completed successfully, and the Commit phase is beginning.
-See the contents of the log file for the C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.exe assembly's progress.
-The file is located at C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog.
-
-The Commit phase completed successfully.
-
-The transacted install has completed.
-
 
 The uninstall is beginning.
-See the contents of the log file for the C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe assembly's progress.
-The file is located at C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog.
+See the contents of the log file for the C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe assembly's progress.
+The file is located at C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog.
 
 The uninstall has completed.
 
 Running a transacted installation.
 
 Beginning the Install phase of the installation.
-See the contents of the log file for the C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe assembly's progress.
-The file is located at C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog.
+See the contents of the log file for the C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe assembly's progress.
+The file is located at C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog.
 
 The Install phase completed successfully, and the Commit phase is beginning.
-See the contents of the log file for the C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe assembly's progress.
-The file is located at C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog.
+See the contents of the log file for the C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe assembly's progress.
+The file is located at C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe assembly's progress.
+The file is located at C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe assembly's progress.
+The file is located at C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog.
 
 The Commit phase completed successfully.
 
@@ -36,7 +36,7 @@ The transacted install has completed.
 
 
 The uninstall is beginning.
-See the contents of the log file for the C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.exe assembly's progress.
-The file is located at C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SisyphusScheduler.InstallLog.
+See the contents of the log file for the C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.exe assembly's progress.
+The file is located at C:\Program Files (x86)\itworks\Sisyphus\SisyphusScheduler.InstallLog.
 
 The uninstall has completed.

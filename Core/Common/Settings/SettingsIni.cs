@@ -40,8 +40,9 @@ namespace Sisyphus.Settings
 
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies().OrderBy(t => t.FullName))
             {
+
                 var q = from t in assembly.GetTypes()
-                        where t.IsClass && t.IsSubclassOf(typeof(SettingsRepresent))
+                        where t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(SettingsRepresent))
                         select t;
                 try
                 {

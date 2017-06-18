@@ -41,7 +41,7 @@ namespace Sisyphus
 
     internal static class TrelloRequestCounter
     {
-        private const int TrelloInterval = 15;
+        private const int TrelloInterval = 1;
         private const int TrelloMaxRequestCountPerInterval = 50;
         private static int _trelloRequestCount;
         public static int TrelloPostCount
@@ -80,7 +80,7 @@ namespace Sisyphus
             foreach (var missedLabel in unwantedLabels)
             {
                 TrelloRequestCounter.TrelloPostCount++;
-                board.Labels.Delete(missedLabel.Id);
+                //board.Labels.Delete(missedLabel.Id);
             }
             foreach (var label in newLabels)
             {
@@ -92,17 +92,25 @@ namespace Sisyphus
         private bool BoardExists(string id)
         {
             Board board;
-            try
+            var boardExists = false;
+            for (var i = 0; i < 3; i++)
             {
-                TrelloRequestCounter.TrelloPostCount++;
-                board = new Board(id);
+                try
+                {
+                    TrelloRequestCounter.TrelloPostCount++;
+                    board = new Board(id);
+                    boardExists = !board.IsClosed.GetValueOrDefault();
+                    break;
+                }
+                catch (Exception e)
+                {
+                }
             }
-            catch (Exception e)
+            if (!boardExists)
             {
-                CreateLogRecord(e);
                 return false;
             }
-            return !board.IsClosed.GetValueOrDefault();
+            return boardExists;
         }
 
         private void CloneBoard(Board source, Board dest, bool newBoard = false)
@@ -196,6 +204,8 @@ namespace Sisyphus
                     CreateLogRecord($"There are not enoght lists in board \"{board.Name}\" ({board.Url})", System.Diagnostics.EventLogEntryType.Error);
                     continue;
                 }
+
+                if (!board.Members.Any(t => t == Member.Me)) board.Memberships.Add(Member.Me, BoardMembershipType.Normal);
 
                 foreach (var card in listStruct.TrelloDoneList.Cards.Where(c => !c.IsArchived.GetValueOrDefault()))
                 {

@@ -49,7 +49,7 @@ namespace Sisyphus
             {
                 CreatorUserName = cardHistory.CreatorUserName,
                 CreatorId = cardHistory.CreatorId,
-                CreatorEMail = cardHistory.CreatorEMail,
+                CreatorEMail =  "",
                 Labels = cardHistory.LabelsNames.ToArray(),
                 CardId = cardHistory.CardId,
                 BoardId = cardHistory.BoardId,
@@ -64,10 +64,10 @@ namespace Sisyphus
             {
                 BeginerId = t.BeginerId,
                 BeginerUserName = t.BeginerUserName,
-                BeginerEMail = t.BeginerEMail,
+                BeginerEMail = "",
                 FinisherId = t.FinisherId,
                 FinisherUserName = t.FinisherUserName,
-                FinisherEMail = t.FinisherEMail,
+                FinisherEMail = "",
                 StartDateTime = t.StartDateTime,
                 FinishDateTime = t.FinishDateTime,
                 ListId = t.ListId
@@ -77,7 +77,7 @@ namespace Sisyphus
             var commentsList = new List<Comment>();
             cardHistory.Comments.ForEach(t => commentsList.Add(new Comment
             {
-                UserEMail = t.AuthorEMail,
+                UserEMail = "",
                 UserName = t.AuthorUserName,
                 CommentDateTime = t.CommentDateTime,
                 Text = t.Text
