@@ -3,3 +3,4 @@ C:\Users\test-test\Source\Repos\sisyphus\Core\Common\bin\Release\Common.dll
 C:\Users\test-test\Source\Repos\sisyphus\Core\Common\bin\Release\Common.pdb
 C:\Users\test-test\Source\Repos\sisyphus\Core\Common\obj\Release\Common.dll
 C:\Users\test-test\Source\Repos\sisyphus\Core\Common\obj\Release\Common.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Core\Common\obj\Release\Common.csprojResolveAssemblyReference.cache

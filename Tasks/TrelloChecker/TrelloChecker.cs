@@ -62,82 +62,7 @@ namespace Sisyphus
         private string LabelName { get; } = "Dipper checks this";
         private LabelColor LabelColor { get; } = LabelColor.Yellow;
         private int MaxLabelCount { get; } = 30;
-        private EnterpriseWsWrapper EnterpriseWsWrapper { get; set; }
-
-        private Label CheckLabel(Board board, string labelName, LabelColor labelColor)
-        {
-            TrelloRequestCounter.TrelloPostCount += 3;
-            var label = board.Labels.FirstOrDefault(l => l.Name == labelName);
-            return label ?? board.Labels.Add(labelName, labelColor);
-        }
-
-        private void SyncLabels(Board board, IEnumerable<string> newLabelNameCollection, LabelColor labelColor)
-        {
-            var boardLabels = board.Labels.Select(l => new { l.Name, l.Color, l.Id }).Where(l => l.Color == labelColor).ToArray();
-            var unwantedLabels = boardLabels.Where(l => newLabelNameCollection.All(c => c != l.Name)).ToArray();
-            var newLabels = newLabelNameCollection.Where(c => boardLabels.All(l => l.Name != c)).ToArray();
-            TrelloRequestCounter.TrelloPostCount += boardLabels.Count() + unwantedLabels.Count() + newLabels.Count();
-            foreach (var missedLabel in unwantedLabels)
-            {
-                TrelloRequestCounter.TrelloPostCount++;
-                //board.Labels.Delete(missedLabel.Id);
-            }
-            foreach (var label in newLabels)
-            {
-                TrelloRequestCounter.TrelloPostCount += 3;
-                CheckLabel(board, label, labelColor);
-            }
-        }
-
-        private bool BoardExists(string id)
-        {
-            Board board;
-            var boardExists = false;
-            for (var i = 0; i < 3; i++)
-            {
-                try
-                {
-                    TrelloRequestCounter.TrelloPostCount++;
-                    board = new Board(id);
-                    boardExists = !board.IsClosed.GetValueOrDefault();
-                    break;
-                }
-                catch (Exception e)
-                {
-                }
-            }
-            if (!boardExists)
-            {
-                return false;
-            }
-            return boardExists;
-        }
-
-        private void CloneBoard(Board source, Board dest, bool newBoard = false)
-        {
-            if (newBoard)
-            {
-                TrelloRequestCounter.TrelloPostCount += 2;
-                var oldLists = dest.Lists.ToList();
-                foreach (var list in oldLists) list.IsArchived = true;
-                source.Preferences.Background = source.Preferences.Background;
-            }
-            foreach (var list in source.Lists.Reverse())
-            {
-                TrelloRequestCounter.TrelloPostCount++;
-                if (!dest.Lists.All(l => l.Name != list.Name)) continue;
-                TrelloRequestCounter.TrelloPostCount += 1;
-                dest.Lists.Add(list.Name);
-            }
-        }
-
-        private string GetBoardId(Board board)
-        {
-            TrelloRequestCounter.TrelloPostCount += 1;
-            var url = new Uri(board.Url);
-            var boardShortId = url.Segments.Reverse().Skip(1).Take(1).First();
-            return boardShortId;
-        }
+        private EnterpriseWsWrapper EnterpriseWsWrapper { get; set; }  
 
         private void SyncContractors(Contractor[] contractorsArray, Organization currentOrganiztion, TrelloCheckerSettings settings)
         {
@@ -145,13 +70,13 @@ namespace Sisyphus
             var sourceBoard = new Board(settings.SourceTrelloBoardShortlink);
             foreach (var contractor in contractorsArray)
             {
-                if (!BoardExists(contractor.BoardId))
+                if (!contractor.BoardId.BoardExists())
                 {
                     emptyBoardContractors.Add(contractor);
                     continue;
                 }
                 TrelloRequestCounter.TrelloPostCount += 3;
-                var boardShortId = GetBoardId(new Board(contractor.BoardId));
+                var boardShortId = new Board(contractor.BoardId).GetBoardId();
                 if (boardShortId == contractor.BoardId) continue;
                 contractor.BoardId = boardShortId;
                 EnterpriseWsWrapper.SetContractor(contractor);
@@ -162,8 +87,8 @@ namespace Sisyphus
                 var newContractorsBoard =
                     currentOrganiztion.Boards.Add($"{settings.BoardNamePrefix} {contractor.Represent}");
                 newContractorsBoard.Preferences.PermissionLevel = BoardPermissionLevel.Org;
-                CloneBoard(sourceBoard, newContractorsBoard, true);
-                contractor.BoardId = GetBoardId(newContractorsBoard);
+                sourceBoard.CloneBoard(newContractorsBoard, true);
+                contractor.BoardId = newContractorsBoard.GetBoardId();
                 if (!EnterpriseWsWrapper.SetContractor(contractor))
                     newContractorsBoard.IsClosed = true;
             }
@@ -194,8 +119,8 @@ namespace Sisyphus
             foreach (var contractor in contractorsArray)
             {
                 var board = new Board(contractor.BoardId);
-                var label = CheckLabel(board, LabelName, LabelColor);
-                SyncLabels(board, nomenclatureArray.Select(t => t.Represent).ToArray(), LabelColor.Purple);
+                var label = board.CheckLabel(LabelName, LabelColor);
+                board.SyncLabels(nomenclatureArray.Select(t => t.Represent).ToArray(), LabelColor.Purple);
 
                 TrelloRequestCounter.TrelloPostCount += 3;
                 var listStruct = new ListsStruct(settings, board);

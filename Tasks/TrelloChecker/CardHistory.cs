@@ -16,7 +16,6 @@ namespace Sisyphus
             private Member Finisher { get; set; }
             private List List { get; set; }
 
-
             public DateTime StartDateTime { get; set; }
 
             public DateTime FinishDateTime { get; set; }
@@ -67,7 +66,7 @@ namespace Sisyphus
         private CardLabelCollection Labels { get; }
 
 
-        public string BoardId { get { return Card != null ? Card.Board.Id : string.Empty; } }
+        public string BoardId { get { return Card != null ? Card.Board.GetBoardId() : string.Empty; } }
 
         public string CardId => Card != null ? Card.Id : string.Empty;
 
