@@ -24,7 +24,8 @@ namespace Sisyphus.Mail
         private static StringBuilder GetLogMessageText(TaskLogging taskLogging)
         {
             var messageText = new StringBuilder();
-            var taskRepresent = new { Settings.Project, TaskResult = taskLogging.ErrorAccured() ? "ERROR" : "SUCCESS", ObjectName = taskLogging.Source, CurrentDateTime = DateTime.Now.ToString(CultureInfo.CurrentCulture) };
+            var firstMessage = taskLogging.Min(t => t.DateTime);
+            var taskRepresent = new { Settings.Project, TaskResult = taskLogging.ErrorAccured() ? "ERROR" : "SUCCESS", ObjectName = taskLogging.Source, CurrentDateTime = firstMessage.ToString(CultureInfo.CurrentCulture) ?? DateTime.Now.ToString(CultureInfo.CurrentCulture) };
             var body = Settings.ReportPattern.FormatWith(taskRepresent);
             messageText.Append(body);
             messageText.Append("<ul>");

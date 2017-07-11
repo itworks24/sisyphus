@@ -2,3 +2,4 @@ C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\bin\Release\Rlc.Cron.dll
 C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\bin\Release\Rlc.Cron.pdb
 C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\obj\Release\Rlc.Cron.dll
 C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\obj\Release\Rlc.Cron.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\obj\Release\Cron.csprojResolveAssemblyReference.cache

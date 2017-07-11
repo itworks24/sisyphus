@@ -25,3 +25,4 @@ C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloReport\bin\Release\System.N
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloReport\bin\Release\System.Web.Http.xml
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloReport\obj\Release\TrelloReport.dll
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloReport\obj\Release\TrelloReport.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Tasks\TrelloReport\obj\Release\TrelloReport.csprojResolveAssemblyReference.cache

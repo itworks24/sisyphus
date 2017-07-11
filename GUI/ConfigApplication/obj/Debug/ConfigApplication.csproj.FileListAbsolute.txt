@@ -368,3 +368,9 @@ C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigA
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.csproj.GenerateResource.Cache
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.exe
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.pdb
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\RKeeperReporter.dll
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\EntityFramework.dll
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\RKeeperReporter.pdb
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\EntityFramework.xml
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\EntityFramework.SqlServer.xml

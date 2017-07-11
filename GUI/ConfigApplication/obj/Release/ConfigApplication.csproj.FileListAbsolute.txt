@@ -248,3 +248,7 @@ C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\AE.Ne
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\TrelloChecker.dll
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\TrelloChecker.pdb
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\TrelloChecker.XmlSerializers.dll
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\RKeeperReporter.dll
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\EntityFramework.dll
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\RKeeperReporter.pdb
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\EntityFramework.xml

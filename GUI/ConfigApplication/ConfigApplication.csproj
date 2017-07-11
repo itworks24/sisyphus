@@ -208,6 +208,10 @@
       <Project>{8ba64265-9289-4a3a-9158-f10ac10ae838}</Project>
       <Name>CheckImapConnection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
+      <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
+      <Name>RKeeperReporter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Tasks\SampleTask\SampleTask.csproj">
       <Project>{756f6a58-7996-4b8b-8cb6-61c69e8d2f8b}</Project>
       <Name>SampleTask</Name>
