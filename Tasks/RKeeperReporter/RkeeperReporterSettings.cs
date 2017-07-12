@@ -15,6 +15,10 @@ namespace Sysiphus.Tasks.Settings
         [DisplayName("Provider name")]
         public string ProviderName { get; set; } = "System.Data.SqlClient";
 
+        [Category("DB")]
+        [DisplayName("Classification group SIFR")]
+        public short ClassificationGroupSIFR { get; set; } = 0;
+
         [Category("Enterprise auth")]
         [DisplayName("Web Service defenition path")]
         public string EnterpriseWsPath { get; set; } = "";
