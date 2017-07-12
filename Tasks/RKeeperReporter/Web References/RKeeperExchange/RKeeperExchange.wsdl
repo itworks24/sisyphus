@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd1="http://rkeeper.lnd.ru" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:tns="http://rkeeper.lnd.ru" name="RKeeperExchange" targetNamespace="http://rkeeper.lnd.ru" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:xs1="http://rkeeper.lnd.ru" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://rkeeper.lnd.ru" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ClassificatorGroup">
+        <xs:sequence>
+          <xs:element name="Base" type="xs1:Element" />
+          <xs:element name="Group" type="xs:int" />
+          <xs:element name="NumInGroup" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ClassificatorGroups">
+        <xs:sequence>
+          <xs:element maxOccurs="10000" name="ClassificatorGroup" type="xs1:ClassificatorGroup" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Discount">
+        <xs:sequence>
+          <xs:element name="DiscountType" type="xs1:Element" />
+          <xs:element name="ClassficatorGroup" type="xs1:Element" />
+          <xs:element name="Restaurant" type="xs1:Element" />
+          <xs:element name="Sum" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Discounts">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1000" name="Discount" type="xs1:Discount" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DishGroup">
+        <xs:sequence>
+          <xs:element name="MenuItemCode" type="xs:int" />
+          <xs:element name="ClassificatorGroupCode" type="xs:int" />
+          <xs:element name="Primary" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DishGroups">
+        <xs:sequence>
+          <xs:element maxOccurs="100000000" name="DishGroup" type="xs1:DishGroup" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Element">
+        <xs:sequence>
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Code" type="xs:int" />
+          <xs:element name="Parent" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Report">
+        <xs:sequence>
+          <xs:element name="ClassficatorGroup" type="xs1:Element" />
+          <xs:element name="Restaurant" type="xs1:Element" />
+          <xs:element name="CurrencyType" type="xs1:Element" />
+          <xs:element name="DiscountType" type="xs1:Element" />
+          <xs:element name="MenuItem" type="xs1:Element" />
+          <xs:element name="Visit" type="xs1:Element" />
+          <xs:element name="VisitQuitTime" type="xs:dateTime" />
+          <xs:element name="Currency" type="xs1:Element" />
+          <xs:element name="Sum" type="xs:decimal" />
+          <xs:element name="PaySum" type="xs:decimal" />
+          <xs:element name="DiscountSum" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Reports">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1000000" name="Report" type="xs1:Report" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ReceiveData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Reports" type="xs1:Reports" />
+            <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceiveDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean" />
+            <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceiveClassificatorGroups">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClassificatorGroups" type="xs1:ClassificatorGroups" />
+            <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceiveClassificatorGroupsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean" />
+            <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceiveDishGroups">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClassificatorGroups" type="xs1:DishGroups" />
+            <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceiveDishGroupsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean" />
+            <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="ReceiveDataRequestMessage">
+    <part name="parameters" element="tns:ReceiveData" />
+  </message>
+  <message name="ReceiveDataResponseMessage">
+    <part name="parameters" element="tns:ReceiveDataResponse" />
+  </message>
+  <message name="ReceiveClassificatorGroupsRequestMessage">
+    <part name="parameters" element="tns:ReceiveClassificatorGroups" />
+  </message>
+  <message name="ReceiveClassificatorGroupsResponseMessage">
+    <part name="parameters" element="tns:ReceiveClassificatorGroupsResponse" />
+  </message>
+  <message name="ReceiveDishGroupsRequestMessage">
+    <part name="parameters" element="tns:ReceiveDishGroups" />
+  </message>
+  <message name="ReceiveDishGroupsResponseMessage">
+    <part name="parameters" element="tns:ReceiveDishGroupsResponse" />
+  </message>
+  <portType name="RKeeperExchangePortType">
+    <operation name="ReceiveData">
+      <input message="tns:ReceiveDataRequestMessage" />
+      <output message="tns:ReceiveDataResponseMessage" />
+    </operation>
+    <operation name="ReceiveClassificatorGroups">
+      <input message="tns:ReceiveClassificatorGroupsRequestMessage" />
+      <output message="tns:ReceiveClassificatorGroupsResponseMessage" />
+    </operation>
+    <operation name="ReceiveDishGroups">
+      <input message="tns:ReceiveDishGroupsRequestMessage" />
+      <output message="tns:ReceiveDishGroupsResponseMessage" />
+    </operation>
+  </portType>
+  <binding name="RKeeperExchangeSoapBinding" type="tns:RKeeperExchangePortType">
+    <soapbind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ReceiveData">
+      <soapbind:operation soapAction="http://rkeeper.lnd.ru#RKeeperExchange:ReceiveData" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReceiveClassificatorGroups">
+      <soapbind:operation soapAction="http://rkeeper.lnd.ru#RKeeperExchange:ReceiveClassificatorGroups" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReceiveDishGroups">
+      <soapbind:operation soapAction="http://rkeeper.lnd.ru#RKeeperExchange:ReceiveDishGroups" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="RKeeperExchangeSoap12Binding" type="tns:RKeeperExchangePortType">
+    <soap12bind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ReceiveData">
+      <soap12bind:operation soapAction="http://rkeeper.lnd.ru#RKeeperExchange:ReceiveData" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReceiveClassificatorGroups">
+      <soap12bind:operation soapAction="http://rkeeper.lnd.ru#RKeeperExchange:ReceiveClassificatorGroups" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReceiveDishGroups">
+      <soap12bind:operation soapAction="http://rkeeper.lnd.ru#RKeeperExchange:ReceiveDishGroups" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RKeeperExchange">
+    <port name="RKeeperExchangeSoap" binding="tns:RKeeperExchangeSoapBinding">
+      <documentation>
+        <wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" conformsTo="http://ws-i.org/profiles/basic/1.1" />
+      </documentation>
+      <soapbind:address location="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange" />
+    </port>
+    <port name="RKeeperExchangeSoap12" binding="tns:RKeeperExchangeSoap12Binding">
+      <soap12bind:address location="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange" />
+    </port>
+  </service>
+</definitions>

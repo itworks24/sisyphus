@@ -200,22 +200,6 @@
       <Project>{669ccd90-ebb4-438b-a31a-a16030214b61}</Project>
       <Name>Cron</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\BackupSender\BackupSender.csproj">
-      <Project>{e77158f7-209f-4555-8958-86e820bacac4}</Project>
-      <Name>BackupSender</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\CheckImapConnection\CheckImapConnection.csproj">
-      <Project>{8ba64265-9289-4a3a-9158-f10ac10ae838}</Project>
-      <Name>CheckImapConnection</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
-      <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
-      <Name>RKeeperReporter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\SampleTask\SampleTask.csproj">
-      <Project>{756f6a58-7996-4b8b-8cb6-61c69e8d2f8b}</Project>
-      <Name>SampleTask</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\ServiceControll\ServiceControll.csproj">
       <Project>{d4c64f83-62af-490a-888b-04c4fd18ad18}</Project>
       <Name>ServiceControll</Name>
@@ -227,14 +211,6 @@
     <ProjectReference Include="..\..\Core\TaskCore\TaskCore.csproj">
       <Project>{6eeca358-c495-40c7-a5ea-445fbf0fb710}</Project>
       <Name>TaskCore</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\TrelloCardReminder\TrelloCardReminder.csproj">
-      <Project>{103f395d-e3ac-497d-bf78-2f820922e092}</Project>
-      <Name>TrelloCardReminder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\TrelloChecker\TrelloChecker.csproj">
-      <Project>{57a750d9-36b6-410b-8808-29cabe955842}</Project>
-      <Name>TrelloChecker</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -264,7 +240,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="itworks.ico" />
+    <Resource Include="itworks.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

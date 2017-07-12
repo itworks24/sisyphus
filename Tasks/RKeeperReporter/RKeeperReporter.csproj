@@ -1,0 +1,1479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6A8489D-1522-4EAF-AC2F-CC85D766BCEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RKeeperReporter</RootNamespace>
+    <AssemblyName>RKeeperReporter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.6156.24807, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLLogger, Version=1.0.6156.24807, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\SQLLogger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskCore, Version=1.0.6156.24808, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\TaskCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\ACTIVITYLIST.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ALIASES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ALIASLANGUAGES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AVAILABILITYSCHEDULES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AWARDSPENALTIESDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AWARDSPENALTIESGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AWARDSPENALTIESTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BANDEDPROPSRIGHTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BANDRIGHTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BASEDIALECT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BONUSTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BRIGADES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BUSINESSPERIODS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CASHES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CASHGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CASHINOUT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CASHREPORTDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CASHSERVDATASTATUSES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CATEGLIST.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CHANGEABLEORDERTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CHECKTABLEFIELDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CHECKTABLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSIFICATORGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSINFOGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSINFOHIDEITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSINFOLOGPROPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSINFOPROPRESTRICTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSINFOS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLASSINFOSQLPROPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CLOCKRECS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COLORMAPPINGS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COLORSCHEMEDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COLORSCHEMES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CONSUMATORS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CONSUMTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COTUSAGES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CUBEDIALECTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CURRENCIES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CURRENCIESBANS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CURRENCYFACEVALUES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CURRENCYTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CURRLINES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_CatFoodCost.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_cm.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_cmprotocol.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_cm_atributes.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_cm_detail.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_cm_tech.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_cm_version.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_CorrFullList.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_CorrTree.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_CurrencyMapping.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_doc.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_docprotocol.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_doc_attrs.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_doc_lines.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_expdoc.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_expdocprotocol.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_expdoc_lines.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_expdoc_lines_details.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_Goods.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsBaseAttrs.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsBaseCompl.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsBaseMain.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsBaseMeasures.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsBaseStore.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsBaseWrite_Off.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsCtg.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsCtg2.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_GoodsTree.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_idoc.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_idocprotocol.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_idoc_lines.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_Messages.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_MGroups.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_MUnits.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_OwnAttrs.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_PLDoc.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_PLDoc_details.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_ReplaceGoods.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_ReplaceGrp.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_settings.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_StoreMapping.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_TDoc.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\data_shcr_TDoc_details.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEFAULTERTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DELIVERYDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DELIVERYZONES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEPARTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEPOSITCOLLECTREASONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEVICEDATALOOKUPITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEVICEDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEVICELICENSES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DEVICES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISCOUNTCOMPOSITIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISCOUNTDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISCOUNTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISCOUNTTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISCPARTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISHCONSUMATORS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISHDISCOUNTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISHGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISHMODIFIERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISHRESTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISHVOIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DISPLAYRESOLUTIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DOCUMENTMAKETSCHEMELINKS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DOCUMENTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DOSINGDEVICEASSIGNS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DOSINGDEVICES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DRAWERLOG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EMPLOYEEGROUPDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EMPLOYEEGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EMPLOYEEROLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EMPLOYEES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ENTRANCECARDTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ENUMSTYPESDATAS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ENUMSTYPESINFOS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EXTBASECONFIGS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EXTBASEUPGRADES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EXTERNALIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EXTRATABLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FILTERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FISCDEVPARAMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FISCDEVZRKEYS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FISCTYPEPROPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FORMDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FORMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FORMSCHEMECHILDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FORMSCHEMEDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FORMSCHEMES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FUNCTIONKEYGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FUNCTIONKEYS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FUNDSACCOUNTINGPLACES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GENERATEDPROPDATAS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GENERATEDPROPGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GENERATEDPROPINFOS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GENERATEDPROPTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GENERATORS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GLOBALSHIFTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GLOBALSHIFTSTATS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GroupFilters.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GUESTREPLIES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GUESTTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HALLPLANITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HALLPLANS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HARDWAREINFO.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HOURLIST.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IMAGELIST.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IMAGENODES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INPDEVTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INTERFACEDLL.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INTFTRANSACTIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INVOICES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_LASTPARAMETERSVALSBYUSERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_REPORTGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SCHEDULEREPORTS_EVENTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SCHEDULE_CALENDAR.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SCHEDULE_CALENDAR_DETAIL.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SCHEDULE_RECIPIENT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SCHEDULE_REPORTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SENDING_TYPE.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IR_SETTINGS_MAILING.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ITEMSSALED.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\KBDLAYOUTKEYS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\KBDLAYOUTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\KBDTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\KDSDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\KURSES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\LINKEDSYSTEMSCONFS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\LINKEDSYSTEMSTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MAKETS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MAKETSCHEMEDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MAKETSCHEMES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MCRALGORITHMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MENUITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MESSAGES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MODIFIERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MODIGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MODISCHEMEDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MODISCHEMES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPCUBEEXTENDEDFIELDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPCUBEFIELDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPCUBEFIELDSDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPCUBES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPCUBESCHEMES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPREPORTGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPREPORTRIGHTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OLAPREPORTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OPERATIONCLASSES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OPERATIONDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OPERATIONLOG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OPERATIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OPERATIONSUSERDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORDERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORDERSESSIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORDERVOIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORDERWAITERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORDER_MAP.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PARAMETEREXCEPTIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PARAMETERHIERARHIES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PARAMETERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PAYBINDINGS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PAYMENTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PAYMENTSEXTRA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PDSCARDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PERIODDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PERIODGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PERIODS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_ACC_ACCOUNTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_ACC_MAPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_ACC_MAPS_CONTENT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_DATABASE.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_DATABASE_GROUP.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_DATASETFIELDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_DATASETPARAMETERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_DATASETS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_DATASETSGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_EXT_STORAGE.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_EXT_STORAGE_GROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_EXT_STORAGE_SQL_SRV.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_GENERATE_REPORTS_LOG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_LASTPARAMETERSVALSBYUSERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_LINKCONFIG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_LINKCONFIGDETAIL.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_REPORTDATASETS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_REPORTGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_REPORTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_REPORTS_SETTING.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_SCHEDULE_EXPORT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_SCHEDULE_EXPORTGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_USEPARAMETERSBYDATASET.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_WEBREPORTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_WEBREPORTSGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_WEB_PLATFORMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_IR_WEB_REPORTS_SETTING.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_PLAN_PARAMETERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_PLAN_PARAMETERSGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_PLAN_PARAMETERS_VAL.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_PLAN_PERIOD.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_REPORTS_HISTORY.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_SH4_LINK_STORE.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_TABLE_LINK.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_TELEGRAM_USERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_TYPE_DATABASE.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_USEPARAMETERSBYLEVEL.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PLG_USE_OBJECT_BY_DB.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRICECONSTANTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRICECONSTANTTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRICEFORMULAS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRICES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRICETYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRICEVALUES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRINTCHECKS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRINTEDDOCUMENTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRINTERASSIGNS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRINTERPURPOSES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRIVILEGEDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRIVILEGEGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PRIVILEGES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PROPRIGHTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RATECLASSES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RECOMMENDEDMENUITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REFLINKS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REFRESOURCES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REFTABLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REF_STAT_SP.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REGISTRATIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REPORTINGSERVERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\REPORTSERVERSYNCITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RESTAURANTCONCEPTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RESTAURANTFRANCHISES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RESTAURANTREGIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RESTAURANTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RIGHTGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RIGHTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RKeeperDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RKeeperDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RKeeperDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RKeeperDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RKeeperDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ROLEREPSSERVS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ROLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RPL8_TRANSACT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SALEDATAS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SaleObjects.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SCHEDULEDREPORTRECIPIENT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SCHEDULEDREPORTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\scheduler.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SCRIPTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SCRIPTTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SELECTORDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SELECTORGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SELECTORHIERARHIES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SELECTORS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SELECTORTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SELECTORTYPEVSTRADEOBJ.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SERVICECHECKS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SERVICESCHEMES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SERVINGPOSITIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SESSIONDISHES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SHEXPENDSDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SHIFTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SHMENUITEMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SHMONEYSALESDATABINDINGS2.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SHMONEYSALESDATAMODIFIERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SHMONEYSALESDATAVOIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SQLCONSTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\statistics.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_PR_EMPLOYEEROLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_PR_EMPLOYEES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_PR_ROLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_PR_THEATRES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_EMPLOYEEROLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_CECKSUM.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_CHARGES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_COMPARISON.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_DELIVERY.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_GPX.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_GPX_ORDERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_MODIFIERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_PARAMETERS_VAL.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_PARAMS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_PDSCARDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_PDSFOLDERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_REFERENCES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_REVENUE.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_TAXES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_RK7_SHIFTS_VOIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_CURRENCIES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_GOODGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_SALELOCATIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_SHIFTS_FOODCOST.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_SHIFTS_FOODCOST_LOG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_SHIFTS_GOODGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STAT_SH4_SHIFTS_GOODS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\STOREHOUSECONFIGS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SYNCDATAS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TABLEATTRIBUTES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TABLEATTRIBUTESASSIGNS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TABLEGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TABLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TARIFFDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TARIFFDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TARIFFICATIONTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXDISHRULES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXDISHTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXPARTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXPAYRULES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXPAYTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXRATEFIELDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAXRATES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPACTIVITYLIST.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPAWARDSPENALTIESDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPCASHINOUT.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPCLOCKRECS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPCURRLINES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDELIVERYDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDISCPARTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDISHCONSUMATORS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDISHDISCOUNTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDISHMODIFIERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDISHRESTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDISHVOIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPDRAWERLOG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPEXTERNALIDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPEXTRATABLES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPGLOBALSHIFTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPGUESTREPLIES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPHARDWAREINFO.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPINTFTRANSACTIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPINVOICES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPITEMSSALED.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPKDSDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPMESSAGES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPOPERATIONLOG.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPORDERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPORDERSESSIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPORDERWAITERS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPPAYBINDINGS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPPAYMENTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPPAYMENTSEXTRA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPPDSCARDS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPPRINTCHECKS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPPRINTEDDOCUMENTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPREGISTRATIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPSESSIONDISHES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPSHIFTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPTARIFFDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPTAXPARTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPVISITGUESTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPVISITS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPZREPORTDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMPZREPORTVALUES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TEMP_TASK.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TMP_USERS_SESSION.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TRADEGROUPDETAILS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TRADEGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TRANSACTIONS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UNCHANGEABLEORDERTYPES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VISITGUESTS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VISITS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBETEMP101.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBETEMP102.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBETEMP103.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBETEMP104.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1000.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1001.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1001837.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1002.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1003.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1004.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1005.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1006.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1007.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW1008.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW101.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW102.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW103.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW104.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10924.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10925.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10932.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10937.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10938.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10940.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10943.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10947.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW10948.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW2005.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW2006.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW2007.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW2009.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW2011.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW3001.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VRK7CUBEVIEW3002.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\vrk7RefItemsNames.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\WARNGROUPS.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ZREPORTDATA.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ZREPORTVALUES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EnterpriseWSWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RkeeperReporterSettings.cs" />
+    <Compile Include="RKeeperReporter.cs" />
+    <Compile Include="Web References\RKeeperExchange\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Database\RKeeperDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RKeeperDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\RKeeperDB.edmx.diagram">
+      <DependentUpon>RKeeperDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RKeeperExchange\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RKeeperExchange\RKeeperExchange.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RKeeperExchange\</RelPath>
+      <UpdateFromURL>http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>RKeeperReporter_RKeeperExchange_RKeeperExchange</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\RKeeperDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RKeeperDB.edmx</DependentUpon>
+      <LastGenOutput>RKeeperDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\RKeeperDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RKeeperDB.edmx</DependentUpon>
+      <LastGenOutput>RKeeperDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

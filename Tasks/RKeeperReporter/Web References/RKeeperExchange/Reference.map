@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange?wsdl" filename="RKeeperExchange.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>
