@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?xml-stylesheet type="text/xsl" href="is.xsl" ?>
 <!DOCTYPE msi [
    <!ELEMENT msi   (summary,table*)>
@@ -354,13 +354,12 @@
 		<row><td>EnterpriseBackup.Primary_output</td><td>{28203477-43F4-4F75-A168-FE4691892BC1}</td><td>INSTALLDIR</td><td>2</td><td/><td>enterprisebackup.primary_out</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B6941918-6F04-49B1-8C4E-CCE565EB199F}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{85902666-AB5C-4980-9DF8-E0C4E3EF1C37}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>RKeeperReporter.Primary_output</td><td>{DBE7EDC4-9DA4-470B-B0D0-8D3D5BAA0796}</td><td>INSTALLDIR</td><td>2</td><td/><td>rkeeperreporter.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SampleTask.Primary_output</td><td>{CA3AE23F-AC7D-4D1A-A9DF-576FA7CB326C}</td><td>INSTALLDIR</td><td>2</td><td/><td>sampletask.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SampleTask.Source_Files</td><td>{1B481489-5709-4F5E-93ED-DD2DECC4B682}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td>sampletask.source_files</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ServiceControll.Primary_output</td><td>{47D8DCF9-8645-4AE7-89C9-8301DDBBA415}</td><td>INSTALLDIR</td><td>2</td><td/><td>servicecontroll.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SisyphusScheduler.Primary_output</td><td>{A85D88CB-56F6-4540-AA8C-D837F9ADD579}</td><td>INSTALLDIR</td><td>2</td><td/><td>sisyphusscheduler.primary_ou</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>TrelloChecker.Primary_output</td><td>{ECE1BC6E-C963-435E-BEE2-88E91C6A7AD3}</td><td>INSTALLDIR</td><td>2</td><td/><td>trellochecker.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TrelloReport.Content_Files</td><td>{BCDED4AB-7516-4E61-952A-02B295B9EAC0}</td><td>INSTALLDIR</td><td>2</td><td/><td>trelloreport.content_files</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TrelloReport.Primary_output</td><td>{E7621883-5FD6-44A2-B7AC-ECC3A8D12FC2}</td><td>INSTALLDIR</td><td>2</td><td/><td>trelloreport.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1078,13 +1077,12 @@
 		<row><td>INSTALLDIR</td><td>EnterpriseBackup.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>INSTALLDIR</td><td>RKeeperReporter.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SampleTask.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SampleTask.Source_Files</td></row>
 		<row><td>INSTALLDIR</td><td>ServiceControll.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SisyphusScheduler.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>TrelloChecker.Primary_output</td></row>
-		<row><td>INSTALLDIR</td><td>TrelloReport.Content_Files</td></row>
-		<row><td>INSTALLDIR</td><td>TrelloReport.Primary_output</td></row>
 		<row><td>SAMPLETASKSOURCE</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>SAMPLETASKSOURCE</td><td>SampleTask.Source_Files</td></row>
 	</table>
@@ -1910,13 +1908,12 @@
 		<row><td>AlwaysInstall</td><td>EnterpriseBackup.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>RKeeperReporter.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SampleTask.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SampleTask.Source_Files</td></row>
 		<row><td>AlwaysInstall</td><td>ServiceControll.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SisyphusScheduler.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>TrelloChecker.Primary_output</td></row>
-		<row><td>AlwaysInstall</td><td>TrelloReport.Content_Files</td></row>
-		<row><td>AlwaysInstall</td><td>TrelloReport.Primary_output</td></row>
 	</table>
 
 	<table name="File">
@@ -1936,13 +1933,12 @@
 		<row><td>configapplication.content_fi</td><td>ConfigApplication.Content_Files</td><td>ConfigApplication.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigApplication&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>configapplication.primary_ou</td><td>ConfigApplication.Primary_output</td><td>ConfigApplication.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigApplication&gt;|Built</td><td>3</td><td/></row>
 		<row><td>enterprisebackup.primary_out</td><td>EnterpriseBackup.Primary_output</td><td>EnterpriseBackup.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|Built</td><td>3</td><td/></row>
+		<row><td>rkeeperreporter.primary_outp</td><td>RKeeperReporter.Primary_output</td><td>RKeeperReporter.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RKeeperReporter&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.primary_output</td><td>SampleTask.Primary_output</td><td>SampleTask.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.source_files</td><td>SampleTask.Source_Files</td><td>SampleTask.Source Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|SourceFiles</td><td>3</td><td/></row>
 		<row><td>servicecontroll.primary_outp</td><td>ServiceControll.Primary_output</td><td>ServiceControll.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ServiceControll1&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sisyphusscheduler.primary_ou</td><td>SisyphusScheduler.Primary_output</td><td>SisyphusScheduler.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SisyphusScheduler1&gt;|Built</td><td>3</td><td/></row>
 		<row><td>trellochecker.primary_output</td><td>TrelloChecker.Primary_output</td><td>TrelloChecker.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TrelloChecker&gt;|Built</td><td>3</td><td/></row>
-		<row><td>trelloreport.content_files</td><td>TrelloReport.Content_Files</td><td>TrelloReport.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TrelloReport&gt;|ContentFiles</td><td>3</td><td/></row>
-		<row><td>trelloreport.primary_output</td><td>TrelloReport.Primary_output</td><td>TrelloReport.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TrelloReport&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2091,13 +2087,12 @@
 		<row><td>EnterpriseBackup.Primary_output</td><td/><td/><td>_8C2E6CCE_8A64_4C8F_89DC_0CD220BD75F6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_EA88607B_5378_4389_A086_D04BD4438057_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_EA7B6CB7_54CF_425C_996D_FEB14BEC9083_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>RKeeperReporter.Primary_output</td><td/><td/><td>_2AAEE881_49EB_45F9_8B13_AE2CED4ED1D4_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SampleTask.Primary_output</td><td/><td/><td>_085EB714_8B12_4140_9969_0E4E9B6B1CD6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SampleTask.Source_Files</td><td/><td/><td>_DCEF0D77_B14F_4F87_BE03_0E9C55B4BBBF_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ServiceControll.Primary_output</td><td/><td/><td>_10D20398_9B8B_4EF6_83CE_E740621112A3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SisyphusScheduler.Primary_output</td><td/><td/><td>_388DBDCA_D01C_48B0_8D07_32802C4654EB_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>TrelloChecker.Primary_output</td><td/><td/><td>_A192FB18_695E_4AC7_99AF_828D3DD14B3A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TrelloReport.Content_Files</td><td/><td/><td>_3B9336E0_2DCE_483E_955F_C1235EB07506_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TrelloReport.Primary_output</td><td/><td/><td>_1345421D_3842_466B_A527_3F5CE546B898_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2388,6 +2383,7 @@
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
 		<row><td>Installer</td><td>Installer\Installer.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
+		<row><td>RKeeperReporter</td><td>Tasks\RKeeperReporter\RKeeperReporter.csproj</td><td/><td>2</td></row>
 		<row><td>SampleTask</td><td>Tasks\SampleTask\SampleTask.csproj</td><td/><td>2</td></row>
 		<row><td>ServiceControll</td><td>Core\Evelated\ServiceControll.csproj</td><td/><td>2</td></row>
 		<row><td>ServiceControll1</td><td>Core\ServiceControll\ServiceControll.csproj</td><td/><td>2</td></row>
@@ -3926,7 +3922,7 @@
 		<col def="V0">Data</col>
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
-		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ConfigApplication\itworks.ico</td><td>0</td></row>
+		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GUI\ConfigApplication\itworks.ico</td><td>0</td></row>
 		<row><td>_00E76C4B7FEA4D1A94A7ECBD67EF533E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_01A34885A70943D9A18B78F01B0E918A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_078F5F725A274134BA7F383A883D414D.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3945,16 +3941,19 @@
 		<row><td>_3C518F3A131248F091A23B7B5DCEDE0E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_3CCA5BC28A144CC7BF92C20D6D154B76.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_43FCDB2AE3FA42A8B2E64DDD3ADAA18C.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_48F8E735A43949B5A4D1E12994E385BA.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_4EE3204553CD4684ACB6D4979B14E0A8.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_52ED2BAF6270454FA0CEF9718695D43D.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_548D7CE9BAE547449B2AFED42BEF8BB2.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_54F83DBCE3324265BBB9701048F987F3.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_6BBB45D5CE9B4FEF81FD5EE974535C7B.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_6E74B70529524861833E209B1E39351B.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_712E32024534434292EC3D4E08D8E1C0.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7739C58D88AC4B7CB8038B615ED171F9.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_799081B7759E4386BC7648B58674A5FC.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7B130711EECD444786A5D634761F71EE.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7F24DB4DA4624F9E97A9A7C2AB10BE54.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_7FCA113089AA4A76AECAFF25EB568C8E.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_87C3AB521ADC43159CFCED68AF1B2C9E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_8850829F86F54F23AE02D1AB506ED552.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_89235FF2ACEB4B32921E5F39A75B0EE7.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3976,9 +3975,13 @@
 		<row><td>_DCCDEE75AB1C4938A9D38E9D1B08A104.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_DD6ADA23DB834EE9A2E5A1D387DDEA25.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_E304A47DF2FC41C085935AD1B76FA4F5.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_E33497AE998B4D4F8B28EEC63AB16758.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_E33AE9C41E3C440FA50F5F962FB7D54C.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_E6CB6DB3823C49D0B6B618606C9E8AC2.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_E943A0AD702544BE89E27E3958F70C67.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_EBF6D9EFFD5B4BBBAB7619EFB1FCFE4D.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_EE1D8C0EAD6F49279A32C6EE5EA72308.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_F1A91779786D4FAE8E479DCBB377B2C8.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_F86DC0CFCB334AA48C18642F96AFBA3A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FA5D53238DF74F7A98EFC86A9AD73DAF.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 	</table>
@@ -4496,9 +4499,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{6351B2DD-239A-4816-8279-1528AFFB1DA6}</td><td/></row>
+		<row><td>ProductCode</td><td>{413C6DB9-E81E-44CC-B5EC-8FAAACB1CF52}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0040</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0047</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

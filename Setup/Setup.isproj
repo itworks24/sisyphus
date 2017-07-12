@@ -29,41 +29,41 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
 	<ItemGroup>
-		<ProjectReference Include="..\BackupSender\BackupSender.csproj">
+		<ProjectReference Include="..\Tasks\BackupSender\BackupSender.csproj">
 			<Name>BackupSender</Name>
 			<Project>{E77158F7-209F-4555-8958-86E820BACAC4}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\CheckImapConnection\CheckImapConnection.csproj">
+		<ProjectReference Include="..\Tasks\CheckImapConnection\CheckImapConnection.csproj">
 			<Name>CheckImapConnection</Name>
 			<Project>{8BA64265-9289-4A3A-9158-F10AC10AE838}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\ConfigApplication\ConfigApplication.csproj">
+		<ProjectReference Include="..\GUI\ConfigApplication\ConfigApplication.csproj">
 			<Name>ConfigApplication</Name>
 			<Project>{26E260E3-AB62-4BB2-AFAC-5788A9BB1211}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\EnterpriseBackup\EnterpriseBackup.csproj">
+		<ProjectReference Include="..\Tasks\EnterpriseBackup\EnterpriseBackup.csproj">
 			<Name>EnterpriseBackup</Name>
 			<Project>{2C314C89-0C09-4FBB-9E79-E5DB1F432BDB}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\SampleTask\SampleTask.csproj">
+		<ProjectReference Include="..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
+			<Name>RKeeperReporter</Name>
+			<Project>{B6A8489D-1522-4EAF-AC2F-CC85D766BCEE}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Tasks\SampleTask\SampleTask.csproj">
 			<Name>SampleTask</Name>
 			<Project>{756F6A58-7996-4B8B-8CB6-61C69E8D2F8B}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\ServiceControll\ServiceControll.csproj">
+		<ProjectReference Include="..\Core\ServiceControll\ServiceControll.csproj">
 			<Name>ServiceControll</Name>
 			<Project>{D4C64F83-62AF-490A-888B-04C4FD18AD18}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\SisyphusSheduler\SisyphusScheduler.csproj">
+		<ProjectReference Include="..\Core\SisyphusSheduler\SisyphusScheduler.csproj">
 			<Name>SisyphusScheduler</Name>
 			<Project>{DC18E5FA-3C4C-4898-8093-F4DE505E064C}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\TrelloChecker\TrelloChecker.csproj">
+		<ProjectReference Include="..\Tasks\TrelloChecker\TrelloChecker.csproj">
 			<Name>TrelloChecker</Name>
 			<Project>{57A750D9-36B6-410B-8808-29CABE955842}</Project>
-		</ProjectReference>
-		<ProjectReference Include="..\TrelloReport\TrelloReport.csproj">
-			<Name>TrelloReport</Name>
-			<Project>{5005A377-0A59-4E18-9E8B-DE05BEC67E67}</Project>
 		</ProjectReference>
 	</ItemGroup>
 </Project>
