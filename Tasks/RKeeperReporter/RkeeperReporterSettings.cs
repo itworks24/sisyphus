@@ -19,6 +19,10 @@ namespace Sysiphus.Tasks.Settings
         [DisplayName("Classification group SIFR")]
         public short ClassificationGroupSIFR { get; set; } = 0;
 
+        [Category("DB")]
+        [DisplayName("Restaurant CODE")]
+        public int restaurantCode { get; set; } = 0;
+
         [Category("Enterprise auth")]
         [DisplayName("Web Service defenition path")]
         public string EnterpriseWsPath { get; set; } = "";
@@ -32,12 +36,20 @@ namespace Sysiphus.Tasks.Settings
         public string EnterprisePassword { get; set; } = "";
 
         [Category("Misc")]
-        [DisplayName("Upload date")]
-        public DateTime ReportDateTime { get; set; } = DateTime.Now;
+        [DisplayName("Upload start date")]
+        public DateTime ReportStartDateTime { get; set; } = DateTime.Now;
+
+        [Category("Misc")]
+        [DisplayName("Upload end date")]
+        public DateTime ReportEndDateTime { get; set; } = DateTime.Now;
 
         [Category("Misc")]
         [DisplayName("Upload last N days")]
         public int UploadLastDays { get; set; } = 0;
+
+        [Category("Misc")]
+        [DisplayName("Send N records per call")]
+        public int SendRecordsCount { get; set; } = 200;
 
         public RkeeperReporterSettings(string groupName) : base(groupName)
         {

@@ -99,13 +99,15 @@ namespace Sysiphus.Tasks.SampleTask
             {
                 db.Database.CommandTimeout = 180;
 
-                var startDateTime = settings.UploadLastDays > 0 ? DateTime.Now.AddDays(-settings.UploadLastDays) : settings.ReportDateTime;
-                var endDateTime = settings.UploadLastDays > 0 ? DateTime.Now : settings.ReportDateTime;
+                var startDateTime = settings.UploadLastDays > 0 ? DateTime.Now.AddDays(-settings.UploadLastDays) : settings.ReportStartDateTime;
+                var endDateTime = settings.UploadLastDays > 0 ? DateTime.Now : settings.ReportEndDateTime;
 
                 startDateTime = startDateTime.AbsoluteStart();
                 endDateTime = endDateTime.AbsoluteEnd();
 
                 var classificationGroupSIFR = settings.ClassificationGroupSIFR;
+
+                var restaurantCode = settings.restaurantCode;
 
                 var reports = (from PAYBINDING in db.PAYBINDINGS
                                join CURRLINE in db.CURRLINES
@@ -140,7 +142,7 @@ namespace Sysiphus.Tasks.SampleTask
                                      on MENUITEM.SIFR equals DISHGROUP.CHILD
                                join CLASSIFICATORGROUP in db.CLASSIFICATORGROUPS
                                      on new { classoficatorId = DISHGROUP.PARENT ?? -1, ClassificationGroupSIFR = classificationGroupSIFR }
-                                          equals new { classoficatorId = CLASSIFICATORGROUP.SIFR * 256 + CLASSIFICATORGROUP.NUMINGROUP, ClassificationGroupSIFR = CLASSIFICATORGROUP.SIFR }
+                                          equals new { classoficatorId = CLASSIFICATORGROUP.SIFR * 256 + CLASSIFICATORGROUP.NUMINGROUP, ClassificationGroupSIFR = classificationGroupSIFR == 0 ? (short)0 : CLASSIFICATORGROUP.SIFR }
                                join DISCPART in db.DISCPARTS
                                      on new { visit = SALEOBJECT.Visit, MidServer = SALEOBJECT.MidServer, bindingUNI = PAYBINDING.UNI }
                                           equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
@@ -148,7 +150,7 @@ namespace Sysiphus.Tasks.SampleTask
                                join DISCOUNT in db.DISCOUNTS
                                      on LEFTJOINDISCPART.SIFR equals DISCOUNT.SIFR into LEFTJOINDISCOUNTS
                                from LEFTJOINDISCOUNT in LEFTJOINDISCOUNTS.DefaultIfEmpty()
-                               where GLOBALSHIFT.SHIFTDATE.Value >= startDateTime && VISIT.QUITTIME.Value <= endDateTime
+                               where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM })
                                .ToList();
                 var groups = from report in reports
@@ -162,7 +164,8 @@ namespace Sysiphus.Tasks.SampleTask
                                                     new { code = 1, name = "Без скидки" } :
                                                     new { code = report.LEFTJOINDISCOUNT.SIFR, name = report.LEFTJOINDISCOUNT.NAME },
                                  MenuItem = report.MENUITEM,
-                                 Visit = report.VISIT
+                                 Visit = report.VISIT,
+                                 GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart()
                              }
                              into groupedReports
                              select new Report
@@ -172,30 +175,48 @@ namespace Sysiphus.Tasks.SampleTask
                                  CurrencyType = new Element { Code = groupedReports.Key.CurrencyType.CODE ?? -1, Name = groupedReports.Key.CurrencyType.NAME },
                                  Currency = new Element { Code = groupedReports.Key.Currency.CODE ?? -1, Name = groupedReports.Key.Currency.NAME },
                                  DiscountType = new Element { Code = groupedReports.Key.DiscountType.code, Name = groupedReports.Key.DiscountType.name },
+                                 //Visit = new Element { Code = 0, Name = "" },
                                  Visit = new Element { Code = groupedReports.Key.Visit.SIFR, Name = groupedReports.Key.Visit.STARTTIME.ToString() },
+                                 //MenuItem = new Element { Code = 0, Name = "" },
                                  MenuItem = new Element { Code = groupedReports.Key.MenuItem.CODE ?? 0, Name = groupedReports.Key.MenuItem.NAME },
 
                                  Sum = groupedReports.Sum(x => x.PAYBINDING.PAYSUM ?? 0),
                                  PaySum = groupedReports.Sum(x => x.PAYBINDING.PRICESUM ?? 0),
                                  DiscountSum = -groupedReports.Sum(x => x.PAYBINDING.DISTRDISCOUNTS ?? 0),
 
-                                 VisitQuitTime = groupedReports.Max(x => x.GLOBALSHIFT.STARTTIME ?? new DateTime())
+                                 VisitQuitTime = groupedReports.Key.GlobalShiftStartTime
                              };
 
-                return groups;
+                return groups.OrderBy(x => x.Restaurant.Code).OrderBy(x => x.VisitQuitTime);
             }
         }
 
         public bool ExecuteProcess()
         {
             var settings = GetSettings(typeof(Settings.RkeeperReporterSettings)) as Settings.RkeeperReporterSettings;
-            var groups = GetReports(settings);
+            var groups = GetReports(settings).ToArray();
 
             var wsWrapper = new EnterpriseWsWrapper(settings);
+
             string errorInfo = "";
-            var result = wsWrapper.SendData(groups.ToArray(), ref errorInfo);
-            if (!result)
-                CreateLogRecord(errorInfo, System.Diagnostics.EventLogEntryType.Error);
+            var reportId = Guid.NewGuid().ToString();
+            var result = true;
+
+            for (int i = 0; i <= groups.Count(); i += settings.SendRecordsCount)
+            {
+                var currentResult = wsWrapper.SendData(groups.Skip(i).Take(settings.SendRecordsCount).ToArray(),
+                                                        reportId,
+                                                        ref errorInfo);
+                if (!currentResult)
+                    CreateLogRecord(errorInfo, System.Diagnostics.EventLogEntryType.Error);
+
+                result = result & currentResult;
+            }
+
+            if (result)
+                CreateLogRecord("Upload successfully finished", System.Diagnostics.EventLogEntryType.Information);
+            else
+                CreateLogRecord("Upload finished with errors", System.Diagnostics.EventLogEntryType.Information);
 
             return result;
         }

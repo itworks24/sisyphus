@@ -212,6 +212,10 @@
       <Project>{6eeca358-c495-40c7-a5ea-445fbf0fb710}</Project>
       <Name>TaskCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
+      <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
+      <Name>RKeeperReporter</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xaml">

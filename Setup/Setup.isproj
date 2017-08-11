@@ -65,5 +65,9 @@
 			<Name>TrelloChecker</Name>
 			<Project>{57A750D9-36B6-410B-8808-29CABE955842}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\Tasks\TrelloReport\TrelloReport.csproj">
+			<Name>TrelloReport</Name>
+			<Project>{5005A377-0A59-4E18-9E8B-DE05BEC67E67}</Project>
+		</ProjectReference>
 	</ItemGroup>
 </Project>

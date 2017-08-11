@@ -70,6 +70,7 @@
         <xs:complexType>
           <xs:sequence>
             <xs:element name="Reports" type="xs1:Reports" />
+            <xs:element name="ReportId" type="xs:string" />
             <xs:element name="ErrorInfo" nillable="true" type="xs:string" />
           </xs:sequence>
         </xs:complexType>

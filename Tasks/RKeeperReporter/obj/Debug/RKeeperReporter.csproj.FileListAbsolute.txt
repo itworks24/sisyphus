@@ -12,12 +12,3 @@ C:\Users\test-test\Source\Repos\sisyphus\RKeeperReporter\bin\Debug\EntityFramewo
 C:\Users\test-test\Source\Repos\sisyphus\RKeeperReporter\obj\Debug\RKeeperReporter.dll
 C:\Users\test-test\Source\Repos\sisyphus\RKeeperReporter\obj\Debug\RKeeperReporter.pdb
 C:\Users\test-test\Source\Repos\sisyphus\RKeeperReporter\obj\Debug\RKeeperReporter.csprojResolveAssemblyReference.cache
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Debug\RKeeperReporter.dll.config
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Debug\RKeeperReporter.dll
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Debug\RKeeperReporter.pdb
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Debug\LiteDB.dll
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Debug\EntityFramework.xml
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Debug\RKeeperReporter.csprojResolveAssemblyReference.cache
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Debug\RKeeperReporter.dll
-C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Debug\RKeeperReporter.pdb

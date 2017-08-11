@@ -85,26 +85,28 @@ namespace RKeeperReporter.RKeeperExchange {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://rkeeper.lnd.ru#RKeeperExchange:ReceiveData", RequestNamespace="http://rkeeper.lnd.ru", ResponseNamespace="http://rkeeper.lnd.ru", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return")]
-        public bool ReceiveData([System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)] Report[] Reports, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string ErrorInfo) {
+        public bool ReceiveData([System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)] Report[] Reports, string ReportId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string ErrorInfo) {
             object[] results = this.Invoke("ReceiveData", new object[] {
                         Reports,
+                        ReportId,
                         ErrorInfo});
             ErrorInfo = ((string)(results[1]));
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void ReceiveDataAsync(Report[] Reports, string ErrorInfo) {
-            this.ReceiveDataAsync(Reports, ErrorInfo, null);
+        public void ReceiveDataAsync(Report[] Reports, string ReportId, string ErrorInfo) {
+            this.ReceiveDataAsync(Reports, ReportId, ErrorInfo, null);
         }
         
         /// <remarks/>
-        public void ReceiveDataAsync(Report[] Reports, string ErrorInfo, object userState) {
+        public void ReceiveDataAsync(Report[] Reports, string ReportId, string ErrorInfo, object userState) {
             if ((this.ReceiveDataOperationCompleted == null)) {
                 this.ReceiveDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnReceiveDataOperationCompleted);
             }
             this.InvokeAsync("ReceiveData", new object[] {
                         Reports,
+                        ReportId,
                         ErrorInfo}, this.ReceiveDataOperationCompleted, userState);
         }
         
