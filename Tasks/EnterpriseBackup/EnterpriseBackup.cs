@@ -289,6 +289,19 @@ namespace Sisyphus
             }
         }
 
+        private static void CompressDirectory7Zip(string inFile, string outFile)
+        {
+            var coder = new SevenZip.Compression.LZMA.Encoder();
+            using (var input = new FileStream(inFile, FileMode.Open))
+            {
+                using (var output = new FileStream(outFile, FileMode.Create))
+                {
+                    coder.Code(input, output, -1, -1, null);
+                    output.Flush();
+                }
+            }
+        }
+
         public void CreateArchiev(string destinationPath, string fileNameFormat = "{name}_{date}")
         {
             if (CurrentBaseType != BaseType.File) return;

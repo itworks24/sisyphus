@@ -212,6 +212,10 @@
       <Project>{6eeca358-c495-40c7-a5ea-445fbf0fb710}</Project>
       <Name>TaskCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\EnterpriseBackup\EnterpriseBackup.csproj">
+      <Project>{2c314c89-0c09-4fbb-9e79-e5db1f432bdb}</Project>
+      <Name>EnterpriseBackup</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
       <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
       <Name>RKeeperReporter</Name>

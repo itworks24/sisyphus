@@ -91,6 +91,7 @@
     <Compile Include="7Zip\Common\CRC.cs" />
     <Compile Include="7Zip\Common\InBuffer.cs" />
     <Compile Include="7Zip\Common\OutBuffer.cs" />
+    <Compile Include="7Zip\Compress\ICoder.cs" />
     <Compile Include="7Zip\Compress\LZMA\LzmaBase.cs" />
     <Compile Include="7Zip\Compress\LZMA\LzmaDecoder.cs" />
     <Compile Include="7Zip\Compress\LZMA\LzmaEncoder.cs" />
