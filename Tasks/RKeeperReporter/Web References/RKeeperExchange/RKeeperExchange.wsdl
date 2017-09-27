@@ -59,6 +59,7 @@
           <xs:element name="Sum" type="xs:decimal" />
           <xs:element name="PaySum" type="xs:decimal" />
           <xs:element name="DiscountSum" type="xs:decimal" />
+          <xs:element name="Quntity" nillable="true" type="xs:double" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="Reports">

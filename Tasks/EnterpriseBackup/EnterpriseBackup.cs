@@ -15,6 +15,7 @@ using V83;
 using Settings;
 using SharpCompress.Common;
 using SharpCompress.Writers;
+using SevenZip.Compression.LZMA;
 
 namespace Sisyphus
 {

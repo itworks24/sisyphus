@@ -13,7 +13,7 @@ namespace RKeeperReporter.Database
     {
         public RKeeperEntities(string connectionString) : base(connectionString)
         {
-            var ensureDLLIsCopied =
+            var ensureDllIsCopied =
                 System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
     }
@@ -74,7 +74,7 @@ namespace Sysiphus.Tasks.SampleTask
             return entityBuilder.ConnectionString;
         }
 
-        internal static string objectRepresent(object obj, int indent = 0)
+        internal static string ObjectRepresent(object obj, int indent = 0)
         {
             var type = obj.GetType();
             if (type.IsPrimitive) return "";
@@ -86,7 +86,7 @@ namespace Sysiphus.Tasks.SampleTask
                 foreach (var field in type.GetFields())
                 {
                     var fieldValue = field.GetValue(obj);
-                    result += $"{currentIndent}{field.Name} : {fieldValue.ToString()} \n";
+                    result += $"{currentIndent}{field.Name} : {fieldValue} \n";
                 }
             }
             catch { }
@@ -97,7 +97,7 @@ namespace Sysiphus.Tasks.SampleTask
         {
             using (var db = new RKeeperEntities(GetEntityConnection(settings)))
             {
-                db.Database.CommandTimeout = 180;
+                db.Database.CommandTimeout = 1800;
 
                 var startDateTime = settings.UploadLastDays > 0 ? DateTime.Now.AddDays(-settings.UploadLastDays) : settings.ReportStartDateTime;
                 var endDateTime = settings.UploadLastDays > 0 ? DateTime.Now : settings.ReportEndDateTime;
@@ -113,6 +113,9 @@ namespace Sysiphus.Tasks.SampleTask
                                join CURRLINE in db.CURRLINES
                                      on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, currUNI = PAYBINDING.CURRUNI ?? -1 }
                                        equals new { visit = CURRLINE.VISIT, midServer = CURRLINE.MIDSERVER, currUNI = CURRLINE.UNI }
+                               join PRINTCHECK in db.PRINTCHECKS
+                                     on new { visit = CURRLINE.VISIT, midServer = CURRLINE.MIDSERVER, currUNI = CURRLINE.CHECKUNI ?? -1 }
+                                       equals new { visit = PRINTCHECK.VISIT, midServer = PRINTCHECK.MIDSERVER, currUNI = PRINTCHECK.UNI }
                                join CURRENCYTYPE in db.CURRENCYTYPES
                                      on CURRLINE.IHIGHLEVELTYPE equals CURRENCYTYPE.SIFR
                                join CURRENCY in db.CURRENCIES
@@ -150,8 +153,10 @@ namespace Sysiphus.Tasks.SampleTask
                                join DISCOUNT in db.DISCOUNTS
                                      on LEFTJOINDISCPART.SIFR equals DISCOUNT.SIFR into LEFTJOINDISCOUNTS
                                from LEFTJOINDISCOUNT in LEFTJOINDISCOUNTS.DefaultIfEmpty()
-                               where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
-                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM })
+                               where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime 
+                                     && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
+                                     && (PRINTCHECK.STATE == 6)
+                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT })
                                .ToList();
                 var groups = from report in reports
                              group report by new
@@ -165,7 +170,8 @@ namespace Sysiphus.Tasks.SampleTask
                                                     new { code = report.LEFTJOINDISCOUNT.SIFR, name = report.LEFTJOINDISCOUNT.NAME },
                                  MenuItem = report.MENUITEM,
                                  Visit = report.VISIT,
-                                 GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart()
+                                 GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
+                                 SaleObject = report.SALEOBJECT
                              }
                              into groupedReports
                              select new Report
@@ -183,11 +189,12 @@ namespace Sysiphus.Tasks.SampleTask
                                  Sum = groupedReports.Sum(x => x.PAYBINDING.PAYSUM ?? 0),
                                  PaySum = groupedReports.Sum(x => x.PAYBINDING.PRICESUM ?? 0),
                                  DiscountSum = -groupedReports.Sum(x => x.PAYBINDING.DISTRDISCOUNTS ?? 0),
+                                 Quntity = groupedReports.Sum(x=> x.SALEOBJECT.Quantity ?? 0),
 
                                  VisitQuitTime = groupedReports.Key.GlobalShiftStartTime
                              };
 
-                return groups.OrderBy(x => x.Restaurant.Code).OrderBy(x => x.VisitQuitTime);
+                return groups.OrderBy(x => x.Restaurant.Code).ThenBy(x => x.VisitQuitTime);
             }
         }
 
@@ -198,7 +205,7 @@ namespace Sysiphus.Tasks.SampleTask
 
             var wsWrapper = new EnterpriseWsWrapper(settings);
 
-            string errorInfo = "";
+            var errorInfo = "";
             var reportId = Guid.NewGuid().ToString();
             var result = true;
 
@@ -214,9 +221,9 @@ namespace Sysiphus.Tasks.SampleTask
             }
 
             if (result)
-                CreateLogRecord("Upload successfully finished", System.Diagnostics.EventLogEntryType.Information);
+                CreateLogRecord("Upload successfully finished");
             else
-                CreateLogRecord("Upload finished with errors", System.Diagnostics.EventLogEntryType.Information);
+                CreateLogRecord("Upload finished with errors");
 
             return result;
         }
