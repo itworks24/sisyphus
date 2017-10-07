@@ -220,6 +220,10 @@
       <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
       <Name>RKeeperReporter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\RoseltorgParser\RoseltorgParser.csproj">
+      <Project>{2419314d-819f-4186-a54f-f1a67f74e1e0}</Project>
+      <Name>RoseltorgParser</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xaml">
