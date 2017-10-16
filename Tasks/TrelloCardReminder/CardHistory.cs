@@ -69,7 +69,8 @@ namespace Sisyphus
                 if (result.Success)
                 {
                     var sign = result.Groups[1].Value == "+" ? "" : "-";
-                    Value = Convert.ToDouble($"{sign}{result.Groups[2].Value}");
+                    var value = result.Groups[2].Value.Replace(".", ",");
+                    Value = Convert.ToDouble($"{sign}{value}");
                 }
                 else { Value = 0; }
 
