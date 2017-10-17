@@ -3982,6 +3982,7 @@
 		<row><td>_A7F359D3351D432983D4FCC751636BA6.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_AE5BA5387773461788412011F1602865.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_B4CA663D8BA54CB49BA262CDA0D109ED.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_B86EA588A93F45AE92F78164028E1265.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_B963ECEB5ADC4350BA5EB6496ADB377E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C1A7376A9F064EF1985E57FD769D67A5.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C95E19F193B0416BBC14136CF217ED46.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3999,6 +4000,7 @@
 		<row><td>_F1A91779786D4FAE8E479DCBB377B2C8.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_F86DC0CFCB334AA48C18642F96AFBA3A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FA5D53238DF74F7A98EFC86A9AD73DAF.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_FD7CAEB376104712987AC0842F9CC377.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FEA9F5E4D2AF42C492923CDBEF51B607.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 	</table>
 
@@ -4515,9 +4517,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{5BA4B6A9-8AE9-4EEE-A914-5E3C87C982C7}</td><td/></row>
+		<row><td>ProductCode</td><td>{D06E2F52-E32D-4D88-B615-D61CA6BA72C4}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0057</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0058</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

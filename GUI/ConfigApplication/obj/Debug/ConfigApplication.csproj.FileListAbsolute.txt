@@ -245,4 +245,3 @@ C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Debug\ConfigApplic
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Debug\ConfigApplication.Properties.Resources.resources
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Debug\ConfigApplication.csproj.GenerateResource.Cache
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\SharpCompress.dll
-C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe.config
