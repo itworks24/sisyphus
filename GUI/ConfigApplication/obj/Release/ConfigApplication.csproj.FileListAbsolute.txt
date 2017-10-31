@@ -124,3 +124,4 @@ C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Release\ConfigAppl
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\obj\Release\ConfigApplication.pdb
 C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\SharpCompress.dll
 C:\Users\test-test\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe.config
+C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe.config
