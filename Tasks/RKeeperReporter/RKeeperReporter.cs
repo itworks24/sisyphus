@@ -13,6 +13,7 @@ namespace RKeeperReporter.Database
     {
         public RKeeperEntities(string connectionString) : base(connectionString)
         {
+            // ReSharper disable once UnusedVariable
             var ensureDllIsCopied =
                 System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
@@ -58,18 +59,21 @@ namespace Sysiphus.Tasks.SampleTask
 
         internal static string GetEntityConnection(Settings.RkeeperReporterSettings settings)
         {
-            EntityConnectionStringBuilder entityBuilder = new EntityConnectionStringBuilder();
+            EntityConnectionStringBuilder entityBuilder = new EntityConnectionStringBuilder
+            {
+                Provider = settings.ProviderName,
+                ProviderConnectionString = settings.ConnectionString,
+                Metadata =
+                    "res://*/Database.RKeeperDB.csdl|res://*/Database.RKeeperDB.ssdl|res://*/Database.RKeeperDB.msl"
+            };
 
             // Set the provider name. 
-            entityBuilder.Provider = settings.ProviderName;
 
             //entityBuilder.ConnectionString = settings.ConnectionString;
 
             // Set the provider-specific connection string. 
-            entityBuilder.ProviderConnectionString = settings.ConnectionString;
 
             // Set the Metadata location. 
-            entityBuilder.Metadata = "res://*/Database.RKeeperDB.csdl|res://*/Database.RKeeperDB.ssdl|res://*/Database.RKeeperDB.msl";
 
             return entityBuilder.ConnectionString;
         }

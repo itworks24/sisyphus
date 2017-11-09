@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using Manatee.Trello;
@@ -77,8 +78,6 @@ namespace Sisyphus
                 var listStruct = new ListsStruct(settings, board);
                 if (!listStruct.BoardHaveAllList) { continue; }
 
-                var boardName = board.Name;
-
                 var powerUpSettings = board.GetPowerUpSettings(settings.PowerUpId);
 
                 foreach (var card in listStruct.TrelloInWorkList.Cards.Where(c => !c.IsArchived.GetValueOrDefault()))
@@ -88,10 +87,20 @@ namespace Sisyphus
                     if (powerUpSettings != null)
                     {
                         var estimeteValue = powerUpSettings.Where(t => t.Id == $"{settings.EstimateValuePrefix}{card.Id}{settings.EstimateValuePostfix}").FirstOrDefault();
-                        if (estimeteValue != null) estimateHours = Convert.ToDouble(estimeteValue.Value);
+                        if (estimeteValue != null && estimeteValue.Value.Trim() != string.Empty) estimateHours = Convert.ToDouble(estimeteValue.Value);
                     }
 
-                    var cardHistory = new CardHistory(listStruct, card, organizationMembers);
+                    CardHistory cardHistory;
+                    try
+                    {
+                        cardHistory = new CardHistory(listStruct, card, organizationMembers);
+                    }
+                    catch (Exception e)
+                    {
+                        CreateLogRecord($"Error while getting card data. Card: {card.Url}", EventLogEntryType.Error);
+                        throw;
+                    }
+
                     var allWorkTime = cardHistory.InWorkActionRecordList.Sum(t => t.Duration) + cardHistory.Comments.Sum(t => t.Value);
                     var lastAction = cardHistory.InWorkActionRecordList.FirstOrDefault();
                     var lastPeriodWorkTime = lastAction.Duration;
