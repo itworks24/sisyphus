@@ -6,9 +6,9 @@ namespace Sysiphus.Tasks.Settings
     class RoseltorgSettings : SettingsRepresent
     {
 
-        [Category("Target")]
-        [DisplayName("Directory")]
-        public string SampleProperty { get; set; } = @"\roseltorg";
+        [Category("Sample category")]
+        [DisplayName("Sample property name")]
+        public string SampleProperty { get; set; } = "SamplePropertyText";
 
         public RoseltorgSettings(string groupName) : base(groupName)
         {

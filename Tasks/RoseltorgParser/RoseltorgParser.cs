@@ -8,6 +8,7 @@ using HtmlAgilityPack;
 using Sisyphus.Tasks;
 using Sysiphus.Tasks.Roseltorg;
 using Newtonsoft.Json;
+using SevenZip;
 
 namespace Sysiphus.Tasks
 {
@@ -64,6 +65,11 @@ namespace Sysiphus.Tasks
             }
 
             return procedure;
+        }
+
+        private static void CheckFile(string fileName)
+        {
+            var z = new SevenZipExtractor(System.IO.File.OpenRead(fileName));
         }
 
         private static void DownloadProcedure(string procedureUrl, string destinationPath = "..")

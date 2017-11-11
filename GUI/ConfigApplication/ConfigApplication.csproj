@@ -220,10 +220,6 @@
       <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
       <Name>RKeeperReporter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\RoseltorgParser\RoseltorgParser.csproj">
-      <Project>{2419314d-819f-4186-a54f-f1a67f74e1e0}</Project>
-      <Name>RoseltorgParser</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Tasks\TrelloCardReminder\TrelloCardReminder.csproj">
       <Project>{103f395d-e3ac-497d-bf78-2f820922e092}</Project>
       <Name>TrelloCardReminder</Name>
