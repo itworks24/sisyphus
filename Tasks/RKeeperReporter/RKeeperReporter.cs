@@ -152,12 +152,12 @@ namespace Sysiphus.Tasks.SampleTask
                                           equals new { classoficatorId = CLASSIFICATORGROUP.SIFR * 256 + CLASSIFICATORGROUP.NUMINGROUP, ClassificationGroupSIFR = classificationGroupSIFR == 0 ? (short)0 : CLASSIFICATORGROUP.SIFR }
                                join DISCPART in db.DISCPARTS
                                      on new { visit = SALEOBJECT.Visit, MidServer = SALEOBJECT.MidServer, bindingUNI = PAYBINDING.UNI }
-                                          equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
-                               from LEFTJOINDISCPART in LEFTJOINDISCPARTS.DefaultIfEmpty()
+                                         equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
+                               from LEFTJOINDISCPART in LEFTJOINDISCPARTS.DefaultIfEmpty().Take(1)
                                join DISCOUNT in db.DISCOUNTS
                                      on LEFTJOINDISCPART.SIFR equals DISCOUNT.SIFR into LEFTJOINDISCOUNTS
                                from LEFTJOINDISCOUNT in LEFTJOINDISCOUNTS.DefaultIfEmpty()
-                               where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime 
+                               where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime
                                      && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                      && (PRINTCHECK.STATE == 6)
                                select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT })
@@ -193,7 +193,7 @@ namespace Sysiphus.Tasks.SampleTask
                                  Sum = groupedReports.Sum(x => x.PAYBINDING.PAYSUM ?? 0),
                                  PaySum = groupedReports.Sum(x => x.PAYBINDING.PRICESUM ?? 0),
                                  DiscountSum = -groupedReports.Sum(x => x.PAYBINDING.DISTRDISCOUNTS ?? 0),
-                                 Quntity = groupedReports.Sum(x=> x.SALEOBJECT.Quantity ?? 0),
+                                 Quntity = groupedReports.Sum(x => x.SALEOBJECT.Quantity ?? 0),
 
                                  VisitQuitTime = groupedReports.Key.GlobalShiftStartTime
                              };

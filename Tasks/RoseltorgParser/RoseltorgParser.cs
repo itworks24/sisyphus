@@ -1,21 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Mime;
 using System.Security.Policy;
+using System.Text;
 using HtmlAgilityPack;
 using Sisyphus.Tasks;
 using Sysiphus.Tasks.Roseltorg;
 using Newtonsoft.Json;
 using SevenZip;
+using File = Sysiphus.Tasks.Roseltorg.File;
 
 namespace Sysiphus.Tasks
 {
-    public partial class RoseltorgParser
-    {
 
-        private static IEnumerable<string> GetProceduresUrlList()
+    public static class FileParses
+    {
+        private static IEnumerable<string> ExtractArchieve(string zipPath, string fileName)
+        {
+            var sourceName = fileName;
+
+            var args = Encoding.GetEncoding(1251).GetString(Encoding.Default.GetBytes($"e \"{fileName}\" -y -o\"{Path.Combine(Path.GetDirectoryName(fileName), Path.GetFileNameWithoutExtension(fileName))}\""));
+
+            var p = new ProcessStartInfo
+            {
+                FileName = zipPath,
+                Arguments = args,
+                WindowStyle = ProcessWindowStyle.Hidden,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+            };
+
+            var x = Process.Start(p);
+            x.WaitForExit();
+            var output = x.StandardOutput.ReadToEnd();
+            var error = x.StandardError.ReadToEnd();
+            if (string.IsNullOrEmpty(error))
+                return Directory.GetFiles(Path.GetDirectoryName(fileName), "*", SearchOption.AllDirectories);
+            return new List<string>();
+            throw new Exception("Can not open the file as archive");
+        }
+
+        public static void ExtractArchieves(string zipPath, string path)
+        {
+            var files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Where(s => s.EndsWith(".rar") || s.EndsWith(".zip") || s.EndsWith(".gzip")); ;
+            foreach (var file in files)
+            {
+                //try
+                //{
+                var extractedFiles = ExtractArchieve(zipPath, file);
+                //}
+                //catch (Exception e) { }
+            }
+        }
+    }
+
+    public static class ProcedureDownloader
+    {
+        public static IEnumerable<string> GetProceduresUrlList()
         {
             const string url = "https://www.roseltorg.ru/procedures/search/";
             var web = new HtmlWeb();
@@ -67,12 +114,57 @@ namespace Sysiphus.Tasks
             return procedure;
         }
 
-        private static void CheckFile(string fileName)
+        public static string GetDecodedString(string sourceName, string encodedString)
         {
-            var z = new SevenZipExtractor(System.IO.File.OpenRead(fileName));
+
+            var encodingArray = new List<Encoding>
+            {
+                Encoding.UTF8,
+                Encoding.Default,
+                Encoding.ASCII,
+                Encoding.GetEncoding(1252),
+                Encoding.GetEncoding(1251),
+                Encoding.GetEncoding(866),
+            };
+
+            foreach (var encoding in encodingArray)
+            {
+                foreach (var decoder in encodingArray)
+                {
+                    var bytes = Encoding.Convert(encoding, decoder, encoding.GetBytes(encodedString));
+                    var result = Encoding.UTF8.GetString(bytes);
+                    if (result.Contains(sourceName)) return result;
+                }
+            }
+            return "";
         }
 
-        private static void DownloadProcedure(string procedureUrl, string destinationPath = "..")
+        public static string GetFileNameFromContentDisposition(string sourceName, string contentDispositionString)
+        {
+
+            var correctFileName = "";
+            try
+            {
+                var contentDisposition = new ContentDisposition(contentDispositionString);
+                correctFileName = contentDisposition.FileName;
+                var decodedString = System.Web.HttpUtility.UrlDecode(correctFileName);
+                return decodedString;
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            const string lookFor = "filename=";
+            var index = contentDispositionString.IndexOf(lookFor, StringComparison.CurrentCultureIgnoreCase);
+            if (index >= 0)
+                correctFileName = contentDispositionString.Substring(index + lookFor.Length);
+            
+            
+            return GetDecodedString(sourceName, correctFileName);
+        }
+
+        public static void DownloadProcedure(string procedureUrl, string destinationPath = "..")
         {
             var procedure = GetProcedure(procedureUrl);
 
@@ -95,22 +187,38 @@ namespace Sysiphus.Tasks
             {
                 using (var client = new WebClient())
                 {
+                    var fileName = Path.Combine(filesDirectory, file.name);
                     client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36");
-                    client.DownloadFile(file.link, Path.Combine(filesDirectory, file.name));
+                    client.DownloadFile(file.link, fileName);
+                    var correctFileName = GetFileNameFromContentDisposition(file.name, client.ResponseHeaders["content-disposition"]);
+                    
+                    try
+                    {
+                        System.IO.File.Move(fileName, Path.Combine(filesDirectory, correctFileName));
+                    }
+                    catch (Exception e)
+                    {
+                        System.IO.File.Delete(fileName);
+                    }
                 }
             }
         }
+    }
 
+    public partial class RoseltorgParser
+    {
 
         public bool ExecuteProcess()
         {
             var settings = GetSettings(typeof(Settings.RoseltorgSettings)) as Settings.RoseltorgSettings;
 
-            foreach (var procedureUrl in GetProceduresUrlList())
+            foreach (var procedureUrl in ProcedureDownloader.GetProceduresUrlList())
             {
                 CreateLogRecord(procedureUrl);
-                DownloadProcedure(procedureUrl, @"c:\temp\roseltorg");
+                ProcedureDownloader.DownloadProcedure(procedureUrl, settings.ExportPath);
             }
+
+            FileParses.ExtractArchieves(settings.ZipPath, settings.ExportPath);
 
             return true;
         }

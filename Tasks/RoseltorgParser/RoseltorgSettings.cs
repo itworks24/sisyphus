@@ -6,10 +6,14 @@ namespace Sysiphus.Tasks.Settings
     class RoseltorgSettings : SettingsRepresent
     {
 
-        [Category("Sample category")]
-        [DisplayName("Sample property name")]
-        public string SampleProperty { get; set; } = "SamplePropertyText";
+        [Category("Misc")]
+        [DisplayName("Export path")]
+        public string ExportPath { get; set; } = @"c:\temp\roseltorg";
 
+        [Category("Misc")]
+        [DisplayName("7-zip path")]
+        public string ZipPath { get; set; } = @"C:\Program Files\7-Zip\7z.exe";
+ 
         public RoseltorgSettings(string groupName) : base(groupName)
         {
         }

@@ -3939,6 +3939,7 @@
 		<row><td>_0A13950C09624A1E8D31A0C26AF8FE2A.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0A3C353C22744A70B2D9248C8A1F35BA.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0B534D66CAB54C14949C3E8A59A7BA60.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_0C6E4268525D46119C3E9377FA6D4556.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_0DD7F26233DB415CAEDD78898D743284.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_109DD8F2CE5E4DB6A79B857610EFDD3E.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_1993A044CE1841A9BBB6E12CB89042B5.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3961,6 +3962,7 @@
 		<row><td>_52ED2BAF6270454FA0CEF9718695D43D.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_548D7CE9BAE547449B2AFED42BEF8BB2.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_54F83DBCE3324265BBB9701048F987F3.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_67FBD9DF8E1944C5BB6E4CD467C151D0.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_6BBB45D5CE9B4FEF81FD5EE974535C7B.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_6E74B70529524861833E209B1E39351B.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_712E32024534434292EC3D4E08D8E1C0.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -4517,9 +4519,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{BD7E5C89-2BE9-48C6-96D0-4E00AB9B42B1}</td><td/></row>
+		<row><td>ProductCode</td><td>{E3D1A731-8358-4982-8FD0-CB0CF65AEC60}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0059</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0061</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4536,7 +4538,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL;ISACTIONPROP2</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{81C1AAD5-3AA8-4E99-A282-D3F377963F9B}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{D10598A3-C3C0-41DE-8F2D-D4591647E0EB}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
