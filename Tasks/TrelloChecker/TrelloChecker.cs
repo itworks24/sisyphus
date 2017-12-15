@@ -7,7 +7,6 @@ using Manatee.Trello.ManateeJson;
 using Manatee.Trello.WebApi;
 using Sisyphus.itws;
 using Sisyphus.Tasks;
-using Label = Manatee.Trello.Label;
 
 namespace Sisyphus
 {
@@ -118,6 +117,7 @@ namespace Sisyphus
 
             foreach (var contractor in contractorsArray)
             {
+                CreateLogRecord(contractor.BoardId);
                 var board = new Board(contractor.BoardId);
                 var label = board.CheckLabel(LabelName, LabelColor);
                 board.SyncLabels(nomenclatureArray.Select(t => t.Represent).ToArray(), LabelColor.Purple);
@@ -136,7 +136,16 @@ namespace Sisyphus
                 {
                     TrelloRequestCounter.TrelloPostCount += 1;
                     if (card.Labels.Count(l => l.Name == LabelName) > 0) continue;
-                    var cardHistory = new CardHistory(listStruct, card, organizationMembers);
+                    CardHistory cardHistory;
+                    try
+                    {
+                        cardHistory = new CardHistory(listStruct, card, organizationMembers);
+                    }
+                    catch (Exception e)
+                    {
+                        CreateLogRecord($"Card history retrieve error. \"{board.Name}\" ({card.Url})", System.Diagnostics.EventLogEntryType.Error);
+                        continue;
+                    }
                     var errorRepresent = string.Empty;
                     if (EnterpriseWsWrapper.AddCardHistory(cardHistory, ref errorRepresent))
                     {
