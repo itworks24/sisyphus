@@ -280,6 +280,39 @@ namespace Sisyphus
             }
         }
 
+
+        private static string Execute7ZCommand(string command)
+        {
+            //Encoding.GetEncoding(1251).GetString(Encoding.Default.GetBytes(command))
+            var processStartInfo = new ProcessStartInfo
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                FileName = "7za.exe",
+                Arguments = command,
+                CreateNoWindow = true,
+                RedirectStandardError = true,
+                UseShellExecute = false
+            };
+
+            var executedProcess = Process.Start(processStartInfo);
+            executedProcess.WaitForExit();
+            return executedProcess.ExitCode != 0 ? executedProcess.StandardError.ReadToEnd() : "";
+        }
+
+        private static string CompressFileConsole(string inFile, string outFile)
+        {
+
+            var args = $"a -mx9 \"{outFile}\" \"{inFile}\"";
+            return Execute7ZCommand(args);
+        }
+
+        private static string TestArchieveConsole(string outFile)
+        {
+
+            var args = $"t \"{outFile}\" * -r";
+            return Execute7ZCommand(args);
+        }
+
         private static void CompressDirectorySharpCompress(string inFile, string outFile)
         {
             using (var zip = File.OpenWrite(outFile))
@@ -308,7 +341,16 @@ namespace Sisyphus
             var sourceFileName = System.IO.Path.Combine(BaseName, "1Cv8.1CD");
             KickAllUsers();
             var fileNamesStruct = new FileNamesStruct(fileNameFormat, destinationPath, this, "zip");
-            CompressDirectorySharpCompress(sourceFileName, fileNamesStruct.BackupFileName);
+            var backupFileName = fileNamesStruct.BackupFileName;
+            var compressResult = CompressFileConsole(sourceFileName, backupFileName);
+            var testResult = TestArchieveConsole(backupFileName);
+            if (string.IsNullOrEmpty(compressResult) || string.IsNullOrEmpty(testResult))
+            {
+                CurrentBackUpState = BackupState.Success;
+                return;
+            };
+            LogResult = $"{compressResult}\n{testResult}";
+            CurrentBackUpState = BackupState.Error;
         }
 
         public void CreateBackup(string enterprisePath, bool useArchiev, string destinationPath, string fileNameFormat = "{name}_{date}",

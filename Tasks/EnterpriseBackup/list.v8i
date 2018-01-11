@@ -1,5 +1,5 @@
 ﻿[Документооборот 2015 - рабочий]
-Connect=Srvr="lesly";Ref="docmng_var_2015";
+Connect=File="C:\Users\test-test\Downloads\7za920.zip\lesly";
 ID=9c9748a5-256f-44d4-a5f0-c4892a4ff2f1
 OrderInList=16384
 Folder=/
@@ -10,7 +10,7 @@ App=Auto
 WA=1
 Version=8.3
 [Управление торговлей 2015 - рабочая]
-Connect=Srvr="lesly";Ref="torg_var_2015";
+Connect=File="D:\WorkData\ДиректорияНаРусском";
 ID=a38a13ee-a145-49a5-9b28-af79b7615a7c
 OrderInList=16384
 Folder=/
@@ -21,19 +21,8 @@ App=ThickClient
 WA=1
 Version=8.3
 [Управление торговлей 2015 - тестовая]
-Connect=Srvr="lesly";Ref="torg_var_test_2015";
+Connect=File="D:\WorkData\ДиректорияНаРусском";
 ID=a1628413-4279-4e79-b586-f114bbdf6182
-OrderInList=16384
-Folder=/
-OrderInTree=256
-External=1
-ClientConnectionSpeed=Normal
-App=ThickClient
-WA=1
-Version=8.3
-[Управление IT 2015 - рабочий]
-Connect=Srvr="lesly";Ref="ita_var_2015";
-ID=21cd87b2-c9b6-4bff-8177-35580bf4920e
 OrderInList=16384
 Folder=/
 OrderInTree=256
