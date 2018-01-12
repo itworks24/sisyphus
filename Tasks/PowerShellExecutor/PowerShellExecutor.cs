@@ -25,7 +25,7 @@ namespace Sisyphus.Tasks
                     PowerShellInstance.AddScript(script);
                 }
                 else
-                    PowerShellInstance.AddCommand(settings.SingleCommand);
+                    PowerShellInstance.Commands.Commands.AddScript(settings.SingleCommand);
 
                 if (!string.IsNullOrEmpty(settings.Arguments))
                     PowerShellInstance.AddArgument(settings.Arguments);

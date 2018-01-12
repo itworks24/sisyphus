@@ -212,25 +212,9 @@
       <Project>{6eeca358-c495-40c7-a5ea-445fbf0fb710}</Project>
       <Name>TaskCore</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\EnterpriseBackup\EnterpriseBackup.csproj">
-      <Project>{2c314c89-0c09-4fbb-9e79-e5db1f432bdb}</Project>
-      <Name>EnterpriseBackup</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
-      <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
-      <Name>RKeeperReporter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\RoseltorgParser\RoseltorgParser.csproj">
-      <Project>{341b719a-659a-4668-b5d9-e91e66557d11}</Project>
-      <Name>RoseltorgParser</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\TrelloCardReminder\TrelloCardReminder.csproj">
-      <Project>{103f395d-e3ac-497d-bf78-2f820922e092}</Project>
-      <Name>TrelloCardReminder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\TrelloChecker\TrelloChecker.csproj">
-      <Project>{57a750d9-36b6-410b-8808-29cabe955842}</Project>
-      <Name>TrelloChecker</Name>
+    <ProjectReference Include="..\..\Tasks\PowerShellExecutor\PowerShellExecutor.csproj">
+      <Project>{6ccb7da6-a140-4485-986b-c6ea5b48a989}</Project>
+      <Name>PowerShellExecutor</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

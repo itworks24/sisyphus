@@ -45,6 +45,10 @@
 			<Name>EnterpriseBackup</Name>
 			<Project>{2C314C89-0C09-4FBB-9E79-E5DB1F432BDB}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\Tasks\PowerShellExecutor\PowerShellExecutor.csproj">
+			<Name>PowerShellExecutor</Name>
+			<Project>{6CCB7DA6-A140-4485-986B-C6EA5B48A989}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
 			<Name>RKeeperReporter</Name>
 			<Project>{B6A8489D-1522-4EAF-AC2F-CC85D766BCEE}</Project>

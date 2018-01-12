@@ -355,6 +355,7 @@
 		<row><td>EnterpriseBackup.Primary_output</td><td>{28203477-43F4-4F75-A168-FE4691892BC1}</td><td>INSTALLDIR</td><td>2</td><td/><td>enterprisebackup.primary_out</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B6941918-6F04-49B1-8C4E-CCE565EB199F}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{85902666-AB5C-4980-9DF8-E0C4E3EF1C37}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PowerShellExecutor.Primary_output</td><td>{C1408FBB-46FA-4B74-8661-93E03D25F21C}</td><td>INSTALLDIR</td><td>2</td><td/><td>powershellexecutor.primary_o</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>RKeeperReporter.Primary_output</td><td>{DBE7EDC4-9DA4-470B-B0D0-8D3D5BAA0796}</td><td>INSTALLDIR</td><td>2</td><td/><td>rkeeperreporter.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SampleTask.Primary_output</td><td>{CA3AE23F-AC7D-4D1A-A9DF-576FA7CB326C}</td><td>INSTALLDIR</td><td>2</td><td/><td>sampletask.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SampleTask.Source_Files</td><td>{1B481489-5709-4F5E-93ED-DD2DECC4B682}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td>sampletask.source_files</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1081,6 +1082,7 @@
 		<row><td>INSTALLDIR</td><td>EnterpriseBackup.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>INSTALLDIR</td><td>PowerShellExecutor.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>RKeeperReporter.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SampleTask.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SampleTask.Source_Files</td></row>
@@ -1915,6 +1917,7 @@
 		<row><td>AlwaysInstall</td><td>EnterpriseBackup.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>PowerShellExecutor.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>RKeeperReporter.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SampleTask.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SampleTask.Source_Files</td></row>
@@ -1943,6 +1946,7 @@
 		<row><td>configapplication.primary_ou</td><td>ConfigApplication.Primary_output</td><td>ConfigApplication.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigApplication&gt;|Built</td><td>3</td><td/></row>
 		<row><td>enterprisebackup.content_fil</td><td>EnterpriseBackup.Content_Files</td><td>EnterpriseBackup.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>enterprisebackup.primary_out</td><td>EnterpriseBackup.Primary_output</td><td>EnterpriseBackup.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|Built</td><td>3</td><td/></row>
+		<row><td>powershellexecutor.primary_o</td><td>PowerShellExecutor.Primary_output</td><td>PowerShellExecutor.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;PowerShellExecutor&gt;|Built</td><td>3</td><td/></row>
 		<row><td>rkeeperreporter.primary_outp</td><td>RKeeperReporter.Primary_output</td><td>RKeeperReporter.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RKeeperReporter&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.primary_output</td><td>SampleTask.Primary_output</td><td>SampleTask.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.source_files</td><td>SampleTask.Source_Files</td><td>SampleTask.Source Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|SourceFiles</td><td>3</td><td/></row>
@@ -2100,6 +2104,7 @@
 		<row><td>EnterpriseBackup.Primary_output</td><td/><td/><td>_8C2E6CCE_8A64_4C8F_89DC_0CD220BD75F6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_EA88607B_5378_4389_A086_D04BD4438057_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_EA7B6CB7_54CF_425C_996D_FEB14BEC9083_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PowerShellExecutor.Primary_output</td><td/><td/><td>_0D27E6AD_AB4F_476C_9B02_CC5C41F78D7B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>RKeeperReporter.Primary_output</td><td/><td/><td>_2AAEE881_49EB_45F9_8B13_AE2CED4ED1D4_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SampleTask.Primary_output</td><td/><td/><td>_085EB714_8B12_4140_9969_0E4E9B6B1CD6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SampleTask.Source_Files</td><td/><td/><td>_DCEF0D77_B14F_4F87_BE03_0E9C55B4BBBF_FILTER</td><td/><td/><td/><td/></row>
@@ -2397,6 +2402,7 @@
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
 		<row><td>Installer</td><td>Installer\Installer.csproj</td><td/><td>2</td></row>
+		<row><td>PowerShellExecutor</td><td>Tasks\PowerShellExecutor\PowerShellExecutor.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>RKeeperReporter</td><td>Tasks\RKeeperReporter\RKeeperReporter.csproj</td><td/><td>2</td></row>
 		<row><td>SampleTask</td><td>Tasks\SampleTask\SampleTask.csproj</td><td/><td>2</td></row>
@@ -2713,7 +2719,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>itworks</td><td>0</td><td/><td>1487316532</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>itworks</td><td>0</td><td/><td>1621524492</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-1834706133</td></row>
@@ -3818,12 +3824,12 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1834700245</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.itworks.com</td><td>0</td><td/><td>1487316532</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>itworks</td><td>0</td><td/><td>1487316532</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.itworks.com</td><td>0</td><td/><td>1621524492</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>itworks</td><td>0</td><td/><td>1621524492</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Contact:  support@itworks24.ru</td><td>0</td><td/><td>161848821</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>SisyphusShceduler</td><td>0</td><td/><td>-1834703406</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>Admin units shedulres service</td><td>0</td><td/><td>-1834698958</td></row>
-		<row><td>ID_STRING7</td><td>1033</td><td>http://www.itworks.com</td><td>0</td><td/><td>1487316532</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>http://www.itworks.com</td><td>0</td><td/><td>1621524492</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1834702293</td></row>
 	</table>
 
@@ -3953,6 +3959,7 @@
 		<row><td>_1DA9802A06F64845B4A8255DA80B5B71.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2160DAA1B5A347C0BC45C78E6CF298F4.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_23813D0A974047A890129C5669A2E97E.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_2AE7C9DDD51044EFB75FBD908D60A8CC.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2CE2F380EC6B4F28A4CA0BD6E62ECE18.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2F809017F7C241E2891ADE36207D86FB.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_39A928FF6A6941AC96C37D1D0F54F48F.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
@@ -4529,9 +4536,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{8C044470-CA61-4BF3-B9F3-F77F5CD5B898}</td><td/></row>
+		<row><td>ProductCode</td><td>{E4CC81CC-70BE-439F-958F-C8C6C0F79E99}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0065</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0067</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
