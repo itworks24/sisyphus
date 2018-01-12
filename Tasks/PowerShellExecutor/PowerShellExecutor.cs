@@ -12,6 +12,7 @@ namespace Sisyphus.Tasks
 {
     public partial class PowershellExecutor
     {
+
         public bool ExecuteProcess()
         {
             var settings = GetSettings(typeof(PowershellExecutorSettings)) as Settings.PowershellExecutorSettings;
@@ -32,10 +33,13 @@ namespace Sisyphus.Tasks
                 var result = PowerShellInstance.Invoke();
                 result.ToList().ForEach(t => CreateLogRecord(t.ToString()));
 
-                if (PowerShellInstance.Streams.Error.Count <= 0) return true;
+                foreach (var verbose in PowerShellInstance.Streams.Verbose)
+                    CreateLogRecord(verbose.Message);
+
                 foreach (var error in PowerShellInstance.Streams.Error)
                     CreateLogRecord(error.Exception.Message, System.Diagnostics.EventLogEntryType.Error);
-                return false;
+
+                return PowerShellInstance.Streams.Error.Count == 0;
             }
         }
     }

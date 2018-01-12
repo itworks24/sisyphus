@@ -351,6 +351,7 @@
 		<row><td>CheckImapConnection.Primary_output</td><td>{35121BB4-A616-401E-8169-A50DE277E450}</td><td>INSTALLDIR</td><td>2</td><td/><td>checkimapconnection.primary_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConfigApplication.Content_Files</td><td>{766B16C1-F8B4-414C-A4D1-D08C64AB64E0}</td><td>INSTALLDIR</td><td>2</td><td/><td>configapplication.content_fi</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConfigApplication.Primary_output</td><td>{EE00726F-D8B4-479F-8389-FB165BA2EC1A}</td><td>INSTALLDIR</td><td>2</td><td/><td>configapplication.primary_ou</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EnterpriseBackup.Content_Files</td><td>{45807F96-DF8B-4369-BB56-D02B33631FC9}</td><td>INSTALLDIR</td><td>2</td><td/><td>enterprisebackup.content_fil</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>EnterpriseBackup.Primary_output</td><td>{28203477-43F4-4F75-A168-FE4691892BC1}</td><td>INSTALLDIR</td><td>2</td><td/><td>enterprisebackup.primary_out</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B6941918-6F04-49B1-8C4E-CCE565EB199F}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{85902666-AB5C-4980-9DF8-E0C4E3EF1C37}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1076,6 +1077,7 @@
 		<row><td>INSTALLDIR</td><td>CheckImapConnection.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>ConfigApplication.Content_Files</td></row>
 		<row><td>INSTALLDIR</td><td>ConfigApplication.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>EnterpriseBackup.Content_Files</td></row>
 		<row><td>INSTALLDIR</td><td>EnterpriseBackup.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
@@ -1909,6 +1911,7 @@
 		<row><td>AlwaysInstall</td><td>CheckImapConnection.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ConfigApplication.Content_Files</td></row>
 		<row><td>AlwaysInstall</td><td>ConfigApplication.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>EnterpriseBackup.Content_Files</td></row>
 		<row><td>AlwaysInstall</td><td>EnterpriseBackup.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
@@ -1938,6 +1941,7 @@
 		<row><td>checkimapconnection.primary_</td><td>CheckImapConnection.Primary_output</td><td>CheckImapConnection.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;CheckImapConnection&gt;|Built</td><td>3</td><td/></row>
 		<row><td>configapplication.content_fi</td><td>ConfigApplication.Content_Files</td><td>ConfigApplication.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigApplication&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>configapplication.primary_ou</td><td>ConfigApplication.Primary_output</td><td>ConfigApplication.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigApplication&gt;|Built</td><td>3</td><td/></row>
+		<row><td>enterprisebackup.content_fil</td><td>EnterpriseBackup.Content_Files</td><td>EnterpriseBackup.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>enterprisebackup.primary_out</td><td>EnterpriseBackup.Primary_output</td><td>EnterpriseBackup.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|Built</td><td>3</td><td/></row>
 		<row><td>rkeeperreporter.primary_outp</td><td>RKeeperReporter.Primary_output</td><td>RKeeperReporter.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RKeeperReporter&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.primary_output</td><td>SampleTask.Primary_output</td><td>SampleTask.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|Built</td><td>3</td><td/></row>
@@ -2092,6 +2096,7 @@
 		<row><td>CheckImapConnection.Primary_output</td><td/><td/><td>_A6D9DBAF_92BD_4F93_9455_4C18D11AECB8_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConfigApplication.Content_Files</td><td/><td/><td>_04CC7490_8877_4D6C_AA28_A9EBB3BB0607_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConfigApplication.Primary_output</td><td/><td/><td>_C877D1E0_4B30_4AB5_8F1D_2D911FE43742_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EnterpriseBackup.Content_Files</td><td/><td/><td>_BA5DF56A_0470_4C89_AFD6_F88A3A9C3A78_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>EnterpriseBackup.Primary_output</td><td/><td/><td>_8C2E6CCE_8A64_4C8F_89DC_0CD220BD75F6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_EA88607B_5378_4389_A086_D04BD4438057_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_EA7B6CB7_54CF_425C_996D_FEB14BEC9083_FILTER</td><td/><td/><td/><td/></row>
@@ -2708,7 +2713,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>itworks</td><td>0</td><td/><td>161862465</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>itworks</td><td>0</td><td/><td>1487316532</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-1834706133</td></row>
@@ -3813,12 +3818,12 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1834702293</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1834700245</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.itworks24.ru</td><td>0</td><td/><td>161857013</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>itworks</td><td>0</td><td/><td>161862465</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.itworks.com</td><td>0</td><td/><td>1487316532</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>itworks</td><td>0</td><td/><td>1487316532</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Contact:  support@itworks24.ru</td><td>0</td><td/><td>161848821</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>SisyphusShceduler</td><td>0</td><td/><td>-1834703406</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>Admin units shedulres service</td><td>0</td><td/><td>-1834698958</td></row>
-		<row><td>ID_STRING7</td><td>1033</td><td>http://www.itworks24.ru</td><td>0</td><td/><td>161859061</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>http://www.itworks.com</td><td>0</td><td/><td>1487316532</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1834702293</td></row>
 	</table>
 
@@ -3952,6 +3957,7 @@
 		<row><td>_2F809017F7C241E2891ADE36207D86FB.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_39A928FF6A6941AC96C37D1D0F54F48F.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_3B9DAA8A7250435F96B2258BCC6689D2.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_3BDF0BE360354BCA830820BC33EE3458.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_3C518F3A131248F091A23B7B5DCEDE0E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_3CCA5BC28A144CC7BF92C20D6D154B76.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_43FCDB2AE3FA42A8B2E64DDD3ADAA18C.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3971,9 +3977,11 @@
 		<row><td>_7B130711EECD444786A5D634761F71EE.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7F24DB4DA4624F9E97A9A7C2AB10BE54.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_7FCA113089AA4A76AECAFF25EB568C8E.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_805DA1790F8E427EA69E9D1F8C409037.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_87C3AB521ADC43159CFCED68AF1B2C9E.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_8850829F86F54F23AE02D1AB506ED552.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_89235FF2ACEB4B32921E5F39A75B0EE7.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_89A96E1017CE480685E67851E2CA3383.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_8A083003E28A4F268F96F4414F0512A3.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_8E95417465D44C4DA80F2AE7920C04DB.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_91C0E22AF89646068B4998DCBCB08D05.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -3989,6 +3997,7 @@
 		<row><td>_C1A7376A9F064EF1985E57FD769D67A5.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C95E19F193B0416BBC14136CF217ED46.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_C98FA3C0AF1D42618090578661CFBD66.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_D290561B46C046CA99EC3B78BC66D573.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_D93D82A79FA84B41A29402245BDF2037.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_DCCDEE75AB1C4938A9D38E9D1B08A104.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_DD6ADA23DB834EE9A2E5A1D387DDEA25.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -4001,6 +4010,7 @@
 		<row><td>_EE1D8C0EAD6F49279A32C6EE5EA72308.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_F1A91779786D4FAE8E479DCBB377B2C8.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_F86DC0CFCB334AA48C18642F96AFBA3A.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_F88FAD7A544F41F9ABC3E2BD8FE64F40.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FA5D53238DF74F7A98EFC86A9AD73DAF.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FD7CAEB376104712987AC0842F9CC377.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_FEA9F5E4D2AF42C492923CDBEF51B607.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
@@ -4519,9 +4529,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{AD822C1E-A95C-4FAE-9466-58356B4AAB5A}</td><td/></row>
+		<row><td>ProductCode</td><td>{8C044470-CA61-4BF3-B9F3-F77F5CD5B898}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0062</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0065</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
