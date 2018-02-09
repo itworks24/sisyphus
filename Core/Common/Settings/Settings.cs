@@ -90,7 +90,6 @@ namespace Sisyphus.Settings
         object IDictionary<string, object>.this[string key] { get { return _dict[key]; } set { _dict[key] = value; } }
         public ICollection<string> Keys => _dict.Keys;
         public ICollection<object> Values => _dict.Values;
-
     }
 
     public class SettingsGroupsCollection : IList<string>

@@ -91,10 +91,12 @@ namespace Sisyphus.Settings
             var startInfo = new ProcessStartInfo("notepad.exe", SettingsFilePath);
             Process.Start(startInfo);
         }
+        
         public static List<string> GetSections(string typeSectionName)
         {
             return GetSettingsIni().GetSections().Where(t => t.StartsWith($"{typeSectionName}.")).ToList();
         }
+        
         public static List<string> GetSectionsByGroupName(string groupName)
         {
             return GetSettingsIni().GetSections().Where(t => t.EndsWith($".{groupName}")).ToList();
@@ -106,10 +108,12 @@ namespace Sisyphus.Settings
             var splited = section.Split('.');
             return splited;
         }
+        
         public static string GetClassName(string section)
         {
             return GetSeparatedSection(section)[0];
         }
+        
         public static string GetGroupName(string section)
         {
             return GetSeparatedSection(section)[1];

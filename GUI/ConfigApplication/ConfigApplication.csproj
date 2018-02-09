@@ -216,6 +216,10 @@
       <Project>{6ccb7da6-a140-4485-986b-c6ea5b48a989}</Project>
       <Name>PowerShellExecutor</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Tasks\RKBot\RKBot.csproj">
+      <Project>{81cd1c91-fb03-49b4-bf8b-1c86852116da}</Project>
+      <Name>RKBot</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xaml">
