@@ -4,44 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
-
+using Sysiphus.Tasks.RKBot.MongoClasses;
 
 namespace Sysiphus.Tasks.RKBot
 {
 
-    class Waiter
-    {
-        public ObjectId Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
-        public Company Company { get; set; }
-        public List<string> Languages { get; set; }
-    }
-    class Company
-    {
-        public string Name { get; set; }
-    }
-
     class MongoDBInteface
     {
-        private MongoClient mongoClient;
-        private IMongoDatabase database;
-        private string connectionString;
-        private const string databaseName = "RK7DB";
+        private MongoClient _mongoClient;
+        private IMongoDatabase _database;
+        private string _connectionString;
+        private const string DatabaseName = "RK7DB";
 
         public MongoDBInteface(string connectionString)
         {
-            this.connectionString = connectionString;
+            this._connectionString = connectionString;
             Connect();
         }
 
-        private bool Connect()
+        private void Connect()
         {
-            mongoClient = new MongoClient(connectionString);
-            database = mongoClient.GetDatabase(databaseName);
-            return true;
+            _mongoClient = new MongoClient(_connectionString);
+            _database = _mongoClient.GetDatabase(DatabaseName);
+        }
+
+        public void SaveShift(Shift shift)
+        {
+            var collection = _database.GetCollection<Shift>("shifts");
+            collection.InsertOne(shift);
         }
     }
 }
