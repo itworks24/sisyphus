@@ -25,46 +25,64 @@ namespace Sysiphus.Tasks.RKBot
             var getWaiterListResult = rkInterface.GetWaiterList(true);
             var getOrderListResult = rkInterface.GetOrderList();
 
+            var restaurant = new Restaurant
+            {
+                Id = getSystemInfo2.SystemInfo.Restaurant.id,
+                Name = getSystemInfo2.SystemInfo.Restaurant.AnyAttr[0].Value
+            };
+
+            var waiters = getWaiterListResult.Waiters.Select(waiter =>
+            {
+                var firstOrDefault = getOrderListResult.Visit.Select(
+                        visit =>
+                            visit.Orders.Select(order => new { name = order.WaiterName, code = order.WaiterCode })
+                                .FirstOrDefault())
+                    .FirstOrDefault(t => t != null && t.code == waiter.Code);
+                return new Waiter
+                {
+                    Code = waiter.Code,
+                    Id = int.Parse(waiter.ID),
+                    Name = (firstOrDefault ?? new { name = "", code = "" }).name
+
+                };
+            }).ToList();
+
+            var parseValue = 0;
+
+            var visits = getOrderListResult.Visit.Select(visit => new Visit
+            {
+                Id = int.Parse(visit.VisitID),
+                GuestCount = int.Parse(visit.GuestsCount),
+                Orders = visit.Orders.Select(order => new Order()
+                {
+                    Id = int.TryParse(order.OrderName.Replace("/", ""), out parseValue) ? parseValue : 0,
+                    BillTime = order.BillTime,
+                    CreateTime = order.CreateTime,
+                    Dessert = order.Dessert,
+                    Finished = order.Finished,
+                    FinishTime = order.FinishTime,
+                    OrderName = order.OrderName,
+                    OrderSum = int.Parse(order.OrderSum),
+                    Table = new Table()
+                    {
+                        Code = order.TableCode,
+                        Id = int.TryParse(order.TableID, out parseValue) ? parseValue : 0,
+                        Name = order.TableName
+                    },
+                    Version = int.TryParse(order.Version, out parseValue) ? parseValue : 0
+                }).ToList()
+            }).ToList();
+
             var shift = new Shift
             {
                 ShiftNum = getSystemInfo2.SystemInfo.CommonShift.ShiftNum,
                 CreateTime = getSystemInfo2.SystemInfo.CommonShift.ShiftStartTime,
-                Restaurant = new Restaurant
-                {
-                    Id = new MongoDB.Bson.ObjectId(getSystemInfo2.SystemInfo.Restaurant.id),
-                    Name = getSystemInfo2.SystemInfo.Restaurant.AnyAttr[0].Value
-                },
-                Waiters = getWaiterListResult.Waiters.Select(waiter => new Waiter()
-                {
-                    Code = waiter.Code,
-                    Id = new MongoDB.Bson.ObjectId(waiter.ID),
-                    Name = getOrderListResult.Visit.Select(visit => visit.Orders.Select(order => new { name = order.WaiterName, code = order.WaiterCode }).FirstOrDefault())
-                                                   .FirstOrDefault(t => t.code == waiter.Code).name,
-                }).ToList(),
-                Visits = getOrderListResult.Visit.Select(visit => new Visit()
-                {
-                    Id = new MongoDB.Bson.ObjectId(visit.VisitID),
-                    GuestCount = int.Parse(visit.GuestsCount),
-                    Orders = visit.Orders.Select(order => new Order()
-                    {
-                        Id = new MongoDB.Bson.ObjectId(order.OrderID),
-                        BillTime = order.BillTime,
-                        CreateTime = order.CreateTime,
-                        Dessert = order.Dessert,
-                        Finished = order.Finished,
-                        FinishTime = order.FinishTime,
-                        OrderName = order.OrderName,
-                        OrderSum = int.Parse(order.OrderSum),
-                        Table = new Table()
-                        {
-                            Code = order.TableCode,
-                            Id = new MongoDB.Bson.ObjectId(order.TableID),
-                            Name = order.TableName
-                        },
-                        Version = int.Parse(order.Version)
-                    }).ToList()
-                }).ToList()
+                Restaurant = restaurant,
+                Waiters = waiters,
+                Visits = visits
             };
+
+            CreateLogRecord(shift.ToJson());
 
             var mongoDB = new MongoDBInteface(settings.MongoConnectionString);
             mongoDB.SaveShift(shift);
