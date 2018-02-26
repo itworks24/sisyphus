@@ -11,3 +11,8 @@ C:\Users\vladas.j\Source\Repos\sisyphus\Cron\bin\Debug\Rlc.Cron.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\Cron\bin\Debug\Rlc.Cron.pdb
 C:\Users\vladas.j\Source\Repos\sisyphus\Cron\obj\Debug\Rlc.Cron.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\Cron\obj\Debug\Rlc.Cron.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\bin\Debug\Rlc.Cron.dll
+C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\bin\Debug\Rlc.Cron.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\obj\Debug\Cron.csprojResolveAssemblyReference.cache
+C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\obj\Debug\Rlc.Cron.dll
+C:\Users\test-test\Source\Repos\sisyphus\Core\Cron\obj\Debug\Rlc.Cron.pdb

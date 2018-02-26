@@ -47,3 +47,4 @@ C:\Users\test-test\Source\Repos\sisyphus\Tasks\EnterpriseBackup\obj\Release\Inte
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\EnterpriseBackup\obj\Release\EnterpriseBackup.csproj.ResolveComReference.cache
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\EnterpriseBackup\obj\Release\BaseBackup.dll
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\EnterpriseBackup\obj\Release\BaseBackup.pdb
+C:\Users\test-test\Source\Repos\sisyphus\Tasks\EnterpriseBackup\bin\Release\7za.exe

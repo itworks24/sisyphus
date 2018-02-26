@@ -149,7 +149,8 @@ namespace Sysiphus.Tasks.SampleTask
                                      on MENUITEM.SIFR equals DISHGROUP.CHILD
                                join CLASSIFICATORGROUP in db.CLASSIFICATORGROUPS
                                      on new { classoficatorId = DISHGROUP.PARENT ?? -1, ClassificationGroupSIFR = classificationGroupSIFR }
-                                          equals new { classoficatorId = CLASSIFICATORGROUP.SIFR * 256 + CLASSIFICATORGROUP.NUMINGROUP, ClassificationGroupSIFR = classificationGroupSIFR == 0 ? (short)0 : CLASSIFICATORGROUP.SIFR }
+                                          equals new { classoficatorId = CLASSIFICATORGROUP.SIFR * 256 + CLASSIFICATORGROUP.NUMINGROUP, ClassificationGroupSIFR = classificationGroupSIFR == 0 ? (short)0 : CLASSIFICATORGROUP.SIFR } into LEFTJOINCLASSINFOGROUPS
+                               from LEFTJOINCLASSINFOGROUP in LEFTJOINCLASSINFOGROUPS.DefaultIfEmpty().Take(1)
                                join DISCPART in db.DISCPARTS
                                      on new { visit = SALEOBJECT.Visit, MidServer = SALEOBJECT.MidServer, bindingUNI = PAYBINDING.UNI }
                                          equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
@@ -160,12 +161,12 @@ namespace Sysiphus.Tasks.SampleTask
                                where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime
                                      && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                      && (PRINTCHECK.STATE == 6)
-                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT })
+                               select new { LEFTJOINCLASSINFOGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT })
                                .ToList();
                 var groups = from report in reports
                              group report by new
                              {
-                                 ClassficatorGroup = report.CLASSIFICATORGROUP,
+                                 ClassficatorGroup = report.LEFTJOINCLASSINFOGROUP,
                                  Restaurant = report.RESTAURANT,
                                  CurrencyType = report.CURRENCYTYPE,
                                  Currency = report.CURRENCY,

@@ -356,6 +356,7 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B6941918-6F04-49B1-8C4E-CCE565EB199F}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{85902666-AB5C-4980-9DF8-E0C4E3EF1C37}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>PowerShellExecutor.Primary_output</td><td>{C1408FBB-46FA-4B74-8661-93E03D25F21C}</td><td>INSTALLDIR</td><td>2</td><td/><td>powershellexecutor.primary_o</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>RKBot.Primary_output</td><td>{DA5DB450-3C1D-4623-8C89-5002AE0D8169}</td><td>INSTALLDIR</td><td>2</td><td/><td>rkbot.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>RKeeperReporter.Primary_output</td><td>{DBE7EDC4-9DA4-470B-B0D0-8D3D5BAA0796}</td><td>INSTALLDIR</td><td>2</td><td/><td>rkeeperreporter.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SampleTask.Primary_output</td><td>{CA3AE23F-AC7D-4D1A-A9DF-576FA7CB326C}</td><td>INSTALLDIR</td><td>2</td><td/><td>sampletask.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SampleTask.Source_Files</td><td>{1B481489-5709-4F5E-93ED-DD2DECC4B682}</td><td>SAMPLETASKSOURCE</td><td>2</td><td/><td>sampletask.source_files</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1083,6 +1084,7 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>PowerShellExecutor.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>RKBot.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>RKeeperReporter.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SampleTask.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SampleTask.Source_Files</td></row>
@@ -1918,6 +1920,7 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>PowerShellExecutor.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>RKBot.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>RKeeperReporter.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SampleTask.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>SampleTask.Source_Files</td></row>
@@ -1947,6 +1950,7 @@
 		<row><td>enterprisebackup.content_fil</td><td>EnterpriseBackup.Content_Files</td><td>EnterpriseBackup.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>enterprisebackup.primary_out</td><td>EnterpriseBackup.Primary_output</td><td>EnterpriseBackup.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EnterpriseBackup&gt;|Built</td><td>3</td><td/></row>
 		<row><td>powershellexecutor.primary_o</td><td>PowerShellExecutor.Primary_output</td><td>PowerShellExecutor.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;PowerShellExecutor&gt;|Built</td><td>3</td><td/></row>
+		<row><td>rkbot.primary_output</td><td>RKBot.Primary_output</td><td>RKBot.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RKBot&gt;|Built</td><td>3</td><td/></row>
 		<row><td>rkeeperreporter.primary_outp</td><td>RKeeperReporter.Primary_output</td><td>RKeeperReporter.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RKeeperReporter&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.primary_output</td><td>SampleTask.Primary_output</td><td>SampleTask.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|Built</td><td>3</td><td/></row>
 		<row><td>sampletask.source_files</td><td>SampleTask.Source_Files</td><td>SampleTask.Source Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SampleTask&gt;|SourceFiles</td><td>3</td><td/></row>
@@ -2105,6 +2109,7 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_EA88607B_5378_4389_A086_D04BD4438057_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_EA7B6CB7_54CF_425C_996D_FEB14BEC9083_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>PowerShellExecutor.Primary_output</td><td/><td/><td>_0D27E6AD_AB4F_476C_9B02_CC5C41F78D7B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>RKBot.Primary_output</td><td/><td/><td>_C1126D11_6F95_42C3_BA6C_1823A4F9C228_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>RKeeperReporter.Primary_output</td><td/><td/><td>_2AAEE881_49EB_45F9_8B13_AE2CED4ED1D4_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SampleTask.Primary_output</td><td/><td/><td>_085EB714_8B12_4140_9969_0E4E9B6B1CD6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SampleTask.Source_Files</td><td/><td/><td>_DCEF0D77_B14F_4F87_BE03_0E9C55B4BBBF_FILTER</td><td/><td/><td/><td/></row>
@@ -2404,6 +2409,7 @@
 		<row><td>Installer</td><td>Installer\Installer.csproj</td><td/><td>2</td></row>
 		<row><td>PowerShellExecutor</td><td>Tasks\PowerShellExecutor\PowerShellExecutor.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
+		<row><td>RKBot</td><td>Tasks\RKBot\RKBot.csproj</td><td/><td>2</td></row>
 		<row><td>RKeeperReporter</td><td>Tasks\RKeeperReporter\RKeeperReporter.csproj</td><td/><td>2</td></row>
 		<row><td>SampleTask</td><td>Tasks\SampleTask\SampleTask.csproj</td><td/><td>2</td></row>
 		<row><td>ServiceControll</td><td>Core\Evelated\ServiceControll.csproj</td><td/><td>2</td></row>
@@ -3959,6 +3965,7 @@
 		<row><td>_1DA9802A06F64845B4A8255DA80B5B71.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2160DAA1B5A347C0BC45C78E6CF298F4.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_23813D0A974047A890129C5669A2E97E.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
+		<row><td>_2460CEC24D92459CA604C5278A4C85A6.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2AE7C9DDD51044EFB75FBD908D60A8CC.exe</td><td/><td>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2CE2F380EC6B4F28A4CA0BD6E62ECE18.exe</td><td/><td>C:\Users\vladas.j\Source\Workspaces\NotificationApplication\AdminUnits\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
 		<row><td>_2F809017F7C241E2891ADE36207D86FB.exe</td><td/><td>C:\Users\vladas.j\Source\Repos\sisyphus\ConfigApplication\bin\Release\ConfigApplication.exe</td><td>0</td></row>
@@ -4536,9 +4543,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigApplication.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{E4CC81CC-70BE-439F-958F-C8C6C0F79E99}</td><td/></row>
+		<row><td>ProductCode</td><td>{540070DC-65DB-4FA4-957A-821877D5C168}</td><td/></row>
 		<row><td>ProductName</td><td>Sisyphus</td><td/></row>
-		<row><td>ProductVersion</td><td>1.01.0067</td><td/></row>
+		<row><td>ProductVersion</td><td>1.01.0070</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

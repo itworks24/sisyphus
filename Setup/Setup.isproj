@@ -49,6 +49,10 @@
 			<Name>PowerShellExecutor</Name>
 			<Project>{6CCB7DA6-A140-4485-986B-C6EA5B48A989}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\Tasks\RKBot\RKBot.csproj">
+			<Name>RKBot</Name>
+			<Project>{81CD1C91-FB03-49B4-BF8B-1C86852116DA}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\Tasks\RKeeperReporter\RKeeperReporter.csproj">
 			<Name>RKeeperReporter</Name>
 			<Project>{B6A8489D-1522-4EAF-AC2F-CC85D766BCEE}</Project>
