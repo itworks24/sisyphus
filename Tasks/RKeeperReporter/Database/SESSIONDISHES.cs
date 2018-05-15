@@ -63,5 +63,6 @@ namespace RKeeperReporter.Database
         public Nullable<int> COMBOMODIUNI { get; set; }
         public Nullable<int> COMBODISCUNI { get; set; }
         public string TRANSACT_GUID { get; set; }
+        public Nullable<System.DateTime> CREATIONDATETIME { get; set; }
     }
 }

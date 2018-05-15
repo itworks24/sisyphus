@@ -28,7 +28,6 @@ namespace RKeeperReporter.Database
         public Nullable<short> QNTDECDIGITS { get; set; }
         public Nullable<int> MODISCHEME { get; set; }
         public Nullable<short> MODIWEIGHT { get; set; }
-        public Nullable<int> TAXDISHTYPE { get; set; }
         public Nullable<short> COOKMINS { get; set; }
         public string COMMENT { get; set; }
         public byte[] INSTRUCT { get; set; }
@@ -70,6 +69,5 @@ namespace RKeeperReporter.Database
         public byte[] LARGEIMAGEPATH { get; set; }
         public Nullable<decimal> GUESTSDISHRATING { get; set; }
         public string RECSTAMP { get; set; }
-        public Nullable<short> DBSTATUS { get; set; }
     }
 }

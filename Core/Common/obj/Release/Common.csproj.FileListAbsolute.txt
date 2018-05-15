@@ -1,0 +1,6 @@
+C:\Users\vlada\Source\Repos\sisyphus\Core\Common\bin\Release\Common.dll.config
+C:\Users\vlada\Source\Repos\sisyphus\Core\Common\bin\Release\Common.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\Common\bin\Release\Common.pdb
+C:\Users\vlada\Source\Repos\sisyphus\Core\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\vlada\Source\Repos\sisyphus\Core\Common\obj\Release\Common.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\Common\obj\Release\Common.pdb

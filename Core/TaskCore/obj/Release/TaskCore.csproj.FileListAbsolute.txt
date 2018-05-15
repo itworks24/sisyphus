@@ -1,0 +1,11 @@
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\TaskCore.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\TaskCore.pdb
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\Common.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\SQLLogger.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\LiteDB.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\Common.pdb
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\SQLLogger.pdb
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\bin\Release\LiteDB.xml
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\obj\Release\TaskCore.csprojResolveAssemblyReference.cache
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\obj\Release\TaskCore.dll
+C:\Users\vlada\Source\Repos\sisyphus\Core\TaskCore\obj\Release\TaskCore.pdb

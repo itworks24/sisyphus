@@ -31,6 +31,7 @@ namespace RKeeperReporter.Database
         public Nullable<short> RIGHTLVL { get; set; }
         public Nullable<int> DISCOUNT { get; set; }
         public Nullable<int> TAXPAYTYPE { get; set; }
+        public Nullable<decimal> MINIMALAMOUNT { get; set; }
         public Nullable<int> VISUALTYPE_IMAGE { get; set; }
         public Nullable<int> VISUALTYPE_BCOLOR { get; set; }
         public Nullable<int> VISUALTYPE_TEXTCOLOR { get; set; }
@@ -56,6 +57,5 @@ namespace RKeeperReporter.Database
         public Nullable<int> AUTOFILLMODE { get; set; }
         public Nullable<int> AUTHPURPOSE { get; set; }
         public string RECSTAMP { get; set; }
-        public Nullable<short> DBSTATUS { get; set; }
     }
 }

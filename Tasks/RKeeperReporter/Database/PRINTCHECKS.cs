@@ -80,5 +80,6 @@ namespace RKeeperReporter.Database
         public string GUIDSTRING { get; set; }
         public Nullable<decimal> PAYFISCALSUM { get; set; }
         public string TRANSACT_GUID { get; set; }
+        public Nullable<short> RECEIPTTAXTYPE { get; set; }
     }
 }

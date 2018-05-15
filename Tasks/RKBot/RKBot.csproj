@@ -85,18 +85,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MongoClasses\MongoShema.cs" />
     <Compile Include="MongoDBInteface.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurant.cs" />
     <Compile Include="RK7Classes\CombinationShema.cs" />
     <Compile Include="RKInterface.cs" />
     <Compile Include="RKReciever.cs" />
     <Compile Include="RKRecieverSettings.cs" />
+    <Compile Include="Shift.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="Visit.cs" />
+    <Compile Include="Waiter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="MongoClasses\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

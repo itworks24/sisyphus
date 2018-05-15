@@ -41,6 +41,5 @@ namespace RKeeperReporter.Database
         public Nullable<short> CIUPDATERIGHT { get; set; }
         public Nullable<int> HHCONTEXTID { get; set; }
         public string RECSTAMP { get; set; }
-        public Nullable<short> DBSTATUS { get; set; }
     }
 }

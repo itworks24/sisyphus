@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Driver;
-using Sysiphus.Tasks.RKBot.MongoClasses;
+﻿using MongoDB.Driver;
 
 namespace Sysiphus.Tasks.RKBot
 {

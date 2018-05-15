@@ -1,0 +1,10 @@
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\PowerShellExecutor.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\PowerShellExecutor.pdb
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\Common.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\LiteDB.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\SQLLogger.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\System.Management.Automation.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\bin\Release\TaskCore.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\obj\Release\PowerShellExecutor.csprojResolveAssemblyReference.cache
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\obj\Release\PowerShellExecutor.dll
+C:\Users\vlada\Source\Repos\sisyphus\Tasks\PowerShellExecutor\obj\Release\PowerShellExecutor.pdb

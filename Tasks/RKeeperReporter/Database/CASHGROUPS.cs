@@ -55,6 +55,5 @@ namespace RKeeperReporter.Database
         public Nullable<int> HTTPAPIPRIVILEGE { get; set; }
         public Nullable<int> HTTPXMLPRIVILEGE { get; set; }
         public string RECSTAMP { get; set; }
-        public Nullable<short> DBSTATUS { get; set; }
     }
 }

@@ -40,6 +40,5 @@ namespace RKeeperReporter.Database
         public string ADDRESSGUID { get; set; }
         public Nullable<long> OPERATIONALHOURS { get; set; }
         public string RECSTAMP { get; set; }
-        public Nullable<short> DBSTATUS { get; set; }
     }
 }

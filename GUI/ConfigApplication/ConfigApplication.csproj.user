@@ -11,6 +11,6 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartWorkingDirectory>C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\</StartWorkingDirectory>
+    <StartWorkingDirectory>C:\Users\vlada\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug</StartWorkingDirectory>
   </PropertyGroup>
 </Project>

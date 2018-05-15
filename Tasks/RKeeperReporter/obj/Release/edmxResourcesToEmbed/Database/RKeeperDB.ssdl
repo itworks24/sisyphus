@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RKeeperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CASHES">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="NETNAME" Type="nvarchar" MaxLength="31" />
+    <Property Name="CASHGROUP" Type="int" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="RIGHTLVL" Type="smallint" />
+    <Property Name="RESOLUTION" Type="int" />
+    <Property Name="COLORS" Type="smallint" />
+    <Property Name="DEFHALLPLANID" Type="int" />
+    <Property Name="RIGHTS" Type="image" />
+    <Property Name="OSTYPE" Type="smallint" />
+    <Property Name="STTYPE" Type="smallint" />
+    <Property Name="DEVICENAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="FILEMANAGERPATH" Type="nvarchar" MaxLength="255" />
+    <Property Name="GRAPHICPARAMETERS" Type="smallint" />
+    <Property Name="WAITDATASENDED" Type="smallint" />
+    <Property Name="AFTERSHIFTCLOSURE" Type="smallint" />
+    <Property Name="SYNCSTATESFLAGS" Type="smallint" />
+    <Property Name="DATASENDTIMEOUT" Type="int" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="CASHGROUPS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="NETNAME" Type="nvarchar" MaxLength="31" />
+    <Property Name="ONLINE" Type="smallint" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="LASTDATARECEIVED" Type="bigint" />
+    <Property Name="NEEDBACKUP" Type="smallint" />
+    <Property Name="BACKUPPATH" Type="nvarchar" MaxLength="255" />
+    <Property Name="BACKUPCOPIESQNT" Type="int" />
+    <Property Name="BACKUPSHIFTQNT" Type="int" />
+    <Property Name="BACKUPTIMEOUT" Type="int" />
+    <Property Name="BACKUPTRANSACTIONQNT" Type="int" />
+    <Property Name="RESTAURANT" Type="int" />
+    <Property Name="KEYNUMBER" Type="int" />
+    <Property Name="LICENSE" Type="nvarchar" MaxLength="47" />
+    <Property Name="LICSTATIONS" Type="int" />
+    <Property Name="LICEXPIREAT" Type="datetime" />
+    <Property Name="PDALICENSE" Type="nvarchar" MaxLength="47" />
+    <Property Name="PDALICSTATIONS" Type="int" />
+    <Property Name="PDALICEXPIREAT" Type="datetime" />
+    <Property Name="LICHARDKEYN" Type="int" />
+    <Property Name="LICENSEVERN" Type="int" />
+    <Property Name="PRINTLOGPATH" Type="nvarchar" MaxLength="255" />
+    <Property Name="TIMESYNCNETNAME" Type="nvarchar" MaxLength="31" />
+    <Property Name="LASTGLOBALSHIFT" Type="int" />
+    <Property Name="FTPGETAVAIL" Type="smallint" />
+    <Property Name="FTPBINDADDR" Type="nvarchar" MaxLength="255" />
+    <Property Name="FTPDATAPORT" Type="int" />
+    <Property Name="FTPINFOPORT" Type="int" />
+    <Property Name="HTTPSERVPORT" Type="int" />
+    <Property Name="HTTPBINDADDR" Type="nvarchar" MaxLength="255" />
+    <Property Name="HTTPGETAVAIL" Type="smallint" />
+    <Property Name="ONLINEDATAEXPORTPERIOD" Type="int" />
+    <Property Name="SYNCSTATESFLAGS" Type="smallint" />
+    <Property Name="SERVEREXISTSSINCE" Type="bigint" />
+    <Property Name="HTTPWEBPRIVILEGE" Type="int" />
+    <Property Name="HTTPAPIPRIVILEGE" Type="int" />
+    <Property Name="HTTPXMLPRIVILEGE" Type="int" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="CLASSIFICATORGROUPS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+      <PropertyRef Name="NUMINGROUP" />
+    </Key>
+    <Property Name="SIFR" Type="smallint" Nullable="false" />
+    <Property Name="NUMINGROUP" Type="smallint" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="SORTORDER" Type="int" />
+    <Property Name="VISUALTYPE_IMAGE" Type="int" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_FLAGS" Type="smallint" />
+    <Property Name="LASTNUMINGROUP" Type="smallint" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="EDITRIGHT" Type="smallint" />
+    <Property Name="DEPARTCODE" Type="smallint" />
+    <Property Name="EXTCODE" Type="int" />
+    <Property Name="EXTRESTID" Type="int" />
+    <Property Name="MODISCHEME" Type="int" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="CLASSINFOS">
+    <Key>
+      <PropertyRef Name="REFNO" />
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="REFNO" Type="smallint" Nullable="false" />
+    <Property Name="NUM" Type="smallint" Nullable="false" />
+    <Property Name="GROUP" Type="int" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CONDITIONPARAMETER" Type="int" />
+    <Property Name="CINAMEOFCLASS" Type="nvarchar" MaxLength="255" />
+    <Property Name="CIUSERNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="CIUSERPLNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="CIDEFAULTPROP" Type="nvarchar" MaxLength="32" />
+    <Property Name="CIHIDDENPROPS" Type="image" />
+    <Property Name="CIREPONLYPROPS" Type="image" />
+    <Property Name="CIREADONLYPROPS" Type="image" />
+    <Property Name="CISPECEDITPROPS" Type="image" />
+    <Property Name="CIENGPREFPROPS" Type="image" />
+    <Property Name="CICOMPLOGPROPS" Type="image" />
+    <Property Name="CIMASKLOGPROPS" Type="image" />
+    <Property Name="CIHIDELOGVALS" Type="image" />
+    <Property Name="CIOPTIONS" Type="smallint" />
+    <Property Name="CIREQPROPS" Type="nvarchar" MaxLength="255" />
+    <Property Name="CIFOCUSONPROP" Type="nvarchar" MaxLength="32" />
+    <Property Name="CISQLPROPHELP" Type="image" />
+    <Property Name="CINAMESUNIQUE" Type="smallint" />
+    <Property Name="CIPARENTPOWCODE" Type="smallint" />
+    <Property Name="CIDONTCHECKPROPS" Type="image" />
+    <Property Name="CIUPDATERIGHT" Type="smallint" />
+    <Property Name="HHCONTEXTID" Type="int" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="CURRENCIES">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="PARENT" Type="int" />
+    <Property Name="RATECLASS" Type="int" />
+    <Property Name="ROUNDRULE" Type="smallint" />
+    <Property Name="ROUNDMETHOD" Type="smallint" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="GROUP" Type="int" />
+    <Property Name="LIMITDISHES" Type="image" />
+    <Property Name="FORMAT" Type="nvarchar" MaxLength="255" />
+    <Property Name="MINTERFACE" Type="int" />
+    <Property Name="RIGHTLVL" Type="smallint" />
+    <Property Name="DISCOUNT" Type="int" />
+    <Property Name="TAXPAYTYPE" Type="int" />
+    <Property Name="MINIMALAMOUNT" Type="money" />
+    <Property Name="VISUALTYPE_IMAGE" Type="int" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_FLAGS" Type="smallint" />
+    <Property Name="SALESTERMS_FLAG" Type="smallint" />
+    <Property Name="SALESTERMS_STARTSALE" Type="datetime" />
+    <Property Name="SALESTERMS_STOPSALE" Type="datetime" />
+    <Property Name="TIPCHARGE" Type="int" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="FISCREGPAYTYPE1" Type="int" />
+    <Property Name="FISCREGPAYTYPE2" Type="int" />
+    <Property Name="FISCREGPAYTYPE3" Type="int" />
+    <Property Name="FISCREGUNFISCTYPE" Type="smallint" />
+    <Property Name="EXTCODE" Type="int" />
+    <Property Name="EXTRESTID" Type="int" />
+    <Property Name="EXTRAINFOCAPTION" Type="nvarchar" MaxLength="40" />
+    <Property Name="MAGNCARDTYPE" Type="int" />
+    <Property Name="FCPAYTRANSACTION" Type="smallint" />
+    <Property Name="FCSUBACCOUNT" Type="int" />
+    <Property Name="MAXPERCENT" Type="float" />
+    <Property Name="FORENCASHMENT" Type="int" />
+    <Property Name="USEBONUSPERCENT" Type="float" />
+    <Property Name="AUTOFILLMODE" Type="int" />
+    <Property Name="AUTHPURPOSE" Type="int" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="CURRENCYTYPES">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="PARENT" Type="int" />
+    <Property Name="CURRENCYFORMAT" Type="smallint" />
+    <Property Name="VISUALTYPE_IMAGE" Type="int" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_FLAGS" Type="smallint" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="FISCREGPAYTYPE1" Type="int" />
+    <Property Name="FISCREGPAYTYPE2" Type="int" />
+    <Property Name="FISCREGPAYTYPE3" Type="int" />
+    <Property Name="FISCREGUNFISCTYPE" Type="smallint" />
+    <Property Name="EDITRIGHT" Type="smallint" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="CURRLINES">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="CHECKUNI" Type="int" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="SIFR" Type="int" />
+    <Property Name="BINDEDSUM" Type="money" />
+    <Property Name="ORIGINALSUM" Type="money" />
+    <Property Name="BASICSUM" Type="money" />
+    <Property Name="NATIONALSUM" Type="money" />
+    <Property Name="DISBALLANCE" Type="bigint" />
+    <Property Name="TAXPAYTYPESIFR" Type="int" />
+    <Property Name="SOURCEORDERIDENT" Type="int" />
+    <Property Name="IHIGHLEVELTYPE" Type="int" />
+    <Property Name="DBKURS" Type="money" />
+    <Property Name="GLOBALIDENT" Type="nvarchar" MaxLength="32" />
+    <Property Name="DISCLINEUNI" Type="int" />
+    <Property Name="PAYUNIFOROWNERINFO" Type="int" />
+    <Property Name="OWNERINFO" Type="nvarchar" MaxLength="64" />
+    <Property Name="FISCREGUNFISCTYPE" Type="int" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="DISCOUNTS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="PARENT" Type="int" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="MODE" Type="smallint" />
+    <Property Name="MAXAMOUNT" Type="money" />
+    <Property Name="MAXPERCENT" Type="float" />
+    <Property Name="COUNTTYPE" Type="int" />
+    <Property Name="CLASSIFICATION" Type="int" />
+    <Property Name="TAXDISHTYPE" Type="int" />
+    <Property Name="MINTERFACE" Type="int" />
+    <Property Name="RIGHTLVL" Type="smallint" />
+    <Property Name="ROUNDRULE" Type="smallint" />
+    <Property Name="MAGNCARDTYPE" Type="int" />
+    <Property Name="VISUALTYPE_IMAGE" Type="int" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_FLAGS" Type="smallint" />
+    <Property Name="SALESTERMS_FLAG" Type="smallint" />
+    <Property Name="SALESTERMS_STARTSALE" Type="datetime" />
+    <Property Name="SALESTERMS_STOPSALE" Type="datetime" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="EXTCODE" Type="int" />
+    <Property Name="EXTRESTID" Type="int" />
+    <Property Name="TRANSACTIONCODE" Type="smallint" />
+    <Property Name="TRANSACTIONVALUE" Type="money" />
+    <Property Name="DISCOUNTDISTRMODE" Type="smallint" />
+    <Property Name="SURPLUSDISTRMODE" Type="smallint" />
+    <Property Name="MINORDERREST" Type="money" />
+    <Property Name="FISCALOUTSIDE" Type="smallint" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="DISCPARTS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="BINDINGUNI" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="BINDINGUNI" Type="int" Nullable="false" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="SIFR" Type="int" />
+    <Property Name="DISCLINEUNI" Type="int" />
+    <Property Name="DISCOUNTQNT" Type="float" />
+    <Property Name="NONZERODISC" Type="smallint" />
+    <Property Name="NONZEROBONUS" Type="smallint" />
+    <Property Name="SUM" Type="money" />
+    <Property Name="BONUSSUM" Type="money" />
+    <Property Name="CALCSUM" Type="money" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="DISHDISCOUNTS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="OWNERUNI" Type="int" />
+    <Property Name="SORTORDER" Type="int" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="SESSIONUNI" Type="int" />
+    <Property Name="SIFR" Type="int" />
+    <Property Name="STATE" Type="smallint" />
+    <Property Name="ICREATOR" Type="int" />
+    <Property Name="IAUTHOR" Type="int" />
+    <Property Name="ICREATORROLE" Type="int" />
+    <Property Name="IAUTHORROLE" Type="int" />
+    <Property Name="ISCHARGE" Type="smallint" />
+    <Property Name="EXCLUDEFROMEARNINGS" Type="smallint" />
+    <Property Name="LOCALIZATION" Type="int" />
+    <Property Name="CHARGESOURCE" Type="int" />
+    <Property Name="VALUECHANGED" Type="smallint" />
+    <Property Name="PDSTRANSACTION" Type="smallint" />
+    <Property Name="COUNTTYPE" Type="int" />
+    <Property Name="SRCAMOUNT" Type="money" />
+    <Property Name="CALCAMOUNT" Type="money" />
+    <Property Name="MAXAMOUNT" Type="bigint" />
+    <Property Name="DELETEDSUM" Type="money" />
+    <Property Name="PAYSUM" Type="bigint" />
+    <Property Name="CLOSEDPAYSUM" Type="bigint" />
+    <Property Name="SEAT" Type="int" />
+    <Property Name="UNFISCALOPERATION" Type="smallint" />
+    <Property Name="ITAXDISHTYPE" Type="int" />
+    <Property Name="CARDCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACCOUNTIDENT" Type="bigint" />
+    <Property Name="GLOBALIDENT" Type="nvarchar" MaxLength="32" />
+    <Property Name="BONUSTYPE" Type="int" />
+    <Property Name="MINTERFACE" Type="int" />
+    <Property Name="BONUSAMOUNT" Type="bigint" />
+    <Property Name="DEFAULTER" Type="int" />
+    <Property Name="HOLDER" Type="nvarchar" MaxLength="40" />
+    <Property Name="CREATETIME" Type="datetime" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="PERSONID" Type="bigint" />
+    <Property Name="COUPONCOUNT" Type="int" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="DISHGROUPS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="PARENT" Type="int" />
+    <Property Name="CHILD" Type="int" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+    <Property Name="Classification" Type="int" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="DISHVOIDS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="DISHUNI" Type="int" />
+    <Property Name="SORTORDER" Type="int" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="SIFR" Type="int" />
+    <Property Name="ICREATOR" Type="int" />
+    <Property Name="IAUTHOR" Type="int" />
+    <Property Name="ICREATORROLE" Type="int" />
+    <Property Name="IAUTHORROLE" Type="int" />
+    <Property Name="SESSIONUNI" Type="int" />
+    <Property Name="VOIDSESSIONUNI" Type="int" />
+    <Property Name="COMBOVOIDUNI" Type="int" />
+    <Property Name="OPENNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="PIECES" Type="float" />
+    <Property Name="QUANTITY" Type="float" />
+    <Property Name="PRLISTSUM" Type="money" />
+    <Property Name="DATETIME" Type="datetime" />
+    <Property Name="GLOBALIDENT" Type="nvarchar" MaxLength="32" />
+    <Property Name="PRINTED" Type="smallint" />
+    <Property Name="SAVEDATETIME" Type="bigint" />
+    <Property Name="STOREDINFM" Type="smallint" />
+    <Property Name="AFTERBILLUNDO" Type="smallint" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="GLOBALSHIFTS">
+    <Key>
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="SHIFTNUM" />
+    </Key>
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="SHIFTNUM" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CREATETIME" Type="datetime" />
+    <Property Name="STARTTIME" Type="datetime" />
+    <Property Name="CLOSETIME" Type="datetime" />
+    <Property Name="IMANAGER" Type="int" />
+    <Property Name="SHIFTDATE" Type="datetime" />
+    <Property Name="CLOSED" Type="smallint" />
+    <Property Name="SENDED" Type="smallint" />
+    <Property Name="IBASICCURRENCY" Type="int" />
+    <Property Name="INATIONALCURRENCY" Type="int" />
+    <Property Name="IRESTAURANT" Type="int" />
+    <Property Name="ORIGINALSHIFTDATE" Type="datetime" />
+    <Property Name="SHIFTLOADDATETIME" Type="datetime" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="GLOBALSHIFTSTATS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="RESTAURANT" Type="int" />
+    <Property Name="CASHSERVER" Type="int" />
+    <Property Name="SHIFTNO" Type="int" />
+    <Property Name="SHIFTSTATS" Type="smallint" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="MENUITEMS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="SHORTNAME" Type="nvarchar" MaxLength="10" />
+    <Property Name="ALTSHORTNAME" Type="nvarchar" MaxLength="10" />
+    <Property Name="PORTIONWEIGHT" Type="float" />
+    <Property Name="PORTIONNAME" Type="nvarchar" MaxLength="10" />
+    <Property Name="ALTPORTION" Type="nvarchar" MaxLength="10" />
+    <Property Name="KURS" Type="int" />
+    <Property Name="QNTDECDIGITS" Type="smallint" />
+    <Property Name="MODISCHEME" Type="int" />
+    <Property Name="MODIWEIGHT" Type="smallint" />
+    <Property Name="TAXDISHTYPE" Type="int" />
+    <Property Name="COOKMINS" Type="smallint" />
+    <Property Name="COMMENT" Type="nvarchar" MaxLength="100" />
+    <Property Name="INSTRUCT" Type="image" />
+    <Property Name="FLAGS" Type="smallint" />
+    <Property Name="SCALECOEF" Type="int" />
+    <Property Name="TARAWEIGHT" Type="float" />
+    <Property Name="CONFIRMQNT" Type="float" />
+    <Property Name="MINRESTQNT" Type="float" />
+    <Property Name="VISUALTYPE_IMAGE" Type="int" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="int" />
+    <Property Name="VISUALTYPE_FLAGS" Type="smallint" />
+    <Property Name="SALESTERMS_FLAG" Type="smallint" />
+    <Property Name="SALESTERMS_STARTSALE" Type="datetime" />
+    <Property Name="SALESTERMS_STOPSALE" Type="datetime" />
+    <Property Name="MINTERFACE" Type="int" />
+    <Property Name="PARENT" Type="int" />
+    <Property Name="TOPARENTCATEG" Type="int" />
+    <Property Name="RIGHTLVL" Type="smallint" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="EXTCODE" Type="int" />
+    <Property Name="EXTRESTID" Type="int" />
+    <Property Name="SALEOBJECTTYPE" Type="smallint" />
+    <Property Name="RATETYPE" Type="smallint" />
+    <Property Name="ROUNDTIME" Type="int" />
+    <Property Name="MINIMUMTARIFTIME" Type="int" />
+    <Property Name="MAXIMUMTARIFTIME" Type="int" />
+    <Property Name="IGNOREDTARIFTIME" Type="int" />
+    <Property Name="DEFTARIFTIMELIMIT" Type="int" />
+    <Property Name="MINTARIFAMOUNT" Type="money" />
+    <Property Name="MAXTARIFAMOUNT" Type="money" />
+    <Property Name="TARIFFROUNDRULE" Type="smallint" />
+    <Property Name="MONEYROUNDRULE" Type="smallint" />
+    <Property Name="COMBOSPLITMODE" Type="int" />
+    <Property Name="COMBOJOINMODE" Type="int" />
+    <Property Name="ADDLINEMODE" Type="int" />
+    <Property Name="COMBODISCOUNT" Type="int" />
+    <Property Name="CHANGETOCOMBO" Type="int" />
+    <Property Name="LARGEIMAGEPATH" Type="image" />
+    <Property Name="GUESTSDISHRATING" Type="money" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="ORDERS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="IDENTINVISIT" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="IDENTINVISIT" Type="int" Nullable="false" />
+    <Property Name="ICREATOR" Type="int" />
+    <Property Name="IAUTHOR" Type="int" />
+    <Property Name="ICREATORROLE" Type="int" />
+    <Property Name="IAUTHORROLE" Type="int" />
+    <Property Name="ILASTUSER" Type="int" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="GUESTSCOUNT" Type="int" />
+    <Property Name="LASTSERVICE" Type="datetime" />
+    <Property Name="NUMONTABLE" Type="nvarchar" MaxLength="255" />
+    <Property Name="OPENTIME" Type="datetime" />
+    <Property Name="TABLEID" Type="int" />
+    <Property Name="TABLENAME" Type="nvarchar" MaxLength="15" />
+    <Property Name="ORDERNAME" Type="nvarchar" MaxLength="12" />
+    <Property Name="PROMOCODE" Type="nvarchar" MaxLength="40" />
+    <Property Name="COT" Type="int" />
+    <Property Name="UOT" Type="int" />
+    <Property Name="DEFAULTER" Type="int" />
+    <Property Name="IBASICCURRENCY" Type="int" />
+    <Property Name="INATIONALCURRENCY" Type="int" />
+    <Property Name="ICOMMONSHIFT" Type="int" />
+    <Property Name="MAINWAITER" Type="int" />
+    <Property Name="BRIGADE" Type="int" />
+    <Property Name="STARTSERVICE" Type="datetime" />
+    <Property Name="ENDSERVICE" Type="datetime" />
+    <Property Name="DURATION" Type="int" />
+    <Property Name="FINISHEDSERVICE" Type="smallint" />
+    <Property Name="PAID" Type="smallint" />
+    <Property Name="ISBANQUET" Type="smallint" />
+    <Property Name="BANQUETSTATE" Type="int" />
+    <Property Name="PRICELISTSUM" Type="money" />
+    <Property Name="TOPAYSUM" Type="money" />
+    <Property Name="PAIDSUM" Type="money" />
+    <Property Name="UNCLOSEDPRICESUM" Type="money" />
+    <Property Name="UNCLOSEDPREPAYSUM" Type="money" />
+    <Property Name="DISCOUNTSUM" Type="money" />
+    <Property Name="TOTALDISHPIECES" Type="float" />
+    <Property Name="INVOICEUNI" Type="int" />
+    <Property Name="ORIGINALORDERID" Type="int" />
+    <Property Name="STATE" Type="smallint" />
+    <Property Name="LASTCHECKUNI" Type="int" />
+    <Property Name="STATIONID" Type="int" />
+    <Property Name="SEQNUMBER" Type="int" />
+    <Property Name="CRC32" Type="int" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="FISCORDERSTATE" Type="smallint" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="PAYBINDINGS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="DISHUNI" Type="int" />
+    <Property Name="CHARGEUNI" Type="int" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="CURRUNI" Type="int" />
+    <Property Name="PRICESUM" Type="money" />
+    <Property Name="PAYSUM" Type="money" />
+    <Property Name="QUANTITY" Type="float" />
+    <Property Name="DISTRDISCOUNTS" Type="money" />
+    <Property Name="TAXESADDED" Type="money" />
+    <Property Name="BONUSBASE" Type="bigint" />
+    <Property Name="BONUSSUM" Type="money" />
+    <Property Name="DISTRDISCOUNTSONLY" Type="bigint" />
+    <Property Name="CONSUMATIONSUM" Type="money" />
+    <Property Name="SEAT" Type="smallint" />
+    <Property Name="STATE" Type="int" />
+    <Property Name="COSTSUM" Type="money" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="PRINTCHECKS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="SESSIONUNI" Type="int" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="STATE" Type="int" />
+    <Property Name="ICREATOR" Type="int" />
+    <Property Name="IAUTHOR" Type="int" />
+    <Property Name="ICREATORROLE" Type="int" />
+    <Property Name="IAUTHORROLE" Type="int" />
+    <Property Name="CLOSEDATETIME" Type="datetime" />
+    <Property Name="BILLDATETIME" Type="datetime" />
+    <Property Name="STARTDATETIME" Type="datetime" />
+    <Property Name="DRAWERDATETIME" Type="datetime" />
+    <Property Name="ICLOSESTATION" Type="int" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="ISHIFT" Type="int" />
+    <Property Name="IFISCSHIFT" Type="int" />
+    <Property Name="IPRINTSTATION" Type="int" />
+    <Property Name="IDRAWER" Type="int" />
+    <Property Name="IPRINTER" Type="int" />
+    <Property Name="EXTFISCID" Type="nvarchar" MaxLength="35" />
+    <Property Name="PRINTNUMBER" Type="int" />
+    <Property Name="CHECKNUM" Type="int" />
+    <Property Name="PARENTCHECKNUM" Type="int" />
+    <Property Name="GUESTCNT" Type="int" />
+    <Property Name="SEAT" Type="int" />
+    <Property Name="DELETED" Type="smallint" />
+    <Property Name="UNDOTRANSACTIONS" Type="smallint" />
+    <Property Name="IDELETEMANAGER" Type="int" />
+    <Property Name="DELETEDATETIME" Type="datetime" />
+    <Property Name="BASICSUM" Type="bigint" />
+    <Property Name="BINDEDSUM" Type="money" />
+    <Property Name="NATIONALSUM" Type="money" />
+    <Property Name="FISCALSUM" Type="bigint" />
+    <Property Name="PRLISTSUM" Type="money" />
+    <Property Name="DISCOUNTSUM" Type="money" />
+    <Property Name="TOPAYSUM" Type="bigint" />
+    <Property Name="DISHPRICELISTSUM" Type="bigint" />
+    <Property Name="CHARGEPRICELISTSUM" Type="bigint" />
+    <Property Name="TAXSUM" Type="money" />
+    <Property Name="TAXSUMADDED" Type="money" />
+    <Property Name="BONUSSUM" Type="money" />
+    <Property Name="GLOBALIDENT" Type="nvarchar" MaxLength="32" />
+    <Property Name="PRINTTRY" Type="int" />
+    <Property Name="ISBILL" Type="smallint" />
+    <Property Name="IVOID" Type="int" />
+    <Property Name="OPENVOIDNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="IDELETEPERSON" Type="int" />
+    <Property Name="BASICRATE" Type="bigint" />
+    <Property Name="WASALLCHANGETOTIP" Type="smallint" />
+    <Property Name="BILLERROR" Type="smallint" />
+    <Property Name="INVOICEUNI" Type="int" />
+    <Property Name="INVOICEPRINTED" Type="smallint" />
+    <Property Name="COPIESPRINTED" Type="int" />
+    <Property Name="IDRAWERSHIFT" Type="int" />
+    <Property Name="IBUSINESSPERIOD" Type="int" />
+    <Property Name="IGNOREINREP" Type="smallint" />
+    <Property Name="ISPREPAYRECEIPT" Type="smallint" />
+    <Property Name="ISDEPOSITRECEIPT" Type="smallint" />
+    <Property Name="ISWITHDRAWALRECEIPT" Type="smallint" />
+    <Property Name="ISTARERECEIPT" Type="smallint" />
+    <Property Name="SQI" Type="int" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="PAYFISCALSUM" Type="money" />
+    <Property Name="RECEIPTTAXTYPE" Type="smallint" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="RESTAURANTS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CODE" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="STATUS" Type="smallint" />
+    <Property Name="OWNER" Type="nvarchar" MaxLength="40" />
+    <Property Name="BASICCURRENCY" Type="int" />
+    <Property Name="NATIONALCURRENCY" Type="int" />
+    <Property Name="CONCEPT" Type="int" />
+    <Property Name="REGION" Type="int" />
+    <Property Name="FRANCHISE" Type="int" />
+    <Property Name="RIGHTLVL" Type="smallint" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+    <Property Name="SH4TRADEGROUP" Type="int" />
+    <Property Name="SH4PRICE" Type="int" />
+    <Property Name="EDITRIGHT" Type="smallint" />
+    <Property Name="EXTCODE" Type="int" />
+    <Property Name="STOREHOUSECODE" Type="nvarchar" MaxLength="2" />
+    <Property Name="OPENINGDATE" Type="datetime" />
+    <Property Name="HANDLESRESTAURANTS" Type="int" />
+    <Property Name="LOCATIONLAT" Type="bigint" />
+    <Property Name="LOCATIONLONG" Type="bigint" />
+    <Property Name="ADDRESSGUID" Type="nvarchar" MaxLength="38" />
+    <Property Name="OPERATIONALHOURS" Type="bigint" />
+    <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="SESSIONDISHES">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="int" />
+    <Property Name="SESSIONUNI" Type="int" />
+    <Property Name="SORTORDER" Type="int" />
+    <Property Name="UNI" Type="int" Nullable="false" />
+    <Property Name="SIFR" Type="int" />
+    <Property Name="STATE" Type="int" />
+    <Property Name="ICREATOR" Type="int" />
+    <Property Name="IAUTHOR" Type="int" />
+    <Property Name="ICREATORROLE" Type="int" />
+    <Property Name="IAUTHORROLE" Type="int" />
+    <Property Name="ITAXDISHTYPE" Type="int" />
+    <Property Name="SRCQUANTITY" Type="float" />
+    <Property Name="WRITEOFFQUANTITY" Type="float" />
+    <Property Name="QUANTITY" Type="float" />
+    <Property Name="PIECES" Type="float" />
+    <Property Name="PRLISTSUM" Type="money" />
+    <Property Name="SRCPRLISTSUM" Type="bigint" />
+    <Property Name="CLEARSUM" Type="money" />
+    <Property Name="PAYSUM" Type="money" />
+    <Property Name="SUMWITHDISCOUNTS" Type="money" />
+    <Property Name="CLOSEDPAYSUM" Type="bigint" />
+    <Property Name="CONSUMSUM" Type="money" />
+    <Property Name="CALCCONSUMSUM" Type="money" />
+    <Property Name="BONUSBASESUM" Type="money" />
+    <Property Name="PRICE" Type="money" />
+    <Property Name="MENUITEMPRICE" Type="money" />
+    <Property Name="SEAT" Type="int" />
+    <Property Name="ISPORTION" Type="smallint" />
+    <Property Name="ISPURCHASE" Type="smallint" />
+    <Property Name="ISCOMBO" Type="smallint" />
+    <Property Name="ISCOMBOCOMP" Type="smallint" />
+    <Property Name="ISUSERPRICE" Type="smallint" />
+    <Property Name="DOSINGDEVID" Type="int" />
+    <Property Name="PURCHASEPREPAYUNI" Type="int" />
+    <Property Name="TARIFFSIFR" Type="int" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="SOURCEGUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="ADDBYALGORITHM" Type="int" />
+    <Property Name="WEIGHT" Type="float" />
+    <Property Name="CHANGECOUNT" Type="smallint" />
+    <Property Name="WEIGHTPRINTED" Type="smallint" />
+    <Property Name="GLOBALIDENT" Type="nvarchar" MaxLength="32" />
+    <Property Name="KDSIDENT" Type="int" />
+    <Property Name="COMBODISHUNI" Type="int" />
+    <Property Name="COMBOMODIUNI" Type="int" />
+    <Property Name="COMBODISCUNI" Type="int" />
+    <Property Name="CREATIONDATETIME" Type="datetime" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <EntityType Name="TEMPGLOBALSHIFTS">
+    <Key>
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="SHIFTNUM" />
+    </Key>
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="SHIFTNUM" Type="int" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="CREATETIME" Type="datetime" />
+    <Property Name="STARTTIME" Type="datetime" />
+    <Property Name="CLOSETIME" Type="datetime" />
+    <Property Name="IMANAGER" Type="int" />
+    <Property Name="SHIFTDATE" Type="datetime" />
+    <Property Name="CLOSED" Type="smallint" />
+    <Property Name="SENDED" Type="smallint" />
+    <Property Name="IBASICCURRENCY" Type="int" />
+    <Property Name="INATIONALCURRENCY" Type="int" />
+    <Property Name="IRESTAURANT" Type="int" />
+    <Property Name="ORIGINALSHIFTDATE" Type="datetime" />
+    <Property Name="SHIFTLOADDATETIME" Type="datetime" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="FLAGS" Type="int" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+    <Property Name="TEMPDATAKIND" Type="int" />
+    <Property Name="TEMPDATASIGN" Type="int" />
+    <Property Name="TEMPSERVERID" Type="int" />
+  </EntityType>
+  <EntityType Name="VISITS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+      <PropertyRef Name="MIDSERVER" />
+    </Key>
+    <Property Name="SIFR" Type="int" Nullable="false" />
+    <Property Name="MIDSERVER" Type="int" Nullable="false" />
+    <Property Name="CREATOR" Type="int" />
+    <Property Name="GUESTTYPE" Type="int" />
+    <Property Name="STARTGUESTCNT" Type="int" />
+    <Property Name="GUESTCNT" Type="int" />
+    <Property Name="RESERVSOURCE" Type="int" />
+    <Property Name="RESERVID" Type="int" />
+    <Property Name="RESERVDURATION" Type="int" />
+    <Property Name="RESERVSTATE" Type="int" />
+    <Property Name="RESERVFLAGS" Type="int" />
+    <Property Name="ENTRCARDMODE" Type="int" />
+    <Property Name="MAXCREDITSUM" Type="money" />
+    <Property Name="STARTTIME" Type="datetime" />
+    <Property Name="QUITTIME" Type="datetime" />
+    <Property Name="FINISHED" Type="smallint" />
+    <Property Name="VISITEXTRAINFOTOSAVE" Type="nvarchar" MaxLength="100" />
+    <Property Name="SEATSCLOSED" Type="image" />
+    <Property Name="VISITOTHEREXTRAINFO" Type="nvarchar" MaxLength="100" />
+    <Property Name="HOLDER" Type="nvarchar" MaxLength="35" />
+    <Property Name="ISTARTCOMMONSHIFT" Type="int" />
+    <Property Name="IQUITCOMMONSHIFT" Type="int" />
+    <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+    <Property Name="UNICOUNT" Type="int" />
+    <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SaleObjects">
+    <Key>
+      <PropertyRef Name="MidServer" />
+      <PropertyRef Name="Visit" />
+      <PropertyRef Name="DishUNI" />
+      <PropertyRef Name="ChargeUNI" />
+      <PropertyRef Name="ObjKind" />
+    </Key>
+    <Property Name="MidServer" Type="int" Nullable="false" />
+    <Property Name="Visit" Type="int" Nullable="false" />
+    <Property Name="DishUNI" Type="int" Nullable="false" />
+    <Property Name="ChargeUNI" Type="int" Nullable="false" />
+    <Property Name="OrderIdent" Type="int" />
+    <Property Name="SessionUNI" Type="int" />
+    <Property Name="ObjKind" Type="int" Nullable="false" />
+    <Property Name="Code" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="40" />
+    <Property Name="AltName" Type="nvarchar" MaxLength="40" />
+    <Property Name="RightLvl" Type="smallint" />
+    <Property Name="TypePath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="smallint" />
+    <Property Name="SalesTerms_StartSale" Type="datetime" />
+    <Property Name="SalesTerms_StopSale" Type="datetime" />
+    <Property Name="iTaxDishType" Type="int" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="ExcludeFromEarnings" Type="int" />
+    <Property Name="SourceSum" Type="money" />
+    <Property Name="PaySum" Type="money" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="GlobalIdent" Type="nvarchar" MaxLength="32" />
+    <Property Name="iCreator" Type="int" />
+    <Property Name="iAuthor" Type="int" />
+    <Property Name="iCreatorRole" Type="int" />
+    <Property Name="iAuthorRole" Type="int" />
+  </EntityType>
+  <EntityContainer Name="RKeeperModelStoreContainer">
+    <EntitySet Name="CASHES" EntityType="Self.CASHES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CASHGROUPS" EntityType="Self.CASHGROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASSIFICATORGROUPS" EntityType="Self.CLASSIFICATORGROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASSINFOS" EntityType="Self.CLASSINFOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRENCIES" EntityType="Self.CURRENCIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRENCYTYPES" EntityType="Self.CURRENCYTYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRLINES" EntityType="Self.CURRLINES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISCOUNTS" EntityType="Self.DISCOUNTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISCPARTS" EntityType="Self.DISCPARTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISHDISCOUNTS" EntityType="Self.DISHDISCOUNTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISHGROUPS" EntityType="Self.DISHGROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISHVOIDS" EntityType="Self.DISHVOIDS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GLOBALSHIFTS" EntityType="Self.GLOBALSHIFTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GLOBALSHIFTSTATS" EntityType="Self.GLOBALSHIFTSTATS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENUITEMS" EntityType="Self.MENUITEMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDERS" EntityType="Self.ORDERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAYBINDINGS" EntityType="Self.PAYBINDINGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRINTCHECKS" EntityType="Self.PRINTCHECKS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESTAURANTS" EntityType="Self.RESTAURANTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SESSIONDISHES" EntityType="Self.SESSIONDISHES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEMPGLOBALSHIFTS" EntityType="Self.TEMPGLOBALSHIFTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VISITS" EntityType="Self.VISITS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleObjects" EntityType="Self.SaleObjects" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SaleObjects].[MidServer] AS [MidServer], 
+    [SaleObjects].[Visit] AS [Visit], 
+    [SaleObjects].[DishUNI] AS [DishUNI], 
+    [SaleObjects].[ChargeUNI] AS [ChargeUNI], 
+    [SaleObjects].[OrderIdent] AS [OrderIdent], 
+    [SaleObjects].[SessionUNI] AS [SessionUNI], 
+    [SaleObjects].[ObjKind] AS [ObjKind], 
+    [SaleObjects].[Code] AS [Code], 
+    [SaleObjects].[Name] AS [Name], 
+    [SaleObjects].[AltName] AS [AltName], 
+    [SaleObjects].[RightLvl] AS [RightLvl], 
+    [SaleObjects].[TypePath] AS [TypePath], 
+    [SaleObjects].[Status] AS [Status], 
+    [SaleObjects].[SalesTerms_StartSale] AS [SalesTerms_StartSale], 
+    [SaleObjects].[SalesTerms_StopSale] AS [SalesTerms_StopSale], 
+    [SaleObjects].[iTaxDishType] AS [iTaxDishType], 
+    [SaleObjects].[Seat] AS [Seat], 
+    [SaleObjects].[ExcludeFromEarnings] AS [ExcludeFromEarnings], 
+    [SaleObjects].[SourceSum] AS [SourceSum], 
+    [SaleObjects].[PaySum] AS [PaySum], 
+    [SaleObjects].[Quantity] AS [Quantity], 
+    [SaleObjects].[GlobalIdent] AS [GlobalIdent], 
+    [SaleObjects].[iCreator] AS [iCreator], 
+    [SaleObjects].[iAuthor] AS [iAuthor], 
+    [SaleObjects].[iCreatorRole] AS [iCreatorRole], 
+    [SaleObjects].[iAuthorRole] AS [iAuthorRole]
+    FROM [dbo].[SaleObjects] AS [SaleObjects]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

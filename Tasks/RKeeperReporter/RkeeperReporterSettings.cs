@@ -23,6 +23,10 @@ namespace Sysiphus.Tasks.Settings
         [DisplayName("Restaurant CODE")]
         public int restaurantCode { get; set; } = 0;
 
+        [Category("DB")]
+        [DisplayName("Database prefix")]
+        public int databasePrefix { get; set; } = 0;
+
         [Category("Enterprise auth")]
         [DisplayName("Web Service defenition path")]
         public string EnterpriseWsPath { get; set; } = "";

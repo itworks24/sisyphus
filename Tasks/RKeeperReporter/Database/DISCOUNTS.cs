@@ -26,7 +26,6 @@ namespace RKeeperReporter.Database
         public Nullable<double> MAXPERCENT { get; set; }
         public Nullable<int> COUNTTYPE { get; set; }
         public Nullable<int> CLASSIFICATION { get; set; }
-        public Nullable<int> TAXDISHTYPE { get; set; }
         public Nullable<int> MINTERFACE { get; set; }
         public Nullable<short> RIGHTLVL { get; set; }
         public Nullable<short> ROUNDRULE { get; set; }
@@ -48,6 +47,5 @@ namespace RKeeperReporter.Database
         public Nullable<decimal> MINORDERREST { get; set; }
         public Nullable<short> FISCALOUTSIDE { get; set; }
         public string RECSTAMP { get; set; }
-        public Nullable<short> DBSTATUS { get; set; }
     }
 }

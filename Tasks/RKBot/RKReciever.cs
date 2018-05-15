@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Xml.Serialization;
-using LiteDB;
 using MongoDB.Bson;
-using Newtonsoft.Json;
 using Sisyphus.Tasks;
-using Sysiphus.Tasks.RKBot.MongoClasses;
 using Sysiphus.Tasks.RKBot.Settings;
 
 namespace Sysiphus.Tasks.RKBot

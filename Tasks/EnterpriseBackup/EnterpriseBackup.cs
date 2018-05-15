@@ -235,7 +235,7 @@ namespace Sisyphus
             }
             else
             {
-                var maxErrorCount = 4;
+                var maxErrorCount = 2;
                 var allConnectionsDisconected = false;
                 while (maxErrorCount > 0 && !allConnectionsDisconected)
                 {
@@ -363,7 +363,8 @@ namespace Sisyphus
 
             if (CurrentBaseType == BaseType.File && useArchiev)
             {
-                CreateArchiev(destinationPath, fileNameFormat); return;
+                CreateArchiev(destinationPath, fileNameFormat);
+                return;
             }
 
             var startInfo = new ProcessStartInfo();
@@ -390,9 +391,6 @@ namespace Sisyphus
                 startInfo.UseShellExecute = true;
                 startInfo.Arguments = commandArgs;
 
-                if (CurrentBaseType == BaseType.Server) SetSheduledJobsStatus(true);
-
-                KickAllUsers();
             }
             catch (Exception e)
             {
@@ -400,6 +398,17 @@ namespace Sisyphus
                 LogResult = e.Message;
                 CurrentBackUpState = BackupState.Error;
                 return;
+            }
+
+            try
+            {
+                if (CurrentBaseType == BaseType.Server) SetSheduledJobsStatus(true);
+                KickAllUsers();
+            }
+            catch(Exception e)
+            {
+                LogResult = "Error while disconnecting sessions";
+                LogResult = e.Message;
             }
 
             using (var backupProcess = Process.Start(startInfo))
