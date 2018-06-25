@@ -12,7 +12,7 @@ namespace Sisyphus
         private readonly RKeeperExchange _service;
 
         public bool SendData(Report[] reports, string reportId, ref string errorInfo) 
-        {   
+        {
             return _service.ReceiveData(reports, reportId, ref errorInfo);
         }
 

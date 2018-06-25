@@ -7,7 +7,7 @@ namespace Sisyphus
 {
     internal static class BoardExtension
     {
-        internal static string GetBoardId(this Board board)
+        internal static string GetBoardId(this IBoard board)
         {
             TrelloRequestCounter.TrelloPostCount += 1;
             var url = new Uri(board.Url);
@@ -39,11 +39,13 @@ namespace Sisyphus
             return boardExists;
         }
 
-        internal static Label CheckLabel(this Board board, string labelName, LabelColor labelColor)
+        internal static ILabel CheckLabel(this Board board, string labelName, LabelColor labelColor)
         {
             TrelloRequestCounter.TrelloPostCount += 3;
             var label = board.Labels.FirstOrDefault(l => l.Name == labelName);
-            return label ?? board.Labels.Add(labelName, labelColor);
+            var task = board.Labels.Add(labelName, labelColor);
+            task.RunSynchronously();
+            return task.Result;
         }
 
         internal static void SyncLabels(this Board board, IEnumerable<string> newLabelNameCollection, LabelColor labelColor)

@@ -1,0 +1,8 @@
+﻿Uninstalling assembly 'C:\Users\vlada\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\SisyphusScheduler.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vlada\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\SisyphusScheduler.InstallLog
+   assemblypath = C:\Users\vlada\Source\Repos\sisyphus\GUI\ConfigApplication\bin\Debug\SisyphusScheduler.exe
+Removing EventLog source SisyphusScheduler.
+Service SisyphusScheduler is being removed from the system...
+Service SisyphusScheduler was successfully removed from the system.

@@ -220,10 +220,6 @@
       <Project>{b6a8489d-1522-4eaf-ac2f-cc85d766bcee}</Project>
       <Name>RKeeperReporter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tasks\TrelloChecker\TrelloChecker.csproj">
-      <Project>{57a750d9-36b6-410b-8808-29cabe955842}</Project>
-      <Name>TrelloChecker</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xaml">

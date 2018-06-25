@@ -28,13 +28,3 @@ C:\Users\test-test\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\Comman
 C:\Users\test-test\Source\Repos\sisyphus\Core\ServiceControll\obj\Release\ServiceControll.csprojResolveAssemblyReference.cache
 C:\Users\test-test\Source\Repos\sisyphus\Core\ServiceControll\obj\Release\ServiceControll.exe
 C:\Users\test-test\Source\Repos\sisyphus\Core\ServiceControll\obj\Release\ServiceControll.pdb
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\ServiceControll.exe.config
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\ServiceControll.exe
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\ServiceControll.pdb
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\CommandLine.dll
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\Common.dll
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\Common.pdb
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\bin\Release\CommandLine.xml
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\obj\Release\ServiceControll.csprojResolveAssemblyReference.cache
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\obj\Release\ServiceControll.exe
-C:\Users\vlada\Source\Repos\sisyphus\Core\ServiceControll\obj\Release\ServiceControll.pdb

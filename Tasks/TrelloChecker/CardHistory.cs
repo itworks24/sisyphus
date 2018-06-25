@@ -12,8 +12,8 @@ namespace Sisyphus
         {
             internal bool Opened;
 
-            private Member Beginer { get; set; }
-            private Member Finisher { get; set; }
+            private IMember Beginer { get; set; }
+            private IMember Finisher { get; set; }
             private List List { get; set; }
 
             public DateTime StartDateTime { get; set; }
@@ -30,7 +30,7 @@ namespace Sisyphus
 
             public string ListId => List?.Id != null ? List.Id : string.Empty;
 
-            public void OpenRecord(Member finisher, DateTime finishDateTime, List list)
+            public void OpenRecord(IMember finisher, DateTime finishDateTime, List list)
             {
                 Finisher = finisher;
                 FinishDateTime = finishDateTime;
@@ -38,7 +38,7 @@ namespace Sisyphus
                 Opened = true;
             }
 
-            public void CloseRecord(Member beginer, DateTime startDateTime)
+            public void CloseRecord(IMember beginer, DateTime startDateTime)
             {
                 Beginer = beginer;
                 StartDateTime = startDateTime;
@@ -48,12 +48,12 @@ namespace Sisyphus
 
         public struct Comment
         {
-            private Member Author { get; set; }
+            private IMember Author { get; set; }
             public DateTime CommentDateTime { get; set; }
             public string AuthorUserName => Author?.UserName != null ? Author.UserName : string.Empty;
             public string Text { get; set; }
 
-            public Comment(Action comment)
+            public Comment(IAction comment)
             {
                 Author = comment.Creator;
                 CommentDateTime = comment.Date.GetValueOrDefault();
@@ -62,8 +62,8 @@ namespace Sisyphus
         }
 
         private Card Card { get; }
-        private Member Creator { get; }
-        private CardLabelCollection Labels { get; }
+        private IMember Creator { get; }
+        private ICardLabelCollection Labels { get; }
 
 
         public string BoardId { get { return Card != null ? Card.Board.GetBoardId() : string.Empty; } }
@@ -85,7 +85,7 @@ namespace Sisyphus
         public string Text => Card != null ? Card.Description : string.Empty;
         public string Url => Card != null ? Card.Url : string.Empty;
 
-        private static List<ActionRecord> FillActionRecordList(IEnumerable<Action> actions, List list, IEnumerable<string> organizationMembers)
+        private static List<ActionRecord> FillActionRecordList(IEnumerable<IAction> actions, List list, IEnumerable<string> organizationMembers)
         {
             var actionList = new List<ActionRecord>();
             var currentActionRecord = new ActionRecord();
@@ -108,12 +108,12 @@ namespace Sisyphus
             return actionList;
         }
 
-        public CardHistory(ListsStruct listsStruct, Card card, IEnumerable<string> organizationMembers)
+        public CardHistory(ListsStruct listsStruct, ICard card, IEnumerable<string> organizationMembers)
         {
             Card = card;
             Labels = card.Labels;
             var createActionArray =
-                listsStruct.TrelloFirstList.Actions.Filter(ActionType.CreateCard).ToArray();
+                listsStruct.TrelloFirstList.Actions.Where(a=> a.Type == ActionType.CreateCard).ToArray();
             var hasCreateAction = createActionArray.Any(a => a.Data.Card.Id == card.Id);
             var createAction = hasCreateAction ? createActionArray.First(a => a.Data.Card.Id == card.Id) : null;
             Creator = hasCreateAction ? createAction.Creator : null;
@@ -121,7 +121,7 @@ namespace Sisyphus
 
             TrelloRequestCounter.TrelloPostCount += 3;
 
-            InWorkActionRecordList = FillActionRecordList(card.Actions.Filter(ActionType.UpdateCard).ToArray(), listsStruct.TrelloInWorkList, organizationMembers);
+            InWorkActionRecordList = FillActionRecordList(card.Actions.Where(a=> a.Type== ActionType.UpdateCard).ToArray(), listsStruct.TrelloInWorkList, organizationMembers);
 
             Comments = new List<Comment>();
             foreach (

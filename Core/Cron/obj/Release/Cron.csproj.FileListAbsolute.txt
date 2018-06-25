@@ -1,5 +1,0 @@
-C:\Users\vlada\Source\Repos\sisyphus\Core\Cron\bin\Release\Rlc.Cron.dll
-C:\Users\vlada\Source\Repos\sisyphus\Core\Cron\bin\Release\Rlc.Cron.pdb
-C:\Users\vlada\Source\Repos\sisyphus\Core\Cron\obj\Release\Cron.csprojResolveAssemblyReference.cache
-C:\Users\vlada\Source\Repos\sisyphus\Core\Cron\obj\Release\Rlc.Cron.dll
-C:\Users\vlada\Source\Repos\sisyphus\Core\Cron\obj\Release\Rlc.Cron.pdb

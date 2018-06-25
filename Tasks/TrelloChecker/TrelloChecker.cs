@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Manatee.Trello;
-using Manatee.Trello.ManateeJson;
-using Manatee.Trello.WebApi;
 using Sisyphus.itws;
 using Sisyphus.Tasks;
 
@@ -101,11 +99,6 @@ namespace Sisyphus
             var contractorsArray = EnterpriseWsWrapper.GetConractorsArray();
             var nomenclatureArray = EnterpriseWsWrapper.GetNomenclatureArray().OrderBy(t => t.Name).Take(MaxLabelCount);
 
-            var serializer = new ManateeSerializer();
-            TrelloConfiguration.Serializer = serializer;
-            TrelloConfiguration.Deserializer = serializer;
-            TrelloConfiguration.JsonFactory = new ManateeFactory();
-            TrelloConfiguration.RestClientProvider = new WebApiClientProvider();
             TrelloAuthorization.Default.AppKey = settings.TrelloAppKey;
             TrelloAuthorization.Default.UserToken = settings.TrelloUserToken;
 
@@ -130,7 +123,7 @@ namespace Sisyphus
                     continue;
                 }
 
-                if (!board.Members.Any(t => t == Member.Me)) board.Memberships.Add(Member.Me, BoardMembershipType.Normal);
+                if (!board.Members.Any(t => t == Member.)) board.Memberships.Add(Member.Me, BoardMembershipType.Normal);
 
                 foreach (var card in listStruct.TrelloDoneList.Cards.Where(c => !c.IsArchived.GetValueOrDefault()))
                 {

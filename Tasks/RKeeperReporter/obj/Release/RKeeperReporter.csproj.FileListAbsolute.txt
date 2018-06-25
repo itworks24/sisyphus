@@ -20,11 +20,3 @@ C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeep
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.pdb
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.XmlSerializers.dll
 C:\Users\test-test\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csprojResolveAssemblyReference.cache
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.dll.config
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.dll
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.XmlSerializers.dll
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.pdb
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csprojResolveAssemblyReference.cache
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.dll
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.pdb
-C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.XmlSerializers.dll

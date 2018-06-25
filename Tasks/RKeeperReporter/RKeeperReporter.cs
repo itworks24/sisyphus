@@ -6,6 +6,7 @@ using System.Data.Entity.Core.EntityClient;
 using RKeeperReporter.RKeeperExchange;
 using RKeeperReporter.Database;
 using Sisyphus;
+using System.Xml;
 
 namespace RKeeperReporter.Database
 {
@@ -102,6 +103,12 @@ namespace Sysiphus.Tasks.SampleTask
             return prefix * code.ToString().Length * 10 + code;
         }
 
+        static string RemoveInvalidXmlChars(string text)
+        {
+            var validXmlChars = text.Where(ch => XmlConvert.IsXmlChar(ch)).ToArray();
+            return new string(validXmlChars);
+        }
+
         IEnumerable<Report> GetReports(Settings.RkeeperReporterSettings settings)
         {
             using (var db = new RKeeperEntities(GetEntityConnection(settings)))
@@ -185,15 +192,15 @@ namespace Sysiphus.Tasks.SampleTask
                              into groupedReports
                              select new Report
                              {
-                                 ClassficatorGroup = new Element { Code = AddPrefix(groupedReports.Key.ClassficatorGroup.CODE ?? -1, settings.databasePrefix), Name = groupedReports.Key.ClassficatorGroup.NAME },
-                                 Restaurant = new Element { Code = AddPrefix(groupedReports.Key.Restaurant.CODE ?? -1, settings.databasePrefix), Name = groupedReports.Key.Restaurant.NAME },
-                                 CurrencyType = new Element { Code = AddPrefix(groupedReports.Key.CurrencyType.CODE ?? -1, settings.databasePrefix), Name = groupedReports.Key.CurrencyType.NAME },
-                                 Currency = new Element { Code = AddPrefix(groupedReports.Key.Currency.CODE ?? -1, settings.databasePrefix), Name = groupedReports.Key.Currency.NAME },
-                                 DiscountType = new Element { Code = AddPrefix(groupedReports.Key.DiscountType.code, settings.databasePrefix), Name = groupedReports.Key.DiscountType.name },
+                                 ClassficatorGroup = new Element { Code = AddPrefix(groupedReports.Key.ClassficatorGroup.CODE ?? -1, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.ClassficatorGroup.NAME) },
+                                 Restaurant = new Element { Code = AddPrefix(groupedReports.Key.Restaurant.CODE ?? -1, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.Restaurant.NAME) },
+                                 CurrencyType = new Element { Code = AddPrefix(groupedReports.Key.CurrencyType.CODE ?? -1, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.CurrencyType.NAME) },
+                                 Currency = new Element { Code = AddPrefix(groupedReports.Key.Currency.CODE ?? -1, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.Currency.NAME) },
+                                 DiscountType = new Element { Code = AddPrefix(groupedReports.Key.DiscountType.code, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.DiscountType.name) },
                                  //Visit = new Element { Code = 0, Name = "" },
                                  Visit = new Element { Code = AddPrefix(groupedReports.Key.Visit.SIFR, settings.databasePrefix), Name = groupedReports.Key.Visit.STARTTIME.ToString() },
                                  //MenuItem = new Element { Code = 0, Name = "" },
-                                 MenuItem = new Element { Code = AddPrefix(groupedReports.Key.MenuItem.CODE ?? 0, settings.databasePrefix), Name = groupedReports.Key.MenuItem.NAME },
+                                 MenuItem = new Element { Code = AddPrefix(groupedReports.Key.MenuItem.CODE ?? 0, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.MenuItem.NAME) },
 
                                  Sum = groupedReports.Sum(x => x.PAYBINDING.PAYSUM ?? 0),
                                  PaySum = groupedReports.Sum(x => x.PAYBINDING.PRICESUM ?? 0),
