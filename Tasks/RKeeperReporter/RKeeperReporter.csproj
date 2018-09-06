@@ -199,10 +199,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange%3fwsdl">
+    <WebReferenceUrl Include="http://rd1.khmeli24.ru:8080/upr_lnd_test_2018/ws/RKeeperExchange%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\RKeeperExchange\</RelPath>
-      <UpdateFromURL>http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>http://rd1.khmeli24.ru:8080/upr_lnd_test_2018/ws/RKeeperExchange%3fwsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

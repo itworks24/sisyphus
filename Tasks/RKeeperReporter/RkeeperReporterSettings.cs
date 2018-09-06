@@ -27,6 +27,14 @@ namespace Sysiphus.Tasks.Settings
         [DisplayName("Database prefix")]
         public int databasePrefix { get; set; } = 0;
 
+        [Category("DB")]
+        [DisplayName("Database code")]
+        public int databaseCode { get; set; } = 0;
+
+        [Category("DB")]
+        [DisplayName("Database name")]
+        public string databaseName { get; set; } = "default DB";
+
         [Category("Enterprise auth")]
         [DisplayName("Web Service defenition path")]
         public string EnterpriseWsPath { get; set; } = "";

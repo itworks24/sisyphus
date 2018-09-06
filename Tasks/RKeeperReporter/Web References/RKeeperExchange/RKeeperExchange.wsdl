@@ -65,6 +65,7 @@
       <xs:complexType name="Reports">
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="1000000" name="Report" type="xs1:Report" />
+          <xs:element name="DB" type="xs1:Element" />
         </xs:sequence>
       </xs:complexType>
       <xs:element name="ReceiveData">
@@ -215,10 +216,10 @@
       <documentation>
         <wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" conformsTo="http://ws-i.org/profiles/basic/1.1" />
       </documentation>
-      <soapbind:address location="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange" />
+      <soapbind:address location="http://rd1.khmeli24.ru:8080/upr_lnd_test_2018/ws/RKeeperExchange" />
     </port>
     <port name="RKeeperExchangeSoap12" binding="tns:RKeeperExchangeSoap12Binding">
-      <soap12bind:address location="http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange" />
+      <soap12bind:address location="http://rd1.khmeli24.ru:8080/upr_lnd_test_2018/ws/RKeeperExchange" />
     </port>
   </service>
 </definitions>

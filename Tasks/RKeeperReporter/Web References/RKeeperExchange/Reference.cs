@@ -23,7 +23,7 @@ namespace RKeeperReporter.RKeeperExchange {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="RKeeperExchangeSoapBinding", Namespace="http://rkeeper.lnd.ru")]
@@ -85,7 +85,7 @@ namespace RKeeperReporter.RKeeperExchange {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://rkeeper.lnd.ru#RKeeperExchange:ReceiveData", RequestNamespace="http://rkeeper.lnd.ru", ResponseNamespace="http://rkeeper.lnd.ru", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return")]
-        public bool ReceiveData([System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)] Report[] Reports, string ReportId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string ErrorInfo) {
+        public bool ReceiveData(Reports Reports, string ReportId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string ErrorInfo) {
             object[] results = this.Invoke("ReceiveData", new object[] {
                         Reports,
                         ReportId,
@@ -95,12 +95,12 @@ namespace RKeeperReporter.RKeeperExchange {
         }
         
         /// <remarks/>
-        public void ReceiveDataAsync(Report[] Reports, string ReportId, string ErrorInfo) {
+        public void ReceiveDataAsync(Reports Reports, string ReportId, string ErrorInfo) {
             this.ReceiveDataAsync(Reports, ReportId, ErrorInfo, null);
         }
         
         /// <remarks/>
-        public void ReceiveDataAsync(Report[] Reports, string ReportId, string ErrorInfo, object userState) {
+        public void ReceiveDataAsync(Reports Reports, string ReportId, string ErrorInfo, object userState) {
             if ((this.ReceiveDataOperationCompleted == null)) {
                 this.ReceiveDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnReceiveDataOperationCompleted);
             }
@@ -203,7 +203,41 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rkeeper.lnd.ru")]
+    public partial class Reports {
+        
+        private Report[] reportField;
+        
+        private Element dbField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Report")]
+        public Report[] Report {
+            get {
+                return this.reportField;
+            }
+            set {
+                this.reportField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Element DB {
+            get {
+                return this.dbField;
+            }
+            set {
+                this.dbField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -357,7 +391,7 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -403,7 +437,7 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -448,7 +482,7 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -493,11 +527,11 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ReceiveDataCompletedEventHandler(object sender, ReceiveDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ReceiveDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -527,11 +561,11 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ReceiveClassificatorGroupsCompletedEventHandler(object sender, ReceiveClassificatorGroupsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ReceiveClassificatorGroupsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -561,11 +595,11 @@ namespace RKeeperReporter.RKeeperExchange {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ReceiveDishGroupsCompletedEventHandler(object sender, ReceiveDishGroupsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ReceiveDishGroupsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

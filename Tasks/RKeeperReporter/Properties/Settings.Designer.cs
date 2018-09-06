@@ -26,7 +26,7 @@ namespace RKeeperReporter.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://rd1.khmeli24.ru:8080/upr_lnd_2017/ws/RKeeperExchange")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://rd1.khmeli24.ru:8080/upr_lnd_test_2018/ws/RKeeperExchange")]
         public string RKeeperReporter_RKeeperExchange_RKeeperExchange {
             get {
                 return ((string)(this["RKeeperReporter_RKeeperExchange_RKeeperExchange"]));
