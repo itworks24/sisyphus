@@ -110,7 +110,7 @@ namespace Sisyphus
 
         public CardHistory(ListsStruct listsStruct, ICard card, IEnumerable<string> organizationMembers)
         {
-            Card = card;
+            Card = (Card)card;
             Labels = card.Labels;
             var createActionArray =
                 listsStruct.TrelloFirstList.Actions.Where(a=> a.Type == ActionType.CreateCard).ToArray();

@@ -32,6 +32,7 @@ namespace ConfigApplication.ViewModels
 
         public TaskRepresent(Type componentType)
         {
+            Misc.FPReset();
             _componentType = componentType;
             _taskInstance = Activator.CreateInstance(componentType) as TaskBase;
             AddGroupCommand = new RelayCommand(arg => AddGroup());

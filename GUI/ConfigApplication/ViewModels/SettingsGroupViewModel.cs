@@ -90,6 +90,7 @@ namespace ConfigApplication.ViewModels
 
         public SettingsGroupViewModel(Type componentType, IEnumerable<Type> taskSettings, string groupName)
         {
+            Misc.FPReset();
             _groupName = groupName;
             _settingsTypes = taskSettings;
             _taskInstance = Activator.CreateInstance(componentType) as TaskBase;

@@ -45,6 +45,7 @@ namespace ConfigApplication.ViewModels
 
         public SettingsGroupsViewModel(Type componentType, IEnumerable<Type> taskSettings)
         {
+            Misc.FPReset();
             _taskSettings = taskSettings;
             _componentType = componentType;
             _settingsGroupsCollection = new SettingsGroupsCollection(_taskSettings);

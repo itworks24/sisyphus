@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.InteropServices;
 using System.Windows.Input;
 using Sisyphus;
 using Sisyphus.Services;
@@ -45,6 +46,7 @@ namespace ConfigApplication.ViewModels
 
         public ComponentViewModel()
         {
+            Misc.FPReset();
             LoadTasks();
             ReloadTasks = new RelayCommand(arg => LoadTasks());
             EditConfigCommand = new RelayCommand(arg => EditConfig());

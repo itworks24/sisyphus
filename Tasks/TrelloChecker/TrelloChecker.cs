@@ -25,11 +25,11 @@ namespace Sisyphus
             foreach (var list in board.Lists)
             {
                 if (list.Name == settings.TrelloInWorkListName)
-                    TrelloInWorkList = list;
+                    TrelloInWorkList = (List)list;
                 else if (list.Name == settings.TrelloFirstListName)
-                    TrelloFirstList = list;
+                    TrelloFirstList = (List)list;
                 else if (list.Name == settings.TrelloDoneListName)
-                    TrelloDoneList = list;
+                    TrelloDoneList = (List)list;
             }
             if (TrelloInWorkList == null || TrelloFirstList == null || TrelloDoneList == null) return;
             BoardHaveAllList = true;
@@ -83,11 +83,11 @@ namespace Sisyphus
                 TrelloRequestCounter.TrelloPostCount += 3;
                 var newContractorsBoard =
                     currentOrganiztion.Boards.Add($"{settings.BoardNamePrefix} {contractor.Represent}");
-                newContractorsBoard.Preferences.PermissionLevel = BoardPermissionLevel.Org;
-                sourceBoard.CloneBoard(newContractorsBoard, true);
-                contractor.BoardId = newContractorsBoard.GetBoardId();
-                if (!EnterpriseWsWrapper.SetContractor(contractor))
-                    newContractorsBoard.IsClosed = true;
+                //newContractorsBoard.Preferences.PermissionLevel = BoardPermissionLevel.Org;
+                //sourceBoard.CloneBoard(newContractorsBoard, true);
+                //contractor.BoardId = newContractorsBoard.GetBoardId();
+                //if (!EnterpriseWsWrapper.SetContractor(contractor))
+                //    newContractorsBoard.IsClosed = true;
             }
         }
 
@@ -122,8 +122,8 @@ namespace Sisyphus
                     CreateLogRecord($"There are not enoght lists in board \"{board.Name}\" ({board.Url})", System.Diagnostics.EventLogEntryType.Error);
                     continue;
                 }
-
-                if (!board.Members.Any(t => t == Member.)) board.Memberships.Add(Member.Me, BoardMembershipType.Normal);
+                
+                //if (!board.Members.Any(t => t == Member.Me)) board.Memberships.Add(Member.Me, BoardMembershipType.Normal);
 
                 foreach (var card in listStruct.TrelloDoneList.Cards.Where(c => !c.IsArchived.GetValueOrDefault()))
                 {

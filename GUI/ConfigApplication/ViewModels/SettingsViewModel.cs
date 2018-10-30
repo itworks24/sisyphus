@@ -30,6 +30,7 @@ namespace ConfigApplication.ViewModels
 
         public SettingsViewModel(Type settingsType, string groupName)
         {
+            Misc.FPReset();
             SettingsRepresentInstance = (SettingsRepresent)Activator.CreateInstance(settingsType, groupName);
             SaveCommand = new ActionCommand(t=>SettingsRepresentInstance.SetSettings());
         }
