@@ -22,6 +22,14 @@ namespace Sysiphus.Tasks.Settings
         [DisplayName("Password")]
         public string SHPassword { get; set; }
 
+        [Category("DB")]
+        [DisplayName("Provider name")]
+        public string ProviderName { get; set; } = "System.Data.SqlClient";
+
+        [Category("DB")]
+        [DisplayName("Connection string")]
+        public string ConnectionString { get; set; } = "data source=localhost;initial catalog=LondonRKeeper;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+
         public SHCMSettings(string groupName) : base(groupName)
         {
         }

@@ -35,14 +35,26 @@
     <Reference Include="Common, Version=1.0.6156.24807, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\Common.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="LiteDB, Version=2.0.2.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
       <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="SHOLE, Version=0.2.1.24780, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\itworks.SHOLE.0.2.5\lib\SHOLE\SHOLE.dll</HintPath>
     </Reference>
     <Reference Include="SQLLogger, Version=1.0.6156.24807, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\SQLLogger.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,12 +66,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHCMPParser.cs" />
     <Compile Include="SHCMSettings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Midas">
+      <Guid>{83F57D68-CA9A-11D2-9088-00C04FA35CFA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
