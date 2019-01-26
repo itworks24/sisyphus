@@ -22,6 +22,14 @@ namespace Sysiphus.Tasks.Settings
         [DisplayName("Password")]
         public string SHPassword { get; set; }
 
+        [Category("Store house test")]
+        [DisplayName("ParentTreeRid")]
+        public uint ParentTreeRid { get; set; } = 0;
+
+        [Category("Store house test")]
+        [DisplayName("ParentTreeAbbr")]
+        public string ParentTreeAbbr { get; set; } = "";
+
         [Category("DB")]
         [DisplayName("Provider name")]
         public string ProviderName { get; set; } = "System.Data.SqlClient";
@@ -29,6 +37,22 @@ namespace Sysiphus.Tasks.Settings
         [Category("DB")]
         [DisplayName("Connection string")]
         public string ConnectionString { get; set; } = "data source=localhost;initial catalog=LondonRKeeper;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+
+        [Category("Misc")]
+        [DisplayName("Select first")]
+        public int SelectFirst { get; set; } = 10;
+
+        [Category("Misc")]
+        [DisplayName("Dont reload goods")]
+        public bool DontReloadGoods { get; set; } = true;
+
+        [Category("Misc")]
+        [DisplayName("Dont reload goods cmplects")]
+        public bool DontReloadGoodsBaseComplects { get; set; } = true;
+
+        [Category("Misc")]
+        [DisplayName("Dont reload tree elements")]
+        public bool DontReloadTreeElements { get; set; } = true;
 
         public SHCMSettings(string groupName) : base(groupName)
         {

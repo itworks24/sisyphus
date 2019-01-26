@@ -1,9 +1,9 @@
-﻿using System;
+﻿using NCrontab;
+using Sisyphus.Tasks;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Sisyphus.Tasks;
-using NCrontab;
 using Tamir.SharpSsh;
 
 namespace Sisyphus
@@ -72,7 +72,14 @@ namespace Sisyphus
                         {
                             var destPath = Path.Combine(settings.DestinationPath, Path.GetFileName(file));
                             ftp.upload(destPath.Replace("\\", "/"), file);
-                            sucessfullyTransferedFiles.Add(file);
+                            if (settings.DeleteFile)
+                            {
+                                File.Delete(file);
+                            }
+                            else
+                            {
+                                sucessfullyTransferedFiles.Add(file);
+                            }
                             CreateLogRecord($"{file} successfully uploaded");
                         }
                         catch (Exception e)

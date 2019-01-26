@@ -44,9 +44,6 @@
     <Reference Include="LiteDB, Version=2.0.2.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
       <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\LiteDB.dll</HintPath>
     </Reference>
-    <Reference Include="SHOLE, Version=0.2.1.24780, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\itworks.SHOLE.0.2.5\lib\SHOLE\SHOLE.dll</HintPath>
-    </Reference>
     <Reference Include="SQLLogger, Version=1.0.6156.24807, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\itworks.Sisyphus.TaskCore.1.0.7\lib\SQLLogger.dll</HintPath>
     </Reference>
@@ -85,6 +82,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SHOLEConnector\SHOLE\SHOLE.csproj">
+      <Project>{a9945ccc-69ee-4f66-bdd6-5eb0433bd3df}</Project>
+      <Name>SHOLE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
