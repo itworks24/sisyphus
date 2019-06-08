@@ -39,10 +39,39 @@ namespace SHTree
         {
             SHOLE.Execute.SHOLEConnector.CurrentConnector.Init("10.20.1.2", 1004, "VLADAS", "123");
             var connected = SHOLE.Execute.SHOLEConnector.CurrentConnector.Connect();
+
+            var goodsTree = new GoodsTreeProc();
+            goodsTree.Execute();
+            //foreach (var good in goodsTree.result.Take(4))
+            //{
+            //    Console.WriteLine(good.goodstree_name);
+            //}
+
+            var cmList = new CmListProc()
+            {
+                input = new CmListProcInputDS()
+                {
+                    cm_tree_rid = 1865,
+                    someParam1 = 0,
+                    startDate = DateTime.Now
+                }
+            };
+
+            cmList.Execute();
+            Console.WriteLine();
             using (var writetext = new StreamWriter($"Groups {DateTime.Now.ToString("dd.MM.yyyy HH_mm_ss")}.txt"))
             {
-                LoadTree(writetext);
-            }      
+                foreach (var list in cmList.output1.Where(item=> item.cm_comp_rid == 32362))
+                {
+                    var output = $"cm_comp_name:{list.cm_comp_name}, cm_comp_rid:{list.cm_comp_rid}, cm_out:{list.cm_out}, cm_netto:{list.cm_netto}, cm_brutto:{list.cm_brutto}, cm_rid:{list.cm_rid}, cm_date:{list.cm_date}";
+                    Console.WriteLine(output);
+                    writetext.WriteLine(output);
+                }
+            }
+            //using (var writetext = new StreamWriter($"Groups {DateTime.Now.ToString("dd.MM.yyyy HH_mm_ss")}.txt"))
+            //{
+            //    //    LoadTree(writetext);
+            //}
             Console.ReadKey();
         }
     }
