@@ -1,0 +1,9 @@
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\obj\Release\SHTree.csprojResolveAssemblyReference.cache
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\bin\Release\SHTree.exe.config
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\bin\Release\MIDAS.DLL
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\bin\Release\SHTree.exe
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\bin\Release\SHTree.pdb
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\bin\Release\SHOLE.dll
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\bin\Release\SHOLE.pdb
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\obj\Release\SHTree.exe
+C:\Users\vlada\Source\Repos\sisyphus\SHTree\obj\Release\SHTree.pdb

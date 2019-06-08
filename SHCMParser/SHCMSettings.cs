@@ -43,12 +43,20 @@ namespace Sysiphus.Tasks.Settings
         public int SelectFirst { get; set; } = 10;
 
         [Category("Misc")]
-        [DisplayName("Dont reload goods")]
-        public bool DontReloadGoods { get; set; } = true;
+        [DisplayName("Reload goods")]
+        public bool ReloadGoods { get; set; } = false;
 
         [Category("Misc")]
-        [DisplayName("Dont reload goods cmplects")]
-        public bool DontReloadGoodsBaseComplects { get; set; } = true;
+        [DisplayName("Reload goods cmplects")]
+        public bool ReloadGoodsBaseComplects { get; set; } = false;
+
+        [Category("Misc")]
+        [DisplayName("Reload cmplects HDR")]
+        public bool ReloadComplectsHDR { get; set; } = true;
+
+        [Category("Misc")]
+        [DisplayName("Reload cmplects list")]
+        public bool ReloadComplectsList { get; set; } = true;
 
         [Category("Misc")]
         [DisplayName("Dont reload tree elements")]

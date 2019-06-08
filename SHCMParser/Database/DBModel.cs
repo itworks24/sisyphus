@@ -1,4 +1,4 @@
-namespace SHCMParserDB
+namespace SHCMParser.DBModels
 {
     using System;
     using System.ComponentModel.DataAnnotations;
@@ -29,7 +29,6 @@ namespace SHCMParserDB
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-
         public virtual DbSet<GoodsTreeDB> GoodsTree { get; set; }
         public virtual DbSet<GoodsAttrsDB> GoodsAttrs { get; set; }
         public virtual DbSet<GoodsBaseAttrsDB> GoodsBaseAttrs { get; set; }
@@ -37,8 +36,9 @@ namespace SHCMParserDB
         //public virtual DbSet<CmBaseDB> CmBase { get; set; }
         public virtual DbSet<CmHdrAttrsDB> CmHdrAttrs { get; set; }
         public virtual DbSet<CmHdrComplectsDB> CmHdrComplects { get; set; }
+        public virtual DbSet<CmListDB> CmList { get; set; }
+        public virtual DbSet<TreeElementsNeedDB> TreeElementsNeed { get; set; }
     }
-
 
     public static class DBModelHelper
     {
@@ -386,5 +386,58 @@ namespace SHCMParserDB
         {
 
         }
+    }
+
+    public class CmListDB
+    {
+        [Key, Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long cm_rid { get; set; }
+
+        [Key, Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long cm_comp_rid { get; set; }
+
+        public long cm_date { get; set; }
+
+        public int options { get; set; }
+
+        public string cm_comp_name { get; set; }
+
+        public string cm_some_param_str { get; set; }
+
+        public int cm_some_param_int { get; set; }
+
+        public double cm_brutto { get; set; }
+
+        public long cm_munit_rid { get; set; }
+
+        public string cm_munit_name { get; set; }
+
+        public long cm_proc1 { get; set; }
+
+        public long cm_proc2 { get; set; }
+
+        public double cm_netto { get; set; }
+
+        public double cm_out { get; set; }
+
+        public CmListDB(SHOLE.Procs.CmListDS source)
+        {
+            DBModelHelper.UpdateForType(typeof(SHOLE.Procs.CmListDS), typeof(CmListDB), source, this);
+        }
+
+        public CmListDB()
+        {
+
+        }
+    }
+
+    public class TreeElementsNeedDB
+    {
+        [Key]
+        public long record_rid { get; set; }
+
+        public string goodstree_abbr { get; set; }
     }
 }

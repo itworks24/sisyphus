@@ -1,0 +1,2 @@
+cm_comp_name:, cm_comp_rid:32362, cm_out:0, cm_netto:0, cm_brutto:2.39, cm_rid:48896, cm_date:0
+cm_comp_name:, cm_comp_rid:32362, cm_out:0.7, cm_netto:0.7, cm_brutto:0.7, cm_rid:48813, cm_date:1

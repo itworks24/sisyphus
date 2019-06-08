@@ -47,6 +47,7 @@ namespace ConfigApplication.ViewModels
         public object Settings => _serviceSettings;
 
         public ICommand RunTaskCommand { get; set; }
+        public ICommand RunTaskCurrentThreadCommand { get; set; }
         public ICommand SaveCommand { get; set; }
         public ObservableCollection<LogMessage> Logging => new ObservableCollection<LogMessage>(_taskInstance);
 
@@ -66,11 +67,13 @@ namespace ConfigApplication.ViewModels
             Executing = true;
             try
             {
+                Misc.FPReset();
                 _taskInstance.ExecuteTask(_groupName,
                     createEmailReport: _serviceSettings.Report,
                     sendReportIntervalInSeconds: _serviceSettings.SendReportInterval * 60,
                     reportInformationLevel: _serviceSettings.ReportInformationLevel,
                     maxErrorCount:_serviceSettings.MaxErrorCount);
+                Misc.FPReset();
             }
             catch (Exception e)
             {
@@ -88,6 +91,11 @@ namespace ConfigApplication.ViewModels
             newThread.Start();
         }
 
+        private void RunTaskCurrentThread()
+        {
+            RunTaskInThread();
+        }
+
         public SettingsGroupViewModel(Type componentType, IEnumerable<Type> taskSettings, string groupName)
         {
             Misc.FPReset();
@@ -96,6 +104,7 @@ namespace ConfigApplication.ViewModels
             _taskInstance = Activator.CreateInstance(componentType) as TaskBase;
             _serviceSettings = GroupSettings.GetGroupSettings(_taskInstance, GroupName);
             RunTaskCommand = new RelayCommand(arg => RunTask());
+            RunTaskCurrentThreadCommand = new RelayCommand(arg => RunTaskCurrentThread());
             SaveCommand = new RelayCommand(arg => _serviceSettings.SaveSettings());
         }
     }

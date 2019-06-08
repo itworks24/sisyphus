@@ -74,6 +74,7 @@
                                 <StackPanel Orientation="Horizontal" Margin="5 5 5 5" >
                                     <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Text="{Binding GroupName}"/>
                                     <Button Margin="5 0 0 0" VerticalAlignment="Center" Command="{Binding RunTaskCommand}" Visibility="{Binding Executing, Converter={StaticResource VisibleIfNotTrue}}" Content="Run"/>
+                                    <Button Margin="5 0 0 0" VerticalAlignment="Center" Command="{Binding RunTaskCommand}" Visibility="{Binding Executing, Converter={StaticResource VisibleIfNotTrue}}" Content="Run in current thread"/>
                                     <loaders:ImgurLoader Margin="5 0 0 0" VerticalAlignment="Center" Visibility="{Binding Executing, Converter={StaticResource VisibleIfTrue}}"/>
                                 </StackPanel>
                             </HierarchicalDataTemplate>
@@ -109,10 +110,10 @@
                         <Button Margin="5,0" Command="{Binding AddGroupCommand}">Add group</Button>
                     </StackPanel>
                     <Button Margin="5 5 5 5" Command="{Binding EditConfigCommand}" Content="Edit config" ToolTipService.ShowOnDisabled="True">
-                        <Button.ToolTip>Service accaunt and current app accaunt doesn't match. Please relogin.</Button.ToolTip>
+                        <Button.ToolTip>Service account and current app accaunt doesn't match. Please relogin.</Button.ToolTip>
                     </Button>
                     <Button Margin="5 5 5 5" Command="{Binding ReloadTasks}" Content="Reload config" ToolTipService.ShowOnDisabled="True">
-                        <Button.ToolTip>Service accaunt and current app accaunt doesn't match. Please relogin.</Button.ToolTip>
+                        <Button.ToolTip>Service account and current app accaunt doesn't match. Please relogin.</Button.ToolTip>
                     </Button>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">

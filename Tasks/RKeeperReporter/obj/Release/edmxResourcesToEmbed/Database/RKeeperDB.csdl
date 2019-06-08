@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RKeeperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CASHES">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="NETNAME" Type="String" MaxLength="31" FixedLength="false" Unicode="true" />
+    <Property Name="CASHGROUP" Type="Int32" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="RIGHTLVL" Type="Int16" />
+    <Property Name="RESOLUTION" Type="Int16" />
+    <Property Name="COLORS" Type="Int16" />
+    <Property Name="DEFHALLPLANID" Type="Int32" />
+    <Property Name="RIGHTS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="OSTYPE" Type="Int16" />
+    <Property Name="STTYPE" Type="Int16" />
+    <Property Name="DEVICENAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FILEMANAGERPATH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRAPHICPARAMETERS" Type="Int16" />
+    <Property Name="WAITDATASENDED" Type="Int16" />
+    <Property Name="AFTERSHIFTCLOSURE" Type="Int16" />
+    <Property Name="SYNCSTATESFLAGS" Type="Int16" />
+    <Property Name="DATASENDTIMEOUT" Type="Int32" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CASHGROUPS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="NETNAME" Type="String" MaxLength="31" FixedLength="false" Unicode="true" />
+    <Property Name="ONLINE" Type="Int16" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="LASTDATARECEIVED" Type="Int64" />
+    <Property Name="NEEDBACKUP" Type="Int16" />
+    <Property Name="BACKUPPATH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BACKUPCOPIESQNT" Type="Int32" />
+    <Property Name="BACKUPSHIFTQNT" Type="Int32" />
+    <Property Name="BACKUPTIMEOUT" Type="Int32" />
+    <Property Name="BACKUPTRANSACTIONQNT" Type="Int32" />
+    <Property Name="RESTAURANT" Type="Int32" />
+    <Property Name="KEYNUMBER" Type="Int32" />
+    <Property Name="LICENSE" Type="String" MaxLength="47" FixedLength="false" Unicode="true" />
+    <Property Name="LICSTATIONS" Type="Int32" />
+    <Property Name="LICEXPIREAT" Type="DateTime" Precision="3" />
+    <Property Name="PDALICENSE" Type="String" MaxLength="47" FixedLength="false" Unicode="true" />
+    <Property Name="PDALICSTATIONS" Type="Int32" />
+    <Property Name="PDALICEXPIREAT" Type="DateTime" Precision="3" />
+    <Property Name="LICHARDKEYN" Type="Int32" />
+    <Property Name="LICENSEVERN" Type="Int32" />
+    <Property Name="PRINTLOGPATH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TIMESYNCNETNAME" Type="String" MaxLength="31" FixedLength="false" Unicode="true" />
+    <Property Name="LASTGLOBALSHIFT" Type="Int32" />
+    <Property Name="FTPGETAVAIL" Type="Int16" />
+    <Property Name="FTPBINDADDR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FTPDATAPORT" Type="Int32" />
+    <Property Name="FTPINFOPORT" Type="Int32" />
+    <Property Name="HTTPSERVPORT" Type="Int32" />
+    <Property Name="HTTPBINDADDR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HTTPGETAVAIL" Type="Int16" />
+    <Property Name="ONLINEDATAEXPORTPERIOD" Type="Int32" />
+    <Property Name="SYNCSTATESFLAGS" Type="Int16" />
+    <Property Name="SERVEREXISTSSINCE" Type="Int64" />
+    <Property Name="HTTPWEBPRIVILEGE" Type="Int32" />
+    <Property Name="HTTPAPIPRIVILEGE" Type="Int32" />
+    <Property Name="HTTPXMLPRIVILEGE" Type="Int32" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CLASSIFICATORGROUPS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+      <PropertyRef Name="NUMINGROUP" />
+    </Key>
+    <Property Name="SIFR" Type="Int16" Nullable="false" />
+    <Property Name="NUMINGROUP" Type="Int16" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="SORTORDER" Type="Int32" />
+    <Property Name="VISUALTYPE_IMAGE" Type="Int32" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_FLAGS" Type="Int16" />
+    <Property Name="LASTNUMINGROUP" Type="Int16" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="EDITRIGHT" Type="Int16" />
+    <Property Name="DEPARTCODE" Type="Int16" />
+    <Property Name="EXTCODE" Type="Int32" />
+    <Property Name="EXTRESTID" Type="Int32" />
+    <Property Name="MODISCHEME" Type="Int32" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CLASSINFOS">
+    <Key>
+      <PropertyRef Name="REFNO" />
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="REFNO" Type="Int16" Nullable="false" />
+    <Property Name="NUM" Type="Int16" Nullable="false" />
+    <Property Name="GROUP" Type="Int32" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CONDITIONPARAMETER" Type="Int32" />
+    <Property Name="CINAMEOFCLASS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CIUSERNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CIUSERPLNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CIDEFAULTPROP" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="CIHIDDENPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIREPONLYPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIREADONLYPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CISPECEDITPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIENGPREFPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CICOMPLOGPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIMASKLOGPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIHIDELOGVALS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIOPTIONS" Type="Int16" />
+    <Property Name="CIREQPROPS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CIFOCUSONPROP" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="CISQLPROPHELP" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CINAMESUNIQUE" Type="Int16" />
+    <Property Name="CIPARENTPOWCODE" Type="Int16" />
+    <Property Name="CIDONTCHECKPROPS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CIUPDATERIGHT" Type="Int16" />
+    <Property Name="HHCONTEXTID" Type="Int32" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CURRENCYTYPES">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PARENT" Type="Int32" />
+    <Property Name="CURRENCYFORMAT" Type="Int16" />
+    <Property Name="VISUALTYPE_IMAGE" Type="Int32" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_FLAGS" Type="Int16" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="FISCREGPAYTYPE1" Type="Int32" />
+    <Property Name="FISCREGPAYTYPE2" Type="Int32" />
+    <Property Name="FISCREGPAYTYPE3" Type="Int32" />
+    <Property Name="FISCREGUNFISCTYPE" Type="Int16" />
+    <Property Name="EDITRIGHT" Type="Int16" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CURRLINES">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="CHECKUNI" Type="Int32" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="SIFR" Type="Int32" />
+    <Property Name="BINDEDSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ORIGINALSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BASICSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NATIONALSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DISBALLANCE" Type="Int64" />
+    <Property Name="TAXPAYTYPESIFR" Type="Int32" />
+    <Property Name="SOURCEORDERIDENT" Type="Int32" />
+    <Property Name="IHIGHLEVELTYPE" Type="Int32" />
+    <Property Name="DBKURS" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GLOBALIDENT" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DISCLINEUNI" Type="Int32" />
+    <Property Name="PAYUNIFOROWNERINFO" Type="Int32" />
+    <Property Name="OWNERINFO" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="FISCREGUNFISCTYPE" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DISCOUNTS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PARENT" Type="Int32" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="MODE" Type="Int16" />
+    <Property Name="MAXAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MAXPERCENT" Type="Double" />
+    <Property Name="COUNTTYPE" Type="Int32" />
+    <Property Name="CLASSIFICATION" Type="Int32" />
+    <Property Name="MINTERFACE" Type="Int32" />
+    <Property Name="RIGHTLVL" Type="Int16" />
+    <Property Name="ROUNDRULE" Type="Int16" />
+    <Property Name="MAGNCARDTYPE" Type="Int32" />
+    <Property Name="VISUALTYPE_IMAGE" Type="Int32" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_FLAGS" Type="Int16" />
+    <Property Name="SALESTERMS_FLAG" Type="Int16" />
+    <Property Name="SALESTERMS_STARTSALE" Type="DateTime" Precision="3" />
+    <Property Name="SALESTERMS_STOPSALE" Type="DateTime" Precision="3" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="EXTCODE" Type="Int32" />
+    <Property Name="EXTRESTID" Type="Int32" />
+    <Property Name="TRANSACTIONCODE" Type="Int16" />
+    <Property Name="TRANSACTIONVALUE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DISCOUNTDISTRMODE" Type="Int16" />
+    <Property Name="SURPLUSDISTRMODE" Type="Int16" />
+    <Property Name="MINORDERREST" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FISCALOUTSIDE" Type="Int16" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DISCPARTS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="BINDINGUNI" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="BINDINGUNI" Type="Int32" Nullable="false" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="SIFR" Type="Int32" />
+    <Property Name="DISCLINEUNI" Type="Int32" />
+    <Property Name="DISCOUNTQNT" Type="Double" />
+    <Property Name="NONZERODISC" Type="Int16" />
+    <Property Name="NONZEROBONUS" Type="Int16" />
+    <Property Name="SUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BONUSSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CALCSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DISHDISCOUNTS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="OWNERUNI" Type="Int32" />
+    <Property Name="SORTORDER" Type="Int32" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="SESSIONUNI" Type="Int32" />
+    <Property Name="SIFR" Type="Int32" />
+    <Property Name="STATE" Type="Int16" />
+    <Property Name="ICREATOR" Type="Int32" />
+    <Property Name="IAUTHOR" Type="Int32" />
+    <Property Name="ICREATORROLE" Type="Int32" />
+    <Property Name="IAUTHORROLE" Type="Int32" />
+    <Property Name="ISCHARGE" Type="Int16" />
+    <Property Name="EXCLUDEFROMEARNINGS" Type="Int16" />
+    <Property Name="LOCALIZATION" Type="Int32" />
+    <Property Name="CHARGESOURCE" Type="Int32" />
+    <Property Name="VALUECHANGED" Type="Int16" />
+    <Property Name="PDSTRANSACTION" Type="Int16" />
+    <Property Name="COUNTTYPE" Type="Int32" />
+    <Property Name="SRCAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CALCAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MAXAMOUNT" Type="Int64" />
+    <Property Name="DELETEDSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PAYSUM" Type="Int64" />
+    <Property Name="CLOSEDPAYSUM" Type="Int64" />
+    <Property Name="SEAT" Type="Int32" />
+    <Property Name="UNFISCALOPERATION" Type="Int16" />
+    <Property Name="ITAXDISHTYPE" Type="Int32" />
+    <Property Name="CARDCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ACCOUNTIDENT" Type="Int64" />
+    <Property Name="GLOBALIDENT" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="BONUSTYPE" Type="Int32" />
+    <Property Name="MINTERFACE" Type="Int32" />
+    <Property Name="BONUSAMOUNT" Type="Int64" />
+    <Property Name="DEFAULTER" Type="Int32" />
+    <Property Name="HOLDER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CREATETIME" Type="DateTime" Precision="3" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONID" Type="Int64" />
+    <Property Name="COUPONCOUNT" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DISHGROUPS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="PARENT" Type="Int32" />
+    <Property Name="CHILD" Type="Int32" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="Classification" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="DISHVOIDS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="DISHUNI" Type="Int32" />
+    <Property Name="SORTORDER" Type="Int32" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="SIFR" Type="Int32" />
+    <Property Name="ICREATOR" Type="Int32" />
+    <Property Name="IAUTHOR" Type="Int32" />
+    <Property Name="ICREATORROLE" Type="Int32" />
+    <Property Name="IAUTHORROLE" Type="Int32" />
+    <Property Name="SESSIONUNI" Type="Int32" />
+    <Property Name="VOIDSESSIONUNI" Type="Int32" />
+    <Property Name="COMBOVOIDUNI" Type="Int32" />
+    <Property Name="OPENNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PIECES" Type="Double" />
+    <Property Name="QUANTITY" Type="Double" />
+    <Property Name="PRLISTSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DATETIME" Type="DateTime" Precision="3" />
+    <Property Name="GLOBALIDENT" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="PRINTED" Type="Int16" />
+    <Property Name="SAVEDATETIME" Type="Int64" />
+    <Property Name="STOREDINFM" Type="Int16" />
+    <Property Name="AFTERBILLUNDO" Type="Int16" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GLOBALSHIFTS">
+    <Key>
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="SHIFTNUM" />
+    </Key>
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="SHIFTNUM" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CREATETIME" Type="DateTime" Precision="3" />
+    <Property Name="STARTTIME" Type="DateTime" Precision="3" />
+    <Property Name="CLOSETIME" Type="DateTime" Precision="3" />
+    <Property Name="IMANAGER" Type="Int32" />
+    <Property Name="SHIFTDATE" Type="DateTime" Precision="3" />
+    <Property Name="CLOSED" Type="Int16" />
+    <Property Name="SENDED" Type="Int16" />
+    <Property Name="IBASICCURRENCY" Type="Int32" />
+    <Property Name="INATIONALCURRENCY" Type="Int32" />
+    <Property Name="IRESTAURANT" Type="Int32" />
+    <Property Name="ORIGINALSHIFTDATE" Type="DateTime" Precision="3" />
+    <Property Name="SHIFTLOADDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GLOBALSHIFTSTATS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="RESTAURANT" Type="Int32" />
+    <Property Name="CASHSERVER" Type="Int32" />
+    <Property Name="SHIFTNO" Type="Int32" />
+    <Property Name="SHIFTSTATS" Type="Int16" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MENUITEMS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="SHORTNAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ALTSHORTNAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PORTIONWEIGHT" Type="Double" />
+    <Property Name="PORTIONNAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ALTPORTION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="KURS" Type="Int32" />
+    <Property Name="QNTDECDIGITS" Type="Int16" />
+    <Property Name="MODISCHEME" Type="Int32" />
+    <Property Name="MODIWEIGHT" Type="Int16" />
+    <Property Name="COOKMINS" Type="Int16" />
+    <Property Name="COMMENT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="INSTRUCT" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FLAGS" Type="Int16" />
+    <Property Name="SCALECOEF" Type="Int32" />
+    <Property Name="TARAWEIGHT" Type="Double" />
+    <Property Name="CONFIRMQNT" Type="Double" />
+    <Property Name="MINRESTQNT" Type="Double" />
+    <Property Name="VISUALTYPE_IMAGE" Type="Int32" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_FLAGS" Type="Int16" />
+    <Property Name="SALESTERMS_FLAG" Type="Int16" />
+    <Property Name="SALESTERMS_STARTSALE" Type="DateTime" Precision="3" />
+    <Property Name="SALESTERMS_STOPSALE" Type="DateTime" Precision="3" />
+    <Property Name="MINTERFACE" Type="Int32" />
+    <Property Name="PARENT" Type="Int32" />
+    <Property Name="TOPARENTCATEG" Type="Int32" />
+    <Property Name="RIGHTLVL" Type="Int16" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="EXTCODE" Type="Int32" />
+    <Property Name="EXTRESTID" Type="Int32" />
+    <Property Name="SALEOBJECTTYPE" Type="Int16" />
+    <Property Name="RATETYPE" Type="Int16" />
+    <Property Name="ROUNDTIME" Type="Int32" />
+    <Property Name="MINIMUMTARIFTIME" Type="Int32" />
+    <Property Name="MAXIMUMTARIFTIME" Type="Int32" />
+    <Property Name="IGNOREDTARIFTIME" Type="Int32" />
+    <Property Name="DEFTARIFTIMELIMIT" Type="Int32" />
+    <Property Name="MINTARIFAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MAXTARIFAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TARIFFROUNDRULE" Type="Int16" />
+    <Property Name="MONEYROUNDRULE" Type="Int16" />
+    <Property Name="COMBOSPLITMODE" Type="Int32" />
+    <Property Name="COMBOJOINMODE" Type="Int32" />
+    <Property Name="ADDLINEMODE" Type="Int32" />
+    <Property Name="COMBODISCOUNT" Type="Int32" />
+    <Property Name="CHANGETOCOMBO" Type="Int32" />
+    <Property Name="LARGEIMAGEPATH" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="GUESTSDISHRATING" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ORDERS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="IDENTINVISIT" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="IDENTINVISIT" Type="Int32" Nullable="false" />
+    <Property Name="ICREATOR" Type="Int32" />
+    <Property Name="IAUTHOR" Type="Int32" />
+    <Property Name="ICREATORROLE" Type="Int32" />
+    <Property Name="IAUTHORROLE" Type="Int32" />
+    <Property Name="ILASTUSER" Type="Int32" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="GUESTSCOUNT" Type="Int32" />
+    <Property Name="LASTSERVICE" Type="DateTime" Precision="3" />
+    <Property Name="NUMONTABLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OPENTIME" Type="DateTime" Precision="3" />
+    <Property Name="TABLEID" Type="Int32" />
+    <Property Name="TABLENAME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ORDERNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="PROMOCODE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="COT" Type="Int32" />
+    <Property Name="UOT" Type="Int32" />
+    <Property Name="DEFAULTER" Type="Int32" />
+    <Property Name="IBASICCURRENCY" Type="Int32" />
+    <Property Name="INATIONALCURRENCY" Type="Int32" />
+    <Property Name="ICOMMONSHIFT" Type="Int32" />
+    <Property Name="MAINWAITER" Type="Int32" />
+    <Property Name="BRIGADE" Type="Int32" />
+    <Property Name="STARTSERVICE" Type="DateTime" Precision="3" />
+    <Property Name="ENDSERVICE" Type="DateTime" Precision="3" />
+    <Property Name="DURATION" Type="Int32" />
+    <Property Name="FINISHEDSERVICE" Type="Int16" />
+    <Property Name="PAID" Type="Int16" />
+    <Property Name="ISBANQUET" Type="Int16" />
+    <Property Name="BANQUETSTATE" Type="Int32" />
+    <Property Name="PRICELISTSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TOPAYSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PAIDSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UNCLOSEDPRICESUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UNCLOSEDPREPAYSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DISCOUNTSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TOTALDISHPIECES" Type="Double" />
+    <Property Name="INVOICEUNI" Type="Int32" />
+    <Property Name="ORIGINALORDERID" Type="Int32" />
+    <Property Name="STATE" Type="Int16" />
+    <Property Name="LASTCHECKUNI" Type="Int32" />
+    <Property Name="STATIONID" Type="Int32" />
+    <Property Name="SEQNUMBER" Type="Int32" />
+    <Property Name="CRC32" Type="Int32" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="FISCORDERSTATE" Type="Int16" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PAYBINDINGS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="DISHUNI" Type="Int32" />
+    <Property Name="CHARGEUNI" Type="Int32" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="CURRUNI" Type="Int32" />
+    <Property Name="PRICESUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PAYSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="QUANTITY" Type="Double" />
+    <Property Name="DISTRDISCOUNTS" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TAXESADDED" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BONUSBASE" Type="Int64" />
+    <Property Name="BONUSSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DISTRDISCOUNTSONLY" Type="Int64" />
+    <Property Name="CONSUMATIONSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SEAT" Type="Int16" />
+    <Property Name="STATE" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="COSTSUM" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="PRINTCHECKS">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="SESSIONUNI" Type="Int32" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="STATE" Type="Int32" />
+    <Property Name="ICREATOR" Type="Int32" />
+    <Property Name="IAUTHOR" Type="Int32" />
+    <Property Name="ICREATORROLE" Type="Int32" />
+    <Property Name="IAUTHORROLE" Type="Int32" />
+    <Property Name="CLOSEDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="BILLDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="STARTDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="DRAWERDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="ICLOSESTATION" Type="Int32" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="ISHIFT" Type="Int32" />
+    <Property Name="IFISCSHIFT" Type="Int32" />
+    <Property Name="IPRINTSTATION" Type="Int32" />
+    <Property Name="IDRAWER" Type="Int32" />
+    <Property Name="IPRINTER" Type="Int32" />
+    <Property Name="EXTFISCID" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="PRINTNUMBER" Type="Int32" />
+    <Property Name="CHECKNUM" Type="Int32" />
+    <Property Name="PARENTCHECKNUM" Type="Int32" />
+    <Property Name="GUESTCNT" Type="Int32" />
+    <Property Name="SEAT" Type="Int32" />
+    <Property Name="DELETED" Type="Int16" />
+    <Property Name="UNDOTRANSACTIONS" Type="Int16" />
+    <Property Name="IDELETEMANAGER" Type="Int32" />
+    <Property Name="DELETEDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="BASICSUM" Type="Int64" />
+    <Property Name="BINDEDSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NATIONALSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FISCALSUM" Type="Int64" />
+    <Property Name="PRLISTSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DISCOUNTSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TOPAYSUM" Type="Int64" />
+    <Property Name="DISHPRICELISTSUM" Type="Int64" />
+    <Property Name="CHARGEPRICELISTSUM" Type="Int64" />
+    <Property Name="TAXSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TAXSUMADDED" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BONUSSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GLOBALIDENT" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="PRINTTRY" Type="Int32" />
+    <Property Name="ISBILL" Type="Int16" />
+    <Property Name="IVOID" Type="Int32" />
+    <Property Name="OPENVOIDNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="IDELETEPERSON" Type="Int32" />
+    <Property Name="BASICRATE" Type="Int64" />
+    <Property Name="WASALLCHANGETOTIP" Type="Int16" />
+    <Property Name="BILLERROR" Type="Int16" />
+    <Property Name="INVOICEUNI" Type="Int32" />
+    <Property Name="INVOICEPRINTED" Type="Int16" />
+    <Property Name="COPIESPRINTED" Type="Int32" />
+    <Property Name="IDRAWERSHIFT" Type="Int32" />
+    <Property Name="IBUSINESSPERIOD" Type="Int32" />
+    <Property Name="IGNOREINREP" Type="Int16" />
+    <Property Name="ISPREPAYRECEIPT" Type="Int16" />
+    <Property Name="ISDEPOSITRECEIPT" Type="Int16" />
+    <Property Name="ISWITHDRAWALRECEIPT" Type="Int16" />
+    <Property Name="ISTARERECEIPT" Type="Int16" />
+    <Property Name="SQI" Type="Int32" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="PAYFISCALSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="RECEIPTTAXTYPE" Type="Int16" />
+  </EntityType>
+  <EntityType Name="RESTAURANTS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="OWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="BASICCURRENCY" Type="Int32" />
+    <Property Name="NATIONALCURRENCY" Type="Int32" />
+    <Property Name="CONCEPT" Type="Int32" />
+    <Property Name="REGION" Type="Int32" />
+    <Property Name="FRANCHISE" Type="Int32" />
+    <Property Name="RIGHTLVL" Type="Int16" />
+    <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SH4TRADEGROUP" Type="Int32" />
+    <Property Name="SH4PRICE" Type="Int32" />
+    <Property Name="EDITRIGHT" Type="Int16" />
+    <Property Name="EXTCODE" Type="Int32" />
+    <Property Name="STOREHOUSECODE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="OPENINGDATE" Type="DateTime" Precision="3" />
+    <Property Name="HANDLESRESTAURANTS" Type="Int32" />
+    <Property Name="LOCATIONLAT" Type="Int64" />
+    <Property Name="LOCATIONLONG" Type="Int64" />
+    <Property Name="ADDRESSGUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="OPERATIONALHOURS" Type="Int64" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SESSIONDISHES">
+    <Key>
+      <PropertyRef Name="VISIT" />
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="UNI" />
+    </Key>
+    <Property Name="VISIT" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="ORDERIDENT" Type="Int32" />
+    <Property Name="SESSIONUNI" Type="Int32" />
+    <Property Name="SORTORDER" Type="Int32" />
+    <Property Name="UNI" Type="Int32" Nullable="false" />
+    <Property Name="SIFR" Type="Int32" />
+    <Property Name="STATE" Type="Int32" />
+    <Property Name="ICREATOR" Type="Int32" />
+    <Property Name="IAUTHOR" Type="Int32" />
+    <Property Name="ICREATORROLE" Type="Int32" />
+    <Property Name="IAUTHORROLE" Type="Int32" />
+    <Property Name="ITAXDISHTYPE" Type="Int32" />
+    <Property Name="SRCQUANTITY" Type="Double" />
+    <Property Name="WRITEOFFQUANTITY" Type="Double" />
+    <Property Name="QUANTITY" Type="Double" />
+    <Property Name="PIECES" Type="Double" />
+    <Property Name="PRLISTSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SRCPRLISTSUM" Type="Int64" />
+    <Property Name="CLEARSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PAYSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SUMWITHDISCOUNTS" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CLOSEDPAYSUM" Type="Int64" />
+    <Property Name="CONSUMSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CALCCONSUMSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BONUSBASESUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PRICE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MENUITEMPRICE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SEAT" Type="Int32" />
+    <Property Name="ISPORTION" Type="Int16" />
+    <Property Name="ISPURCHASE" Type="Int16" />
+    <Property Name="ISCOMBO" Type="Int16" />
+    <Property Name="ISCOMBOCOMP" Type="Int16" />
+    <Property Name="ISUSERPRICE" Type="Int16" />
+    <Property Name="DOSINGDEVID" Type="Int32" />
+    <Property Name="PURCHASEPREPAYUNI" Type="Int32" />
+    <Property Name="TARIFFSIFR" Type="Int32" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="SOURCEGUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="ADDBYALGORITHM" Type="Int32" />
+    <Property Name="WEIGHT" Type="Double" />
+    <Property Name="CHANGECOUNT" Type="Int16" />
+    <Property Name="WEIGHTPRINTED" Type="Int16" />
+    <Property Name="GLOBALIDENT" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="KDSIDENT" Type="Int32" />
+    <Property Name="COMBODISHUNI" Type="Int32" />
+    <Property Name="COMBOMODIUNI" Type="Int32" />
+    <Property Name="COMBODISCUNI" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CREATIONDATETIME" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TEMPGLOBALSHIFTS">
+    <Key>
+      <PropertyRef Name="MIDSERVER" />
+      <PropertyRef Name="SHIFTNUM" />
+    </Key>
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="SHIFTNUM" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CREATETIME" Type="DateTime" Precision="3" />
+    <Property Name="STARTTIME" Type="DateTime" Precision="3" />
+    <Property Name="CLOSETIME" Type="DateTime" Precision="3" />
+    <Property Name="IMANAGER" Type="Int32" />
+    <Property Name="SHIFTDATE" Type="DateTime" Precision="3" />
+    <Property Name="CLOSED" Type="Int16" />
+    <Property Name="SENDED" Type="Int16" />
+    <Property Name="IBASICCURRENCY" Type="Int32" />
+    <Property Name="INATIONALCURRENCY" Type="Int32" />
+    <Property Name="IRESTAURANT" Type="Int32" />
+    <Property Name="ORIGINALSHIFTDATE" Type="DateTime" Precision="3" />
+    <Property Name="SHIFTLOADDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPDATAKIND" Type="Int32" />
+    <Property Name="TEMPDATASIGN" Type="Int32" />
+    <Property Name="TEMPSERVERID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VISITS">
+    <Key>
+      <PropertyRef Name="SIFR" />
+      <PropertyRef Name="MIDSERVER" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+    <Property Name="CREATOR" Type="Int32" />
+    <Property Name="GUESTTYPE" Type="Int32" />
+    <Property Name="STARTGUESTCNT" Type="Int32" />
+    <Property Name="GUESTCNT" Type="Int32" />
+    <Property Name="RESERVSOURCE" Type="Int32" />
+    <Property Name="RESERVID" Type="Int32" />
+    <Property Name="RESERVDURATION" Type="Int32" />
+    <Property Name="RESERVSTATE" Type="Int32" />
+    <Property Name="RESERVFLAGS" Type="Int32" />
+    <Property Name="ENTRCARDMODE" Type="Int32" />
+    <Property Name="MAXCREDITSUM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="STARTTIME" Type="DateTime" Precision="3" />
+    <Property Name="QUITTIME" Type="DateTime" Precision="3" />
+    <Property Name="FINISHED" Type="Int16" />
+    <Property Name="VISITEXTRAINFOTOSAVE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SEATSCLOSED" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="VISITOTHEREXTRAINFO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HOLDER" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="ISTARTCOMMONSHIFT" Type="Int32" />
+    <Property Name="IQUITCOMMONSHIFT" Type="Int32" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="UNICOUNT" Type="Int32" />
+    <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SaleObjects">
+    <Key>
+      <PropertyRef Name="MidServer" />
+      <PropertyRef Name="Visit" />
+      <PropertyRef Name="DishUNI" />
+      <PropertyRef Name="ChargeUNI" />
+      <PropertyRef Name="ObjKind" />
+    </Key>
+    <Property Name="MidServer" Type="Int32" Nullable="false" />
+    <Property Name="Visit" Type="Int32" Nullable="false" />
+    <Property Name="DishUNI" Type="Int32" Nullable="false" />
+    <Property Name="ChargeUNI" Type="Int32" Nullable="false" />
+    <Property Name="OrderIdent" Type="Int32" />
+    <Property Name="SessionUNI" Type="Int32" />
+    <Property Name="ObjKind" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="AltName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="RightLvl" Type="Int16" />
+    <Property Name="TypePath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int16" />
+    <Property Name="SalesTerms_StartSale" Type="DateTime" Precision="3" />
+    <Property Name="SalesTerms_StopSale" Type="DateTime" Precision="3" />
+    <Property Name="iTaxDishType" Type="Int32" />
+    <Property Name="Seat" Type="Int32" />
+    <Property Name="ExcludeFromEarnings" Type="Int32" />
+    <Property Name="SourceSum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PaySum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="GlobalIdent" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="iCreator" Type="Int32" />
+    <Property Name="iAuthor" Type="Int32" />
+    <Property Name="iCreatorRole" Type="Int32" />
+    <Property Name="iAuthorRole" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="RKeeperEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CASHES" EntityType="Self.CASHES" />
+    <EntitySet Name="CASHGROUPS" EntityType="Self.CASHGROUPS" />
+    <EntitySet Name="CLASSIFICATORGROUPS" EntityType="Self.CLASSIFICATORGROUPS" />
+    <EntitySet Name="CLASSINFOS" EntityType="Self.CLASSINFOS" />
+    <EntitySet Name="CURRENCYTYPES" EntityType="Self.CURRENCYTYPES" />
+    <EntitySet Name="CURRLINES" EntityType="Self.CURRLINES" />
+    <EntitySet Name="DISCOUNTS" EntityType="Self.DISCOUNTS" />
+    <EntitySet Name="DISCPARTS" EntityType="Self.DISCPARTS" />
+    <EntitySet Name="DISHDISCOUNTS" EntityType="Self.DISHDISCOUNTS" />
+    <EntitySet Name="DISHGROUPS" EntityType="Self.DISHGROUPS" />
+    <EntitySet Name="DISHVOIDS" EntityType="Self.DISHVOIDS" />
+    <EntitySet Name="GLOBALSHIFTS" EntityType="Self.GLOBALSHIFTS" />
+    <EntitySet Name="GLOBALSHIFTSTATS" EntityType="Self.GLOBALSHIFTSTATS" />
+    <EntitySet Name="MENUITEMS" EntityType="Self.MENUITEMS" />
+    <EntitySet Name="ORDERS" EntityType="Self.ORDERS" />
+    <EntitySet Name="PAYBINDINGS" EntityType="Self.PAYBINDINGS" />
+    <EntitySet Name="PRINTCHECKS" EntityType="Self.PRINTCHECKS" />
+    <EntitySet Name="RESTAURANTS" EntityType="Self.RESTAURANTS" />
+    <EntitySet Name="SESSIONDISHES" EntityType="Self.SESSIONDISHES" />
+    <EntitySet Name="TEMPGLOBALSHIFTS" EntityType="Self.TEMPGLOBALSHIFTS" />
+    <EntitySet Name="VISITS" EntityType="Self.VISITS" />
+    <EntitySet Name="SaleObjects" EntityType="Self.SaleObjects" />
+    <EntitySet Name="CURRENCIES" EntityType="RKeeperModel.CURRENCIES" />
+  </EntityContainer>
+  <EntityType Name="CURRENCIES">
+    <Key>
+      <PropertyRef Name="SIFR" />
+    </Key>
+    <Property Name="SIFR" Type="Int32" Nullable="false" />
+    <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="Int32" />
+    <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PARENT" Type="Int32" />
+    <Property Name="RATECLASS" Type="Int32" />
+    <Property Name="ROUNDRULE" Type="Int16" />
+    <Property Name="ROUNDMETHOD" Type="Int16" />
+    <Property Name="FLAGS" Type="Int32" />
+    <Property Name="GROUP" Type="Int32" />
+    <Property Name="LIMITDISHES" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FORMAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MINTERFACE" Type="Int32" />
+    <Property Name="RIGHTLVL" Type="Int16" />
+    <Property Name="DISCOUNT" Type="Int32" />
+    <Property Name="TAXPAYTYPE" Type="Int32" />
+    <Property Name="MINIMALAMOUNT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="VISUALTYPE_IMAGE" Type="Int32" />
+    <Property Name="VISUALTYPE_BCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_TEXTCOLOR" Type="Int32" />
+    <Property Name="VISUALTYPE_FLAGS" Type="Int16" />
+    <Property Name="SALESTERMS_FLAG" Type="Int16" />
+    <Property Name="SALESTERMS_STARTSALE" Type="DateTime" Precision="3" />
+    <Property Name="SALESTERMS_STOPSALE" Type="DateTime" Precision="3" />
+    <Property Name="TIPCHARGE" Type="Int32" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="FISCREGPAYTYPE1" Type="Int32" />
+    <Property Name="FISCREGPAYTYPE2" Type="Int32" />
+    <Property Name="FISCREGPAYTYPE3" Type="Int32" />
+    <Property Name="FISCREGUNFISCTYPE" Type="Int16" />
+    <Property Name="EXTCODE" Type="Int32" />
+    <Property Name="EXTRESTID" Type="Int32" />
+    <Property Name="EXTRAINFOCAPTION" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MAGNCARDTYPE" Type="Int32" />
+    <Property Name="FCPAYTRANSACTION" Type="Int16" />
+    <Property Name="FCSUBACCOUNT" Type="Int32" />
+    <Property Name="MAXPERCENT" Type="Double" />
+    <Property Name="FORENCASHMENT" Type="Int32" />
+    <Property Name="USEBONUSPERCENT" Type="Double" />
+    <Property Name="AUTOFILLMODE" Type="Int32" />
+    <Property Name="AUTHPURPOSE" Type="Int32" />
+    <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

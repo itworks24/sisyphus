@@ -55,10 +55,27 @@ namespace Sysiphus.Tasks.SampleTask
         }
     }
 
-    public partial class RkeeperReporter
+    public static class RkeeperLoader
     {
+        public class RkeeperLoaderSettings
+        {
+            public string ProviderName { get; set; }
+            public string ConnectionString { get; set; }
+            public int UploadLastDays { get; set; }
+            public DateTime ReportStartDateTime { get; set; }
+            public DateTime ReportEndDateTime { get; set; }
+            public short ClassificationGroupSIFR { get; set; }
+            public int restaurantCode { get; set; }
+            public int databasePrefix { get; set; }
+        }
 
-        internal static string GetEntityConnection(Settings.RkeeperReporterSettings settings)
+        internal static string RemoveInvalidXmlChars(string text)
+        {
+            var validXmlChars = text.Where(ch => XmlConvert.IsXmlChar(ch)).ToArray();
+            return new string(validXmlChars);
+        }
+
+        internal static string GetEntityConnection(RkeeperLoaderSettings settings)
         {
             EntityConnectionStringBuilder entityBuilder = new EntityConnectionStringBuilder
             {
@@ -98,18 +115,12 @@ namespace Sysiphus.Tasks.SampleTask
             return result;
         }
 
-        private int AddPrefix(int code, int prefix)
+        private static int AddPrefix(int code, int prefix)
         {
             return prefix * code.ToString().Length * 10 + code;
         }
 
-        static string RemoveInvalidXmlChars(string text)
-        {
-            var validXmlChars = text.Where(ch => XmlConvert.IsXmlChar(ch)).ToArray();
-            return new string(validXmlChars);
-        }
-
-        IEnumerable<Report> GetReports(Settings.RkeeperReporterSettings settings)
+        public static IEnumerable<Report> GetReports(RkeeperLoaderSettings settings)
         {
             using (var db = new RKeeperEntities(GetEntityConnection(settings)))
             {
@@ -213,11 +224,24 @@ namespace Sysiphus.Tasks.SampleTask
                 return groups.OrderBy(x => x.Restaurant.Code).ThenBy(x => x.VisitQuitTime);
             }
         }
+    }
 
+    public partial class RkeeperReporter
+    {      
         public bool ExecuteProcess()
         {
             var settings = GetSettings(typeof(Settings.RkeeperReporterSettings)) as Settings.RkeeperReporterSettings;
-            var groups = GetReports(settings).ToArray();
+            var currentSettings = new RkeeperLoader.RkeeperLoaderSettings()
+            {
+                ConnectionString = settings.ConnectionString,
+                ProviderName = settings.ProviderName,
+                ClassificationGroupSIFR = settings.ClassificationGroupSIFR,
+                ReportEndDateTime = settings.ReportEndDateTime,
+                ReportStartDateTime = settings.ReportStartDateTime,
+                restaurantCode = settings.restaurantCode,
+                UploadLastDays = settings.UploadLastDays
+            };
+            var groups = RkeeperLoader.GetReports(currentSettings).ToArray();
 
             var wsWrapper = new EnterpriseWsWrapper(settings);
 

@@ -4,7 +4,7 @@ using System;
 
 namespace Sysiphus.Tasks.Settings
 {
-    class RkeeperReporterSettings : SettingsRepresent
+    public class RkeeperReporterSettings : SettingsRepresent
     {
 
         [Category("DB")]

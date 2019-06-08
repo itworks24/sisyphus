@@ -1,4 +1,5 @@
-﻿using SHCMParserDB;
+﻿using SHCMParser.DBModels;
+using SHCMParser;
 using SHOLE.Procs;
 using Sisyphus.Tasks;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core.EntityClient;
 using System.Linq;
+using SHCMParser.StoreHouse;
 
 namespace Sysiphus.Tasks
 {
@@ -40,7 +42,7 @@ namespace Sysiphus.Tasks
             var startTime = DateTime.Now;
             using (var db = new DBModel(settings.ConnectionString))
             {
-                if (!settings.DontReloadGoods)
+                if (settings.ReloadGoods)
                 {
                     var goodsTree = new GoodsTreeProc();
                     var error = goodsTree.Execute();
@@ -81,7 +83,7 @@ namespace Sysiphus.Tasks
 
                 CreateLogRecord($"GoodsBaseComplects count {db.GoodsBaseAttrs.Count()}");
 
-                if (!settings.DontReloadGoodsBaseComplects)
+                if (settings.ReloadGoodsBaseComplects)
                 {
                     foreach (var goodsBase in db.GoodsBaseAttrs.Where(goodBase => goodBase.cm_base_rid != 0 && !db.CmHdrAttrs.Any(cmHDR => cmHDR.cm_base_rid == goodBase.cm_base_rid)).ToList())
                     {
@@ -104,30 +106,55 @@ namespace Sysiphus.Tasks
                         db.SaveChanges();
                     }
                 }
-
                 CreateLogRecord($"CmHdrAttrs count {db.CmHdrAttrs.Count()}");
 
-                foreach (var CmHdrComplect in db.CmHdrComplects.ToList())
+                if (settings.ReloadComplectsHDR)
                 {
-                    if (CmHdrComplect.cm_item_options == 0 && !db.CmHdrAttrs.Any(element => element.cm_base_rid == CmHdrComplect.cm_comp_rid))
+                    foreach (var CmHdrComplect in db.CmHdrComplects.ToList())
                     {
-                        var cmHdr = new CmHdrProc()
+                        if (CmHdrComplect.cm_item_options == 0 && !db.CmHdrAttrs.Any(element => element.cm_base_rid == CmHdrComplect.cm_comp_rid))
                         {
-                            input = new CmHdrProcInputDS()
+                            var cmHdr = new CmHdrProc()
                             {
-                                cm_base_rid = (int)CmHdrComplect.cm_comp_rid,
-                                date = DateTime.Now
+                                input = new CmHdrProcInputDS()
+                                {
+                                    cm_base_rid = (int)CmHdrComplect.cm_comp_rid,
+                                    date = DateTime.Now
+                                }
+                            };
+                            cmHdr.Execute();
+                            db.CmHdrAttrs.AddRange(cmHdr.cm_hdr_attr.Select(item => new CmHdrAttrsDB(item, cmHdr.input.cm_base_rid))
+                                                                              .Where(item => !db.CmHdrAttrs.Any(element => item.cm_hdr_rid == element.cm_hdr_rid && item.cm_base_rid == element.cm_base_rid)));
+
+                            db.CmHdrComplects.RemoveRange(db.CmHdrComplects.Where(item => item.cm_base_rid == cmHdr.input.cm_base_rid));
+                            db.CmHdrComplects.AddRange(cmHdr.complects.Select(item => new CmHdrComplectsDB(item, cmHdr.input.cm_base_rid))
+                                                                              .Where(item => !db.CmHdrComplects.Any(element => item.cm_hdr_id == element.cm_hdr_id && item.cm_base_rid == element.cm_base_rid)));
+
+                        }
+                    }
+                    db.SaveChanges();
+                }
+
+                CreateLogRecord($"CmHdrAttrs whith out cm list count {db.CmHdrAttrs.Where(cmHdr => !db.CmList.Any(cmList => cmList.cm_comp_rid == cmHdr.cm_base_rid)).Count()}");
+
+                if (settings.ReloadComplectsList)
+                {
+                    foreach (var treeRid in db.CmHdrAttrs.Where(cmHdr => !db.CmList.Any(cmList => cmList.cm_comp_rid == cmHdr.cm_base_rid)).Select(item => item.cm_tree_parent_rid).Distinct().ToList())
+                    {
+                        var cmList = new CmListProc()
+                        {
+                            input = new CmListProcInputDS()
+                            {
+                                cm_tree_rid = (int)treeRid,
+                                someParam1 = 0,
+                                startDate = DateTime.Now
                             }
                         };
-                        cmHdr.Execute();
-                        db.CmHdrAttrs.AddRange(cmHdr.cm_hdr_attr.Select(item => new CmHdrAttrsDB(item, cmHdr.input.cm_base_rid))
-                                                                          .Where(item => !db.CmHdrAttrs.Any(element => item.cm_hdr_rid == element.cm_hdr_rid && item.cm_base_rid == element.cm_base_rid)));
-
-                        db.CmHdrComplects.RemoveRange(db.CmHdrComplects.Where(item => item.cm_base_rid == cmHdr.input.cm_base_rid));
-                        db.CmHdrComplects.AddRange(cmHdr.complects.Select(item => new CmHdrComplectsDB(item, cmHdr.input.cm_base_rid))
-                                                                          .Where(item => !db.CmHdrComplects.Any(element => item.cm_hdr_id == element.cm_hdr_id && item.cm_base_rid == element.cm_base_rid)));
-
+                        cmList.Execute();
+                        db.CmList.AddRange(cmList.output1.Select(item => new CmListDB(item))
+                                                                .Where(item => !db.CmList.Any(element => item.cm_rid == element.cm_rid) && item.cm_date == 0));
                         db.SaveChanges();
+
                     }
                 }
             }
@@ -157,64 +184,6 @@ namespace Sysiphus.Tasks
             return entityBuilder.ConnectionString;
         }
 
-        private void LoadTreeElements(DBModel db)
-        {
-            var goodsTree = new GoodsTreeProc();
-            goodsTree.Execute();
-            db.GoodsTree.AddRange(goodsTree.result.Select(item => new GoodsTreeDB(item))
-                                                            .Where(item => !db.GoodsTree.Any(element => item.goodstree_rid == element.goodstree_rid)));
-            db.SaveChanges();
-        }
-
-        private void LoadTree(DBModel db, uint ParentTreeRid)
-        {
-            var goodsTree = new GoodsTreeProc()
-            {
-                input = new GoodsTreeProcInputDS()
-                {
-                    goodstree_parent_rid = (int)ParentTreeRid
-                }
-            };
-
-            var goods = new GoodsProc()
-            {
-                input = new GoodsProcInputDS() { goodstree_rid = ParentTreeRid }
-            };
-
-            goods.Execute();
-            db.GoodsAttrs.AddRange(goods.goodsAttrsDS.Select(item => new GoodsAttrsDB(item))
-                                                          .Where(item => !db.GoodsAttrs.Any(element => item.goods_rid == element.goods_rid)));
-
-            foreach (var good in goods.goodsAttrsDS)
-            {
-
-                var goodsBase = new GoodsBaseProc()
-                {
-                    input = new GoodsBaseInputDS()
-                    {
-                        goods_rid = (int)good.goods_rid
-                    }
-                };
-
-                goodsBase.Execute();
-                db.GoodsBaseAttrs.AddRange(goodsBase.goods_attr.Select(item => new GoodsBaseAttrsDB(item))
-                                                               .Where(item => !db.GoodsBaseAttrs.Any(element => item.goods_rid == element.goods_rid)));
-
-                db.GoodsBaseComplects.RemoveRange(db.GoodsBaseComplects.Where(item => item.goods_rid == (int)good.goods_rid));
-                db.GoodsBaseComplects.AddRange(goodsBase.complects.Select(item => new GoodsBaseComplectsDB(item, (int)good.goods_rid))
-                                                               .Where(item => !db.GoodsBaseComplects.Any(element => item.cm_base_rid == element.cm_base_rid)));
-            }
-            db.SaveChanges();
-
-            goodsTree.Execute();
-
-            foreach (var treeElement in goodsTree.result)
-            {
-                if (treeElement.goodstree_rid == ParentTreeRid) continue;
-                LoadTree(db, treeElement.goodstree_rid);
-            }
-        }
-
         public bool ExecuteProcess()
         {
             var settings = GetSettings(typeof(Settings.SHCMSettings)) as Settings.SHCMSettings;
@@ -231,13 +200,13 @@ namespace Sysiphus.Tasks
                 if (!settings.DontReloadTreeElements)
                 {
                     CreateLogRecord($"Loading tree elements");
-                    LoadTreeElements(db);
+                    StoreHouseAPI.LoadTreeElements(db);
                 }
                 var goodsTree = db.GoodsTree.FirstOrDefault(item => item.goodstree_abbr == settings.ParentTreeAbbr);
                 if (goodsTree != null)
                 {
                     CreateLogRecord($"Tree rid {goodsTree.goodstree_rid}");
-                    LoadTree(db, (uint)goodsTree.goodstree_rid);
+                    StoreHouseAPI.LoadTree(db, (int)goodsTree.goodstree_rid);
                 }
             }
 

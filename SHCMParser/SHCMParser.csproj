@@ -65,8 +65,10 @@
   <ItemGroup>
     <Compile Include="Database\DBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHCMPLoader.cs" />
     <Compile Include="SHCMPParser.cs" />
     <Compile Include="SHCMSettings.cs" />
+    <Compile Include="StoreHouse\StoreHouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
