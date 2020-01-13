@@ -31,6 +31,17 @@
           <Property Name="AFTERSHIFTCLOSURE" Type="smallint" />
           <Property Name="SYNCSTATESFLAGS" Type="smallint" />
           <Property Name="DATASENDTIMEOUT" Type="int" />
+          <Property Name="RESERVECASHGROUPID" Type="int" />
+          <Property Name="HTTPSERVPORT" Type="int" />
+          <Property Name="HTTPBINDADDR" Type="nvarchar" MaxLength="40" />
+          <Property Name="HTTPGETAVAIL" Type="smallint" />
+          <Property Name="HTTPLOGQUERY" Type="smallint" />
+          <Property Name="HTTPLOGPATH" Type="nvarchar" MaxLength="255" />
+          <Property Name="HTTPNOLOGGINQUERIES" Type="image" />
+          <Property Name="HTTPLOGFILES" Type="int" />
+          <Property Name="HTTPWEBPRIVILEGE" Type="int" />
+          <Property Name="HTTPAPIPRIVILEGE" Type="int" />
+          <Property Name="HTTPXMLPRIVILEGE" Type="int" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
         </EntityType>
         <EntityType Name="CASHGROUPS">
@@ -65,18 +76,24 @@
           <Property Name="TIMESYNCNETNAME" Type="nvarchar" MaxLength="31" />
           <Property Name="LASTGLOBALSHIFT" Type="int" />
           <Property Name="FTPGETAVAIL" Type="smallint" />
-          <Property Name="FTPBINDADDR" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTPBINDADDR" Type="nvarchar" MaxLength="40" />
           <Property Name="FTPDATAPORT" Type="int" />
           <Property Name="FTPINFOPORT" Type="int" />
           <Property Name="HTTPSERVPORT" Type="int" />
-          <Property Name="HTTPBINDADDR" Type="nvarchar" MaxLength="255" />
+          <Property Name="HTTPBINDADDR" Type="nvarchar" MaxLength="40" />
           <Property Name="HTTPGETAVAIL" Type="smallint" />
+          <Property Name="HTTPLOGQUERY" Type="smallint" />
+          <Property Name="HTTPLOGPATH" Type="nvarchar" MaxLength="255" />
+          <Property Name="HTTPNOLOGGINQUERIES" Type="image" />
+          <Property Name="HTTPLOGFILES" Type="int" />
           <Property Name="ONLINEDATAEXPORTPERIOD" Type="int" />
           <Property Name="SYNCSTATESFLAGS" Type="smallint" />
           <Property Name="SERVEREXISTSSINCE" Type="bigint" />
           <Property Name="HTTPWEBPRIVILEGE" Type="int" />
           <Property Name="HTTPAPIPRIVILEGE" Type="int" />
           <Property Name="HTTPXMLPRIVILEGE" Type="int" />
+          <Property Name="PARENTCASHGROUP" Type="int" />
+          <Property Name="ALLOWCONNECTTO" Type="nvarchar" MaxLength="31" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
         </EntityType>
         <EntityType Name="CLASSIFICATORGROUPS">
@@ -103,7 +120,10 @@
           <Property Name="EXTCODE" Type="int" />
           <Property Name="EXTRESTID" Type="int" />
           <Property Name="MODISCHEME" Type="int" />
+          <Property Name="ENTITYDETAILS" Type="int" />
+          <Property Name="UCSPRESET" Type="smallint" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+       
         </EntityType>
         <EntityType Name="CLASSINFOS">
           <Key>
@@ -137,6 +157,7 @@
           <Property Name="CIUPDATERIGHT" Type="smallint" />
           <Property Name="HHCONTEXTID" Type="int" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
         </EntityType>
         <EntityType Name="CURRENCIES">
           <Key>
@@ -184,7 +205,11 @@
           <Property Name="USEBONUSPERCENT" Type="float" />
           <Property Name="AUTOFILLMODE" Type="int" />
           <Property Name="AUTHPURPOSE" Type="int" />
+          <Property Name="CALCASDISCOUNT" Type="int" />
+          <Property Name="USEFORRETURN" Type="int" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
+          <Property Name="HighLevelType" Type="int" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="CURRENCYTYPES">
           <Key>
@@ -208,6 +233,7 @@
           <Property Name="FISCREGUNFISCTYPE" Type="smallint" />
           <Property Name="EDITRIGHT" Type="smallint" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+        
         </EntityType>
         <EntityType Name="CURRLINES">
           <Key>
@@ -236,6 +262,7 @@
           <Property Name="OWNERINFO" Type="nvarchar" MaxLength="64" />
           <Property Name="FISCREGUNFISCTYPE" Type="int" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+         
         </EntityType>
         <EntityType Name="DISCOUNTS">
           <Key>
@@ -253,7 +280,7 @@
           <Property Name="MAXPERCENT" Type="float" />
           <Property Name="COUNTTYPE" Type="int" />
           <Property Name="CLASSIFICATION" Type="int" />
-          <Property Name="TAXDISHTYPE" Type="int" />
+          <Property Name="CHARGEMENUITEM" Type="int" />
           <Property Name="MINTERFACE" Type="int" />
           <Property Name="RIGHTLVL" Type="smallint" />
           <Property Name="ROUNDRULE" Type="smallint" />
@@ -272,9 +299,11 @@
           <Property Name="TRANSACTIONVALUE" Type="money" />
           <Property Name="DISCOUNTDISTRMODE" Type="smallint" />
           <Property Name="SURPLUSDISTRMODE" Type="smallint" />
+          <Property Name="DISCOUNTOBJECTTYPE" Type="smallint" />
           <Property Name="MINORDERREST" Type="money" />
           <Property Name="FISCALOUTSIDE" Type="smallint" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
         </EntityType>
         <EntityType Name="DISCPARTS">
           <Key>
@@ -297,6 +326,7 @@
           <Property Name="BONUSSUM" Type="money" />
           <Property Name="CALCSUM" Type="money" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+          
         </EntityType>
         <EntityType Name="DISHDISCOUNTS">
           <Key>
@@ -346,6 +376,9 @@
           <Property Name="PERSONID" Type="bigint" />
           <Property Name="COUPONCOUNT" Type="int" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+          
+          <Property Name="CHARGEDISHUNI" Type="int" />
+          <Property Name="PAYUNI" Type="int" />
         </EntityType>
         <EntityType Name="DISHGROUPS">
           <Key>
@@ -356,6 +389,7 @@
           <Property Name="PARENT" Type="int" />
           <Property Name="CHILD" Type="int" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
           <Property Name="Classification" Type="int" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="DISHVOIDS">
@@ -390,6 +424,8 @@
           <Property Name="AFTERBILLUNDO" Type="smallint" />
           <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+         
+          <Property Name="ISUNPRINTEDDISH" Type="smallint" />
         </EntityType>
         <EntityType Name="GLOBALSHIFTS">
           <Key>
@@ -425,6 +461,7 @@
           <Property Name="SHIFTNO" Type="int" />
           <Property Name="SHIFTSTATS" Type="smallint" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+         
         </EntityType>
         <EntityType Name="MENUITEMS">
           <Key>
@@ -469,6 +506,7 @@
           <Property Name="EXTRESTID" Type="int" />
           <Property Name="SALEOBJECTTYPE" Type="smallint" />
           <Property Name="RATETYPE" Type="smallint" />
+          <Property Name="ITEMKIND" Type="int" />
           <Property Name="ROUNDTIME" Type="int" />
           <Property Name="MINIMUMTARIFTIME" Type="int" />
           <Property Name="MAXIMUMTARIFTIME" Type="int" />
@@ -486,6 +524,11 @@
           <Property Name="LARGEIMAGEPATH" Type="image" />
           <Property Name="GUESTSDISHRATING" Type="money" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
+          <Property Name="HighLevelGroup1" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="HighLevelGroup2" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="HighLevelGroup3" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="HighLevelGroup4" Type="int" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="ORDERS">
           <Key>
@@ -507,8 +550,8 @@
           <Property Name="NUMONTABLE" Type="nvarchar" MaxLength="255" />
           <Property Name="OPENTIME" Type="datetime" />
           <Property Name="TABLEID" Type="int" />
-          <Property Name="TABLENAME" Type="nvarchar" MaxLength="15" />
-          <Property Name="ORDERNAME" Type="nvarchar" MaxLength="12" />
+          <Property Name="TABLENAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="ORDERNAME" Type="nvarchar" MaxLength="17" />
           <Property Name="PROMOCODE" Type="nvarchar" MaxLength="40" />
           <Property Name="COT" Type="int" />
           <Property Name="UOT" Type="int" />
@@ -542,6 +585,7 @@
           <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
           <Property Name="FISCORDERSTATE" Type="smallint" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+        
         </EntityType>
         <EntityType Name="PAYBINDINGS">
           <Key>
@@ -567,8 +611,10 @@
           <Property Name="CONSUMATIONSUM" Type="money" />
           <Property Name="SEAT" Type="smallint" />
           <Property Name="STATE" Type="int" />
-          <Property Name="COSTSUM" Type="money" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+          
+          <Property Name="COSTSUM" Type="money" />
+          <Property Name="PAYMENTMETHOD" Type="int" />
         </EntityType>
         <EntityType Name="PRINTCHECKS">
           <Key>
@@ -641,8 +687,14 @@
           <Property Name="SQI" Type="int" />
           <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
           <Property Name="PAYFISCALSUM" Type="money" />
-          <Property Name="RECEIPTTAXTYPE" Type="smallint" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+         
+          <Property Name="RECEIPTTAXTYPE" Type="smallint" />
+          <Property Name="BILLPRINTED" Type="smallint" />
+          <Property Name="DELETEPRINTNUMBER" Type="int" />
+          <Property Name="FISCDOCNUMBER" Type="int" />
+          <Property Name="DELETEFISCDOCNUMBER" Type="int" />
+          <Property Name="GLOBALFISCALID" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="RESTAURANTS">
           <Key>
@@ -674,6 +726,7 @@
           <Property Name="ADDRESSGUID" Type="nvarchar" MaxLength="38" />
           <Property Name="OPERATIONALHOURS" Type="bigint" />
           <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
         </EntityType>
         <EntityType Name="SESSIONDISHES">
           <Key>
@@ -729,8 +782,45 @@
           <Property Name="COMBODISHUNI" Type="int" />
           <Property Name="COMBOMODIUNI" Type="int" />
           <Property Name="COMBODISCUNI" Type="int" />
-          <Property Name="CREATIONDATETIME" Type="datetime" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+          
+          <Property Name="CREATIONDATETIME" Type="datetime" />
+          <Property Name="CHARGEUNI" Type="int" />
+        </EntityType>
+        <EntityType Name="TABLES">
+          <Key>
+            <PropertyRef Name="SIFR" />
+          </Key>
+          <Property Name="SIFR" Type="int" Nullable="false" />
+          <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
+          <Property Name="CODE" Type="int" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="10" />
+          <Property Name="MAXGUESTS" Type="int" />
+          <Property Name="TABLEGROUP" Type="int" />
+          <Property Name="HALL" Type="int" />
+          <Property Name="SERVINGPOSITION" Type="int" />
+          <Property Name="VISUALTYPE_IMAGE" Type="int" />
+          <Property Name="VISUALTYPE_BCOLOR" Type="int" />
+          <Property Name="VISUALTYPE_TEXTCOLOR" Type="int" />
+          <Property Name="VISUALTYPE_FLAGS" Type="smallint" />
+          <Property Name="RIGHTLVL" Type="smallint" />
+          <Property Name="STATUS" Type="smallint" />
+          <Property Name="DEVICEFLAGS" Type="int" />
+          <Property Name="LOGDEVICE" Type="int" />
+          <Property Name="TARIFF" Type="int" />
+          <Property Name="MAXDEVICETIME" Type="int" />
+          <Property Name="ONOFFINTERVAL" Type="int" />
+          <Property Name="HALLPLANITEMKIND" Type="smallint" />
+          <Property Name="BUTTONNUM" Type="int" />
+          <Property Name="PAGERMSGNUM" Type="int" />
+          <Property Name="LANE" Type="int" />
+          <Property Name="TABLEUSEKIND" Type="smallint" />
+          <Property Name="USERATTRIBUTE1" Type="nvarchar" MaxLength="40" />
+          <Property Name="USERATTRIBUTE2" Type="nvarchar" MaxLength="40" />
+          <Property Name="USERATTRIBUTE3" Type="nvarchar" MaxLength="40" />
+          <Property Name="DOSERDEVICE" Type="int" />
+          <Property Name="RECSTAMP" Type="nvarchar" MaxLength="38" />
+          
         </EntityType>
         <EntityType Name="TEMPGLOBALSHIFTS">
           <Key>
@@ -789,43 +879,44 @@
           <Property Name="GUIDSTRING" Type="nvarchar" MaxLength="38" />
           <Property Name="UNICOUNT" Type="int" />
           <Property Name="TRANSACT_GUID" Type="nvarchar" MaxLength="38" />
+          
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="SaleObjects">
+warning 6002: The table/view 'rk7_lrg.dbo.SALEOBJECTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SALEOBJECTS">
           <Key>
-            <PropertyRef Name="MidServer" />
-            <PropertyRef Name="Visit" />
-            <PropertyRef Name="DishUNI" />
-            <PropertyRef Name="ChargeUNI" />
-            <PropertyRef Name="ObjKind" />
+            <PropertyRef Name="MIDSERVER" />
+            <PropertyRef Name="VISIT" />
+            <PropertyRef Name="DISHUNI" />
+            <PropertyRef Name="OBJKIND" />
+            <PropertyRef Name="EXCLUDEFROMEARNINGS" />
           </Key>
-          <Property Name="MidServer" Type="int" Nullable="false" />
-          <Property Name="Visit" Type="int" Nullable="false" />
-          <Property Name="DishUNI" Type="int" Nullable="false" />
-          <Property Name="ChargeUNI" Type="int" Nullable="false" />
-          <Property Name="OrderIdent" Type="int" />
-          <Property Name="SessionUNI" Type="int" />
-          <Property Name="ObjKind" Type="int" Nullable="false" />
-          <Property Name="Code" Type="int" />
-          <Property Name="Name" Type="nvarchar" MaxLength="40" />
-          <Property Name="AltName" Type="nvarchar" MaxLength="40" />
-          <Property Name="RightLvl" Type="smallint" />
-          <Property Name="TypePath" Type="nvarchar" MaxLength="255" />
-          <Property Name="Status" Type="smallint" />
-          <Property Name="SalesTerms_StartSale" Type="datetime" />
-          <Property Name="SalesTerms_StopSale" Type="datetime" />
-          <Property Name="iTaxDishType" Type="int" />
-          <Property Name="Seat" Type="int" />
-          <Property Name="ExcludeFromEarnings" Type="int" />
-          <Property Name="SourceSum" Type="money" />
-          <Property Name="PaySum" Type="money" />
-          <Property Name="Quantity" Type="float" />
-          <Property Name="GlobalIdent" Type="nvarchar" MaxLength="32" />
-          <Property Name="iCreator" Type="int" />
-          <Property Name="iAuthor" Type="int" />
-          <Property Name="iCreatorRole" Type="int" />
-          <Property Name="iAuthorRole" Type="int" />
+          <Property Name="MIDSERVER" Type="int" Nullable="false" />
+          <Property Name="VISIT" Type="int" Nullable="false" />
+          <Property Name="DISHUNI" Type="int" Nullable="false" />
+          <Property Name="CHARGEUNI" Type="int" />
+          <Property Name="ORDERIDENT" Type="int" />
+          <Property Name="SESSIONUNI" Type="int" />
+          <Property Name="OBJKIND" Type="int" Nullable="false" />
+          <Property Name="CODE" Type="int" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="40" />
+          <Property Name="ALTNAME" Type="nvarchar" MaxLength="40" />
+          <Property Name="RIGHTLVL" Type="smallint" />
+          <Property Name="TYPEPATH" Type="nvarchar" MaxLength="255" />
+          <Property Name="STATUS" Type="smallint" />
+          <Property Name="SALESTERMS_STARTSALE" Type="datetime" />
+          <Property Name="SALESTERMS_STOPSALE" Type="datetime" />
+          <Property Name="ITAXDISHTYPE" Type="int" />
+          <Property Name="SEAT" Type="int" />
+          <Property Name="EXCLUDEFROMEARNINGS" Type="int" Nullable="false" />
+          <Property Name="SOURCESUM" Type="money" />
+          <Property Name="PAYSUM" Type="money" />
+          <Property Name="QUANTITY" Type="float" />
+          <Property Name="GLOBALIDENT" Type="nvarchar" MaxLength="32" />
+          <Property Name="ICREATOR" Type="int" />
+          <Property Name="IAUTHOR" Type="int" />
+          <Property Name="ICREATORROLE" Type="int" />
+          <Property Name="IAUTHORROLE" Type="int" />
         </EntityType>
         <EntityContainer Name="RKeeperModelStoreContainer">
           <EntitySet Name="CASHES" EntityType="Self.CASHES" Schema="dbo" store:Type="Tables" />
@@ -848,37 +939,38 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySet Name="PRINTCHECKS" EntityType="Self.PRINTCHECKS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RESTAURANTS" EntityType="Self.RESTAURANTS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SESSIONDISHES" EntityType="Self.SESSIONDISHES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TABLES" EntityType="Self.TABLES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TEMPGLOBALSHIFTS" EntityType="Self.TEMPGLOBALSHIFTS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VISITS" EntityType="Self.VISITS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SaleObjects" EntityType="Self.SaleObjects" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="SALEOBJECTS" EntityType="Self.SALEOBJECTS" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [SaleObjects].[MidServer] AS [MidServer], 
-    [SaleObjects].[Visit] AS [Visit], 
-    [SaleObjects].[DishUNI] AS [DishUNI], 
-    [SaleObjects].[ChargeUNI] AS [ChargeUNI], 
-    [SaleObjects].[OrderIdent] AS [OrderIdent], 
-    [SaleObjects].[SessionUNI] AS [SessionUNI], 
-    [SaleObjects].[ObjKind] AS [ObjKind], 
-    [SaleObjects].[Code] AS [Code], 
-    [SaleObjects].[Name] AS [Name], 
-    [SaleObjects].[AltName] AS [AltName], 
-    [SaleObjects].[RightLvl] AS [RightLvl], 
-    [SaleObjects].[TypePath] AS [TypePath], 
-    [SaleObjects].[Status] AS [Status], 
-    [SaleObjects].[SalesTerms_StartSale] AS [SalesTerms_StartSale], 
-    [SaleObjects].[SalesTerms_StopSale] AS [SalesTerms_StopSale], 
-    [SaleObjects].[iTaxDishType] AS [iTaxDishType], 
-    [SaleObjects].[Seat] AS [Seat], 
-    [SaleObjects].[ExcludeFromEarnings] AS [ExcludeFromEarnings], 
-    [SaleObjects].[SourceSum] AS [SourceSum], 
-    [SaleObjects].[PaySum] AS [PaySum], 
-    [SaleObjects].[Quantity] AS [Quantity], 
-    [SaleObjects].[GlobalIdent] AS [GlobalIdent], 
-    [SaleObjects].[iCreator] AS [iCreator], 
-    [SaleObjects].[iAuthor] AS [iAuthor], 
-    [SaleObjects].[iCreatorRole] AS [iCreatorRole], 
-    [SaleObjects].[iAuthorRole] AS [iAuthorRole]
-    FROM [dbo].[SaleObjects] AS [SaleObjects]</DefiningQuery>
+    [SALEOBJECTS].[MIDSERVER] AS [MIDSERVER], 
+    [SALEOBJECTS].[VISIT] AS [VISIT], 
+    [SALEOBJECTS].[DISHUNI] AS [DISHUNI], 
+    [SALEOBJECTS].[CHARGEUNI] AS [CHARGEUNI], 
+    [SALEOBJECTS].[ORDERIDENT] AS [ORDERIDENT], 
+    [SALEOBJECTS].[SESSIONUNI] AS [SESSIONUNI], 
+    [SALEOBJECTS].[OBJKIND] AS [OBJKIND], 
+    [SALEOBJECTS].[CODE] AS [CODE], 
+    [SALEOBJECTS].[NAME] AS [NAME], 
+    [SALEOBJECTS].[ALTNAME] AS [ALTNAME], 
+    [SALEOBJECTS].[RIGHTLVL] AS [RIGHTLVL], 
+    [SALEOBJECTS].[TYPEPATH] AS [TYPEPATH], 
+    [SALEOBJECTS].[STATUS] AS [STATUS], 
+    [SALEOBJECTS].[SALESTERMS_STARTSALE] AS [SALESTERMS_STARTSALE], 
+    [SALEOBJECTS].[SALESTERMS_STOPSALE] AS [SALESTERMS_STOPSALE], 
+    [SALEOBJECTS].[ITAXDISHTYPE] AS [ITAXDISHTYPE], 
+    [SALEOBJECTS].[SEAT] AS [SEAT], 
+    [SALEOBJECTS].[EXCLUDEFROMEARNINGS] AS [EXCLUDEFROMEARNINGS], 
+    [SALEOBJECTS].[SOURCESUM] AS [SOURCESUM], 
+    [SALEOBJECTS].[PAYSUM] AS [PAYSUM], 
+    [SALEOBJECTS].[QUANTITY] AS [QUANTITY], 
+    [SALEOBJECTS].[GLOBALIDENT] AS [GLOBALIDENT], 
+    [SALEOBJECTS].[ICREATOR] AS [ICREATOR], 
+    [SALEOBJECTS].[IAUTHOR] AS [IAUTHOR], 
+    [SALEOBJECTS].[ICREATORROLE] AS [ICREATORROLE], 
+    [SALEOBJECTS].[IAUTHORROLE] AS [IAUTHORROLE]
+    FROM [dbo].[SALEOBJECTS] AS [SALEOBJECTS]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -912,6 +1004,17 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="SYNCSTATESFLAGS" Type="Int16" />
           <Property Name="DATASENDTIMEOUT" Type="Int32" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="RESERVECASHGROUPID" Type="Int32" />
+          <Property Name="HTTPSERVPORT" Type="Int32" />
+          <Property Name="HTTPBINDADDR" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="HTTPGETAVAIL" Type="Int16" />
+          <Property Name="HTTPLOGQUERY" Type="Int16" />
+          <Property Name="HTTPLOGPATH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HTTPNOLOGGINQUERIES" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HTTPLOGFILES" Type="Int32" />
+          <Property Name="HTTPWEBPRIVILEGE" Type="Int32" />
+          <Property Name="HTTPAPIPRIVILEGE" Type="Int32" />
+          <Property Name="HTTPXMLPRIVILEGE" Type="Int32" />
         </EntityType>
         <EntityType Name="CASHGROUPS">
           <Key>
@@ -945,11 +1048,11 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="TIMESYNCNETNAME" Type="String" MaxLength="31" FixedLength="false" Unicode="true" />
           <Property Name="LASTGLOBALSHIFT" Type="Int32" />
           <Property Name="FTPGETAVAIL" Type="Int16" />
-          <Property Name="FTPBINDADDR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FTPBINDADDR" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="FTPDATAPORT" Type="Int32" />
           <Property Name="FTPINFOPORT" Type="Int32" />
           <Property Name="HTTPSERVPORT" Type="Int32" />
-          <Property Name="HTTPBINDADDR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HTTPBINDADDR" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="HTTPGETAVAIL" Type="Int16" />
           <Property Name="ONLINEDATAEXPORTPERIOD" Type="Int32" />
           <Property Name="SYNCSTATESFLAGS" Type="Int16" />
@@ -958,6 +1061,12 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="HTTPAPIPRIVILEGE" Type="Int32" />
           <Property Name="HTTPXMLPRIVILEGE" Type="Int32" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="HTTPLOGQUERY" Type="Int16" />
+          <Property Name="HTTPLOGPATH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HTTPNOLOGGINQUERIES" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HTTPLOGFILES" Type="Int32" />
+          <Property Name="PARENTCASHGROUP" Type="Int32" />
+          <Property Name="ALLOWCONNECTTO" Type="String" MaxLength="31" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="CLASSIFICATORGROUPS">
           <Key>
@@ -984,6 +1093,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="EXTRESTID" Type="Int32" />
           <Property Name="MODISCHEME" Type="Int32" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="ENTITYDETAILS" Type="Int32" />
+          <Property Name="UCSPRESET" Type="Int16" />
         </EntityType>
         <EntityType Name="CLASSINFOS">
           <Key>
@@ -1040,6 +1151,7 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="FISCREGUNFISCTYPE" Type="Int16" />
           <Property Name="EDITRIGHT" Type="Int16" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          
         </EntityType>
         <EntityType Name="CURRLINES">
           <Key>
@@ -1106,6 +1218,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="MINORDERREST" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="FISCALOUTSIDE" Type="Int16" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="CHARGEMENUITEM" Type="Int32" />
+          <Property Name="DISCOUNTOBJECTTYPE" Type="Int16" />
         </EntityType>
         <EntityType Name="DISCPARTS">
           <Key>
@@ -1177,6 +1291,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="PERSONID" Type="Int64" />
           <Property Name="COUPONCOUNT" Type="Int32" />
           <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="CHARGEDISHUNI" Type="Int32" />
+          <Property Name="PAYUNI" Type="Int32" />
         </EntityType>
         <EntityType Name="DISHGROUPS">
           <Key>
@@ -1221,6 +1337,7 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="AFTERBILLUNDO" Type="Int16" />
           <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
           <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="ISUNPRINTEDDISH" Type="Int16" />
         </EntityType>
         <EntityType Name="GLOBALSHIFTS">
           <Key>
@@ -1317,6 +1434,11 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="LARGEIMAGEPATH" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="GUESTSDISHRATING" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="ITEMKIND" Type="Int32" />
+          <Property Name="HighLevelGroup1" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="HighLevelGroup2" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="HighLevelGroup3" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="HighLevelGroup4" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
         
         </EntityType>
         <EntityType Name="ORDERS">
@@ -1339,8 +1461,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="NUMONTABLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="OPENTIME" Type="DateTime" Precision="3" />
           <Property Name="TABLEID" Type="Int32" />
-          <Property Name="TABLENAME" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="ORDERNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="TABLENAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ORDERNAME" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
           <Property Name="PROMOCODE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="COT" Type="Int32" />
           <Property Name="UOT" Type="Int32" />
@@ -1401,6 +1523,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="STATE" Type="Int32" />
           <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
           <Property Name="COSTSUM" Type="Decimal" Precision="19" Scale="4" />
+         
+          <Property Name="PAYMENTMETHOD" Type="Int32" />
         </EntityType>
         <EntityType Name="PRINTCHECKS">
           <Key>
@@ -1475,6 +1599,11 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="PAYFISCALSUM" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
           <Property Name="RECEIPTTAXTYPE" Type="Int16" />
+          <Property Name="BILLPRINTED" Type="Int16" />
+          <Property Name="DELETEPRINTNUMBER" Type="Int32" />
+          <Property Name="FISCDOCNUMBER" Type="Int32" />
+          <Property Name="DELETEFISCDOCNUMBER" Type="Int32" />
+          <Property Name="GLOBALFISCALID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="RESTAURANTS">
           <Key>
@@ -1564,6 +1693,7 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="COMBODISCUNI" Type="Int32" />
           <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
           <Property Name="CREATIONDATETIME" Type="DateTime" Precision="3" />
+          <Property Name="CHARGEUNI" Type="Int32" />
         </EntityType>
         <EntityType Name="TEMPGLOBALSHIFTS">
           <Key>
@@ -1623,41 +1753,6 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="UNICOUNT" Type="Int32" />
           <Property Name="TRANSACT_GUID" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="SaleObjects">
-          <Key>
-            <PropertyRef Name="MidServer" />
-            <PropertyRef Name="Visit" />
-            <PropertyRef Name="DishUNI" />
-            <PropertyRef Name="ChargeUNI" />
-            <PropertyRef Name="ObjKind" />
-          </Key>
-          <Property Name="MidServer" Type="Int32" Nullable="false" />
-          <Property Name="Visit" Type="Int32" Nullable="false" />
-          <Property Name="DishUNI" Type="Int32" Nullable="false" />
-          <Property Name="ChargeUNI" Type="Int32" Nullable="false" />
-          <Property Name="OrderIdent" Type="Int32" />
-          <Property Name="SessionUNI" Type="Int32" />
-          <Property Name="ObjKind" Type="Int32" Nullable="false" />
-          <Property Name="Code" Type="Int32" />
-          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="AltName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="RightLvl" Type="Int16" />
-          <Property Name="TypePath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Status" Type="Int16" />
-          <Property Name="SalesTerms_StartSale" Type="DateTime" Precision="3" />
-          <Property Name="SalesTerms_StopSale" Type="DateTime" Precision="3" />
-          <Property Name="iTaxDishType" Type="Int32" />
-          <Property Name="Seat" Type="Int32" />
-          <Property Name="ExcludeFromEarnings" Type="Int32" />
-          <Property Name="SourceSum" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="PaySum" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Quantity" Type="Double" />
-          <Property Name="GlobalIdent" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
-          <Property Name="iCreator" Type="Int32" />
-          <Property Name="iAuthor" Type="Int32" />
-          <Property Name="iCreatorRole" Type="Int32" />
-          <Property Name="iAuthorRole" Type="Int32" />
-        </EntityType>
         <EntityContainer Name="RKeeperEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CASHES" EntityType="Self.CASHES" />
           <EntitySet Name="CASHGROUPS" EntityType="Self.CASHGROUPS" />
@@ -1680,8 +1775,9 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySet Name="SESSIONDISHES" EntityType="Self.SESSIONDISHES" />
           <EntitySet Name="TEMPGLOBALSHIFTS" EntityType="Self.TEMPGLOBALSHIFTS" />
           <EntitySet Name="VISITS" EntityType="Self.VISITS" />
-          <EntitySet Name="SaleObjects" EntityType="Self.SaleObjects" />
           <EntitySet Name="CURRENCIES" EntityType="RKeeperModel.CURRENCIES" />
+          <EntitySet Name="TABLES" EntityType="RKeeperModel.TABLES" />
+          <EntitySet Name="SALEOBJECTSSet" EntityType="RKeeperModel.SALEOBJECTS" />
           </EntityContainer>
         <EntityType Name="CURRENCIES">
           <Key>
@@ -1730,6 +1826,77 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <Property Name="AUTOFILLMODE" Type="Int32" />
           <Property Name="AUTHPURPOSE" Type="Int32" />
           <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="CALCASDISCOUNT" Type="Int32" />
+          <Property Name="USEFORRETURN" Type="Int32" />
+          <Property Name="HighLevelType" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="TABLES">
+          <Key>
+            <PropertyRef Name="SIFR" />
+          </Key>
+          <Property Name="SIFR" Type="Int32" Nullable="false" />
+          <Property Name="GUIDSTRING" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="Int32" />
+          <Property Name="NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MAXGUESTS" Type="Int32" />
+          <Property Name="TABLEGROUP" Type="Int32" />
+          <Property Name="HALL" Type="Int32" />
+          <Property Name="SERVINGPOSITION" Type="Int32" />
+          <Property Name="VISUALTYPE_IMAGE" Type="Int32" />
+          <Property Name="VISUALTYPE_BCOLOR" Type="Int32" />
+          <Property Name="VISUALTYPE_TEXTCOLOR" Type="Int32" />
+          <Property Name="VISUALTYPE_FLAGS" Type="Int16" />
+          <Property Name="RIGHTLVL" Type="Int16" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="DEVICEFLAGS" Type="Int32" />
+          <Property Name="LOGDEVICE" Type="Int32" />
+          <Property Name="TARIFF" Type="Int32" />
+          <Property Name="MAXDEVICETIME" Type="Int32" />
+          <Property Name="ONOFFINTERVAL" Type="Int32" />
+          <Property Name="HALLPLANITEMKIND" Type="Int16" />
+          <Property Name="BUTTONNUM" Type="Int32" />
+          <Property Name="PAGERMSGNUM" Type="Int32" />
+          <Property Name="LANE" Type="Int32" />
+          <Property Name="TABLEUSEKIND" Type="Int16" />
+          <Property Name="USERATTRIBUTE1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="USERATTRIBUTE2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="USERATTRIBUTE3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="DOSERDEVICE" Type="Int32" />
+          <Property Name="RECSTAMP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SALEOBJECTS">
+          <Key>
+            <PropertyRef Name="MIDSERVER" />
+            <PropertyRef Name="VISIT" />
+            <PropertyRef Name="DISHUNI" />
+            <PropertyRef Name="OBJKIND" />
+            <PropertyRef Name="EXCLUDEFROMEARNINGS" />
+          </Key>
+          <Property Name="MIDSERVER" Type="Int32" Nullable="false" />
+          <Property Name="VISIT" Type="Int32" Nullable="false" />
+          <Property Name="DISHUNI" Type="Int32" Nullable="false" />
+          <Property Name="CHARGEUNI" Type="Int32" />
+          <Property Name="ORDERIDENT" Type="Int32" />
+          <Property Name="SESSIONUNI" Type="Int32" />
+          <Property Name="OBJKIND" Type="Int32" Nullable="false" />
+          <Property Name="CODE" Type="Int32" />
+          <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ALTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="RIGHTLVL" Type="Int16" />
+          <Property Name="TYPEPATH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="SALESTERMS_STARTSALE" Type="DateTime" Precision="3" />
+          <Property Name="SALESTERMS_STOPSALE" Type="DateTime" Precision="3" />
+          <Property Name="ITAXDISHTYPE" Type="Int32" />
+          <Property Name="SEAT" Type="Int32" />
+          <Property Name="EXCLUDEFROMEARNINGS" Type="Int32" Nullable="false" />
+          <Property Name="SOURCESUM" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PAYSUM" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="QUANTITY" Type="Double" />
+          <Property Name="GLOBALIDENT" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="ICREATOR" Type="Int32" />
+          <Property Name="IAUTHOR" Type="Int32" />
+          <Property Name="ICREATORROLE" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1740,6 +1907,17 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="CASHES">
             <EntityTypeMapping TypeName="RKeeperModel.CASHES">
               <MappingFragment StoreEntitySet="CASHES">
+                <ScalarProperty Name="HTTPXMLPRIVILEGE" ColumnName="HTTPXMLPRIVILEGE" />
+                <ScalarProperty Name="HTTPAPIPRIVILEGE" ColumnName="HTTPAPIPRIVILEGE" />
+                <ScalarProperty Name="HTTPWEBPRIVILEGE" ColumnName="HTTPWEBPRIVILEGE" />
+                <ScalarProperty Name="HTTPLOGFILES" ColumnName="HTTPLOGFILES" />
+                <ScalarProperty Name="HTTPNOLOGGINQUERIES" ColumnName="HTTPNOLOGGINQUERIES" />
+                <ScalarProperty Name="HTTPLOGPATH" ColumnName="HTTPLOGPATH" />
+                <ScalarProperty Name="HTTPLOGQUERY" ColumnName="HTTPLOGQUERY" />
+                <ScalarProperty Name="HTTPGETAVAIL" ColumnName="HTTPGETAVAIL" />
+                <ScalarProperty Name="HTTPBINDADDR" ColumnName="HTTPBINDADDR" />
+                <ScalarProperty Name="HTTPSERVPORT" ColumnName="HTTPSERVPORT" />
+                <ScalarProperty Name="RESERVECASHGROUPID" ColumnName="RESERVECASHGROUPID" />
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
                 <ScalarProperty Name="CODE" ColumnName="CODE" />
@@ -1769,6 +1947,12 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="CASHGROUPS">
             <EntityTypeMapping TypeName="RKeeperModel.CASHGROUPS">
               <MappingFragment StoreEntitySet="CASHGROUPS">
+                <ScalarProperty Name="ALLOWCONNECTTO" ColumnName="ALLOWCONNECTTO" />
+                <ScalarProperty Name="PARENTCASHGROUP" ColumnName="PARENTCASHGROUP" />
+                <ScalarProperty Name="HTTPLOGFILES" ColumnName="HTTPLOGFILES" />
+                <ScalarProperty Name="HTTPNOLOGGINQUERIES" ColumnName="HTTPNOLOGGINQUERIES" />
+                <ScalarProperty Name="HTTPLOGPATH" ColumnName="HTTPLOGPATH" />
+                <ScalarProperty Name="HTTPLOGQUERY" ColumnName="HTTPLOGQUERY" />
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -1816,6 +2000,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="CLASSIFICATORGROUPS">
             <EntityTypeMapping TypeName="RKeeperModel.CLASSIFICATORGROUPS">
               <MappingFragment StoreEntitySet="CLASSIFICATORGROUPS">
+                <ScalarProperty Name="UCSPRESET" ColumnName="UCSPRESET" />
+                <ScalarProperty Name="ENTITYDETAILS" ColumnName="ENTITYDETAILS" />
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
                 <ScalarProperty Name="NUMINGROUP" ColumnName="NUMINGROUP" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
@@ -1875,6 +2061,7 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="CURRENCYTYPES">
             <EntityTypeMapping TypeName="RKeeperModel.CURRENCYTYPES">
               <MappingFragment StoreEntitySet="CURRENCYTYPES">
+                
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
                 <ScalarProperty Name="CODE" ColumnName="CODE" />
@@ -1899,7 +2086,6 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="CURRLINES">
             <EntityTypeMapping TypeName="RKeeperModel.CURRLINES">
               <MappingFragment StoreEntitySet="CURRLINES">
-                
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
                 <ScalarProperty Name="ORDERIDENT" ColumnName="ORDERIDENT" />
@@ -1927,6 +2113,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="DISCOUNTS">
             <EntityTypeMapping TypeName="RKeeperModel.DISCOUNTS">
               <MappingFragment StoreEntitySet="DISCOUNTS">
+                <ScalarProperty Name="DISCOUNTOBJECTTYPE" ColumnName="DISCOUNTOBJECTTYPE" />
+                <ScalarProperty Name="CHARGEMENUITEM" ColumnName="CHARGEMENUITEM" />
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
                 <ScalarProperty Name="CODE" ColumnName="CODE" />
@@ -1966,7 +2154,6 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="DISCPARTS">
             <EntityTypeMapping TypeName="RKeeperModel.DISCPARTS">
               <MappingFragment StoreEntitySet="DISCPARTS">
-                
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
                 <ScalarProperty Name="ORDERIDENT" ColumnName="ORDERIDENT" />
@@ -1988,6 +2175,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
             <EntityTypeMapping TypeName="RKeeperModel.DISHDISCOUNTS">
               <MappingFragment StoreEntitySet="DISHDISCOUNTS">
                 
+                <ScalarProperty Name="PAYUNI" ColumnName="PAYUNI" />
+                <ScalarProperty Name="CHARGEDISHUNI" ColumnName="CHARGEDISHUNI" />
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
                 <ScalarProperty Name="ORDERIDENT" ColumnName="ORDERIDENT" />
@@ -2049,6 +2238,7 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
             <EntityTypeMapping TypeName="RKeeperModel.DISHVOIDS">
               <MappingFragment StoreEntitySet="DISHVOIDS">
                 
+                <ScalarProperty Name="ISUNPRINTEDDISH" ColumnName="ISUNPRINTEDDISH" />
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
                 <ScalarProperty Name="ORDERIDENT" ColumnName="ORDERIDENT" />
@@ -2117,6 +2307,11 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="MENUITEMS">
             <EntityTypeMapping TypeName="RKeeperModel.MENUITEMS">
               <MappingFragment StoreEntitySet="MENUITEMS">
+                <ScalarProperty Name="HighLevelGroup4" ColumnName="HighLevelGroup4" />
+                <ScalarProperty Name="HighLevelGroup3" ColumnName="HighLevelGroup3" />
+                <ScalarProperty Name="HighLevelGroup2" ColumnName="HighLevelGroup2" />
+                <ScalarProperty Name="HighLevelGroup1" ColumnName="HighLevelGroup1" />
+                <ScalarProperty Name="ITEMKIND" ColumnName="ITEMKIND" />
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
                 <ScalarProperty Name="CODE" ColumnName="CODE" />
@@ -2233,6 +2428,8 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="PAYBINDINGS">
             <EntityTypeMapping TypeName="RKeeperModel.PAYBINDINGS">
               <MappingFragment StoreEntitySet="PAYBINDINGS">
+                <ScalarProperty Name="PAYMENTMETHOD" ColumnName="PAYMENTMETHOD" />
+                
                 <ScalarProperty Name="COSTSUM" ColumnName="COSTSUM" />
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
@@ -2259,6 +2456,11 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="PRINTCHECKS">
             <EntityTypeMapping TypeName="RKeeperModel.PRINTCHECKS">
               <MappingFragment StoreEntitySet="PRINTCHECKS">
+                <ScalarProperty Name="GLOBALFISCALID" ColumnName="GLOBALFISCALID" />
+                <ScalarProperty Name="DELETEFISCDOCNUMBER" ColumnName="DELETEFISCDOCNUMBER" />
+                <ScalarProperty Name="FISCDOCNUMBER" ColumnName="FISCDOCNUMBER" />
+                <ScalarProperty Name="DELETEPRINTNUMBER" ColumnName="DELETEPRINTNUMBER" />
+                <ScalarProperty Name="BILLPRINTED" ColumnName="BILLPRINTED" />
                 <ScalarProperty Name="RECEIPTTAXTYPE" ColumnName="RECEIPTTAXTYPE" />
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
@@ -2364,6 +2566,7 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
           <EntitySetMapping Name="SESSIONDISHES">
             <EntityTypeMapping TypeName="RKeeperModel.SESSIONDISHES">
               <MappingFragment StoreEntitySet="SESSIONDISHES">
+                <ScalarProperty Name="CHARGEUNI" ColumnName="CHARGEUNI" />
                 <ScalarProperty Name="CREATIONDATETIME" ColumnName="CREATIONDATETIME" />
                 <ScalarProperty Name="VISIT" ColumnName="VISIT" />
                 <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
@@ -2475,41 +2678,12 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SaleObjects">
-            <EntityTypeMapping TypeName="RKeeperModel.SaleObjects">
-              <MappingFragment StoreEntitySet="SaleObjects">
-                <ScalarProperty Name="MidServer" ColumnName="MidServer" />
-                <ScalarProperty Name="Visit" ColumnName="Visit" />
-                <ScalarProperty Name="DishUNI" ColumnName="DishUNI" />
-                <ScalarProperty Name="ChargeUNI" ColumnName="ChargeUNI" />
-                <ScalarProperty Name="OrderIdent" ColumnName="OrderIdent" />
-                <ScalarProperty Name="SessionUNI" ColumnName="SessionUNI" />
-                <ScalarProperty Name="ObjKind" ColumnName="ObjKind" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="AltName" ColumnName="AltName" />
-                <ScalarProperty Name="RightLvl" ColumnName="RightLvl" />
-                <ScalarProperty Name="TypePath" ColumnName="TypePath" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="SalesTerms_StartSale" ColumnName="SalesTerms_StartSale" />
-                <ScalarProperty Name="SalesTerms_StopSale" ColumnName="SalesTerms_StopSale" />
-                <ScalarProperty Name="iTaxDishType" ColumnName="iTaxDishType" />
-                <ScalarProperty Name="Seat" ColumnName="Seat" />
-                <ScalarProperty Name="ExcludeFromEarnings" ColumnName="ExcludeFromEarnings" />
-                <ScalarProperty Name="SourceSum" ColumnName="SourceSum" />
-                <ScalarProperty Name="PaySum" ColumnName="PaySum" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="GlobalIdent" ColumnName="GlobalIdent" />
-                <ScalarProperty Name="iCreator" ColumnName="iCreator" />
-                <ScalarProperty Name="iAuthor" ColumnName="iAuthor" />
-                <ScalarProperty Name="iCreatorRole" ColumnName="iCreatorRole" />
-                <ScalarProperty Name="iAuthorRole" ColumnName="iAuthorRole" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CURRENCIES">
             <EntityTypeMapping TypeName="RKeeperModel.CURRENCIES">
               <MappingFragment StoreEntitySet="CURRENCIES">
+                <ScalarProperty Name="HighLevelType" ColumnName="HighLevelType" />
+                <ScalarProperty Name="USEFORRETURN" ColumnName="USEFORRETURN" />
+                <ScalarProperty Name="CALCASDISCOUNT" ColumnName="CALCASDISCOUNT" />
                 <ScalarProperty Name="RECSTAMP" ColumnName="RECSTAMP" />
                 <ScalarProperty Name="AUTHPURPOSE" ColumnName="AUTHPURPOSE" />
                 <ScalarProperty Name="AUTOFILLMODE" ColumnName="AUTOFILLMODE" />
@@ -2553,6 +2727,72 @@ warning 6002: The table/view 'RK7.dbo.SaleObjects' does not have a primary key d
                 <ScalarProperty Name="CODE" ColumnName="CODE" />
                 <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
                 <ScalarProperty Name="SIFR" ColumnName="SIFR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABLES">
+            <EntityTypeMapping TypeName="RKeeperModel.TABLES">
+              <MappingFragment StoreEntitySet="TABLES">
+                <ScalarProperty Name="RECSTAMP" ColumnName="RECSTAMP" />
+                <ScalarProperty Name="DOSERDEVICE" ColumnName="DOSERDEVICE" />
+                <ScalarProperty Name="USERATTRIBUTE3" ColumnName="USERATTRIBUTE3" />
+                <ScalarProperty Name="USERATTRIBUTE2" ColumnName="USERATTRIBUTE2" />
+                <ScalarProperty Name="USERATTRIBUTE1" ColumnName="USERATTRIBUTE1" />
+                <ScalarProperty Name="TABLEUSEKIND" ColumnName="TABLEUSEKIND" />
+                <ScalarProperty Name="LANE" ColumnName="LANE" />
+                <ScalarProperty Name="PAGERMSGNUM" ColumnName="PAGERMSGNUM" />
+                <ScalarProperty Name="BUTTONNUM" ColumnName="BUTTONNUM" />
+                <ScalarProperty Name="HALLPLANITEMKIND" ColumnName="HALLPLANITEMKIND" />
+                <ScalarProperty Name="ONOFFINTERVAL" ColumnName="ONOFFINTERVAL" />
+                <ScalarProperty Name="MAXDEVICETIME" ColumnName="MAXDEVICETIME" />
+                <ScalarProperty Name="TARIFF" ColumnName="TARIFF" />
+                <ScalarProperty Name="LOGDEVICE" ColumnName="LOGDEVICE" />
+                <ScalarProperty Name="DEVICEFLAGS" ColumnName="DEVICEFLAGS" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="RIGHTLVL" ColumnName="RIGHTLVL" />
+                <ScalarProperty Name="VISUALTYPE_FLAGS" ColumnName="VISUALTYPE_FLAGS" />
+                <ScalarProperty Name="VISUALTYPE_TEXTCOLOR" ColumnName="VISUALTYPE_TEXTCOLOR" />
+                <ScalarProperty Name="VISUALTYPE_BCOLOR" ColumnName="VISUALTYPE_BCOLOR" />
+                <ScalarProperty Name="VISUALTYPE_IMAGE" ColumnName="VISUALTYPE_IMAGE" />
+                <ScalarProperty Name="SERVINGPOSITION" ColumnName="SERVINGPOSITION" />
+                <ScalarProperty Name="HALL" ColumnName="HALL" />
+                <ScalarProperty Name="TABLEGROUP" ColumnName="TABLEGROUP" />
+                <ScalarProperty Name="MAXGUESTS" ColumnName="MAXGUESTS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="GUIDSTRING" ColumnName="GUIDSTRING" />
+                <ScalarProperty Name="SIFR" ColumnName="SIFR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SALEOBJECTSSet">
+            <EntityTypeMapping TypeName="RKeeperModel.SALEOBJECTS">
+              <MappingFragment StoreEntitySet="SALEOBJECTS">
+                <ScalarProperty Name="ICREATORROLE" ColumnName="ICREATORROLE" />
+                <ScalarProperty Name="IAUTHOR" ColumnName="IAUTHOR" />
+                <ScalarProperty Name="ICREATOR" ColumnName="ICREATOR" />
+                <ScalarProperty Name="GLOBALIDENT" ColumnName="GLOBALIDENT" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+                <ScalarProperty Name="PAYSUM" ColumnName="PAYSUM" />
+                <ScalarProperty Name="SOURCESUM" ColumnName="SOURCESUM" />
+                <ScalarProperty Name="EXCLUDEFROMEARNINGS" ColumnName="EXCLUDEFROMEARNINGS" />
+                <ScalarProperty Name="SEAT" ColumnName="SEAT" />
+                <ScalarProperty Name="ITAXDISHTYPE" ColumnName="ITAXDISHTYPE" />
+                <ScalarProperty Name="SALESTERMS_STOPSALE" ColumnName="SALESTERMS_STOPSALE" />
+                <ScalarProperty Name="SALESTERMS_STARTSALE" ColumnName="SALESTERMS_STARTSALE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TYPEPATH" ColumnName="TYPEPATH" />
+                <ScalarProperty Name="RIGHTLVL" ColumnName="RIGHTLVL" />
+                <ScalarProperty Name="ALTNAME" ColumnName="ALTNAME" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="OBJKIND" ColumnName="OBJKIND" />
+                <ScalarProperty Name="SESSIONUNI" ColumnName="SESSIONUNI" />
+                <ScalarProperty Name="ORDERIDENT" ColumnName="ORDERIDENT" />
+                <ScalarProperty Name="CHARGEUNI" ColumnName="CHARGEUNI" />
+                <ScalarProperty Name="DISHUNI" ColumnName="DISHUNI" />
+                <ScalarProperty Name="VISIT" ColumnName="VISIT" />
+                <ScalarProperty Name="MIDSERVER" ColumnName="MIDSERVER" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

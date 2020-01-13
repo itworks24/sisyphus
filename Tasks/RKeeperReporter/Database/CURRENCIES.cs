@@ -57,5 +57,8 @@ namespace RKeeperReporter.Database
         public Nullable<int> AUTOFILLMODE { get; set; }
         public Nullable<int> AUTHPURPOSE { get; set; }
         public string RECSTAMP { get; set; }
+        public Nullable<int> CALCASDISCOUNT { get; set; }
+        public Nullable<int> USEFORRETURN { get; set; }
+        public Nullable<int> HighLevelType { get; set; }
     }
 }

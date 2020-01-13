@@ -12,33 +12,32 @@ namespace RKeeperReporter.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class SaleObjects
+    public partial class SALEOBJECTS
     {
-        public int MidServer { get; set; }
-        public int Visit { get; set; }
-        public int DishUNI { get; set; }
-        public int ChargeUNI { get; set; }
-        public Nullable<int> OrderIdent { get; set; }
-        public Nullable<int> SessionUNI { get; set; }
-        public int ObjKind { get; set; }
-        public Nullable<int> Code { get; set; }
-        public string Name { get; set; }
-        public string AltName { get; set; }
-        public Nullable<short> RightLvl { get; set; }
-        public string TypePath { get; set; }
-        public Nullable<short> Status { get; set; }
-        public Nullable<System.DateTime> SalesTerms_StartSale { get; set; }
-        public Nullable<System.DateTime> SalesTerms_StopSale { get; set; }
-        public Nullable<int> iTaxDishType { get; set; }
-        public Nullable<int> Seat { get; set; }
-        public Nullable<int> ExcludeFromEarnings { get; set; }
-        public Nullable<decimal> SourceSum { get; set; }
-        public Nullable<decimal> PaySum { get; set; }
-        public Nullable<double> Quantity { get; set; }
-        public string GlobalIdent { get; set; }
-        public Nullable<int> iCreator { get; set; }
-        public Nullable<int> iAuthor { get; set; }
-        public Nullable<int> iCreatorRole { get; set; }
-        public Nullable<int> iAuthorRole { get; set; }
+        public int MIDSERVER { get; set; }
+        public int VISIT { get; set; }
+        public int DISHUNI { get; set; }
+        public Nullable<int> CHARGEUNI { get; set; }
+        public Nullable<int> ORDERIDENT { get; set; }
+        public Nullable<int> SESSIONUNI { get; set; }
+        public int OBJKIND { get; set; }
+        public Nullable<int> CODE { get; set; }
+        public string NAME { get; set; }
+        public string ALTNAME { get; set; }
+        public Nullable<short> RIGHTLVL { get; set; }
+        public string TYPEPATH { get; set; }
+        public Nullable<short> STATUS { get; set; }
+        public Nullable<System.DateTime> SALESTERMS_STARTSALE { get; set; }
+        public Nullable<System.DateTime> SALESTERMS_STOPSALE { get; set; }
+        public Nullable<int> ITAXDISHTYPE { get; set; }
+        public Nullable<int> SEAT { get; set; }
+        public int EXCLUDEFROMEARNINGS { get; set; }
+        public Nullable<decimal> SOURCESUM { get; set; }
+        public Nullable<decimal> PAYSUM { get; set; }
+        public Nullable<double> QUANTITY { get; set; }
+        public string GLOBALIDENT { get; set; }
+        public Nullable<int> ICREATOR { get; set; }
+        public Nullable<int> IAUTHOR { get; set; }
+        public Nullable<int> ICREATORROLE { get; set; }
     }
 }

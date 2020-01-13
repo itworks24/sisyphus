@@ -34,5 +34,7 @@ namespace RKeeperReporter.Database
         public Nullable<int> EXTRESTID { get; set; }
         public Nullable<int> MODISCHEME { get; set; }
         public string RECSTAMP { get; set; }
+        public Nullable<int> ENTITYDETAILS { get; set; }
+        public Nullable<short> UCSPRESET { get; set; }
     }
 }

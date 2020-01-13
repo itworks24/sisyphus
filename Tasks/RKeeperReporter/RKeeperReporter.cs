@@ -32,6 +32,18 @@ namespace RKeeperReporter.RKeeperExchange
             return codeField == other.codeField && nameField == other.nameField;
         }
     }
+
+    public class TableRepresent
+    {
+        public int Code { get; set; }
+        public string Name { get; set; }
+        public int Hall { get; set; }
+    }
+
+    public class RKReport : Report
+    {    
+        public TableRepresent Table { get; set; }
+    }
 }
 
 namespace Sysiphus.Tasks.SampleTask
@@ -120,7 +132,7 @@ namespace Sysiphus.Tasks.SampleTask
             return prefix * code.ToString().Length * 10 + code;
         }
 
-        public static IEnumerable<Report> GetReports(RkeeperLoaderSettings settings)
+        public static IEnumerable<RKReport> GetReports(RkeeperLoaderSettings settings)
         {
             using (var db = new RKeeperEntities(GetEntityConnection(settings)))
             {
@@ -157,14 +169,14 @@ namespace Sysiphus.Tasks.SampleTask
                                join ORDER in db.ORDERS
                                      on new { visit = PAYBINDING.VISIT, identInVisit = PAYBINDING.ORDERIDENT ?? -1, midServer = PAYBINDING.MIDSERVER }
                                           equals new { visit = ORDER.VISIT, identInVisit = ORDER.IDENTINVISIT, midServer = ORDER.MIDSERVER }
+                               join SALEOBJECT in db.SALEOBJECTSSet
+                                    on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, dishUNI = PAYBINDING.DISHUNI ?? -1, chargeUNI = PAYBINDING.CHARGEUNI ?? -1 }
+                                        equals new { visit = SALEOBJECT.VISIT, midServer = SALEOBJECT.MIDSERVER, dishUNI = SALEOBJECT.DISHUNI, chargeUNI = SALEOBJECT.CHARGEUNI ?? -1 }
                                join GLOBALSHIFT in db.GLOBALSHIFTS
                                      on new { shift = ORDER.ICOMMONSHIFT ?? -1, midServer = ORDER.MIDSERVER }
-                                          equals new { shift = GLOBALSHIFT.SHIFTNUM, midServer = GLOBALSHIFT.MIDSERVER }
-                               join SALEOBJECT in db.SaleObjects
-                                     on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, dishUNI = PAYBINDING.DISHUNI ?? -1, chargeUNI = PAYBINDING.CHARGEUNI ?? -1 }
-                                         equals new { visit = SALEOBJECT.Visit, midServer = SALEOBJECT.MidServer, dishUNI = SALEOBJECT.DishUNI, chargeUNI = SALEOBJECT.ChargeUNI }
+                                          equals new { shift = GLOBALSHIFT.SHIFTNUM, midServer = GLOBALSHIFT.MIDSERVER }            
                                join SESSIONDISH in db.SESSIONDISHES
-                                     on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, dishUNI = SALEOBJECT.DishUNI }
+                                     on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, dishUNI = SALEOBJECT.DISHUNI }
                                          equals new { visit = SESSIONDISH.VISIT, midServer = SESSIONDISH.MIDSERVER, dishUNI = SESSIONDISH.UNI }
                                join MENUITEM in db.MENUITEMS
                                      on SESSIONDISH.SIFR equals MENUITEM.SIFR
@@ -174,16 +186,18 @@ namespace Sysiphus.Tasks.SampleTask
                                      on new { classoficatorId = DISHGROUP.PARENT ?? -1, ClassificationGroupSIFR = classificationGroupSIFR }
                                           equals new { classoficatorId = CLASSIFICATORGROUP.SIFR * 256 + CLASSIFICATORGROUP.NUMINGROUP, ClassificationGroupSIFR = classificationGroupSIFR == 0 ? (short)0 : CLASSIFICATORGROUP.SIFR }
                                join DISCPART in db.DISCPARTS
-                                     on new { visit = SALEOBJECT.Visit, MidServer = SALEOBJECT.MidServer, bindingUNI = PAYBINDING.UNI }
+                                     on new { visit = SALEOBJECT.VISIT, MidServer = SALEOBJECT.MIDSERVER, bindingUNI = PAYBINDING.UNI }
                                          equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
                                from LEFTJOINDISCPART in LEFTJOINDISCPARTS.DefaultIfEmpty().Take(1)
                                join DISCOUNT in db.DISCOUNTS
                                      on LEFTJOINDISCPART.SIFR equals DISCOUNT.SIFR into LEFTJOINDISCOUNTS
                                from LEFTJOINDISCOUNT in LEFTJOINDISCOUNTS.DefaultIfEmpty()
+                               join TABLE in db.TABLES
+                                     on ORDER.TABLEID equals TABLE.SIFR
                                where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime
                                      && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                      && (PRINTCHECK.STATE == 6)
-                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT })
+                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT, TABLE })
                                .ToList();
                 var groups = from report in reports
                              group report by new
@@ -198,10 +212,13 @@ namespace Sysiphus.Tasks.SampleTask
                                  MenuItem = report.MENUITEM,
                                  Visit = report.VISIT,
                                  GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
-                                 SaleObject = report.SALEOBJECT
+                                 SaleObject = report.SALEOBJECT,
+                                 Table = report.TABLE == null ?
+                                                new { code = -1, name = "Без стола", hall = -1} : 
+                                                new { code = report.TABLE.CODE ?? 1, name = report.TABLE.NAME, hall = report.TABLE.HALL ?? 1}
                              }
                              into groupedReports
-                             select new Report
+                             select new RKReport
                              {
                                  ClassficatorGroup = new Element { Code = groupedReports.Key.ClassficatorGroup.CODE ?? -1, Name = RemoveInvalidXmlChars(groupedReports.Key.ClassficatorGroup.NAME) },
                                  Restaurant = new Element { Code = AddPrefix(groupedReports.Key.Restaurant.CODE ?? -1, settings.databasePrefix), Name = RemoveInvalidXmlChars(groupedReports.Key.Restaurant.NAME) },
@@ -216,9 +233,11 @@ namespace Sysiphus.Tasks.SampleTask
                                  Sum = groupedReports.Sum(x => x.PAYBINDING.PAYSUM ?? 0),
                                  PaySum = groupedReports.Sum(x => x.PAYBINDING.PRICESUM ?? 0),
                                  DiscountSum = -groupedReports.Sum(x => x.PAYBINDING.DISTRDISCOUNTS ?? 0),
-                                 Quntity = groupedReports.Sum(x => x.SALEOBJECT.Quantity ?? 0),
+                                 Quntity = groupedReports.Sum(x => x.SALEOBJECT.QUANTITY ?? 0),
 
-                                 VisitQuitTime = groupedReports.Key.GlobalShiftStartTime
+                                 VisitQuitTime = groupedReports.Key.GlobalShiftStartTime,
+                                 
+                                 Table = new TableRepresent { Code = groupedReports.Key.Table.code, Name = RemoveInvalidXmlChars(groupedReports.Key.Table.name), Hall = groupedReports.Key.Table.hall }
                              };
 
                 return groups.OrderBy(x => x.Restaurant.Code).ThenBy(x => x.VisitQuitTime);

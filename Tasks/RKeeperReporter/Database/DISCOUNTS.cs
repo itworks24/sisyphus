@@ -47,5 +47,7 @@ namespace RKeeperReporter.Database
         public Nullable<decimal> MINORDERREST { get; set; }
         public Nullable<short> FISCALOUTSIDE { get; set; }
         public string RECSTAMP { get; set; }
+        public Nullable<int> CHARGEMENUITEM { get; set; }
+        public Nullable<short> DISCOUNTOBJECTTYPE { get; set; }
     }
 }

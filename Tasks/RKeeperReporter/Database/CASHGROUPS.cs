@@ -55,5 +55,11 @@ namespace RKeeperReporter.Database
         public Nullable<int> HTTPAPIPRIVILEGE { get; set; }
         public Nullable<int> HTTPXMLPRIVILEGE { get; set; }
         public string RECSTAMP { get; set; }
+        public Nullable<short> HTTPLOGQUERY { get; set; }
+        public string HTTPLOGPATH { get; set; }
+        public byte[] HTTPNOLOGGINQUERIES { get; set; }
+        public Nullable<int> HTTPLOGFILES { get; set; }
+        public Nullable<int> PARENTCASHGROUP { get; set; }
+        public string ALLOWCONNECTTO { get; set; }
     }
 }

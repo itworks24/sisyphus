@@ -56,5 +56,7 @@ namespace RKeeperReporter.Database
         public Nullable<long> PERSONID { get; set; }
         public Nullable<int> COUPONCOUNT { get; set; }
         public string TRANSACT_GUID { get; set; }
+        public Nullable<int> CHARGEDISHUNI { get; set; }
+        public Nullable<int> PAYUNI { get; set; }
     }
 }

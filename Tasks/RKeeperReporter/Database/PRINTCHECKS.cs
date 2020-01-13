@@ -81,5 +81,10 @@ namespace RKeeperReporter.Database
         public Nullable<decimal> PAYFISCALSUM { get; set; }
         public string TRANSACT_GUID { get; set; }
         public Nullable<short> RECEIPTTAXTYPE { get; set; }
+        public Nullable<short> BILLPRINTED { get; set; }
+        public Nullable<int> DELETEPRINTNUMBER { get; set; }
+        public Nullable<int> FISCDOCNUMBER { get; set; }
+        public Nullable<int> DELETEFISCDOCNUMBER { get; set; }
+        public string GLOBALFISCALID { get; set; }
     }
 }

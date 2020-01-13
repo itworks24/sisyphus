@@ -46,7 +46,8 @@ namespace RKeeperReporter.Database
         public virtual DbSet<SESSIONDISHES> SESSIONDISHES { get; set; }
         public virtual DbSet<TEMPGLOBALSHIFTS> TEMPGLOBALSHIFTS { get; set; }
         public virtual DbSet<VISITS> VISITS { get; set; }
-        public virtual DbSet<SaleObjects> SaleObjects { get; set; }
         public virtual DbSet<CURRENCIES> CURRENCIES { get; set; }
+        public virtual DbSet<TABLES> TABLES { get; set; }
+        public virtual DbSet<SALEOBJECTS> SALEOBJECTSSet { get; set; }
     }
 }

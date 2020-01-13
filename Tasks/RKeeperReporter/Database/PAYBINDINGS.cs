@@ -34,5 +34,6 @@ namespace RKeeperReporter.Database
         public Nullable<int> STATE { get; set; }
         public string TRANSACT_GUID { get; set; }
         public Nullable<decimal> COSTSUM { get; set; }
+        public Nullable<int> PAYMENTMETHOD { get; set; }
     }
 }

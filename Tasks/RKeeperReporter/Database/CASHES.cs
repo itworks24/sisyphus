@@ -37,5 +37,16 @@ namespace RKeeperReporter.Database
         public Nullable<short> SYNCSTATESFLAGS { get; set; }
         public Nullable<int> DATASENDTIMEOUT { get; set; }
         public string RECSTAMP { get; set; }
+        public Nullable<int> RESERVECASHGROUPID { get; set; }
+        public Nullable<int> HTTPSERVPORT { get; set; }
+        public string HTTPBINDADDR { get; set; }
+        public Nullable<short> HTTPGETAVAIL { get; set; }
+        public Nullable<short> HTTPLOGQUERY { get; set; }
+        public string HTTPLOGPATH { get; set; }
+        public byte[] HTTPNOLOGGINQUERIES { get; set; }
+        public Nullable<int> HTTPLOGFILES { get; set; }
+        public Nullable<int> HTTPWEBPRIVILEGE { get; set; }
+        public Nullable<int> HTTPAPIPRIVILEGE { get; set; }
+        public Nullable<int> HTTPXMLPRIVILEGE { get; set; }
     }
 }

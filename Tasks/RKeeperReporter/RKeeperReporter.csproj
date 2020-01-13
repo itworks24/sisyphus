@@ -146,10 +146,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RKeeperDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Database\SaleObjects.cs">
+    <Compile Include="Database\SALEOBJECTS.cs">
       <DependentUpon>RKeeperDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\SESSIONDISHES.cs">
+      <DependentUpon>RKeeperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TABLES.cs">
       <DependentUpon>RKeeperDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\TEMPGLOBALSHIFTS.cs">

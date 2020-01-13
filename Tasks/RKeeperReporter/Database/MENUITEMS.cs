@@ -69,5 +69,10 @@ namespace RKeeperReporter.Database
         public byte[] LARGEIMAGEPATH { get; set; }
         public Nullable<decimal> GUESTSDISHRATING { get; set; }
         public string RECSTAMP { get; set; }
+        public Nullable<int> ITEMKIND { get; set; }
+        public Nullable<int> HighLevelGroup1 { get; set; }
+        public Nullable<int> HighLevelGroup2 { get; set; }
+        public Nullable<int> HighLevelGroup3 { get; set; }
+        public Nullable<int> HighLevelGroup4 { get; set; }
     }
 }

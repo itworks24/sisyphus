@@ -4,6 +4,7 @@ using Sysiphus.Tasks.SampleTask;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 
 namespace RKLoader
@@ -67,8 +68,14 @@ namespace RKLoader
                 ReportEndDateTime = options.ReportEndDateTime,
                 ReportStartDateTime = options.ReportStartDateTime
             };
+
             var reports = RkeeperLoader.GetReports(settings);
-            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IEnumerable<Report>));
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IEnumerable<RKReport>), 
+                new DataContractJsonSerializerSettings
+                {
+                    DateTimeFormat = new DateTimeFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+                }
+            );
 
             using (FileStream fs = new FileStream(options.File, FileMode.OpenOrCreate))
             {
