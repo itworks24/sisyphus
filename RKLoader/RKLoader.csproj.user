@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-D "data source=10.20.0.2%3binitial catalog=rk7_lrg%3bintegrated security=False%3bMultipleActiveResultSets=True%3bApp=EntityFramework%3bUser ID=sa%3bPassword=Rkeeper001" -r 25 -C 15 -a 0 -c 5 -s "2020-01-07 00:00:00" -e	"2020-01-07 00:00:00" -f "C:\Users\vlada\Documents\temp\v8_88C0_14.json"</StartArguments>
+    <StartArguments>-D "data source=10.20.4.2%3binitial catalog=rk7%3bintegrated security=False%3bMultipleActiveResultSets=True%3bApp=EntityFramework%3bUser ID=sa%3bPassword=Rkeeper001" -r 4 -C 10 -a 2000 -c 2 -s "2019-01-04 00:00:00" -e	"2019-01-04 00:00:00" -f "temp.json"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <StartArguments>-D "data source=10.20.1.2%3binitial catalog=rk7%3bintegrated security=False%3bMultipleActiveResultSets=True%3bApp=EntityFramework%3bUser ID=sa%3bPassword=Rkeeper001" -r 1 -C 10 -a 3000 -c 3 -s "2020-01-11 00:00:00" -e	"2020-01-11 00:00:00" -f "C:\Users\zv\AppData\Local\Temp\38\v8_5219_14.json"</StartArguments>
+    <StartArguments>
+    </StartArguments>
   </PropertyGroup>
 </Project>

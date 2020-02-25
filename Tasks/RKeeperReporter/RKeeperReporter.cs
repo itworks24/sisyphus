@@ -41,7 +41,7 @@ namespace RKeeperReporter.RKeeperExchange
     }
 
     public class RKReport : Report
-    {    
+    {
         public TableRepresent Table { get; set; }
     }
 }
@@ -174,7 +174,7 @@ namespace Sysiphus.Tasks.SampleTask
                                         equals new { visit = SALEOBJECT.VISIT, midServer = SALEOBJECT.MIDSERVER, dishUNI = SALEOBJECT.DISHUNI, chargeUNI = SALEOBJECT.CHARGEUNI ?? -1 }
                                join GLOBALSHIFT in db.GLOBALSHIFTS
                                      on new { shift = ORDER.ICOMMONSHIFT ?? -1, midServer = ORDER.MIDSERVER }
-                                          equals new { shift = GLOBALSHIFT.SHIFTNUM, midServer = GLOBALSHIFT.MIDSERVER }            
+                                          equals new { shift = GLOBALSHIFT.SHIFTNUM, midServer = GLOBALSHIFT.MIDSERVER }
                                join SESSIONDISH in db.SESSIONDISHES
                                      on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, dishUNI = SALEOBJECT.DISHUNI }
                                          equals new { visit = SESSIONDISH.VISIT, midServer = SESSIONDISH.MIDSERVER, dishUNI = SESSIONDISH.UNI }
@@ -188,16 +188,12 @@ namespace Sysiphus.Tasks.SampleTask
                                join DISCPART in db.DISCPARTS
                                      on new { visit = SALEOBJECT.VISIT, MidServer = SALEOBJECT.MIDSERVER, bindingUNI = PAYBINDING.UNI }
                                          equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
-                               from LEFTJOINDISCPART in LEFTJOINDISCPARTS.DefaultIfEmpty().Take(1)
-                               join DISCOUNT in db.DISCOUNTS
-                                     on LEFTJOINDISCPART.SIFR equals DISCOUNT.SIFR into LEFTJOINDISCOUNTS
-                               from LEFTJOINDISCOUNT in LEFTJOINDISCOUNTS.DefaultIfEmpty()
                                join TABLE in db.TABLES
                                      on ORDER.TABLEID equals TABLE.SIFR
                                where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime
                                      && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                      && (PRINTCHECK.STATE == 6)
-                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCOUNT, MENUITEM, SALEOBJECT, TABLE })
+                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCPARTS, MENUITEM, SALEOBJECT, TABLE })
                                .ToList();
                 var groups = from report in reports
                              group report by new
@@ -206,16 +202,14 @@ namespace Sysiphus.Tasks.SampleTask
                                  Restaurant = report.RESTAURANT,
                                  CurrencyType = report.CURRENCYTYPE,
                                  Currency = report.CURRENCY,
-                                 DiscountType = report.LEFTJOINDISCOUNT == null ?
-                                                    new { code = 1, name = "Без скидки" } :
-                                                    new { code = report.LEFTJOINDISCOUNT.SIFR, name = report.LEFTJOINDISCOUNT.NAME },
+                                 DiscountType = new { code = 1, name = "Без скидки" },
                                  MenuItem = report.MENUITEM,
                                  Visit = report.VISIT,
                                  GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
                                  SaleObject = report.SALEOBJECT,
                                  Table = report.TABLE == null ?
-                                                new { code = -1, name = "Без стола", hall = -1} : 
-                                                new { code = report.TABLE.CODE ?? 1, name = report.TABLE.NAME, hall = report.TABLE.HALL ?? 1}
+                                                new { code = -1, name = "Без стола", hall = -1 } :
+                                                new { code = report.TABLE.CODE ?? 1, name = report.TABLE.NAME, hall = report.TABLE.HALL ?? 1 }
                              }
                              into groupedReports
                              select new RKReport
@@ -225,28 +219,71 @@ namespace Sysiphus.Tasks.SampleTask
                                  CurrencyType = new Element { Code = groupedReports.Key.CurrencyType.CODE ?? -1, Name = RemoveInvalidXmlChars(groupedReports.Key.CurrencyType.NAME) },
                                  Currency = new Element { Code = groupedReports.Key.Currency.CODE ?? -1, Name = RemoveInvalidXmlChars(groupedReports.Key.Currency.NAME) },
                                  DiscountType = new Element { Code = groupedReports.Key.DiscountType.code, Name = RemoveInvalidXmlChars(groupedReports.Key.DiscountType.name) },
-                                 //Visit = new Element { Code = 0, Name = "" },
+
                                  Visit = new Element { Code = groupedReports.Key.Visit.SIFR, Name = groupedReports.Key.Visit.STARTTIME.ToString() },
-                                 //MenuItem = new Element { Code = 0, Name = "" },
                                  MenuItem = new Element { Code = groupedReports.Key.MenuItem.CODE ?? 0, Name = RemoveInvalidXmlChars(groupedReports.Key.MenuItem.NAME) },
 
                                  Sum = groupedReports.Sum(x => x.PAYBINDING.PAYSUM ?? 0),
                                  PaySum = groupedReports.Sum(x => x.PAYBINDING.PRICESUM ?? 0),
-                                 DiscountSum = -groupedReports.Sum(x => x.PAYBINDING.DISTRDISCOUNTS ?? 0),
+                                 DiscountSum = 0,
                                  Quntity = groupedReports.Sum(x => x.SALEOBJECT.QUANTITY ?? 0),
 
                                  VisitQuitTime = groupedReports.Key.GlobalShiftStartTime,
-                                 
+
                                  Table = new TableRepresent { Code = groupedReports.Key.Table.code, Name = RemoveInvalidXmlChars(groupedReports.Key.Table.name), Hall = groupedReports.Key.Table.hall }
                              };
 
-                return groups.OrderBy(x => x.Restaurant.Code).ThenBy(x => x.VisitQuitTime);
+                var discountSIFR = new List<int>();
+                foreach (var report in reports)
+                    foreach (var discount in report.LEFTJOINDISCPARTS)
+                        discountSIFR.Add(discount.SIFR ?? -1);
+
+                var discountObjects = (from DISCOUNT in db.DISCOUNTS
+                                      where discountSIFR.Contains(DISCOUNT.SIFR)
+                                      select DISCOUNT).ToList();
+
+                var discounts = new List<RKReport>();
+                foreach (var report in reports)
+                {
+                    foreach (var discpart in report.LEFTJOINDISCPARTS)
+                    {
+                        var discount = discountObjects.FirstOrDefault(discountLambda => discountLambda.SIFR == discpart.SIFR);
+                        var table = report.TABLE == null ?
+                                                new { code = -1, name = "Без стола", hall = -1 } :
+                                                new { code = report.TABLE.CODE ?? 1, name = report.TABLE.NAME, hall = report.TABLE.HALL ?? 1 };
+                        var currentRKReport = new RKReport
+                        {
+                            ClassficatorGroup = new Element { Code = report.CLASSIFICATORGROUP.CODE ?? -1, Name = RemoveInvalidXmlChars(report.CLASSIFICATORGROUP.NAME) },
+                            Restaurant = new Element { Code = AddPrefix(report.RESTAURANT.CODE ?? -1, settings.databasePrefix), Name = RemoveInvalidXmlChars(report.RESTAURANT.NAME) },
+                            CurrencyType = new Element { Code = report.CURRENCYTYPE.CODE ?? -1, Name = RemoveInvalidXmlChars(report.CURRENCYTYPE.NAME) },
+                            Currency = new Element { Code = report.CURRENCY.CODE ?? -1, Name = RemoveInvalidXmlChars(report.CURRENCY.NAME) },
+                            DiscountType = new Element { Code = discount.SIFR, Name = RemoveInvalidXmlChars(discount.NAME) },
+
+                            Visit = new Element { Code = report.VISIT.SIFR, Name = report.VISIT.STARTTIME.ToString() },
+                            MenuItem = new Element { Code = report.MENUITEM.CODE ?? 0, Name = RemoveInvalidXmlChars(report.MENUITEM.NAME) },
+
+                            Sum = 0,
+                            PaySum = 0,
+                            DiscountSum = -discpart.SUM ?? 0,
+                            Quntity = 0,
+
+                            VisitQuitTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
+
+                            Table = new TableRepresent { Code = table.code, Name = RemoveInvalidXmlChars(table.name), Hall = table.hall }
+                        };
+                        discounts.Add(currentRKReport);
+                    }
+                }
+
+                var result = groups.Union(discounts);
+
+                return result.OrderBy(x => x.Restaurant.Code).ThenBy(x => x.VisitQuitTime);
             }
         }
     }
 
     public partial class RkeeperReporter
-    {      
+    {
         public bool ExecuteProcess()
         {
             var settings = GetSettings(typeof(Settings.RkeeperReporterSettings)) as Settings.RkeeperReporterSettings;
@@ -276,7 +313,7 @@ namespace Sysiphus.Tasks.SampleTask
                     Report = groups.Skip(i).Take(settings.SendRecordsCount).ToArray(),
                     DB = new Element() { Code = settings.databaseCode, Name = settings.databaseName }
                 };
-   
+
                 var currentResult = wsWrapper.SendData(reports,
                                                         reportId,
                                                         ref errorInfo);

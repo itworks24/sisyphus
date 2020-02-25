@@ -30,3 +30,13 @@ C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperRe
 C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csprojAssemblyReference.cache
 C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csproj.CoreCompileInputs.cache
 C:\Users\vlada\Source\Repos\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csproj.CopyComplete
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.dll.config
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.XmlSerializers.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\bin\Release\RKeeperReporter.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csproj.CoreCompileInputs.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.csproj.CopyComplete
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperReporter\obj\Release\RKeeperReporter.XmlSerializers.dll
