@@ -1,0 +1,5 @@
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\SHLoaderTester\obj\Debug\SHLoaderTester.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\SHLoaderTester\obj\Debug\SHLoaderTester.Form1.resources
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\SHLoaderTester\obj\Debug\SHLoaderTester.Properties.Resources.resources
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\SHLoaderTester\obj\Debug\SHLoaderTester.csproj.GenerateResource.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\SHLoaderTester\obj\Debug\SHLoaderTester.csproj.CoreCompileInputs.cache

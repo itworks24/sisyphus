@@ -1,0 +1,15 @@
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Core.Common.ActiveDirectory.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Core.Common.ActiveDirectory.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Castle.Core.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Common.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Moq.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Common.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Common.dll.config
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Castle.Core.xml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\bin\Debug\Moq.xml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\obj\Debug\Core.Common.ActiveDirectory.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\obj\Debug\Core.Common.ActiveDirectory.csproj.CoreCompileInputs.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\obj\Debug\Core.Common.ActiveDirectory.csproj.CopyComplete
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\obj\Debug\Core.Common.ActiveDirectory.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\UnitTests\Core.Common.ActiveDirectory\obj\Debug\Core.Common.ActiveDirectory.pdb

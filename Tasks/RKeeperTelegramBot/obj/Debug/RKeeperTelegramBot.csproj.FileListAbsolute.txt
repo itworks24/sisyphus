@@ -1,0 +1,11 @@
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\bin\Debug\RKeeperTelegramBot.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\bin\Debug\RKeeperTelegramBot.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\bin\Debug\Common.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\bin\Debug\LiteDB.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\bin\Debug\SQLLogger.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\bin\Debug\TaskCore.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\obj\Debug\RKeeperTelegramBot.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\obj\Debug\RKeeperTelegramBot.csproj.CoreCompileInputs.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\obj\Debug\RKeeperTelegramBot.csproj.CopyComplete
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\obj\Debug\RKeeperTelegramBot.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\RKeeperTelegramBot\obj\Debug\RKeeperTelegramBot.pdb

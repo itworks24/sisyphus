@@ -351,3 +351,16 @@ C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigA
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.csproj.GenerateResource.Cache
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.exe
 C:\Users\test-test\Source\Repos\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\Themes\Metro\Metro.MSControls.Core.Implicit.baml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\Themes\Metro\Metro.MSControls.Toolkit.Implicit.baml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\Themes\Metro\Styles.Shared.baml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\Themes\Metro\Styles.WPF.baml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\Themes\Metro\Theme.Colors.baml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\App.baml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\MainWindow.g.cs
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\App.g.cs
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication_Content.g.cs
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication_MarkupCompile.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\GUI\ConfigApplication\obj\Debug\ConfigApplication_MarkupCompile.lref

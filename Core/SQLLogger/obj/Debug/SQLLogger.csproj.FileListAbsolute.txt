@@ -26,3 +26,16 @@ C:\Users\test-test\Source\Repos\sisyphus\Core\SQLLogger\bin\Debug\LiteDB.xml
 C:\Users\test-test\Source\Repos\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.csprojResolveAssemblyReference.cache
 C:\Users\test-test\Source\Repos\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.dll
 C:\Users\test-test\Source\Repos\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\SQLLogger.dll.config
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\SQLLogger.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\SQLLogger.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\Common.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\LiteDB.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\Common.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\Common.dll.config
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\bin\Debug\LiteDB.xml
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.csproj.CoreCompileInputs.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.csproj.CopyComplete
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\SQLLogger\obj\Debug\SQLLogger.pdb

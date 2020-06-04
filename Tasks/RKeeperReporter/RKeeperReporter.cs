@@ -79,6 +79,7 @@ namespace Sysiphus.Tasks.SampleTask
             public short ClassificationGroupSIFR { get; set; }
             public int restaurantCode { get; set; }
             public int databasePrefix { get; set; }
+            public int menuItemCode { get; set; } = -1;
         }
 
         internal static string RemoveInvalidXmlChars(string text)
@@ -144,6 +145,8 @@ namespace Sysiphus.Tasks.SampleTask
                 startDateTime = startDateTime.AbsoluteStart();
                 endDateTime = endDateTime.AbsoluteEnd();
 
+                var menuItemCode = settings.menuItemCode;
+
                 var classificationGroupSIFR = settings.ClassificationGroupSIFR;
 
                 var restaurantCode = settings.restaurantCode;
@@ -189,11 +192,13 @@ namespace Sysiphus.Tasks.SampleTask
                                      on new { visit = SALEOBJECT.VISIT, MidServer = SALEOBJECT.MIDSERVER, bindingUNI = PAYBINDING.UNI }
                                          equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
                                join TABLE in db.TABLES
-                                     on ORDER.TABLEID equals TABLE.SIFR
+                                     on ORDER.TABLEID equals TABLE.SIFR into TABLES
                                where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime
                                      && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                      && (PRINTCHECK.STATE == 6)
-                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCPARTS, MENUITEM, SALEOBJECT, TABLE })
+                                     && (menuItemCode <= 0 || MENUITEM.CODE == menuItemCode)
+                                    
+                               select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCPARTS, MENUITEM, SALEOBJECT, TABLES })
                                .ToList();
                 var groups = from report in reports
                              group report by new
@@ -207,9 +212,7 @@ namespace Sysiphus.Tasks.SampleTask
                                  Visit = report.VISIT,
                                  GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
                                  SaleObject = report.SALEOBJECT,
-                                 Table = report.TABLE == null ?
-                                                new { code = -1, name = "Без стола", hall = -1 } :
-                                                new { code = report.TABLE.CODE ?? 1, name = report.TABLE.NAME, hall = report.TABLE.HALL ?? 1 }
+                                 Table = report.TABLES.DefaultIfEmpty(null).First()
                              }
                              into groupedReports
                              select new RKReport
@@ -230,7 +233,7 @@ namespace Sysiphus.Tasks.SampleTask
 
                                  VisitQuitTime = groupedReports.Key.GlobalShiftStartTime,
 
-                                 Table = new TableRepresent { Code = groupedReports.Key.Table.code, Name = RemoveInvalidXmlChars(groupedReports.Key.Table.name), Hall = groupedReports.Key.Table.hall }
+                                 Table = new TableRepresent { Code = groupedReports.Key.Table.CODE ?? -1, Name = RemoveInvalidXmlChars(groupedReports.Key.Table.NAME ?? "Без стола"), Hall = groupedReports.Key.Table.HALL ?? 1 }
                              };
 
                 var discountSIFR = new List<int>();
@@ -248,9 +251,10 @@ namespace Sysiphus.Tasks.SampleTask
                     foreach (var discpart in report.LEFTJOINDISCPARTS)
                     {
                         var discount = discountObjects.FirstOrDefault(discountLambda => discountLambda.SIFR == discpart.SIFR);
-                        var table = report.TABLE == null ?
+                        var currentTable = report.TABLES.DefaultIfEmpty(null).First();
+                        var table = currentTable == null ?
                                                 new { code = -1, name = "Без стола", hall = -1 } :
-                                                new { code = report.TABLE.CODE ?? 1, name = report.TABLE.NAME, hall = report.TABLE.HALL ?? 1 };
+                                                new { code = currentTable.CODE ?? 1, name = currentTable.NAME, hall = currentTable.HALL ?? 1 };
                         var currentRKReport = new RKReport
                         {
                             ClassficatorGroup = new Element { Code = report.CLASSIFICATORGROUP.CODE ?? -1, Name = RemoveInvalidXmlChars(report.CLASSIFICATORGROUP.NAME) },

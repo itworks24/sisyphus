@@ -44,3 +44,6 @@ C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\EnterpriseBac
 C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\BaseBackup.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\obj\Debug\BaseBackup.pdb
 C:\Users\vladas.j\Source\Repos\sisyphus\EnterpriseBackup\bin\Debug\SharpCompress.dll
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\EnterpriseBackup\obj\Debug\EnterpriseBackup.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\EnterpriseBackup\obj\Debug\EnterpriseBackup.csproj.ResolveComReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\EnterpriseBackup\obj\Debug\EnterpriseBackup.csproj.CoreCompileInputs.cache

@@ -44,6 +44,9 @@ namespace RKLoader
 
         [Option('f', "file", Required = false, HelpText = "Файл выгрузки")]
         public string File { get; set; } = $"{DateTime.Now.ToString("MM.dd.yyyy-HH.mm.ss")}.json";
+
+        [Option('m', "menuItem", Required = false, HelpText = "Код элемента")]
+        public int MenuItemCode { get; set; } = -1;
     }
 
     class Program
@@ -66,7 +69,8 @@ namespace RKLoader
                 restaurantCode = options.RestaurantCode,
                 databasePrefix = options.DatabasePrefix,
                 ReportEndDateTime = options.ReportEndDateTime,
-                ReportStartDateTime = options.ReportStartDateTime
+                ReportStartDateTime = options.ReportStartDateTime,
+                menuItemCode = options.MenuItemCode
             };
 
             var reports = RkeeperLoader.GetReports(settings);

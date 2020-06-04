@@ -56,3 +56,5 @@ C:\Users\vladas.j\Source\Repos\sisyphus\TrelloChecker\bin\Debug\SQLLogger.pdb
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloChecker\obj\Debug\TrelloChecker.csprojResolveAssemblyReference.cache
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloChecker\obj\Debug\TrelloChecker.dll
 C:\Users\vladas.j\Source\Repos\sisyphus\TrelloChecker\obj\Debug\TrelloChecker.pdb
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\TrelloChecker\obj\Debug\TrelloChecker.csprojAssemblyReference.cache
+C:\Users\vlada\Source\Repos\itworks24\sisyphus\Tasks\TrelloChecker\obj\Debug\TrelloChecker.csproj.CoreCompileInputs.cache
