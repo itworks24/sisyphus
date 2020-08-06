@@ -18,7 +18,6 @@ C:\Users\test-test\Source\Repos\sisyphus\Core\Common\obj\Debug\Common.pdb
 C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\bin\Debug\Common.dll.config
 C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\bin\Debug\Common.dll
 C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\bin\Debug\Common.pdb
-C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\obj\Debug\Common.csprojAssemblyReference.cache
 C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\obj\Debug\Common.dll
 C:\Users\vlada\Source\Repos\itworks24\sisyphus\Core\Common\obj\Debug\Common.pdb

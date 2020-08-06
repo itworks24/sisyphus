@@ -47,6 +47,9 @@ namespace RKLoader
 
         [Option('m', "menuItem", Required = false, HelpText = "Код элемента")]
         public int MenuItemCode { get; set; } = -1;
+
+        [Option('g', "globalshif", Required = false, HelpText = "Номер смены")]
+        public int ShiftNum { get; set; } = -1;
     }
 
     class Program
@@ -70,7 +73,8 @@ namespace RKLoader
                 databasePrefix = options.DatabasePrefix,
                 ReportEndDateTime = options.ReportEndDateTime,
                 ReportStartDateTime = options.ReportStartDateTime,
-                menuItemCode = options.MenuItemCode
+                menuItemCode = options.MenuItemCode,
+                shiftNum = options.ShiftNum
             };
 
             var reports = RkeeperLoader.GetReports(settings);

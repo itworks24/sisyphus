@@ -43,6 +43,7 @@ namespace RKeeperReporter.RKeeperExchange
     public class RKReport : Report
     {
         public TableRepresent Table { get; set; }
+        public Element Shift { get; set; }
     }
 }
 
@@ -80,6 +81,7 @@ namespace Sysiphus.Tasks.SampleTask
             public int restaurantCode { get; set; }
             public int databasePrefix { get; set; }
             public int menuItemCode { get; set; } = -1;
+            public int shiftNum { get; set; } = -1;
         }
 
         internal static string RemoveInvalidXmlChars(string text)
@@ -151,6 +153,8 @@ namespace Sysiphus.Tasks.SampleTask
 
                 var restaurantCode = settings.restaurantCode;
 
+                var shiftNum = settings.shiftNum;
+
                 var reports = (from PAYBINDING in db.PAYBINDINGS
                                join CURRLINE in db.CURRLINES
                                      on new { visit = PAYBINDING.VISIT, midServer = PAYBINDING.MIDSERVER, currUNI = PAYBINDING.CURRUNI ?? -1 }
@@ -193,11 +197,13 @@ namespace Sysiphus.Tasks.SampleTask
                                          equals new { visit = DISCPART.VISIT, MidServer = DISCPART.MIDSERVER, bindingUNI = DISCPART.BINDINGUNI } into LEFTJOINDISCPARTS
                                join TABLE in db.TABLES
                                      on ORDER.TABLEID equals TABLE.SIFR into TABLES
-                               where GLOBALSHIFT.STARTTIME.Value >= startDateTime && GLOBALSHIFT.STARTTIME.Value < endDateTime
+                               where (shiftNum == -1 || GLOBALSHIFT.SHIFTNUM == shiftNum) 
+                                     && (shiftNum != -1 || (GLOBALSHIFT.SHIFTDATE.Value >= startDateTime && GLOBALSHIFT.SHIFTDATE.Value <= endDateTime))
                                      && (restaurantCode == 0 || RESTAURANT.CODE == restaurantCode)
                                      && (PRINTCHECK.STATE == 6)
                                      && (menuItemCode <= 0 || MENUITEM.CODE == menuItemCode)
                                     
+
                                select new { CLASSIFICATORGROUP, RESTAURANT, CURRENCYTYPE, CURRENCY, PAYBINDING, VISIT, GLOBALSHIFT, LEFTJOINDISCPARTS, MENUITEM, SALEOBJECT, TABLES })
                                .ToList();
                 var groups = from report in reports
@@ -210,9 +216,10 @@ namespace Sysiphus.Tasks.SampleTask
                                  DiscountType = new { code = 1, name = "Без скидки" },
                                  MenuItem = report.MENUITEM,
                                  Visit = report.VISIT,
-                                 GlobalShiftStartTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
+                                 GlobalShiftStartTime = report.GLOBALSHIFT.SHIFTDATE.Value.AbsoluteStart(),
                                  SaleObject = report.SALEOBJECT,
-                                 Table = report.TABLES.DefaultIfEmpty(null).First()
+                                 Table = report.TABLES.DefaultIfEmpty(null).First(),
+                                 Shift = report.GLOBALSHIFT,
                              }
                              into groupedReports
                              select new RKReport
@@ -233,7 +240,9 @@ namespace Sysiphus.Tasks.SampleTask
 
                                  VisitQuitTime = groupedReports.Key.GlobalShiftStartTime,
 
-                                 Table = new TableRepresent { Code = groupedReports.Key.Table.CODE ?? -1, Name = RemoveInvalidXmlChars(groupedReports.Key.Table.NAME ?? "Без стола"), Hall = groupedReports.Key.Table.HALL ?? 1 }
+                                 Table = new TableRepresent { Code = groupedReports.Key.Table?.CODE ?? -1, Name = RemoveInvalidXmlChars(groupedReports.Key.Table?.NAME ?? "Без стола"), Hall = groupedReports.Key.Table?.HALL ?? -1 },
+
+                                 Shift = new Element { Code = groupedReports.Key.Shift.SHIFTNUM, Name = RemoveInvalidXmlChars($"{groupedReports.Key.Shift.STARTTIME}")}
                              };
 
                 var discountSIFR = new List<int>();
@@ -254,7 +263,7 @@ namespace Sysiphus.Tasks.SampleTask
                         var currentTable = report.TABLES.DefaultIfEmpty(null).First();
                         var table = currentTable == null ?
                                                 new { code = -1, name = "Без стола", hall = -1 } :
-                                                new { code = currentTable.CODE ?? 1, name = currentTable.NAME, hall = currentTable.HALL ?? 1 };
+                                                new { code = currentTable?.CODE ?? -1, name = currentTable?.NAME ?? "Без стола", hall = currentTable?.HALL ?? -1 };
                         var currentRKReport = new RKReport
                         {
                             ClassficatorGroup = new Element { Code = report.CLASSIFICATORGROUP.CODE ?? -1, Name = RemoveInvalidXmlChars(report.CLASSIFICATORGROUP.NAME) },
@@ -271,7 +280,7 @@ namespace Sysiphus.Tasks.SampleTask
                             DiscountSum = -discpart.SUM ?? 0,
                             Quntity = 0,
 
-                            VisitQuitTime = report.GLOBALSHIFT.STARTTIME.Value.AbsoluteStart(),
+                            VisitQuitTime = report.GLOBALSHIFT.SHIFTDATE.Value.AbsoluteStart(),
 
                             Table = new TableRepresent { Code = table.code, Name = RemoveInvalidXmlChars(table.name), Hall = table.hall }
                         };
